@@ -1,0 +1,12 @@
+﻿.ipynb_checkpoints
+ 
+*.swp
+*.p
+.~lock*
+
+__pycache__
+*.zip
+
+
+*.pyc
+.fuse_hidden*

@@ -19,7 +19,7 @@ class qCamera:
             sample_dir : Description
         
         Returns:
-            TYPE: Description
+            integer: number of calibrated image samples
         """
 
         corner_x = 9
@@ -53,8 +53,11 @@ class qCamera:
 
                 # Draw and display the corners
                 cv2.drawChessboardCorners(img, (corner_x,corner_y), corners, ret)
-                file_loc = './udacity/output_images/' + 'calibration/' + 'corners_found'+str(idx)+'.jpg'
-                cv2.imwrite(file_loc, img)
+
+
+                # file_loc = './udacity/output_images/' + 'calibration/' + 'corners_found'+str(idx)+'.jpg'
+                # cv2.imwrite(file_loc, img)
+
                 # cv2.imshow('img', img)
                 # cv2.waitKey(500)
 
@@ -62,8 +65,8 @@ class qCamera:
         # Do camera calibration given object points and image points
         self.ret, self.mtx, self.dist, self.rvecs, self.tvecs = cv2.calibrateCamera(objpoints, imgpoints, img_size,None,None)
 
-        #TODO: find out if the more chass image calibrated, the better calibration it gets?
-        # print('num of img calibrated: ' , len(imgpoints))
+
+        return len(imgpoints)
 
 
     def undistortImg(self, img):
@@ -85,7 +88,9 @@ def main():
 
     camera = qCamera()
 
-    camera.calibrateSamples('udacity/camera_cal/')
+    num_calibr = camera.calibrateSamples('udacity/camera_cal/')
+    #TODO: find out if the more chass image calibrated, the better calibration it gets?
+    print('Number of images calibrated: ' , num_calibr)
 
     img_distorted = cv2.imread('udacity/camera_cal/calibration3.jpg')
     img_undist = camera.undistortImg(img_distorted)
@@ -95,9 +100,9 @@ def main():
     f, (ax1, ax2) = plt.subplots(1, 2, figsize=(24, 9))
     f.tight_layout()
     ax1.imshow(img_distorted)
-    ax1.set_title('Original Image', fontsize=50)
+    ax1.set_title('Original Image', fontsize=30)
     ax2.imshow(img_undist)
-    ax2.set_title('Undistorted Image', fontsize=50)
+    ax2.set_title('Undistorted Image', fontsize=30)
     plt.subplots_adjust(left=0., right=1, top=0.9, bottom=0.)
     plt.savefig(output_dir+'undistortion.jpg')
     plt.show()
