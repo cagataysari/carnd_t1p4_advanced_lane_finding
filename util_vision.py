@@ -97,6 +97,23 @@ def dir_threshold(img, sobel_kernel=3, thresh=(0, np.pi/2)):
     return binary_output
 
 
+# a function that thresholds the S-channel of HLS
+# Use exclusive lower bound (>) and inclusive upper (<=)
+def hls_select(img, thresh=(0, 255)):
+    # 1) Convert to HLS color space
+    img_hls = cv2.cvtColor(img, cv2.COLOR_RGB2HLS)
+    # 2) Apply a threshold to the S channel
+    ch_satu = img_hls[:,:,2]
+    img_1ch = ch_satu
+    binary_ch = np.zeros_like(img_1ch)
+    thre_min = thresh[0]
+    thre_max = thresh[1]
+    binary_ch[ (img_1ch>thre_min) & (img_1ch<=thre_max)] =1
+    # 3) Return a binary image of threshold result
+    binary_output = binary_ch
+    
+
+    return binary_output
 
 
 class qVision:
@@ -105,19 +122,22 @@ class qVision:
 
     def processImg(self, img_rgb):
 
-        image = img_rgb
+        image = np.copy(img_rgb)
+        # image =  img_rgb
+
+        hls_binary = hls_select(img_rgb, thresh=(100, 255))
+        image[(hls_binary != 1)]  = 0
         # Run the function
-        mag_binary = mag_thresh(image, sobel_kernel=3, mag_thresh=(33, 150))
-        dir_binary = dir_threshold(image, sobel_kernel=5, thresh=(0.7, 1.3)) 
+        mag_binary = mag_thresh(image, sobel_kernel=9, mag_thresh=(33, 150))
+        dir_binary = dir_threshold(image, sobel_kernel=9, thresh=(np.pi*20.0/180.0, np.pi*80.0/180.0)) 
         # dir_binary = dir_threshold(mag_binary, sobel_kernel=11, thresh=(0.7, 1.3), enable_binary_map=True) 
 
-        print('mag_binary shape: ', mag_binary.shape)
-        print('dir_binary shape: ', dir_binary.shape)
 
         combined = np.zeros_like(dir_binary)
-        combined[  ((dir_binary == 1) & (mag_binary == 1))] = 1
+        # combined[(hls_binary == 1) ] = 1
+        combined[  (dir_binary == 1) & (mag_binary == 1)   ] = 1
+        # combined[ (mag_binary == 1)   ] = 1
         # Plot the result
-
 
 
         img_final = combined
@@ -154,7 +174,7 @@ def main():
 
     img_procd = vision.processImg(img_rgb)
 
-    DBG_CompareImages(img_rgb, img_procd, 'Oriddginal Image', 'Processed Image', cmap2='gray')
+    DBG_CompareImages(img_rgb, img_procd, 'Original Image', 'Processed Image', cmap2='gray')
 
 # test image: /udacity/test_images/test4.jpg
 
