@@ -22,7 +22,7 @@ class qCamera:
             integer: number of calibrated image samples
         """
 
-        corner_x = 9
+        corner_x = 9 #num of conners at x-axis
         corner_y = 6
         # prepare object points, like (0,0,0), (1,0,0), (2,0,0) ....,(6,5,0)
         objp = np.zeros((corner_y*corner_x,3), np.float32)

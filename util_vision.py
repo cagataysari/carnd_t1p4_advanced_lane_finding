@@ -166,15 +166,36 @@ def main():
 
     vision = qVision()
 
+    import glob
+    import os
 
-    img_bgr = cv2.imread('udacity/test_images/test4.jpg')
+    sample_dir = 'udacity/test_images/'
+    images_loc = glob.glob(sample_dir+'/*.jpg')
 
-    print('img shape: ', img_bgr.shape)
+    for img_loc in images_loc:
+        img_bgr = cv2.imread(img_loc)
+
+
+        img_rgb = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2RGB)
+        img_procd = vision.processImg(img_rgb)
+
+        path, filename = os.path.split(img_loc)    
+        file_loc = 'udacity/output_images/' + 'test_images/' + 'processed_'+ filename
+        cv2.imwrite(file_loc, (img_procd*225).astype(np.uint8) ) #Only 8-bit images can be saved using this function, so convert from (0.0, 1.0) to (0,255)
+        # cv2.imshow('Processed Image', img_procd)
+        # DBG_CompareImages(img_rgb, img_procd, 'Original Image', 'Processed Image', cmap2='gray')
+
+
+
+    img_bgr = cv2.imread('udacity/test_images/test2.jpg')
+
+
     img_rgb = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2RGB)
-
     img_procd = vision.processImg(img_rgb)
 
     DBG_CompareImages(img_rgb, img_procd, 'Original Image', 'Processed Image', cmap2='gray')
+
+        
 
 # test image: /udacity/test_images/test4.jpg
 
