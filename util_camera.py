@@ -92,7 +92,8 @@ def main():
     #TODO: find out if the more chass image calibrated, the better calibration it gets?
     print('Number of images calibrated: ' , num_calibr)
 
-    img_distorted = cv2.imread('udacity/camera_cal/calibration3.jpg')
+    img = cv2.imread('udacity/camera_cal/calibration3.jpg')
+    img_distorted = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)    
     img_undist = camera.undistortImg(img_distorted)
 
 
@@ -104,9 +105,25 @@ def main():
     ax2.imshow(img_undist)
     ax2.set_title('Undistorted Image', fontsize=30)
     plt.subplots_adjust(left=0., right=1, top=0.9, bottom=0.)
-    plt.savefig(output_dir+'undistortion.jpg')
+    plt.savefig(output_dir+'undistortion_calibration_img.jpg')
     plt.show()
 
+
+
+
+
+    img = cv2.imread('udacity/test_images/straight_lines1.jpg')
+    img_distorted = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    img_undist = camera.undistortImg(img_distorted)
+    f, (ax1, ax2) = plt.subplots(1, 2, figsize=(24, 9))
+    f.tight_layout()
+    ax1.imshow(img_distorted)
+    ax1.set_title('Original Image', fontsize=30)
+    ax2.imshow(img_undist)
+    ax2.set_title('Undistorted Image', fontsize=30)
+    plt.subplots_adjust(left=0., right=1, top=0.9, bottom=0.)
+    plt.savefig(output_dir+'undistortion_road_img.jpg')
+    plt.show()
 
 if __name__ == "__main__": 
     import time
