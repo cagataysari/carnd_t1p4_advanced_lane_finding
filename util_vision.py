@@ -4,7 +4,7 @@ import cv2
 
 def extractSatuCh(img):
 
-    img_hls = cv2.cvtColor(img, cv2.COLOR_RGB2HLS)
+    img_hls = cv2.cvtColor(img, cv2.COLOR_BGR2HLS)
     # 2) Apply a threshold to the S channel
     ch_satu = img_hls[:,:,2]
 
@@ -19,7 +19,7 @@ def abs_sobel_thresh(img, orient='x', thresh_min=0, thresh_max=255):
     
     # Apply the following steps to img
     # 1) Convert to grayscale
-    img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
     # 2) Take the derivative in x or y given orient = 'x' or 'y'
     
@@ -49,7 +49,7 @@ def abs_sobel_thresh(img, orient='x', thresh_min=0, thresh_max=255):
 def mag_thresh(image, sobel_kernel=3, thresh=(0, 255)):
     
     # 1) Convert to grayscale
-    # img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+    # img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     img = extractSatuCh(image)
     # 2) Take the derivative in x or y given orient = 'x' or 'y'
     
@@ -85,7 +85,7 @@ def dir_threshold(image, sobel_kernel=3, thresh=(0, np.pi/2)):
     
     # Apply the following steps to image
     # 1) Convert to grayscale
-    img = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
+    img = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     # img = extractSatuCh(image)
 
     # 2) Take the gradient in x and y separately
@@ -113,7 +113,7 @@ def dir_threshold(image, sobel_kernel=3, thresh=(0, np.pi/2)):
 # Use exclusive lower bound (>) and inclusive upper (<=)
 def hls_select(img, thresh=(0, 255)):
     # 1) Convert to HLS color space
-    img_hls = cv2.cvtColor(img, cv2.COLOR_RGB2HLS)
+    img_hls = cv2.cvtColor(img, cv2.COLOR_BGR2HLS)
     # 2) Apply a threshold to the S channel
     ch_satu = img_hls[:,:,2]
     img_1ch = ch_satu
@@ -131,7 +131,7 @@ def hls_select(img, thresh=(0, 255)):
 # Use exclusive lower bound (>) and inclusive upper (<=)
 def hls_select_s(img, thresh=(0, 255)):
     # 1) Convert to HLS color space
-    img_hls = cv2.cvtColor(img, cv2.COLOR_RGB2HLS)
+    img_hls = cv2.cvtColor(img, cv2.COLOR_BGR2HLS)
     # 2) Apply a threshold to the S channel
     ch_hue = img_hls[:,:,0]
     # ch_satu = img_hls[:,:,2]
@@ -181,10 +181,40 @@ class qVision:
 
 
 
+    def transformToBirdsEyeView(self, img):
+        img_size = (img.shape[1], img.shape[0])
+
+
+        src = np.float32(
+            [[(img_size[0] / 2) - 55, img_size[1] / 2 + 100],
+            [((img_size[0] / 6) - 10), img_size[1]],
+            [(img_size[0] * 5 / 6) + 60, img_size[1]],
+            [(img_size[0] / 2 + 55), img_size[1] / 2 + 100]])
+
+        dst = np.float32(
+            [[(img_size[0] / 4), 0],
+            [(img_size[0] / 4), img_size[1]],
+            [(img_size[0] * 3 / 4), img_size[1]],
+            [(img_size[0] * 3 / 4), 0]])
+
+        M = cv2.getPerspectiveTransform(src, dst)
+
+        #TODO: check if img_size stays the same
+        img_warped = cv2.warpPerspective(img, M, img_size)
+
+        return img_warped
+
+
 
 def DBG_CompareImages(img1, img2, title1, title2, cmap2=None, save_to_file=''):
     import matplotlib.pyplot as plt
     import matplotlib.image as mpimg
+
+    img1 = cv2.cvtColor(img1, cv2.COLOR_BGR2RGB)
+
+    if 'gray' != cmap2:
+        img2 = cv2.cvtColor(img2, cv2.COLOR_BGR2RGB)
+
 
     f, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 6))
     f.tight_layout()
@@ -194,7 +224,7 @@ def DBG_CompareImages(img1, img2, title1, title2, cmap2=None, save_to_file=''):
     ax2.set_title(title2, fontsize=30)
     plt.subplots_adjust(left=0., right=1, top=0.9, bottom=0.)
     if '' != save_to_file: 
-        plt.savefig(output_dir+save_to_file)
+        plt.savefig(save_to_file)
     plt.show()
 
 
@@ -232,8 +262,7 @@ def main():
     for img_loc in images_loc:
         img_bgr = cv2.imread(img_loc)
 
-        img_rgb = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2RGB)
-        img_procd = vision.processImg(img_rgb)
+        img_procd = vision.processImg(img_bgr)
 
         path, filename = os.path.split(img_loc)    
         file_loc = 'udacity/output_images/' + 'test_images/' + 'processed_'+ filename
@@ -245,15 +274,22 @@ def main():
 
     img_bgr = cv2.imread('udacity/test_images/test1.jpg')
 
+    img_procd = vision.processImg(img_bgr)
 
-    img_rgb = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2RGB)
-    img_procd = vision.processImg(img_rgb)
+    DBG_CompareImages(img_bgr, img_procd, 'Original Image', 'Thresholded Binary Image', cmap2='gray')
 
-    DBG_CompareImages(img_rgb, img_procd, 'Original Image', 'Thresholded Binary Image', cmap2='gray')
+    from util_camera import qCamera
+    camera = qCamera()
 
+    camera.calibrateSamples('udacity/camera_cal/')
         
+    img_distorted = cv2.imread('udacity/test_images/straight_lines1.jpg')
+    img_undist = camera.undistortImg(img_distorted)
+    img_undist_birdview = vision.transformToBirdsEyeView(img_undist)
 
-# test image: /udacity/test_images/test4.jpg
+
+    DBG_CompareImages(img_distorted, img_undist_birdview, 'Original Image', "Bird's Eye view Image",save_to_file='udacity/output_images/persp_birds_eye_view.jpg')
+
 
 
 if __name__ == "__main__": 

@@ -74,7 +74,9 @@ class qCamera:
         # img = cv2.imread(file_loc)
 
         #TODO: Check if mtx is initialized
+        assert(None  !=  img_bgr)
         img_undst = cv2.undistort(img_bgr, self.mtx, self.dist, None, self.mtx)
+ 
 
         return img_undst
 
