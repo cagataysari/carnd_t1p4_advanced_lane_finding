@@ -69,12 +69,12 @@ class qCamera:
         return len(imgpoints)
 
 
-    def undistortImg(self, img):
+    def undistortImg(self, img_bgr):
 
         # img = cv2.imread(file_loc)
 
         #TODO: Check if mtx is initialized
-        img_undst = cv2.undistort(img, self.mtx, self.dist, None, self.mtx)
+        img_undst = cv2.undistort(img_bgr, self.mtx, self.dist, None, self.mtx)
 
         return img_undst
 
@@ -92,11 +92,13 @@ def main():
     #TODO: find out if the more chass image calibrated, the better calibration it gets?
     print('Number of images calibrated: ' , num_calibr)
 
-    img = cv2.imread('udacity/camera_cal/calibration3.jpg')
-    img_distorted = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)    
+    img_distorted = cv2.imread('udacity/camera_cal/calibration3.jpg')
     img_undist = camera.undistortImg(img_distorted)
 
 
+    # matplotlib requires RGB, while cv2 and qCamera uses BGR
+    img_distorted = cv2.cvtColor(img_distorted, cv2.COLOR_BGR2RGB)
+    img_undist = cv2.cvtColor(img_undist, cv2.COLOR_BGR2RGB)
 
     f, (ax1, ax2) = plt.subplots(1, 2, figsize=(24, 9))
     f.tight_layout()
@@ -112,9 +114,14 @@ def main():
 
 
 
-    img = cv2.imread('udacity/test_images/straight_lines1.jpg')
-    img_distorted = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    img_distorted = cv2.imread('udacity/test_images/straight_lines1.jpg')
     img_undist = camera.undistortImg(img_distorted)
+
+    # matplotlib requires RGB, while cv2 and qCamera uses BGR
+    img_distorted = cv2.cvtColor(img_distorted, cv2.COLOR_BGR2RGB)
+    img_undist = cv2.cvtColor(img_undist, cv2.COLOR_BGR2RGB)
+
+
     f, (ax1, ax2) = plt.subplots(1, 2, figsize=(24, 9))
     f.tight_layout()
     ax1.imshow(img_distorted)
