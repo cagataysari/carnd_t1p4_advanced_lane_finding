@@ -159,7 +159,7 @@ class qVision:
         hls_binary = hls_select(image_orig, thresh=(66, 255))
         # image[(hls_binary != 1)]  = 0
         # Run the function
-        mag_binary = mag_thresh(image_orig, sobel_kernel=3, thresh=(50, 120 ))
+        mag_binary = mag_thresh(image_orig, sobel_kernel=27, thresh=(50, 220 ))
 
         dir_binary = dir_threshold(image_orig, sobel_kernel=15, thresh=(np.pi*20.0/180.0, np.pi*80.0/180.0)) 
         # dir_binary = dir_threshold(image_orig2, sobel_kernel=15, thresh=(0.7, 1.2) ) # 40~80 degree
@@ -243,13 +243,13 @@ def main():
 
 
 
-    img_bgr = cv2.imread('udacity/test_images/test5.jpg')
+    img_bgr = cv2.imread('udacity/test_images/test1.jpg')
 
 
     img_rgb = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2RGB)
     img_procd = vision.processImg(img_rgb)
 
-    DBG_CompareImages(img_rgb, img_procd, 'Original Image', 'Processed Image', cmap2='gray')
+    DBG_CompareImages(img_rgb, img_procd, 'Original Image', 'Thresholded Binary Image', cmap2='gray')
 
         
 
