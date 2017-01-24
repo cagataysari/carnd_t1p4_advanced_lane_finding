@@ -184,7 +184,7 @@ class qVision:
     def transformToBirdsEyeView(self, img):
         img_size = (img.shape[1], img.shape[0])
 
-
+        
         src = np.float32(
             [[(img_size[0] / 2) - 55, img_size[1] / 2 + 100],
             [((img_size[0] / 6) - 10), img_size[1]],
@@ -278,6 +278,10 @@ def main():
 
     DBG_CompareImages(img_bgr, img_procd, 'Original Image', 'Thresholded Binary Image', cmap2='gray')
 
+
+    ##########################################
+    # Test for Birds Eye View Transformation
+    #########################################
     from util_camera import qCamera
     camera = qCamera()
 
@@ -288,7 +292,25 @@ def main():
     img_undist_birdview = vision.transformToBirdsEyeView(img_undist)
 
 
-    DBG_CompareImages(img_distorted, img_undist_birdview, 'Original Image', "Bird's Eye view Image",save_to_file='udacity/output_images/persp_birds_eye_view.jpg')
+    DBG_CompareImages(img_distorted, img_undist_birdview, 'Original Image', "Bird's Eye View Image",save_to_file='udacity/output_images/persp_birds_eye_view.jpg')
+
+
+    # test on thresholded images
+    sample_dir = 'udacity/output_images/test_images/'
+    images_loc = glob.glob(sample_dir+'/*.jpg')
+    for img_loc in images_loc:
+        img_bgr = cv2.imread(img_loc)
+
+        img_distorted = img_bgr
+        img_undist = camera.undistortImg(img_distorted)
+        img_undist_birdview = vision.transformToBirdsEyeView(img_undist)
+
+        path, filename = os.path.split(img_loc)    
+        file_loc = 'udacity/output_images/' + 'birds_eye_view/' + 'transformed_'+ filename
+        cv2.imwrite(file_loc, img_undist_birdview ) #Only 8-bit images can be saved using this function, so convert from (0.0, 1.0) to (0,255)
+        # cv2.imshow('Processed Image', img_procd)
+        # DBG_CompareImages(img_rgb, img_procd, 'Original Image', 'Processed Image', cmap2='gray')
+
 
 
 
