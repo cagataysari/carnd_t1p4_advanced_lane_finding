@@ -40,11 +40,11 @@ def findLinePositions(img_bgr):
         return (indexes[idx_sort[0]], indexes[idx_sort[1]])
 
 
-def findLinePixels(img, initial_x_center, window_width=60, window_height=20, search_step = 10, num_of_windows=2, debug=True):
+def findLinePixels(img, initial_x_center, window_width=100, window_height=20, search_step = 10, num_of_windows=2, debug=False):
     """find the line pixels
     
     Args:
-        img (TYPE): Description
+        img (TYPE): gray images
         starting_x_pos (TYPE): Description
         window_width (int, optional): Description
         window_height (int, optional): Description
@@ -52,15 +52,19 @@ def findLinePixels(img, initial_x_center, window_width=60, window_height=20, sea
         num_of_windows: search space consists a number of side-by-side windows
 
     Returns:
-        tuple of list: a list of x positions, and a list of y positions.
+        tuple of list: list of (x, y) coorinates of line pixels.
     """
     img_height = img.shape[0] # image height
     img_width = img.shape[1]
 
+    row_col_index_map = np.mgrid[0:img_height,0:img_width]
+    x_corrodinates_map = row_col_index_map[1]
+    y_corrodinates_map = row_col_index_map[0]
+    np_x_cooridinates = np.array([])
+    np_y_cooridinates = np.array([])
 
 
-
-    y_start_range = range(img_height, int(img_height/2), -window_height) #scan bottom half; y_top ==0
+    y_start_range = range(img_height, 0, -window_height) #scan bottom half; y_top ==0
 
     for y_start in y_start_range:
 
@@ -89,54 +93,108 @@ def findLinePixels(img, initial_x_center, window_width=60, window_height=20, sea
 
             ls_btm_left_pos.append( (btm_left_row_idx,btm_left_col_idx))
 
+            if btm_left_row_idx-window_height < 0:
+                window_height = btm_left_row_idx # if the last layer at the top of image does not have the height to fit the window
+
             img_window = img[  (btm_left_row_idx-window_height):btm_left_row_idx , 
                                 btm_left_col_idx:(btm_left_col_idx+window_width)]
 
             ls_window_sum.append(np.sum(img_window)) # sum up the numbers of valid line pixels 
-            if debug:
-                print('btm_left_x =', btm_left_x)
-                print('btm_left_y =', btm_left_y)
-                print('img_window : ', np.sum(img_window))
+            # if debug:
+            #     print('btm_left_x =', btm_left_x)
+            #     print('btm_left_y =', btm_left_y)
+            #     print('img_window : ', np.sum(img_window))
 
-                plt.imshow(img_window,'gray')
-                plt.show()
+            #     plt.imshow(img_window,'gray')
+            #     plt.show()
 
         #evaluate after the search
         idx_search = np.argsort(ls_window_sum) [::-1] #reverse to have decending sort
 
         btm_left_row_idx, btm_left_col_idx  = ls_btm_left_pos[idx_search[0]]
 
-        img_window = img[  (btm_left_row_idx-window_height):btm_left_row_idx , 
-                            btm_left_col_idx:(btm_left_col_idx+window_width)]
+
+        initial_x_center = btm_left_col_idx + int(window_width/2) # for the next search along y-axis
+
+        binary_map_line  = np.zeros_like(img)
+        binary_map_line[(btm_left_row_idx-window_height):btm_left_row_idx , 
+                            btm_left_col_idx:(btm_left_col_idx+window_width)] =  img[  (btm_left_row_idx-window_height):btm_left_row_idx , 
+                                                                                    btm_left_col_idx:(btm_left_col_idx+window_width)]
+                            
+        x_val  = x_corrodinates_map[binary_map_line==1]
+
+        y_val  = y_corrodinates_map[binary_map_line==1]
 
 
-        initial_x_center = btm_left_col_idx + int(window_width/2)
+        np_x_cooridinates = np.hstack((np_x_cooridinates, x_val))
+        np_y_cooridinates = np.hstack((np_y_cooridinates, y_val))
 
         if debug:
+            print('Search result on the lane line mark:')
+            print('x_val :', x_val)
+            print('y_val :', y_val)
             print('line is at '+ str(idx_search[0]+1) + 'th block!!!')
             print('ls_btm_left_pos: ' ,ls_btm_left_pos)
-            print('left_right_pos found: ', ls_btm_left_pos[idx_search[0]] )
+            print('btm_left_pos found: ', ls_btm_left_pos[idx_search[0]] )
 
-            plt.imshow(img_window,'gray')
-            plt.title(' the line center found')
+
+            img_xy = np.zeros_like(img)
+
+            for x,y in zip(np_x_cooridinates, np_y_cooridinates):  
+                img_xy[y,x ] = 1
+
+
+            plt.imshow(img_xy,'gray')
+            # plt.imshow(binary_map_line,'gray')
+
+            plt.title('The line center found')
             plt.show()
 
 
+    # return (x, y) coorinates of line pixels
 
-    return ([],[])
+    return (np_x_cooridinates, np_y_cooridinates)
 
-def findLane(img_bgr):
+def findLaneInGrayImg(img_gray):
 
-    x_left, x_right = findLinePositions(img_bgr)
+    x_left, x_right = findLinePositions(img_gray)
 
-    print('left line: ', x_left )
-    print('right line: ',  x_right  )
-
-
-    ls_left_x, ls_left_y = findLinePixels(img_bgr, x_left)
+    print('left line searching point: ', x_left )
+    print('right line searching point: ',  x_right  )
 
 
-    return img_bgr
+    np_left_x, np_left_y = findLinePixels(img_gray, x_left, debug=True)
+
+    img_gray_3ch = np.dstack([img_gray, img_gray, img_gray])
+
+    img_gray_3ch = np.zeros_like(img_gray_3ch)
+    for x,y in zip(np_left_x, np_left_y):  
+        row = y
+        col = x
+        img_gray_3ch[row,col] = [255,0,0]
+
+    implot=plt.imshow(img_gray_3ch)
+    # plt.scatter(np_left_x.tolist(), np_left_y.tolist(),  c='r', s=40)
+    # plt.plot([1,2,3,4], [1,4,9,16], 'ro')
+    plt.title('left line pixels')
+    plt.show()
+
+    #right line
+    np_left_x, np_left_y = findLinePixels(img_gray, x_right)
+
+    img_gray_3ch = np.dstack([img_gray, img_gray, img_gray])
+
+    for x,y in zip(np_left_x, np_left_y):  
+        img_gray_3ch[y,x ] = [255,0,0]
+
+    implot=plt.imshow(img_gray_3ch)
+    # plt.scatter(np_left_x.tolist(), np_left_y.tolist(),  c='r', s=40)
+    # plt.plot([1,2,3,4], [1,4,9,16], 'ro')
+    plt.title('right line pixels')
+    plt.show()
+
+
+    return img_gray
 
 
 
@@ -147,7 +205,7 @@ img_bgr = cv2.imread('udacity/output_images/birds_eye_view/transformed_processed
 plt.imshow(img_bgr,'gray')
 plt.show()
 print('img_bgr shape', img_bgr.shape)
-img_lines = findLane(img_bgr)
+img_lines = findLaneInGrayImg(img_bgr)
 
 # cv2.imshow('Two Lines:', img_bgr)
 # cv2.waitKey()
