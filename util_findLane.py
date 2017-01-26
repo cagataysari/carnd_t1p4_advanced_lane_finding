@@ -24,14 +24,6 @@ def findLinePositions(img_bgr):
     # sort the peaks
     idx_sort = np.argsort( histogram[indexes] ) [::-1]
 
-
-    
-
-    # x= np.linspace(0, len(histogram)-1, len(histogram))
-    # pplot(x, histogram, indexes)
-    # plt.title('First estimate')
-    # plt.show()
-
     
     if len(indexes) < 2:
         # lane is not found
@@ -97,13 +89,7 @@ def findLinePixels(img, initial_x_center, window_width=100, window_height=20, se
                                 btm_left_col_idx:(btm_left_col_idx+window_width)]
 
             ls_window_sum.append(np.sum(img_window)) # sum up the numbers of valid line pixels 
-            # if debug:
-            #     print('btm_left_x =', btm_left_x)
-            #     print('btm_left_y =', btm_left_y)
-            #     print('img_window : ', np.sum(img_window))
 
-            #     plt.imshow(img_window,'gray')
-            #     plt.show()
 
         #evaluate after the search
         idx_search = np.argsort(ls_window_sum) [::-1] #reverse to have decending sort
@@ -120,9 +106,6 @@ def findLinePixels(img, initial_x_center, window_width=100, window_height=20, se
                             btm_left_col_idx:(btm_left_col_idx+window_width)] =  img[  (btm_left_row_idx-window_height):btm_left_row_idx , 
                                                                                     btm_left_col_idx:(btm_left_col_idx+window_width)]
                             
-        # x_val  = x_corrodinates_map[binary_map_line==1]
-
-        # y_val  = y_corrodinates_map[binary_map_line==1]
 
         coor_xy = cv2.findNonZero(binary_map_line)
 
@@ -152,13 +135,11 @@ def findLinePixels(img, initial_x_center, window_width=100, window_height=20, se
 
 
             plt.imshow(img_xy,'gray')
-            # plt.imshow(binary_map_line,'gray')
 
             plt.title('The line center found')
             plt.show()
 
 
-    # return (x, y) coorinates of line pixels
 
     return (np_x_cooridinates, np_y_cooridinates)
 
@@ -280,8 +261,7 @@ def main():
                         left_line.np_fitx, right_line.np_fitx )
 
 
-# cv2.imshow('Two Lines:', img_bgr)
-# cv2.waitKey()
+
 if __name__ == "__main__": 
     import time
     from datetime import timedelta
