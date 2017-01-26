@@ -240,7 +240,7 @@ class qLine:
         self.np_y = np_y
         self.np_fitx = np_fitx
         self.coef_fitx = coef_fitx
-    def getCurvatureInMeters(self):
+    def getCurvatureRadiusInMeters(self):
         """Calculate curvature
            based on Udacity course material
         
@@ -279,11 +279,11 @@ def main():
     plt.show()
     print('img_gray shape', img_gray.shape)
     
-    left_line, right_line = findLaneLines(img_gray, debug=True)
+    left_line, right_line = findLaneLines(img_gray, debug=False)
 
 
-    print('Left Lane Curvature: ', left_line.getCurvatureInMeters())
-    print('Rgiht Lane Curvature: ', right_line.getCurvatureInMeters())
+    print('Left Lane Curvature: ', left_line.getCurvatureRadiusInMeters())
+    print('Rgiht Lane Curvature: ', right_line.getCurvatureRadiusInMeters())
 
     visualizeDetectedLane(left_line.np_x, left_line.np_y, right_line.np_x, right_line.np_y, 
                         left_line.np_fitx, right_line.np_fitx )
