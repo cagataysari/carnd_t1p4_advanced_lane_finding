@@ -162,7 +162,7 @@ def findLinePixels(img, initial_x_center, window_width=100, window_height=20, se
 
     return (np_x_cooridinates, np_y_cooridinates)
 
-def findLaneInGrayImg(img_gray, debug=True):
+def findLaneInGrayImg(img_gray, debug=False):
 
     x_left, x_right = findLinePositions(img_gray)
 
@@ -205,7 +205,7 @@ def findLaneInGrayImg(img_gray, debug=True):
     return np_left_x, np_left_y, np_right_x, np_right_y
 
 
-def fitLaneLines(np_x_val_left, np_y_val_left, np_x_val_right, np_y_val_right):
+def computeLaneLines(np_x_val_left, np_y_val_left, np_x_val_right, np_y_val_right):
     """compute lane lines
     
     Args:
@@ -245,18 +245,51 @@ def visualizeDetectedLane(np_x_val_left, np_y_val_left, np_x_val_right, np_y_val
 
     plt.show()   
 
-img_bgr = cv2.imread('udacity/output_images/birds_eye_view/transformed_processed_test1.jpg', cv2.IMREAD_GRAYSCALE)
 
-plt.imshow(img_bgr,'gray')
-plt.show()
-print('img_bgr shape', img_bgr.shape)
-np_left_x, np_left_y, np_right_x, np_right_y  = findLaneInGrayImg(img_bgr)
+class qLine:
+    def __init__(self, np_x, np_y,  coef_fitx, np_fitx,):
+        self.np_x = np_x
+        self.np_y = np_y
+        self.np_fitx = np_fitx
+        self.coef_fitx = coef_fitx
 
 
-left_fit, left_fitx, right_fit, right_fitx = fitLaneLines(np_left_x, np_left_y, np_right_x, np_right_y)
 
-visualizeDetectedLane(np_left_x, np_left_y, np_right_x, np_right_y,left_fitx, right_fitx )
+def findLaneLines(img_gray, debug=False):
+    np_left_x, np_left_y, np_right_x, np_right_y  = findLaneInGrayImg(img_gray, debug=debug)
+
+    left_fit, left_fitx, right_fit, right_fitx = computeLaneLines(np_left_x, np_left_y, np_right_x, np_right_y)
+
+
+    left_line = qLine(np_left_x, np_left_y, left_fit, left_fitx)
+    right_line = qLine(np_right_x, np_right_y, right_fit, right_fitx)
+
+    return left_line, right_line
+
+def main():
+    img_gray = cv2.imread('udacity/output_images/birds_eye_view/transformed_processed_test1.jpg', cv2.IMREAD_GRAYSCALE)
+
+    plt.imshow(img_gray,'gray')
+    plt.show()
+    print('img_gray shape', img_gray.shape)
+    
+    left_line, right_line = findLaneLines(img_gray, debug=True)
+
+
+    visualizeDetectedLane(left_line.np_x, left_line.np_y, right_line.np_x, right_line.np_y, 
+                        left_line.np_fitx, right_line.np_fitx )
 
 
 # cv2.imshow('Two Lines:', img_bgr)
 # cv2.waitKey()
+if __name__ == "__main__": 
+    import time
+    from datetime import timedelta
+
+    time_start = time.time()
+
+    main()
+
+    time_end = time.time()
+    print("Time usage: " + str(timedelta(seconds=int( time_end - time_start))))
+    
