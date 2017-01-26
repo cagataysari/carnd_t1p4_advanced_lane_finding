@@ -162,57 +162,101 @@ def findLinePixels(img, initial_x_center, window_width=100, window_height=20, se
 
     return (np_x_cooridinates, np_y_cooridinates)
 
-def findLaneInGrayImg(img_gray):
+def findLaneInGrayImg(img_gray, debug=True):
 
     x_left, x_right = findLinePositions(img_gray)
 
-    print('left line searching point: ', x_left )
-    print('right line searching point: ',  x_right  )
 
 
     np_left_x, np_left_y = findLinePixels(img_gray, x_left, debug=False)
 
-    img_gray_3ch = np.dstack([img_gray, img_gray, img_gray])
 
-    img_gray_3ch = np.zeros_like(img_gray_3ch)
-    for x,y in zip(np_left_x, np_left_y):  
-        row = y
-        col = x
-        img_gray_3ch[row,col] = [255,0,0]
-
-    implot=plt.imshow(img_gray_3ch)
-    # plt.scatter(np_left_x.tolist(), np_left_y.tolist(),  c='r', s=40)
-    # plt.plot([1,2,3,4], [1,4,9,16], 'ro')
-    plt.title('left line pixels')
-    plt.show()
 
     #right line
-    np_left_x, np_left_y = findLinePixels(img_gray, x_right)
-
-    img_gray_3ch = np.dstack([img_gray, img_gray, img_gray])
-
-    for x,y in zip(np_left_x, np_left_y):  
-        img_gray_3ch[y,x ] = [255,0,0]
-
-    implot=plt.imshow(img_gray_3ch)
-    # plt.scatter(np_left_x.tolist(), np_left_y.tolist(),  c='r', s=40)
-    # plt.plot([1,2,3,4], [1,4,9,16], 'ro')
-    plt.title('right line pixels')
-    plt.show()
+    np_right_x, np_right_y = findLinePixels(img_gray, x_right)
 
 
-    return img_gray
+    if True == debug: 
+        img_gray_3ch = np.dstack([img_gray, img_gray, img_gray])
+
+        img_gray_3ch = np.zeros_like(img_gray_3ch)
+        for x,y in zip(np_left_x, np_left_y):  
+            row = y
+            col = x
+            img_gray_3ch[row,col] = [255,0,0]
+
+        implot=plt.imshow(img_gray_3ch)
+
+        plt.title('findLaneInGrayImg() - left line pixels')
+        plt.show()
+
+        img_gray_3ch = np.dstack([img_gray, img_gray, img_gray])
+
+        for x,y in zip(np_right_x, np_right_y):  
+            img_gray_3ch[y,x ] = [255,0,0]
+
+        implot=plt.imshow(img_gray_3ch)
+        # plt.scatter(np_left_x.tolist(), np_left_y.tolist(),  c='r', s=40)
+        # plt.plot([1,2,3,4], [1,4,9,16], 'ro')
+        plt.title('findLaneInGrayImg() - right line pixels')
+        plt.show()
+
+
+    return np_left_x, np_left_y, np_right_x, np_right_y
+
+
+def fitLaneLines(np_x_val_left, np_y_val_left, np_x_val_right, np_y_val_right):
+    """compute lane lines
+    
+    Args:
+        np_x_val_left (TYPE): Description
+        np_y_val_left (TYPE): Description
+        np_x_val_right (TYPE): Description
+        np_y_val_right (TYPE): Description
+    
+    Returns:
+        TYPE: Description
+    """
+    yvals = np_y_val_left
+    left_fit = np.polyfit(yvals, np_x_val_left, 2)
+    left_fitx = left_fit[0]*yvals**2 + left_fit[1]*yvals + left_fit[2]
+
+    yvals = np_y_val_right
+    right_fit = np.polyfit(yvals, np_x_val_right, 2)
+    right_fitx = right_fit[0]*yvals**2 + right_fit[1]*yvals + right_fit[2]
+
+    return left_fit, left_fitx, right_fit, right_fitx
+
+def visualizeDetectedLane(np_x_val_left, np_y_val_left, np_x_val_right, np_y_val_right, left_fitx, right_fitx):
+    leftx = np_x_val_left
+    rightx = np_x_val_right
 
 
 
+    # Plot up the fake data
+    plt.plot(leftx, np_y_val_left, 'o', color='red')
+    plt.plot(rightx, np_y_val_right, 'o', color='blue')
+    plt.xlim(0, 1280)
+    plt.ylim(0, 720)
+    plt.plot(left_fitx, np_y_val_left, color='green', linewidth=3)
+    plt.plot(right_fitx, np_y_val_right, color='green', linewidth=3)
+    plt.gca().invert_yaxis() # to visualize as we do the images
+    plt.title('visualizeDetectedLane() - polyfit result')
 
+    plt.show()   
 
 img_bgr = cv2.imread('udacity/output_images/birds_eye_view/transformed_processed_test1.jpg', cv2.IMREAD_GRAYSCALE)
 
 plt.imshow(img_bgr,'gray')
 plt.show()
 print('img_bgr shape', img_bgr.shape)
-img_lines = findLaneInGrayImg(img_bgr)
+np_left_x, np_left_y, np_right_x, np_right_y  = findLaneInGrayImg(img_bgr)
+
+
+left_fit, left_fitx, right_fit, right_fitx = fitLaneLines(np_left_x, np_left_y, np_right_x, np_right_y)
+
+visualizeDetectedLane(np_left_x, np_left_y, np_right_x, np_right_y,left_fitx, right_fitx )
+
 
 # cv2.imshow('Two Lines:', img_bgr)
 # cv2.waitKey()
