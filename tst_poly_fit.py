@@ -57,9 +57,6 @@ def findLinePixels(img, initial_x_center, window_width=100, window_height=20, se
     img_height = img.shape[0] # image height
     img_width = img.shape[1]
 
-    row_col_index_map = np.mgrid[0:img_height,0:img_width]
-    x_corrodinates_map = row_col_index_map[1]
-    y_corrodinates_map = row_col_index_map[0]
     np_x_cooridinates = np.array([])
     np_y_cooridinates = np.array([])
 
@@ -111,19 +108,29 @@ def findLinePixels(img, initial_x_center, window_width=100, window_height=20, se
         #evaluate after the search
         idx_search = np.argsort(ls_window_sum) [::-1] #reverse to have decending sort
 
+        
         btm_left_row_idx, btm_left_col_idx  = ls_btm_left_pos[idx_search[0]]
 
 
-        initial_x_center = btm_left_col_idx + int(window_width/2) # for the next search along y-axis
+        if ls_window_sum[idx_search[0]] > 10: # only update the initial search position if we actually found pixels
+            initial_x_center = btm_left_col_idx + int(window_width/2) # for the next search along y-axis
 
         binary_map_line  = np.zeros_like(img)
         binary_map_line[(btm_left_row_idx-window_height):btm_left_row_idx , 
                             btm_left_col_idx:(btm_left_col_idx+window_width)] =  img[  (btm_left_row_idx-window_height):btm_left_row_idx , 
                                                                                     btm_left_col_idx:(btm_left_col_idx+window_width)]
                             
-        x_val  = x_corrodinates_map[binary_map_line==1]
+        # x_val  = x_corrodinates_map[binary_map_line==1]
 
-        y_val  = y_corrodinates_map[binary_map_line==1]
+        # y_val  = y_corrodinates_map[binary_map_line==1]
+
+        coor_xy = cv2.findNonZero(binary_map_line)
+
+        if coor_xy != None:
+            x_val = coor_xy[:,:,0]
+            x_val = x_val.reshape(-1)
+            y_val = coor_xy[:,:,1]
+            y_val = y_val.reshape(-1)
 
 
         np_x_cooridinates = np.hstack((np_x_cooridinates, x_val))
@@ -163,7 +170,7 @@ def findLaneInGrayImg(img_gray):
     print('right line searching point: ',  x_right  )
 
 
-    np_left_x, np_left_y = findLinePixels(img_gray, x_left, debug=True)
+    np_left_x, np_left_y = findLinePixels(img_gray, x_left, debug=False)
 
     img_gray_3ch = np.dstack([img_gray, img_gray, img_gray])
 
