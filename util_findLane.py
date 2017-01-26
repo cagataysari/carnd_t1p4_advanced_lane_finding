@@ -143,8 +143,15 @@ def findLinePixels(img, initial_x_center, window_width=100, window_height=20, se
 
     return (np_x_cooridinates, np_y_cooridinates)
 
-def findLaneInGrayImg(img_gray, debug=False):
-
+def findLanePixels(img_gray, debug=False):
+    """find Lane Line pixels.    
+    Args:
+        img_gray (TYPE): Description
+        debug (bool, optional): Description
+    
+    Returns:
+        TYPE: position of pixcels respectively in left and right lane marks
+    """
     x_left, x_right = findLinePositions(img_gray)
 
 
@@ -168,7 +175,7 @@ def findLaneInGrayImg(img_gray, debug=False):
 
         implot=plt.imshow(img_gray_3ch)
 
-        plt.title('findLaneInGrayImg() - left line pixels')
+        plt.title('findLanePixels() - left line pixels')
         plt.show()
 
         img_gray_3ch = np.dstack([img_gray, img_gray, img_gray])
@@ -179,7 +186,7 @@ def findLaneInGrayImg(img_gray, debug=False):
         implot=plt.imshow(img_gray_3ch)
         # plt.scatter(np_left_x.tolist(), np_left_y.tolist(),  c='r', s=40)
         # plt.plot([1,2,3,4], [1,4,9,16], 'ro')
-        plt.title('findLaneInGrayImg() - right line pixels')
+        plt.title('findLanePixels() - right line pixels')
         plt.show()
 
 
@@ -237,7 +244,7 @@ class qLine:
 
 
 def findLaneLines(img_gray, debug=False):
-    np_left_x, np_left_y, np_right_x, np_right_y  = findLaneInGrayImg(img_gray, debug=debug)
+    np_left_x, np_left_y, np_right_x, np_right_y  = findLanePixels(img_gray, debug=debug)
 
     left_fit, left_fitx, right_fit, right_fitx = computeLaneLines(np_left_x, np_left_y, np_right_x, np_right_y)
 
