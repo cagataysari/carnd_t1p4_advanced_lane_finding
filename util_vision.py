@@ -1,6 +1,8 @@
 import numpy as np
+from numpy.linalg import inv
 import cv2
 from util_line import qLine
+from util_findLane import findLaneLines
 
 def extractSatuCh(img):
 
@@ -217,33 +219,34 @@ class qVision:
 
         return img_warped
 
-        def projectLines(img_undist, left_line, right_line):
-            #based on Udacity course material
+    def imaginLines(self, img_undist, left_line, right_line):
+        #based on Udacity course material
 
-            # Create an image to draw the lines on
-            warp_zero = np.zeros_like(img_undist).astype(np.uint8)
-            color_warp = np.dstack((warp_zero, warp_zero, warp_zero))
+        # Create an image to draw the lines on
+        warp_zero = np.zeros_like(img_undist).astype(np.uint8)
+        color_warp = np.dstack((warp_zero, warp_zero, warp_zero))
 
-            # Recast the x and y points into usable format for cv2.fillPoly()
-            left_fitx = left_line.getFittedX()
-            yvals = left_line.getPixelsY()
-            pts_left = np.array([np.transpose(np.vstack([left_fitx, yvals]))])
+        # Recast the x and y points into usable format for cv2.fillPoly()
+        left_fitx = left_line.getFittedX()
+        yvals = left_line.getPixelsY()
+        pts_left = np.array([np.transpose(np.vstack([left_fitx, yvals]))])
 
-            right_fitx = right_line.getFittedX()
-            yvals = right_line.getPixelsY()
-            pts_right = np.array([np.flipud(np.transpose(np.vstack([right_fitx, yvals])))])
-            pts = np.hstack((pts_left, pts_right))
+        right_fitx = right_line.getFittedX()
+        yvals = right_line.getPixelsY()
+        pts_right = np.array([np.flipud(np.transpose(np.vstack([right_fitx, yvals])))])
+        pts = np.hstack((pts_left, pts_right))
 
-            # Draw the lane onto the warped blank image
-            cv2.fillPoly(color_warp, np.int_([pts]), (0,255, 0))
+        # Draw the lane onto the warped blank image
+        cv2.fillPoly(color_warp, np.int_([pts]), (0,255, 0))
 
-            # Warp the blank back to original image space using inverse perspective matrix (Minv)
-            newwarp = cv2.warpPerspective(color_warp, Minv, (img_undist.shape[1], img_undist.shape[0])) 
-            # Combine the result with the original image
-            result = cv2.addWeighted(img_undist, 1, newwarp, 0.3, 0)
-            # plt.imshow(result)
+        # Warp the blank back to original image space using inverse perspective matrix (Minv)
+        Minv = inv(self.M)
+        newwarp = cv2.warpPerspective(color_warp, Minv, (img_undist.shape[1], img_undist.shape[0])) 
+        # Combine the result with the original image
+        result = cv2.addWeighted(img_undist, 1, newwarp, 0.3, 0)
+        # plt.imshow(result)
 
-            return result
+        return result
 
 def DBG_CompareImages(img1, img2, title1, title2, cmap2=None, save_to_file=''):
     import matplotlib.pyplot as plt
@@ -334,6 +337,25 @@ def main():
     DBG_CompareImages(img_distorted, img_undist_birdview, 'Original Image', "Bird's Eye View Image",save_to_file='udacity/output_images/persp_birds_eye_view.jpg')
 
 
+    ##########################################
+    # Test on Lane Finding
+    ##########################################
+    img_undist_procd = vision.processImg(img_undist)
+    
+    img_undist_procd_birdview = vision.transformToBirdsEyeView(img_undist_procd)
+    # cv2.imshow('img_undist_procd_birdview',img_undist_procd_birdview)
+    # cv2.waitKey()
+    left_line, right_line = findLaneLines(img_undist_procd_birdview)
+
+    img_imagined_lines = vision.imaginLines(img_undist, left_line, right_line)
+
+    DBG_CompareImages(img_undist, img_imagined_lines, 'Undistorted Image', "Reimagined Lane")
+
+
+
+    ##########################################
+    # Test for Birds Eye View Transformation on black and white thresholded images
+    ##########################################
     # test on thresholded images
     sample_dir = 'udacity/output_images/test_images/'
     images_loc = glob.glob(sample_dir+'/*.jpg')
@@ -349,6 +371,8 @@ def main():
         cv2.imwrite(file_loc, img_undist_birdview ) #Only 8-bit images can be saved using this function, so convert from (0.0, 1.0) to (0,255)
         # cv2.imshow('Processed Image', img_procd)
         # DBG_CompareImages(img_rgb, img_procd, 'Original Image', 'Processed Image', cmap2='gray')
+
+
 
 
 

@@ -107,15 +107,18 @@ def findLinePixels(img, initial_x_center, window_width=100, window_height=20, se
         binary_map_line[(btm_left_row_idx-window_height):btm_left_row_idx , 
                             btm_left_col_idx:(btm_left_col_idx+window_width)] =  img[  (btm_left_row_idx-window_height):btm_left_row_idx , 
                                                                                     btm_left_col_idx:(btm_left_col_idx+window_width)]
-                            
-
-        coor_xy = cv2.findNonZero(binary_map_line)
-
-        if coor_xy != None:
-            x_val = coor_xy[:,:,0]
-            x_val = x_val.reshape(-1)
-            y_val = coor_xy[:,:,1]
-            y_val = y_val.reshape(-1)
+        # print('np.max(binary_map_line): ', np.max(binary_map_line))
+        if 1 ==np.max(binary_map_line) :  #if passed in a binary map, cv2.findNonZero requirs a single-channeled 8-bit image
+            im = np.array(binary_map_line * 255, dtype = np.uint8)
+            binary_map_line = cv2.adaptiveThreshold(im, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 3, 0)                                                                           
+        # coor_xy = cv2.findNonZero(binary_map_line)
+        # if coor_xy != None:
+        #     x_val = coor_xy[:,:,0]
+        #     x_val = x_val.reshape(-1)
+        #     y_val = coor_xy[:,:,1]
+        #     y_val = y_val.reshape(-1)
+        y_val, x_val = np.nonzero(binary_map_line) # return row,col
+        # print('coor_xy shape: ', coor_xy.shape)
 
 
         np_x_cooridinates = np.hstack((np_x_cooridinates, x_val))
