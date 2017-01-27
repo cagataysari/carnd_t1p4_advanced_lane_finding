@@ -272,8 +272,10 @@ def main():
     print('Left Lane Curvature: ', left_line.getCurvatureRadiusInMeters())
     print('Rgiht Lane Curvature: ', right_line.getCurvatureRadiusInMeters())
 
-    visualizeDetectedLane(left_line.np_x, left_line.np_y, right_line.np_x, right_line.np_y, 
-                        left_line.np_fitx, right_line.np_fitx )
+
+    visualizeDetectedLane(  left_line.getPixelsX(),  left_line.getPixelsY(), 
+                            right_line.getPixelsX(), right_line.getPixelsY(), 
+                            left_line.getFittedX(), right_line.getFittedX() )
 
 
     # test on thresholded images
@@ -288,9 +290,10 @@ def main():
 
         file_loc = 'udacity/output_images/' + 'lane_computed/' + 'computed_'+ filename
 
-        visualizeDetectedLane(left_line.np_x, left_line.np_y, right_line.np_x, right_line.np_y, 
-                        left_line.np_fitx, right_line.np_fitx ,
-                        file_to_save=file_loc)
+        visualizeDetectedLane(  left_line.getPixelsX(),  left_line.getPixelsY(), 
+                                right_line.getPixelsX(), right_line.getPixelsY(), 
+                                left_line.getFittedX(), right_line.getFittedX() ,
+                                file_to_save=file_loc   )
 
 
 

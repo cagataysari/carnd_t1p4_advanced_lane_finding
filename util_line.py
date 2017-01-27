@@ -1,13 +1,52 @@
 import numpy as np
 
+#to keep track of recent detections and to perform sanity checks.
 class qLine:
-    def __init__(self, np_x, np_y,  coef_fitx, np_fitx,):
+    def __init__(self, np_x, np_y,  np_fit_coef_x, np_fitx):
         self.np_x = np_x
         self.np_y = np_y
         self.np_fitx = np_fitx
-        self.coef_fitx = coef_fitx
+        self.np_fit_coef_x = np_fit_coef_x
+
+        # was the line detected in the last iteration?
+        self.detected = False  
+        # x values of the last n fits of the line
+        self.recent_xfitted = [] 
+        #average x values of the fitted line over the last n iterations
+        self.avgx = None     
+        #polynomial coefficients averaged over the last n iterations
+        self.avg_fit = None  
+        #polynomial coefficients for the most recent fit
+        self.current_fit = [np.array([False])]  
+        #radius of curvature of the line in some units
+        self.radius_of_curvature = None 
+        #distance in meters of vehicle center from the line
+        self.line_base_pos = None 
+        #difference in fit coefficients between last and new fits
+        self.diffs = np.array([0,0,0], dtype='float') 
+        #x values for detected line pixels
+        self.allx = None  
+        #y values for detected line pixels
+        self.ally = None
+
+    def getFittedX(self):
+        return self.np_fitx
 
 
+    def getFitXCoef(self):
+        return self.np_fit_coef_x
+
+    def getPixelsX(self):
+        return self.np_x
+        
+    def getPixelsY(self):
+        return self.np_y
+
+    # Checking that they have similar curvature
+    # Checking that they are separated by approximately the right distance horizontally
+    # Checking that they are roughly parallel
+    def update(self):
+        pass
 
 
     def getCurvatureRadiusInMeters(self):
