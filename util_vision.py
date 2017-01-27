@@ -280,7 +280,7 @@ def main():
 
 
 
-    img_bgr = cv2.imread('udacity/test_images/test1.jpg')
+    img_bgr = cv2.imread('udacity/test_images/test1.jpg' )
 
     img_procd = vision.processImg(img_bgr)
 
@@ -289,7 +289,7 @@ def main():
 
     ##########################################
     # Test for Birds Eye View Transformation
-    #########################################
+    ##########################################
     from util_camera import qCamera
     camera = qCamera()
 
@@ -307,7 +307,7 @@ def main():
     sample_dir = 'udacity/output_images/test_images/'
     images_loc = glob.glob(sample_dir+'/*.jpg')
     for img_loc in images_loc:
-        img_bgr = cv2.imread(img_loc)
+        img_bgr = cv2.imread(img_loc, cv2.IMREAD_GRAYSCALE)
 
         img_distorted = img_bgr
         img_undist = camera.undistortImg(img_distorted)
