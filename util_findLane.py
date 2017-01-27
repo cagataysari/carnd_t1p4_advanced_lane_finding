@@ -5,7 +5,6 @@ import peakutils
 from peakutils.plot import plot as pplot
 
 
-
 def findLinePositions(img_bgr):
     """find left and right lane edges 
     
@@ -51,7 +50,9 @@ def findLinePixels(img, initial_x_center, window_width=100, window_height=20, se
 
     np_x_cooridinates = np.array([])
     np_y_cooridinates = np.array([])
-
+    x_val = np.array([])
+    y_val = np.array([])
+    
 
     y_start_range = range(img_height, 0, -window_height) #scan bottom half; y_top ==0
 
@@ -215,7 +216,7 @@ def computeLaneLines(np_x_val_left, np_y_val_left, np_x_val_right, np_y_val_righ
 
     return left_fit, left_fitx, right_fit, right_fitx
 
-def visualizeDetectedLane(np_x_val_left, np_y_val_left, np_x_val_right, np_y_val_right, left_fitx, right_fitx):
+def visualizeDetectedLane(np_x_val_left, np_y_val_left, np_x_val_right, np_y_val_right, left_fitx, right_fitx, file_to_save = ''):
     leftx = np_x_val_left
     rightx = np_x_val_right
 
@@ -231,8 +232,15 @@ def visualizeDetectedLane(np_x_val_left, np_y_val_left, np_x_val_right, np_y_val
     plt.gca().invert_yaxis() # to visualize as we do the images
     plt.title('visualizeDetectedLane() - polyfit result')
 
-    plt.show()   
+    if '' == file_to_save:
+        plt.show()   
+    else:
+        import os 
+        path, filename = os.path.split(file_to_save)    
+        plt.title(filename)
+        plt.savefig(file_to_save)
 
+    plt.clf()
 
 class qLine:
     def __init__(self, np_x, np_y,  coef_fitx, np_fitx,):
@@ -273,6 +281,9 @@ def findLaneLines(img_gray, debug=False):
     return left_line, right_line
 
 def main():
+    import glob
+    import os 
+
     img_gray = cv2.imread('udacity/output_images/birds_eye_view/transformed_processed_test1.jpg', cv2.IMREAD_GRAYSCALE)
 
     plt.imshow(img_gray,'gray')
@@ -287,6 +298,23 @@ def main():
 
     visualizeDetectedLane(left_line.np_x, left_line.np_y, right_line.np_x, right_line.np_y, 
                         left_line.np_fitx, right_line.np_fitx )
+
+
+    # test on thresholded images
+    sample_dir = 'udacity/output_images/birds_eye_view/'
+    images_loc = glob.glob(sample_dir+'/*.jpg')
+    for img_loc in images_loc:
+        img_gray = cv2.imread(img_loc, cv2.IMREAD_GRAYSCALE)
+
+        left_line, right_line = findLaneLines(img_gray)
+
+        path, filename = os.path.split(img_loc)    
+
+        file_loc = 'udacity/output_images/' + 'lane_computed/' + 'computed_'+ filename
+
+        visualizeDetectedLane(left_line.np_x, left_line.np_y, right_line.np_x, right_line.np_y, 
+                        left_line.np_fitx, right_line.np_fitx ,
+                        file_to_save=file_loc)
 
 
 
