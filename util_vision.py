@@ -1,6 +1,6 @@
 import numpy as np
 import cv2
-
+from util_line import qLine
 
 def extractSatuCh(img):
 
@@ -148,7 +148,11 @@ def hls_select_s(img, thresh=(0, 255)):
 
 class qVision:
     def __init__(self):
-        pass
+
+
+
+        self.M = None
+
 
     def processImg(self, img_rgb, debug=False):
 
@@ -192,27 +196,54 @@ class qVision:
         """
         img_size = (img.shape[1], img.shape[0])
 
-        
-        src = np.float32(
-            [[(img_size[0] / 2) - 55, img_size[1] / 2 + 100],
-            [((img_size[0] / 6) - 10), img_size[1]],
-            [(img_size[0] * 5 / 6) + 60, img_size[1]],
-            [(img_size[0] / 2 + 55), img_size[1] / 2 + 100]])
+        # init M when the first image is fed in
+        if None == self.M:
+            src = np.float32(
+                [[(img_size[0] / 2) - 55, img_size[1] / 2 + 100],
+                [((img_size[0] / 6) - 10), img_size[1]],
+                [(img_size[0] * 5 / 6) + 60, img_size[1]],
+                [(img_size[0] / 2 + 55), img_size[1] / 2 + 100]])
 
-        dst = np.float32(
-            [[(img_size[0] / 4), 0],
-            [(img_size[0] / 4), img_size[1]],
-            [(img_size[0] * 3 / 4), img_size[1]],
-            [(img_size[0] * 3 / 4), 0]])
+            dst = np.float32(
+                [[(img_size[0] / 4), 0],
+                [(img_size[0] / 4), img_size[1]],
+                [(img_size[0] * 3 / 4), img_size[1]],
+                [(img_size[0] * 3 / 4), 0]])
 
-        M = cv2.getPerspectiveTransform(src, dst)
+            self.M = cv2.getPerspectiveTransform(src, dst)
 
         #TODO: check if img_size stays the same
-        img_warped = cv2.warpPerspective(img, M, img_size)
+        img_warped = cv2.warpPerspective(img, self.M, img_size)
 
         return img_warped
 
+        def projectLines(img_undist, left_line, right_line):
+            #based on Udacity course material
 
+            # Create an image to draw the lines on
+            warp_zero = np.zeros_like(img_undist).astype(np.uint8)
+            color_warp = np.dstack((warp_zero, warp_zero, warp_zero))
+
+            # Recast the x and y points into usable format for cv2.fillPoly()
+            left_fitx = left_line.getFittedX()
+            yvals = left_line.getPixelsY()
+            pts_left = np.array([np.transpose(np.vstack([left_fitx, yvals]))])
+
+            right_fitx = right_line.getFittedX()
+            yvals = right_line.getPixelsY()
+            pts_right = np.array([np.flipud(np.transpose(np.vstack([right_fitx, yvals])))])
+            pts = np.hstack((pts_left, pts_right))
+
+            # Draw the lane onto the warped blank image
+            cv2.fillPoly(color_warp, np.int_([pts]), (0,255, 0))
+
+            # Warp the blank back to original image space using inverse perspective matrix (Minv)
+            newwarp = cv2.warpPerspective(color_warp, Minv, (img_undist.shape[1], img_undist.shape[0])) 
+            # Combine the result with the original image
+            result = cv2.addWeighted(img_undist, 1, newwarp, 0.3, 0)
+            # plt.imshow(result)
+
+            return result
 
 def DBG_CompareImages(img1, img2, title1, title2, cmap2=None, save_to_file=''):
     import matplotlib.pyplot as plt
