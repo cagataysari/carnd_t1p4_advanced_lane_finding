@@ -220,6 +220,16 @@ class qVision:
         return img_warped
 
     def imaginLines(self, img_undist, left_line, right_line):
+        """ project lines on the the road
+        
+        Args:
+            img_undist (TYPE): undistorted image to project the lane on 
+            left_line (TYPE): Description
+            right_line (TYPE): Description
+        
+        Returns:
+            TYPE: Description
+        """
         #based on Udacity course material
 
         # Create an image to draw the lines on
@@ -236,8 +246,7 @@ class qVision:
         pts_right = np.array([np.flipud(np.transpose(np.vstack([right_fitx, yvals])))])
         pts = np.hstack((pts_left, pts_right))
 
-        print('color_warp shape: ', color_warp.shape)
-        print('pts shape: ', pts.shape)
+
         # Draw the lane onto the warped blank image
         cv2.fillPoly(color_warp, np.int_([pts]), (0,255, 0))
 
@@ -249,6 +258,28 @@ class qVision:
         # plt.imshow(result)
 
         return result
+
+    def hightlightLane(self, img_bgr):
+        """hightlight the current lane
+        
+        Args:
+            img_bgr (TYPE): an camera-undistorted road image 
+        
+        Returns:
+            TYPE: Description
+        """
+        img_bgr_procd = self.processImg(img_bgr)
+    
+        img_bgr_procd_birdview = self.transformToBirdsEyeView(img_bgr_procd)
+        # cv2.imshow('img_bgr_procd_birdview',img_bgr_procd_birdview)
+        # cv2.waitKey()
+        left_line, right_line = findLaneLines(img_bgr_procd_birdview)
+
+        img_imagined_lines = self.imaginLines(img_bgr, left_line, right_line)
+
+        return img_imagined_lines
+
+
 
 def DBG_CompareImages(img1, img2, title1, title2, cmap2=None, save_to_file=''):
     import matplotlib.pyplot as plt
@@ -270,6 +301,7 @@ def DBG_CompareImages(img1, img2, title1, title2, cmap2=None, save_to_file=''):
     if '' != save_to_file: 
         plt.savefig(save_to_file)
     plt.show()
+    plt.close()
 
 
 def DBG_CompareThreeGrayImages(img1, img2, img3, title1, title2, title3 ):
@@ -339,20 +371,6 @@ def main():
     DBG_CompareImages(img_distorted, img_undist_birdview, 'Original Image', "Bird's Eye View Image",save_to_file='udacity/output_images/persp_birds_eye_view.jpg')
 
 
-    ##########################################
-    # Test on Lane Finding
-    ##########################################
-    img_undist_procd = vision.processImg(img_undist)
-    
-    img_undist_procd_birdview = vision.transformToBirdsEyeView(img_undist_procd)
-    # cv2.imshow('img_undist_procd_birdview',img_undist_procd_birdview)
-    # cv2.waitKey()
-    left_line, right_line = findLaneLines(img_undist_procd_birdview)
-
-    img_imagined_lines = vision.imaginLines(img_undist, left_line, right_line)
-
-    DBG_CompareImages(img_undist, img_imagined_lines, 'Undistorted Image', "Reimagined Lane")
-
 
 
     ##########################################
@@ -361,14 +379,14 @@ def main():
     # test on thresholded images
     sample_dir = 'udacity/output_images/test_images/'
     images_loc = glob.glob(sample_dir+'/*.jpg')
-    for img_loc in images_loc:
-        img_bgr = cv2.imread(img_loc, cv2.IMREAD_GRAYSCALE)
+    for loc in images_loc:
+        bgr = cv2.imread(loc, cv2.IMREAD_GRAYSCALE)
 
-        img_distorted = img_bgr
-        img_undist = camera.undistortImg(img_distorted)
-        img_undist_birdview = vision.transformToBirdsEyeView(img_undist)
+        distorted = bgr
+        undist = camera.undistortImg(distorted)
+        undist_birdview = vision.transformToBirdsEyeView(undist)
 
-        path, filename = os.path.split(img_loc)    
+        path, filename = os.path.split(loc)    
         file_loc = 'udacity/output_images/' + 'birds_eye_view/' + 'transformed_'+ filename
         cv2.imwrite(file_loc, img_undist_birdview ) #Only 8-bit images can be saved using this function, so convert from (0.0, 1.0) to (0,255)
         # cv2.imshow('Processed Image', img_procd)
@@ -376,8 +394,26 @@ def main():
 
 
 
+    ##########################################
+    # Test on Lane Finding
+    ##########################################
 
+    img_lane_hightlighted = vision.hightlightLane(img_undist)
 
+    DBG_CompareImages(img_undist, img_lane_hightlighted, 'Undistorted Image', "Reimagined Lane")
+
+    sample_dir = 'udacity/test_images/'
+    images_loc = glob.glob(sample_dir+'*.jpg')
+
+    for loc in images_loc:
+        distorted = cv2.imread(loc)
+        undist = camera.undistortImg(distorted)
+
+        lane_hightlighted = vision.hightlightLane(undist)
+
+        path, filename = os.path.split(loc)    
+        file_loc = 'udacity/output_images/' + 'hightlighted_lane/' + 'hightlighted'+ filename
+        cv2.imwrite(file_loc, lane_hightlighted ) 
 
 if __name__ == "__main__": 
     import time
