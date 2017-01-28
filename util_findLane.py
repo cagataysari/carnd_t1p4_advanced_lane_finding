@@ -220,7 +220,7 @@ def computeLaneLines(np_x_val_left, np_y_val_left, np_x_val_right, np_y_val_righ
 
     return left_fit, left_fitx, right_fit, right_fitx
 
-def visualizeDetectedLane(np_x_val_left, np_y_val_left, np_x_val_right, np_y_val_right, left_fitx, right_fitx, file_to_save = ''):
+def DBG_visualizeDetectedLane(np_x_val_left, np_y_val_left, np_x_val_right, np_y_val_right, left_fitx, right_fitx, file_to_save = ''):
     leftx = np_x_val_left
     rightx = np_x_val_right
 
@@ -234,7 +234,7 @@ def visualizeDetectedLane(np_x_val_left, np_y_val_left, np_x_val_right, np_y_val
     plt.plot(left_fitx, np_y_val_left, color='green', linewidth=3)
     plt.plot(right_fitx, np_y_val_right, color='green', linewidth=3)
     plt.gca().invert_yaxis() # to visualize as we do the images
-    plt.title('visualizeDetectedLane() - polyfit result')
+    plt.title('DBG_visualizeDetectedLane() - polyfit result')
 
     if '' == file_to_save:
         plt.show()   
@@ -254,7 +254,7 @@ def findLaneLines(img_gray, debug=False):
     left_fit, left_fitx, right_fit, right_fitx = computeLaneLines(np_left_x, np_left_y, np_right_x, np_right_y)
 
 
-    left_line = qLine(np_left_x, np_left_y, left_fit, left_fitx)
+    left_line = qLine(np_left_x, np_left_y, left_fit, right_fitx)
     right_line = qLine(np_right_x, np_right_y, right_fit, right_fitx)
 
     return left_line, right_line
@@ -280,7 +280,7 @@ def main():
     print('Rgiht Lane Curvature: ', right_line.getCurvatureRadiusInMeters())
 
 
-    visualizeDetectedLane(  left_line.getPixelsX(),  left_line.getPixelsY(), 
+    DBG_visualizeDetectedLane(  left_line.getPixelsX(),  left_line.getPixelsY(), 
                             right_line.getPixelsX(), right_line.getPixelsY(), 
                             left_line.getFittedX(), right_line.getFittedX() )
 
@@ -297,7 +297,7 @@ def main():
 
         file_loc = 'udacity/output_images/' + 'lane_computed/' + 'computed_'+ filename
 
-        visualizeDetectedLane(  left_line.getPixelsX(),  left_line.getPixelsY(), 
+        DBG_visualizeDetectedLane(  left_line.getPixelsX(),  left_line.getPixelsY(), 
                                 right_line.getPixelsX(), right_line.getPixelsY(), 
                                 left_line.getFittedX(), right_line.getFittedX() ,
                                 file_to_save=file_loc   )

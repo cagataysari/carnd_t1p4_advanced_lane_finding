@@ -2,6 +2,7 @@ import numpy as np
 from numpy.linalg import inv
 import cv2
 from util_line import qLine
+from util_lane import qLane
 from util_findLane import findLaneLines
 
 def extractSatuCh(img):
@@ -152,8 +153,11 @@ class qVision:
     def __init__(self):
 
 
+        # perspective transformation matrix for birds' eye view 
+        self.M = None  
 
-        self.M = None
+        # current lane 
+        self.lane = qLane()
 
 
     def processImg(self, img_rgb, debug=False):
@@ -275,7 +279,12 @@ class qVision:
         # cv2.waitKey()
         left_line, right_line = findLaneLines(img_bgr_procd_birdview)
 
-        img_imagined_lines = self.imaginLines(img_bgr, left_line, right_line)
+        self.lane.update( left_line, right_line, bottom_pixel_pos=img_bgr.shape[0])
+
+        projected_left_line = self.lane.getLeftLine()
+        projected_right_line = self.lane.getRightLine()
+
+        img_imagined_lines = self.imaginLines(img_bgr, projected_left_line, projected_right_line)
 
         return img_imagined_lines
 
@@ -327,6 +336,25 @@ def DBG_CompareThreeGrayImages(img1, img2, img3, title1, title2, title3 ):
 
 def main():
 
+
+    #load camera
+    from util_camera import qCamera
+
+    #save camera data
+    import pickle
+    import os.path
+    if os.path.isfile('calibrated_camera.pickle') :
+        with open('calibrated_camera.pickle', 'rb') as handle:
+            camera = pickle.load(handle)
+    else: 
+        camera = qCamera()
+        camera.calibrateSamples('udacity/camera_cal/')
+
+        with open('calibrated_camera.pickle', 'wb') as handle:
+            pickle.dump(camera, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
+
+    ##############################3
     vision = qVision()
 
     import glob
@@ -358,10 +386,7 @@ def main():
     ##########################################
     # Test for Birds Eye View Transformation
     ##########################################
-    from util_camera import qCamera
-    camera = qCamera()
 
-    camera.calibrateSamples('udacity/camera_cal/')
         
     img_distorted = cv2.imread('udacity/test_images/straight_lines1.jpg')
     img_undist = camera.undistortImg(img_distorted)

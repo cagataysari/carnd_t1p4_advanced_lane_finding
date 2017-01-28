@@ -1,8 +1,18 @@
 import numpy as np
 
+
+def calc2ndOrderPoly(fit_coef, yvals):
+
+    assert(fit_coef.size == 3)
+    fitx = fit_coef[0]*yvals**2 + fit_coef[1]*yvals + fit_coef[2]
+
+    return fitx
+
+
+
 #to keep track of recent detections and to perform sanity checks.
 class qLine:
-    def __init__(self, np_x, np_y,  np_fit_coef_x, np_fitx):
+    def __init__(self, np_x=None, np_y=None,  np_fit_coef_x=None, np_fitx = None):
         self.np_x = np_x
         self.np_y = np_y
         self.np_fitx = np_fitx
@@ -32,7 +42,6 @@ class qLine:
     def getFittedX(self):
         return self.np_fitx
 
-
     def getFitXCoef(self):
         return self.np_fit_coef_x
 
@@ -45,9 +54,25 @@ class qLine:
     # Checking that they have similar curvature
     # Checking that they are separated by approximately the right distance horizontally
     # Checking that they are roughly parallel
-    def update(self):
-        pass
+    def update(self, np_x, np_y,  np_fit_coef_x):
 
+        if self.isLineValie(np_x, np_y,  np_fit_coef_x):
+            self.np_x = np_x
+            self.np_y = np_y
+            self.np_fit_coef_x = np_fit_coef_x
+            self.np_fitx = calc2ndOrderPoly(np_fit_coef_x, np_y )
+
+    def updateWithObj(self,qline):
+
+        np_x = qline.getPixelsX()
+        np_y = qline.getPixelsY()
+        np_fit_coef_x = qline.getFitXCoef()
+
+        self.update( np_x, np_y,  np_fit_coef_x )
+
+
+    def isLineValie(self, np_x, np_y,  np_fit_coef_x):
+        return True
 
     def getCurvatureRadiusInMeters(self):
         """Calculate curvature
