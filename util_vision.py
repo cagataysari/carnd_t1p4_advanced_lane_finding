@@ -223,8 +223,8 @@ class qVision:
         #based on Udacity course material
 
         # Create an image to draw the lines on
-        warp_zero = np.zeros_like(img_undist).astype(np.uint8)
-        color_warp = np.dstack((warp_zero, warp_zero, warp_zero))
+        color_warp = np.zeros_like(img_undist).astype(np.uint8)
+        # color_warp = np.dstack((warp_zero, warp_zero, warp_zero))
 
         # Recast the x and y points into usable format for cv2.fillPoly()
         left_fitx = left_line.getFittedX()
@@ -236,6 +236,8 @@ class qVision:
         pts_right = np.array([np.flipud(np.transpose(np.vstack([right_fitx, yvals])))])
         pts = np.hstack((pts_left, pts_right))
 
+        print('color_warp shape: ', color_warp.shape)
+        print('pts shape: ', pts.shape)
         # Draw the lane onto the warped blank image
         cv2.fillPoly(color_warp, np.int_([pts]), (0,255, 0))
 
