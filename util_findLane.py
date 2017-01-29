@@ -210,15 +210,22 @@ def computeLaneLines(np_x_val_left, np_y_val_left, np_x_val_right, np_y_val_righ
     Returns:
         TYPE: Description
     """
-    yvals = np_y_val_left
-    left_fit = np.polyfit(yvals, np_x_val_left, 2)
-    left_fitx = left_fit[0]*yvals**2 + left_fit[1]*yvals + left_fit[2]
+    if np_x_val_left.size == 0 or  np_y_val_left.size == 0 or np_x_val_right.size == 0 or np_y_val_right.size == 0:
+        left_fit = np.array([])
+        left_fitx = np.array([])
+        right_fit = np.array([])
+        right_fitx = np.array([])
 
-    yvals = np_y_val_right
-    right_fit = np.polyfit(yvals, np_x_val_right, 2)
-    right_fitx = right_fit[0]*yvals**2 + right_fit[1]*yvals + right_fit[2]
+    else:
+        yvals = np_y_val_left
+        left_fit = np.polyfit(yvals, np_x_val_left, 2)
+        left_fitx = left_fit[0]*yvals**2 + left_fit[1]*yvals + left_fit[2]
 
-    return left_fit, left_fitx, right_fit, right_fitx
+        yvals = np_y_val_right
+        right_fit = np.polyfit(yvals, np_x_val_right, 2)
+        right_fitx = right_fit[0]*yvals**2 + right_fit[1]*yvals + right_fit[2]
+
+        return left_fit, left_fitx, right_fit, right_fitx
 
 def DBG_visualizeDetectedLane(np_x_val_left, np_y_val_left, np_x_val_right, np_y_val_right, left_fitx, right_fitx, file_to_save = ''):
     leftx = np_x_val_left
@@ -251,6 +258,7 @@ def DBG_visualizeDetectedLane(np_x_val_left, np_y_val_left, np_x_val_right, np_y
 def findLaneLines(img_gray, debug=False):
     np_left_x, np_left_y, np_right_x, np_right_y  = findLanePixels(img_gray, debug=debug)
 
+    #TODO: remove fitx from intermediate calculation
     left_fit, left_fitx, right_fit, right_fitx = computeLaneLines(np_left_x, np_left_y, np_right_x, np_right_y)
 
 

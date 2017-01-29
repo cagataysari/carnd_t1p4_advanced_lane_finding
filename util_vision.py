@@ -162,6 +162,8 @@ class qVision:
 
     def processImg(self, img_rgb, debug=False):
 
+        #TODO: crop image to a more targeted area to reduce noise
+        
         # image = np.copy(img_rgb)
         image_orig = np.copy(img_rgb)
 
@@ -263,7 +265,7 @@ class qVision:
 
         return result
 
-    def hightlightLane(self, img_bgr):
+    def highlightLane(self, img_bgr):
         """hightlight the current lane
         
         Args:
@@ -275,8 +277,8 @@ class qVision:
         img_bgr_procd = self.processImg(img_bgr)
     
         img_bgr_procd_birdview = self.transformToBirdsEyeView(img_bgr_procd)
-        # cv2.imshow('img_bgr_procd_birdview',img_bgr_procd_birdview)
-        # cv2.waitKey()
+
+        #TODO: use qLane abstraction instead of qLine at the vision layer
         left_line, right_line = findLaneLines(img_bgr_procd_birdview)
 
         self.lane.update( left_line, right_line, bottom_pixel_pos=img_bgr.shape[0])
@@ -423,7 +425,7 @@ def main():
     # Test on Lane Finding
     ##########################################
 
-    img_lane_hightlighted = vision.hightlightLane(img_undist)
+    img_lane_hightlighted = vision.highlightLane(img_undist)
 
     DBG_CompareImages(img_undist, img_lane_hightlighted, 'Undistorted Image', "Reimagined Lane")
 
@@ -434,7 +436,7 @@ def main():
         distorted = cv2.imread(loc)
         undist = camera.undistortImg(distorted)
 
-        lane_hightlighted = vision.hightlightLane(undist)
+        lane_hightlighted = vision.highlightLane(undist)
 
         path, filename = os.path.split(loc)    
         file_loc = 'udacity/output_images/' + 'hightlighted_lane/' + 'hightlighted'+ filename
