@@ -5,6 +5,9 @@ import peakutils
 from peakutils.plot import plot as pplot
 from util_line import qLine
 
+from util_debug import DBG_saveTimeStampedImg
+import logging
+logger = logging.getLogger(__name__)
 
 def findLinePositions(img_bgr):
     """find left and right lane edges 
@@ -16,7 +19,7 @@ def findLinePositions(img_bgr):
         tuple: x-axis positions of left and right lane edge lines 
     """
 
-    histogram = np.sum(img_bgr[img_bgr.shape[0]/2:,:], axis=0)
+    histogram = np.sum(img_bgr[img_bgr.shape[0]//2:,:], axis=0)
 
     indexes = peakutils.indexes(histogram.astype(int), thres=.01, min_dist=100)  #100 is the estimated lane mark width, straight or curved lane
 
@@ -148,6 +151,11 @@ def findLinePixels(img, initial_x_center, window_width=100, window_height=20, se
 
     return (np_x_cooridinates, np_y_cooridinates)
 
+
+
+
+
+
 def findLanePixels(img_gray, debug=False):
     """find Lane Line pixels.    
     Args:
@@ -168,6 +176,16 @@ def findLanePixels(img_gray, debug=False):
     #right line
     np_right_x, np_right_y = findLinePixels(img_gray, x_right)
 
+
+
+    if np_left_x.size == 0 or  np_left_y.size == 0 or np_right_x.size == 0 or np_right_y.size == 0:
+        file_loc = DBG_saveTimeStampedImg(img_gray, 'gray_bird_view', 'debug_output' )
+        logger.debug('findLanePixels(): one lane line is not found')
+        logger.debug('image saved to: '+ file_loc)
+        logger.debug('np_left_x shape: ', np_left_x.shape)
+        logger.debug('np_left_y shape: ', np_left_y.shape)
+        logger.debug('np_right_x shape: ', np_right_x.shape)
+        logger.debug('np_right_y shape: ', np_right_y.shape)
 
     if True == debug: 
         img_gray_3ch = np.dstack([img_gray, img_gray, img_gray])
@@ -211,6 +229,7 @@ def computeLaneLines(np_x_val_left, np_y_val_left, np_x_val_right, np_y_val_righ
         TYPE: Description
     """
     if np_x_val_left.size == 0 or  np_y_val_left.size == 0 or np_x_val_right.size == 0 or np_y_val_right.size == 0:
+
         left_fit = np.array([])
         left_fitx = np.array([])
         right_fit = np.array([])
@@ -225,7 +244,15 @@ def computeLaneLines(np_x_val_left, np_y_val_left, np_x_val_right, np_y_val_righ
         right_fit = np.polyfit(yvals, np_x_val_right, 2)
         right_fitx = right_fit[0]*yvals**2 + right_fit[1]*yvals + right_fit[2]
 
-        return left_fit, left_fitx, right_fit, right_fitx
+
+
+    print('computeLaneLines(): left_fitx avg: ', np.average(left_fitx))
+    print('computeLaneLines(): right_fitx avg: ', np.average(right_fitx))
+
+
+
+
+    return left_fit, left_fitx, right_fit, right_fitx
 
 def DBG_visualizeDetectedLane(np_x_val_left, np_y_val_left, np_x_val_right, np_y_val_right, left_fitx, right_fitx, file_to_save = ''):
     leftx = np_x_val_left
@@ -262,7 +289,7 @@ def findLaneLines(img_gray, debug=False):
     left_fit, left_fitx, right_fit, right_fitx = computeLaneLines(np_left_x, np_left_y, np_right_x, np_right_y)
 
 
-    left_line = qLine(np_left_x, np_left_y, left_fit, right_fitx)
+    left_line = qLine(np_left_x, np_left_y, left_fit, left_fitx)
     right_line = qLine(np_right_x, np_right_y, right_fit, right_fitx)
 
     return left_line, right_line
@@ -282,6 +309,17 @@ def main():
     print('img_gray shape', img_gray.shape)
     
     left_line, right_line = findLaneLines(img_gray, debug=False)
+
+
+    
+    left_fitx = left_line.getFittedX()
+    right_fitx = right_line.getFittedX()
+
+    print('main(): left_fitx avg: ', np.average(left_fitx))
+    print('main(): right_fitx avg: ', np.average(right_fitx))
+
+
+
 
 
     print('Left Lane Curvature: ', left_line.getCurvatureRadiusInMeters())
