@@ -182,10 +182,12 @@ def findLanePixels(img_gray, debug=False):
         file_loc = DBG_saveTimeStampedImg(img_gray, 'gray_bird_view', 'debug_output' )
         logger.debug('findLanePixels(): one lane line is not found')
         logger.debug('image saved to: '+ file_loc)
-        logger.debug('np_left_x shape: ', np_left_x.shape)
-        logger.debug('np_left_y shape: ', np_left_y.shape)
-        logger.debug('np_right_x shape: ', np_right_x.shape)
-        logger.debug('np_right_y shape: ', np_right_y.shape)
+        logger.debug('np_left_x size: ' + str(np_left_x.size))
+        logger.debug('np_left_y size: '+ str(np_left_y.size))
+        logger.debug('np_right_x size: ' + str(np_right_x.size))
+        logger.debug('np_right_y size: ' + str( np_right_y.size))
+
+
 
     if True == debug: 
         img_gray_3ch = np.dstack([img_gray, img_gray, img_gray])
@@ -243,12 +245,6 @@ def computeLaneLines(np_x_val_left, np_y_val_left, np_x_val_right, np_y_val_righ
         yvals = np_y_val_right
         right_fit = np.polyfit(yvals, np_x_val_right, 2)
         right_fitx = right_fit[0]*yvals**2 + right_fit[1]*yvals + right_fit[2]
-
-
-
-    print('computeLaneLines(): left_fitx avg: ', np.average(left_fitx))
-    print('computeLaneLines(): right_fitx avg: ', np.average(right_fitx))
-
 
 
 

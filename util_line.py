@@ -51,6 +51,12 @@ class qLine:
     def getPixelsY(self):
         return self.np_y
 
+    def isEmpty(self):
+        if self.np_x.size == 0 or self.np_y.size == 0:
+            return True
+        else:
+            return False
+
     # Checking that they have similar curvature
     # Checking that they are separated by approximately the right distance horizontally
     # Checking that they are roughly parallel

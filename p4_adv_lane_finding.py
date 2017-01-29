@@ -1,3 +1,7 @@
+import logging
+logging.basicConfig(filename='log_lanefinding.txt', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+
+
 from util_camera import qCamera
 from util_vision import qVision
 import pickle
@@ -5,12 +9,15 @@ import os.path
 import cv2
 from moviepy.editor import VideoFileClip
 
+logger = logging.getLogger(__name__)
+
 camera = qCamera()
 vision = qVision()
 
 
-camera.calibrateSamples('udacity/camera_cal/')
-
+num_of_calbd_img = camera.calibrateSamples('udacity/camera_cal/')
+logger.info('Camera calibrated')
+logger.info('Number of calibrated img: '+ str(num_of_calbd_img) )
 
 def DBG_process_image(img):
 

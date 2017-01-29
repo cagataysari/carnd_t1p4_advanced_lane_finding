@@ -4,6 +4,11 @@ import cv2
 from util_line import qLine
 from util_lane import qLane
 from util_findLane import findLaneLines
+from util_debug import DBG_saveTimeStampedImg
+
+import logging
+logger = logging.getLogger(__name__)
+logger.info('vision submodule loaded')
 
 def extractSatuCh(img):
 

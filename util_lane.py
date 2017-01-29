@@ -61,7 +61,13 @@ class qLane:
         return self.right_line
 
     def isLaneValid(self, left_line, right_line):
-       return True 
+
+        is_valid = True
+        
+        if left_line.isEmpty() or right_line.isEmpty():
+            is_valid = False
+
+        return is_valid 
 
 
 def main():
