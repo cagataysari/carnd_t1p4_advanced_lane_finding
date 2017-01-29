@@ -5,22 +5,14 @@ import os.path
 import cv2
 from moviepy.editor import VideoFileClip
 
+camera = qCamera()
+vision = qVision()
+
+
+camera.calibrateSamples('udacity/camera_cal/')
+
 
 def DBG_process_image(img):
-
-        camera = qCamera()
-        vision = qVision()
-
-        #load camera data
-        if os.path.isfile('calibrated_camera.pickle') :
-            with open('calibrated_camera.pickle', 'rb') as handle:
-                camera = pickle.load(handle)
-        else: 
-            camera = qCamera()
-            camera.calibrateSamples('udacity/camera_cal/')
-
-            with open('calibrated_camera.pickle', 'wb') as handle:
-                pickle.dump(camera, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
 
         img_bgr = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
