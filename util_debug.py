@@ -1,4 +1,7 @@
 import logging
+logger = logging.getLogger(__name__)
+
+import matplotlib.pyplot as plt
 
 from datetime import timedelta, datetime
 import pytz
@@ -6,8 +9,7 @@ import pytz
 import os
 import cv2
 
-import logging
-logger = logging.getLogger(__name__)
+from util_line import qLine
 
 logger.info('util_debug.py loaded')
 
@@ -49,3 +51,29 @@ if __name__ == "__main__":
     time_end = time.time()
     print("Time usage: " + str(timedelta(seconds=int( time_end - time_start))))
     
+
+def DBG_visualizeDetectedLane(np_x_val_left, np_y_val_left, np_x_val_right, np_y_val_right, left_fitx, right_fitx, file_to_save = ''):
+    leftx = np_x_val_left
+    rightx = np_x_val_right
+
+
+
+    # Plot up the fake data
+    plt.plot(leftx, np_y_val_left, 'o', color='red')
+    plt.plot(rightx, np_y_val_right, 'o', color='blue')
+    plt.xlim(0, 1280)
+    plt.ylim(0, 720)
+    plt.plot(left_fitx, np_y_val_left, color='green', linewidth=3)
+    plt.plot(right_fitx, np_y_val_right, color='green', linewidth=3)
+    plt.gca().invert_yaxis() # to visualize as we do the images
+    plt.title('DBG_visualizeDetectedLane() - polyfit result')
+
+    if '' == file_to_save:
+        plt.show()   
+    else:
+        import os 
+        path, filename = os.path.split(file_to_save)    
+        plt.title(filename)
+        plt.savefig(file_to_save)
+
+    plt.clf()

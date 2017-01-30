@@ -18,6 +18,48 @@ def extractSatuCh(img):
 
     return ch_satu
 
+def region_of_interest(img, vertices):
+    """
+    from Udacity course material
+    Applies an image mask.
+    Only keeps the region of the image defined by the polygon
+    formed from `vertices`. The rest of the image is set to black.
+    """
+    #defining a blank mask to start with
+    mask = np.zeros_like(img)
+
+    #defining a 3 channel or 1 channel color to fill the mask with depending on the input image
+    if len(img.shape) > 2:
+        channel_count = img.shape[2]  # i.e. 3 or 4 depending on your image
+        ignore_mask_color = (255,) * channel_count
+    else:
+        ignore_mask_color = 255
+
+    #filling pixels inside the polygon defined by "vertices" with the fill color
+    cv2.fillPoly(mask, vertices, ignore_mask_color)
+
+    #returning the image only where mask pixels are nonzero
+    masked_image = cv2.bitwise_and(img, mask)
+    return masked_image
+
+# @param apex_portion range : 0~1.0 the percentage of relative position of apex, e.g., 0.2 is at 0.2*x
+def QH_Region_GenTriangleVertices(image, apex_x_portion , apex_y_portion):
+
+    bottom_portion = 0.02   
+
+    img_num_of_row = image.shape[0]
+    img_num_of_col = image.shape[1]
+    img_size_x = img_num_of_col
+    img_size_y = img_num_of_row
+
+    tup_botm_right = (img_size_x*(1-bottom_portion), img_size_y)
+    tup_botm_left = (img_size_x*bottom_portion,img_size_y)
+    tup_apex = (img_size_x*apex_x_portion, img_size_y*apex_y_portion)
+
+    vertices = np.array([[tup_botm_left,tup_apex, tup_botm_right]], dtype=np.int32)
+
+    return vertices
+
 
 # a function that applies Sobel x or y, 
 # then takes an absolute value and applies a threshold.
@@ -171,14 +213,14 @@ class qVision:
         
         # image = np.copy(img_rgb)
         image_orig = np.copy(img_rgb)
+        image_cropped = self.cropImage(image_orig)
 
-
-        hls_binary = hls_select(image_orig, thresh=(66, 255))
+        hls_binary = hls_select(image_cropped, thresh=(66, 255))
         # image[(hls_binary != 1)]  = 0
         # Run the function
-        mag_binary = mag_thresh(image_orig, sobel_kernel=27, thresh=(50, 220 ))
+        mag_binary = mag_thresh(image_cropped, sobel_kernel=27, thresh=(50, 220 ))
 
-        dir_binary = dir_threshold(image_orig, sobel_kernel=15, thresh=(np.pi*20.0/180.0, np.pi*80.0/180.0)) 
+        dir_binary = dir_threshold(image_cropped, sobel_kernel=15, thresh=(np.pi*20.0/180.0, np.pi*80.0/180.0)) 
         # dir_binary = dir_threshold(image_orig2, sobel_kernel=15, thresh=(0.7, 1.2) ) # 40~80 degree
         # dir_binary = dir_threshold(mag_binary, sobel_kernel=11, thresh=(0.7, 1.3), enable_binary_map=True) 
 
@@ -196,7 +238,11 @@ class qVision:
         img_final = combined
         return img_final
 
+    def cropImage(self, img):
 
+        vertices = QH_Region_GenTriangleVertices(img, 0.5, 0.5)
+        img_cropped_region = region_of_interest(img, vertices)
+        return img_cropped_region
 
     def transformToBirdsEyeView(self, img):
         """based on Udacity course material
@@ -346,6 +392,7 @@ def DBG_CompareThreeGrayImages(img1, img2, img3, title1, title2, title3 ):
 
 
 def main():
+    logging.basicConfig(filename='log_lanefinding.txt', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 
     #load camera
@@ -376,37 +423,37 @@ def main():
 
     for img_loc in images_loc:
         img_bgr = cv2.imread(img_loc)
-
+        img_bgr = camera.undistortImg(img_bgr)
         img_procd = vision.processImg(img_bgr)
 
         path, filename = os.path.split(img_loc)    
         file_loc = 'udacity/output_images/' + 'test_images/' + 'processed_'+ filename
         cv2.imwrite(file_loc, (img_procd*225).astype(np.uint8) ) #Only 8-bit images can be saved using this function, so convert from (0.0, 1.0) to (0,255)
-        # cv2.imshow('Processed Image', img_procd)
-        # DBG_CompareImages(img_rgb, img_procd, 'Original Image', 'Processed Image', cmap2='gray')
 
 
 
-    img_bgr = cv2.imread('udacity/test_images/test1.jpg' )
+    img_distorted = cv2.imread('udacity/test_images/test8_noise_from_another_car.jpg' )
+    img_undist = camera.undistortImg(img_distorted)
 
-    img_procd = vision.processImg(img_bgr)
+    img_procd = vision.processImg(img_undist)
 
-    DBG_CompareImages(img_bgr, img_procd, 'Original Image', 'Thresholded Binary Image', cmap2='gray')
+    DBG_CompareImages(img_undist, img_procd, 'Undistorted Image', 'Thresholded Binary Image', cmap2='gray')
 
 
     ##########################################
     # Test for Birds Eye View Transformation
     ##########################################
 
-        
-    img_distorted = cv2.imread('udacity/test_images/straight_lines1.jpg')
-    img_undist = camera.undistortImg(img_distorted)
-    img_undist_birdview = vision.transformToBirdsEyeView(img_undist)
+    img_undist_birdview = vision.transformToBirdsEyeView(img_procd)
 
 
-    DBG_CompareImages(img_distorted, img_undist_birdview, 'Original Image', "Bird's Eye View Image",save_to_file='udacity/output_images/persp_birds_eye_view.jpg')
+    DBG_CompareImages(img_distorted, img_undist_birdview, 'Original Image', "Bird's Eye View Image",save_to_file='udacity/output_images/persp_birds_eye_view.jpg',
+                        cmap2 ='gray')
 
 
+    left_line, right_line = findLaneLines(img_undist_birdview, debug=False)
+    logger.debug('main(): left_line empty? : '+ str(left_line.isEmpty()))
+    logger.debug('main(): right_line empty? : '+ str(right_line.isEmpty()))
 
 
     ##########################################
@@ -443,13 +490,15 @@ def main():
     images_loc = glob.glob(sample_dir+'*.jpg')
 
     for loc in images_loc:
+
+        logger.info('Load test image: ' + str(loc))
         distorted = cv2.imread(loc)
         undist = camera.undistortImg(distorted)
 
         lane_hightlighted = vision.highlightLane(undist)
 
         path, filename = os.path.split(loc)    
-        file_loc = 'udacity/output_images/' + 'hightlighted_lane/' + 'hightlighted'+ filename
+        file_loc = 'udacity/output_images/' + 'hightlighted_lane/' + 'hightlighted_'+ filename
         cv2.imwrite(file_loc, lane_hightlighted ) 
 
 if __name__ == "__main__": 

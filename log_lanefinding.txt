@@ -2554,3 +2554,377 @@
 2017-01-29 20:02:46,166 - DEBUG - np_left_y size: 0
 2017-01-29 20:02:46,166 - DEBUG - np_right_x size: 0
 2017-01-29 20:02:46,166 - DEBUG - np_right_y size: 0
+2017-01-29 21:44:15,560 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 21:44:15,560 - DEBUG - image saved to: debug_output/20170129_214415_gray_bird_view.jpg
+2017-01-29 21:44:15,560 - DEBUG - np_left_x size: 0
+2017-01-29 21:44:15,561 - DEBUG - np_left_y size: 0
+2017-01-29 21:44:15,561 - DEBUG - np_right_x size: 0
+2017-01-29 21:44:15,561 - DEBUG - np_right_y size: 0
+2017-01-29 21:44:15,561 - DEBUG - No past or current lane found. 
+2017-01-29 21:44:16,715 - INFO - Load test image: udacity/test_images/signs_vehicles_xygrad.jpg
+2017-01-29 21:44:18,162 - INFO - Load test image: udacity/test_images/straight_lines1.jpg
+2017-01-29 21:44:19,792 - INFO - Load test image: udacity/test_images/straight_lines2.jpg
+2017-01-29 21:44:21,218 - INFO - Load test image: udacity/test_images/test1.jpg
+2017-01-29 21:44:22,731 - INFO - Load test image: udacity/test_images/test2.jpg
+2017-01-29 21:44:24,201 - INFO - Load test image: udacity/test_images/test3.jpg
+2017-01-29 21:44:25,721 - INFO - Load test image: udacity/test_images/test4.jpg
+2017-01-29 21:44:27,239 - INFO - Load test image: udacity/test_images/test5.jpg
+2017-01-29 21:44:28,839 - INFO - Load test image: udacity/test_images/test6.jpg
+2017-01-29 21:44:30,172 - INFO - Load test image: udacity/test_images/test7_side_lane.jpg
+2017-01-29 21:44:31,420 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 21:44:31,420 - DEBUG - image saved to: debug_output/20170129_214431_gray_bird_view.jpg
+2017-01-29 21:44:31,420 - DEBUG - np_left_x size: 0
+2017-01-29 21:44:31,420 - DEBUG - np_left_y size: 0
+2017-01-29 21:44:31,420 - DEBUG - np_right_x size: 0
+2017-01-29 21:44:31,421 - DEBUG - np_right_y size: 0
+2017-01-29 21:44:31,478 - INFO - Load test image: udacity/test_images/test8_noise_from_another_car.jpg
+2017-01-29 21:44:32,783 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 21:44:32,783 - DEBUG - image saved to: debug_output/20170129_214432_gray_bird_view.jpg
+2017-01-29 21:44:32,783 - DEBUG - np_left_x size: 0
+2017-01-29 21:44:32,783 - DEBUG - np_left_y size: 0
+2017-01-29 21:44:32,784 - DEBUG - np_right_x size: 0
+2017-01-29 21:44:32,784 - DEBUG - np_right_y size: 0
+2017-01-29 21:44:32,842 - INFO - Load test image: udacity/test_images/test9_shadow.jpg
+2017-01-29 21:55:03,794 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 21:55:03,794 - DEBUG - image saved to: debug_output/20170129_215503_gray_bird_view.jpg
+2017-01-29 21:55:03,794 - DEBUG - np_left_x size: 0
+2017-01-29 21:55:03,794 - DEBUG - np_left_y size: 0
+2017-01-29 21:55:03,794 - DEBUG - np_right_x size: 0
+2017-01-29 21:55:03,795 - DEBUG - np_right_y size: 0
+2017-01-29 21:55:03,795 - DEBUG - No past or current lane found. 
+2017-01-29 21:55:07,476 - INFO - Load test image: udacity/test_images/signs_vehicles_xygrad.jpg
+2017-01-29 21:55:08,917 - INFO - Load test image: udacity/test_images/straight_lines1.jpg
+2017-01-29 21:55:10,444 - INFO - Load test image: udacity/test_images/straight_lines2.jpg
+2017-01-29 21:55:11,970 - INFO - Load test image: udacity/test_images/test1.jpg
+2017-01-29 21:55:13,549 - INFO - Load test image: udacity/test_images/test2.jpg
+2017-01-29 21:55:15,261 - INFO - Load test image: udacity/test_images/test3.jpg
+2017-01-29 21:55:16,829 - INFO - Load test image: udacity/test_images/test4.jpg
+2017-01-29 21:55:18,459 - INFO - Load test image: udacity/test_images/test5.jpg
+2017-01-29 21:55:20,004 - INFO - Load test image: udacity/test_images/test6.jpg
+2017-01-29 21:55:21,402 - INFO - Load test image: udacity/test_images/test7_side_lane.jpg
+2017-01-29 21:55:22,685 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 21:55:22,685 - DEBUG - image saved to: debug_output/20170129_215522_gray_bird_view.jpg
+2017-01-29 21:55:22,685 - DEBUG - np_left_x size: 0
+2017-01-29 21:55:22,685 - DEBUG - np_left_y size: 0
+2017-01-29 21:55:22,686 - DEBUG - np_right_x size: 0
+2017-01-29 21:55:22,686 - DEBUG - np_right_y size: 0
+2017-01-29 21:55:22,755 - INFO - Load test image: udacity/test_images/test8_noise_from_another_car.jpg
+2017-01-29 21:55:24,096 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 21:55:24,096 - DEBUG - image saved to: debug_output/20170129_215524_gray_bird_view.jpg
+2017-01-29 21:55:24,096 - DEBUG - np_left_x size: 0
+2017-01-29 21:55:24,096 - DEBUG - np_left_y size: 0
+2017-01-29 21:55:24,096 - DEBUG - np_right_x size: 0
+2017-01-29 21:55:24,096 - DEBUG - np_right_y size: 0
+2017-01-29 21:55:24,149 - INFO - Load test image: udacity/test_images/test9_shadow.jpg
+2017-01-29 22:05:14,966 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 22:05:14,966 - DEBUG - image saved to: debug_output/20170129_220514_gray_bird_view.jpg
+2017-01-29 22:05:14,966 - DEBUG - np_left_x size: 0
+2017-01-29 22:05:14,967 - DEBUG - np_left_y size: 0
+2017-01-29 22:05:14,967 - DEBUG - np_right_x size: 0
+2017-01-29 22:05:14,967 - DEBUG - np_right_y size: 0
+2017-01-29 22:05:14,967 - DEBUG - No past or current lane found. 
+2017-01-29 22:14:14,920 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 22:14:14,920 - DEBUG - image saved to: debug_output/20170129_221414_gray_bird_view.jpg
+2017-01-29 22:14:14,921 - DEBUG - np_left_x size: 0
+2017-01-29 22:14:14,921 - DEBUG - np_left_y size: 0
+2017-01-29 22:14:14,921 - DEBUG - np_right_x size: 0
+2017-01-29 22:14:14,921 - DEBUG - np_right_y size: 0
+2017-01-29 22:14:14,921 - DEBUG - No past or current lane found. 
+2017-01-29 22:16:17,485 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 22:16:17,485 - DEBUG - image saved to: debug_output/20170129_221617_gray_bird_view.jpg
+2017-01-29 22:16:17,485 - DEBUG - np_left_x size: 0
+2017-01-29 22:16:17,485 - DEBUG - np_left_y size: 0
+2017-01-29 22:16:17,485 - DEBUG - np_right_x size: 0
+2017-01-29 22:16:17,486 - DEBUG - np_right_y size: 0
+2017-01-29 22:16:17,486 - DEBUG - No past or current lane found. 
+2017-01-29 22:17:24,520 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 22:17:24,520 - DEBUG - image saved to: debug_output/20170129_221724_gray_bird_view.jpg
+2017-01-29 22:17:24,520 - DEBUG - np_left_x size: 0
+2017-01-29 22:17:24,521 - DEBUG - np_left_y size: 0
+2017-01-29 22:17:24,521 - DEBUG - np_right_x size: 0
+2017-01-29 22:17:24,521 - DEBUG - np_right_y size: 0
+2017-01-29 22:17:24,521 - DEBUG - No past or current lane found. 
+2017-01-29 22:17:27,131 - INFO - Load test image: udacity/test_images/signs_vehicles_xygrad.jpg
+2017-01-29 22:17:28,661 - INFO - Load test image: udacity/test_images/straight_lines1.jpg
+2017-01-29 22:17:30,461 - INFO - Load test image: udacity/test_images/straight_lines2.jpg
+2017-01-29 22:17:32,283 - INFO - Load test image: udacity/test_images/test1.jpg
+2017-01-29 22:17:34,167 - INFO - Load test image: udacity/test_images/test2.jpg
+2017-01-29 22:17:35,848 - INFO - Load test image: udacity/test_images/test3.jpg
+2017-01-29 22:17:37,554 - INFO - Load test image: udacity/test_images/test4.jpg
+2017-01-29 22:17:39,135 - INFO - Load test image: udacity/test_images/test5.jpg
+2017-01-29 22:17:40,711 - INFO - Load test image: udacity/test_images/test6.jpg
+2017-01-29 22:17:42,143 - INFO - Load test image: udacity/test_images/test7_side_lane.jpg
+2017-01-29 22:17:43,605 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 22:17:43,605 - DEBUG - image saved to: debug_output/20170129_221743_gray_bird_view.jpg
+2017-01-29 22:17:43,605 - DEBUG - np_left_x size: 0
+2017-01-29 22:17:43,605 - DEBUG - np_left_y size: 0
+2017-01-29 22:17:43,605 - DEBUG - np_right_x size: 0
+2017-01-29 22:17:43,606 - DEBUG - np_right_y size: 0
+2017-01-29 22:17:43,666 - INFO - Load test image: udacity/test_images/test8_noise_from_another_car.jpg
+2017-01-29 22:17:45,066 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 22:17:45,066 - DEBUG - image saved to: debug_output/20170129_221745_gray_bird_view.jpg
+2017-01-29 22:17:45,066 - DEBUG - np_left_x size: 0
+2017-01-29 22:17:45,066 - DEBUG - np_left_y size: 0
+2017-01-29 22:17:45,066 - DEBUG - np_right_x size: 0
+2017-01-29 22:17:45,066 - DEBUG - np_right_y size: 0
+2017-01-29 22:17:45,140 - INFO - Load test image: udacity/test_images/test9_shadow.jpg
+2017-01-29 22:18:17,730 - INFO - Load test image: udacity/test_images/signs_vehicles_xygrad.jpg
+2017-01-29 22:18:18,398 - INFO - Load test image: udacity/test_images/signs_vehicles_xygrad.jpg
+2017-01-29 22:18:19,096 - INFO - Load test image: udacity/test_images/signs_vehicles_xygrad.jpg
+2017-01-29 22:18:20,890 - INFO - Load test image: udacity/test_images/straight_lines1.jpg
+2017-01-29 22:18:21,590 - INFO - Load test image: udacity/test_images/straight_lines1.jpg
+2017-01-29 22:18:22,923 - INFO - Load test image: udacity/test_images/straight_lines1.jpg
+2017-01-29 22:18:25,944 - INFO - Load test image: udacity/test_images/straight_lines2.jpg
+2017-01-29 22:18:27,549 - INFO - Load test image: udacity/test_images/straight_lines2.jpg
+2017-01-29 22:18:29,337 - INFO - Load test image: udacity/test_images/straight_lines2.jpg
+2017-01-29 22:18:32,301 - INFO - Load test image: udacity/test_images/test1.jpg
+2017-01-29 22:18:33,526 - INFO - Load test image: udacity/test_images/test1.jpg
+2017-01-29 22:18:35,316 - INFO - Load test image: udacity/test_images/test1.jpg
+2017-01-29 22:18:36,258 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 22:18:36,258 - DEBUG - image saved to: debug_output/20170129_221836_gray_bird_view.jpg
+2017-01-29 22:18:36,259 - DEBUG - np_left_x size: 0
+2017-01-29 22:18:36,259 - DEBUG - np_left_y size: 0
+2017-01-29 22:18:36,260 - DEBUG - np_right_x size: 0
+2017-01-29 22:18:36,260 - DEBUG - np_right_y size: 0
+2017-01-29 22:18:36,260 - DEBUG - No past or current lane found. 
+2017-01-29 22:18:39,025 - INFO - Load test image: udacity/test_images/test2.jpg
+2017-01-29 22:18:40,335 - INFO - Load test image: udacity/test_images/test2.jpg
+2017-01-29 22:18:41,240 - INFO - Load test image: udacity/test_images/test2.jpg
+2017-01-29 22:18:44,742 - INFO - Load test image: udacity/test_images/test3.jpg
+2017-01-29 22:18:45,948 - INFO - Load test image: udacity/test_images/test3.jpg
+2017-01-29 22:18:47,248 - INFO - Load test image: udacity/test_images/test3.jpg
+2017-01-29 22:18:51,207 - INFO - Load test image: udacity/test_images/test4.jpg
+2017-01-29 22:18:52,198 - INFO - Load test image: udacity/test_images/test4.jpg
+2017-01-29 22:18:53,104 - INFO - Load test image: udacity/test_images/test4.jpg
+2017-01-29 22:18:56,906 - INFO - Load test image: udacity/test_images/test5.jpg
+2017-01-29 22:18:57,605 - INFO - Load test image: udacity/test_images/test5.jpg
+2017-01-29 22:18:59,520 - INFO - Load test image: udacity/test_images/test5.jpg
+2017-01-29 22:19:02,626 - INFO - Load test image: udacity/test_images/test6.jpg
+2017-01-29 22:19:03,453 - INFO - Load test image: udacity/test_images/test6.jpg
+2017-01-29 22:19:05,270 - INFO - Load test image: udacity/test_images/test6.jpg
+2017-01-29 22:19:07,973 - INFO - Load test image: udacity/test_images/test7_side_lane.jpg
+2017-01-29 22:19:08,645 - INFO - Load test image: udacity/test_images/test7_side_lane.jpg
+2017-01-29 22:19:10,563 - INFO - Load test image: udacity/test_images/test7_side_lane.jpg
+2017-01-29 22:19:13,469 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 22:19:13,470 - DEBUG - image saved to: debug_output/20170129_221913_gray_bird_view.jpg
+2017-01-29 22:19:13,470 - DEBUG - np_left_x size: 0
+2017-01-29 22:19:13,470 - DEBUG - np_left_y size: 0
+2017-01-29 22:19:13,470 - DEBUG - np_right_x size: 0
+2017-01-29 22:19:13,471 - DEBUG - np_right_y size: 0
+2017-01-29 22:19:13,559 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 22:19:13,559 - DEBUG - image saved to: debug_output/20170129_221913_gray_bird_view.jpg
+2017-01-29 22:19:13,560 - DEBUG - np_left_x size: 0
+2017-01-29 22:19:13,560 - DEBUG - np_left_y size: 0
+2017-01-29 22:19:13,560 - DEBUG - np_right_x size: 0
+2017-01-29 22:19:13,560 - DEBUG - np_right_y size: 0
+2017-01-29 22:19:13,813 - INFO - Load test image: udacity/test_images/test8_noise_from_another_car.jpg
+2017-01-29 22:19:13,945 - INFO - Load test image: udacity/test_images/test8_noise_from_another_car.jpg
+2017-01-29 22:19:15,220 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 22:19:15,221 - DEBUG - image saved to: debug_output/20170129_221915_gray_bird_view.jpg
+2017-01-29 22:19:15,221 - DEBUG - np_left_x size: 0
+2017-01-29 22:19:15,222 - DEBUG - np_left_y size: 0
+2017-01-29 22:19:15,222 - DEBUG - np_right_x size: 0
+2017-01-29 22:19:15,223 - DEBUG - np_right_y size: 0
+2017-01-29 22:19:15,429 - INFO - Load test image: udacity/test_images/test8_noise_from_another_car.jpg
+2017-01-29 22:19:17,983 - INFO - Load test image: udacity/test_images/signs_vehicles_xygrad.jpg
+2017-01-29 22:19:18,545 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 22:19:18,545 - DEBUG - image saved to: debug_output/20170129_221918_gray_bird_view.jpg
+2017-01-29 22:19:18,545 - DEBUG - np_left_x size: 0
+2017-01-29 22:19:18,545 - DEBUG - np_left_y size: 0
+2017-01-29 22:19:18,545 - DEBUG - np_right_x size: 0
+2017-01-29 22:19:18,546 - DEBUG - np_right_y size: 0
+2017-01-29 22:19:18,922 - INFO - Load test image: udacity/test_images/test9_shadow.jpg
+2017-01-29 22:19:19,093 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 22:19:19,094 - DEBUG - image saved to: debug_output/20170129_221919_gray_bird_view.jpg
+2017-01-29 22:19:19,095 - DEBUG - np_left_x size: 0
+2017-01-29 22:19:19,095 - DEBUG - np_left_y size: 0
+2017-01-29 22:19:19,096 - DEBUG - np_right_x size: 0
+2017-01-29 22:19:19,097 - DEBUG - np_right_y size: 0
+2017-01-29 22:19:19,317 - INFO - Load test image: udacity/test_images/test9_shadow.jpg
+2017-01-29 22:19:20,274 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 22:19:20,274 - DEBUG - image saved to: debug_output/20170129_221920_gray_bird_view.jpg
+2017-01-29 22:19:20,274 - DEBUG - np_left_x size: 0
+2017-01-29 22:19:20,274 - DEBUG - np_left_y size: 0
+2017-01-29 22:19:20,275 - DEBUG - np_right_x size: 0
+2017-01-29 22:19:20,275 - DEBUG - np_right_y size: 0
+2017-01-29 22:19:20,533 - INFO - Load test image: udacity/test_images/test9_shadow.jpg
+2017-01-29 22:19:23,436 - INFO - Load test image: udacity/test_images/straight_lines1.jpg
+2017-01-29 22:19:28,775 - INFO - Load test image: udacity/test_images/straight_lines2.jpg
+2017-01-29 22:19:31,390 - INFO - Load test image: udacity/test_images/test1.jpg
+2017-01-29 22:19:33,210 - INFO - Load test image: udacity/test_images/test2.jpg
+2017-01-29 22:19:34,920 - INFO - Load test image: udacity/test_images/test3.jpg
+2017-01-29 22:19:36,544 - INFO - Load test image: udacity/test_images/test4.jpg
+2017-01-29 22:19:38,145 - INFO - Load test image: udacity/test_images/test5.jpg
+2017-01-29 22:19:39,772 - INFO - Load test image: udacity/test_images/test6.jpg
+2017-01-29 22:19:41,158 - INFO - Load test image: udacity/test_images/test7_side_lane.jpg
+2017-01-29 22:19:42,522 - INFO - Load test image: udacity/test_images/test8_noise_from_another_car.jpg
+2017-01-29 22:19:43,850 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 22:19:43,850 - DEBUG - image saved to: debug_output/20170129_221943_gray_bird_view.jpg
+2017-01-29 22:19:43,850 - DEBUG - np_left_x size: 0
+2017-01-29 22:19:43,850 - DEBUG - np_left_y size: 0
+2017-01-29 22:19:43,850 - DEBUG - np_right_x size: 0
+2017-01-29 22:19:43,850 - DEBUG - np_right_y size: 0
+2017-01-29 22:19:43,908 - INFO - Load test image: udacity/test_images/test9_shadow.jpg
+2017-01-29 22:21:30,272 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 22:21:30,272 - DEBUG - image saved to: debug_output/20170129_222130_gray_bird_view.jpg
+2017-01-29 22:21:30,272 - DEBUG - np_left_x size: 0
+2017-01-29 22:21:30,272 - DEBUG - np_left_y size: 0
+2017-01-29 22:21:30,272 - DEBUG - np_right_x size: 0
+2017-01-29 22:21:30,272 - DEBUG - np_right_y size: 0
+2017-01-29 22:21:30,272 - DEBUG - No past or current lane found. 
+2017-01-29 22:21:37,193 - INFO - Load test image: udacity/test_images/signs_vehicles_xygrad.jpg
+2017-01-29 22:21:38,662 - INFO - Load test image: udacity/test_images/straight_lines1.jpg
+2017-01-29 22:21:40,295 - INFO - Load test image: udacity/test_images/straight_lines2.jpg
+2017-01-29 22:21:41,873 - INFO - Load test image: udacity/test_images/test1.jpg
+2017-01-29 22:21:43,518 - INFO - Load test image: udacity/test_images/test2.jpg
+2017-01-29 22:21:45,205 - INFO - Load test image: udacity/test_images/test3.jpg
+2017-01-29 22:21:46,824 - INFO - Load test image: udacity/test_images/test4.jpg
+2017-01-29 22:21:48,533 - INFO - Load test image: udacity/test_images/test5.jpg
+2017-01-29 22:21:50,122 - INFO - Load test image: udacity/test_images/test6.jpg
+2017-01-29 22:21:51,600 - INFO - Load test image: udacity/test_images/test7_side_lane.jpg
+2017-01-29 22:21:52,964 - INFO - Load test image: udacity/test_images/test8_noise_from_another_car.jpg
+2017-01-29 22:21:54,284 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 22:21:54,284 - DEBUG - image saved to: debug_output/20170129_222154_gray_bird_view.jpg
+2017-01-29 22:21:54,284 - DEBUG - np_left_x size: 0
+2017-01-29 22:21:54,284 - DEBUG - np_left_y size: 0
+2017-01-29 22:21:54,284 - DEBUG - np_right_x size: 0
+2017-01-29 22:21:54,284 - DEBUG - np_right_y size: 0
+2017-01-29 22:21:54,343 - INFO - Load test image: udacity/test_images/test9_shadow.jpg
+2017-01-29 22:24:58,125 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 22:24:58,125 - DEBUG - image saved to: debug_output/20170129_222458_gray_bird_view.jpg
+2017-01-29 22:24:58,125 - DEBUG - np_left_x size: 0
+2017-01-29 22:24:58,126 - DEBUG - np_left_y size: 0
+2017-01-29 22:24:58,126 - DEBUG - np_right_x size: 0
+2017-01-29 22:24:58,126 - DEBUG - np_right_y size: 0
+2017-01-29 22:24:58,126 - DEBUG - main(): left_line empty? : True
+2017-01-29 22:24:58,126 - DEBUG - main(): right_line empty? : True
+2017-01-29 22:24:59,852 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 22:24:59,852 - DEBUG - image saved to: debug_output/20170129_222459_gray_bird_view.jpg
+2017-01-29 22:24:59,852 - DEBUG - np_left_x size: 0
+2017-01-29 22:24:59,853 - DEBUG - np_left_y size: 0
+2017-01-29 22:24:59,853 - DEBUG - np_right_x size: 0
+2017-01-29 22:24:59,853 - DEBUG - np_right_y size: 0
+2017-01-29 22:24:59,853 - DEBUG - No past or current lane found. 
+2017-01-29 22:25:01,528 - INFO - Load test image: udacity/test_images/signs_vehicles_xygrad.jpg
+2017-01-29 22:25:03,104 - INFO - Load test image: udacity/test_images/straight_lines1.jpg
+2017-01-29 22:25:04,751 - INFO - Load test image: udacity/test_images/straight_lines2.jpg
+2017-01-29 22:25:06,350 - INFO - Load test image: udacity/test_images/test1.jpg
+2017-01-29 22:25:07,876 - INFO - Load test image: udacity/test_images/test2.jpg
+2017-01-29 22:25:09,428 - INFO - Load test image: udacity/test_images/test3.jpg
+2017-01-29 22:25:11,019 - INFO - Load test image: udacity/test_images/test4.jpg
+2017-01-29 22:25:12,705 - INFO - Load test image: udacity/test_images/test5.jpg
+2017-01-29 22:25:14,296 - INFO - Load test image: udacity/test_images/test6.jpg
+2017-01-29 22:25:15,626 - INFO - Load test image: udacity/test_images/test7_side_lane.jpg
+2017-01-29 22:25:17,066 - INFO - Load test image: udacity/test_images/test8_noise_from_another_car.jpg
+2017-01-29 22:25:18,376 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 22:25:18,377 - DEBUG - image saved to: debug_output/20170129_222518_gray_bird_view.jpg
+2017-01-29 22:25:18,377 - DEBUG - np_left_x size: 0
+2017-01-29 22:25:18,377 - DEBUG - np_left_y size: 0
+2017-01-29 22:25:18,377 - DEBUG - np_right_x size: 0
+2017-01-29 22:25:18,377 - DEBUG - np_right_y size: 0
+2017-01-29 22:25:18,435 - INFO - Load test image: udacity/test_images/test9_shadow.jpg
+2017-01-29 22:28:58,047 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 22:28:58,048 - DEBUG - image saved to: debug_output/20170129_222858_gray_bird_view.jpg
+2017-01-29 22:28:58,048 - DEBUG - findLanePixels() - left line position x(x_left):  0
+2017-01-29 22:28:58,048 - DEBUG - findLanePixels() - left line position x(x_right):  0
+2017-01-29 22:28:58,048 - DEBUG - np_left_x size: 0
+2017-01-29 22:28:58,048 - DEBUG - np_left_y size: 0
+2017-01-29 22:28:58,048 - DEBUG - np_right_x size: 0
+2017-01-29 22:28:58,048 - DEBUG - np_right_y size: 0
+2017-01-29 22:28:58,048 - DEBUG - main(): left_line empty? : True
+2017-01-29 22:28:58,049 - DEBUG - main(): right_line empty? : True
+2017-01-29 22:28:59,665 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 22:28:59,665 - DEBUG - image saved to: debug_output/20170129_222859_gray_bird_view.jpg
+2017-01-29 22:28:59,665 - DEBUG - findLanePixels() - left line position x(x_left):  0
+2017-01-29 22:28:59,665 - DEBUG - findLanePixels() - left line position x(x_right):  0
+2017-01-29 22:28:59,665 - DEBUG - np_left_x size: 0
+2017-01-29 22:28:59,666 - DEBUG - np_left_y size: 0
+2017-01-29 22:28:59,666 - DEBUG - np_right_x size: 0
+2017-01-29 22:28:59,666 - DEBUG - np_right_y size: 0
+2017-01-29 22:28:59,666 - DEBUG - No past or current lane found. 
+2017-01-29 22:29:01,131 - INFO - Load test image: udacity/test_images/signs_vehicles_xygrad.jpg
+2017-01-29 22:29:02,665 - INFO - Load test image: udacity/test_images/straight_lines1.jpg
+2017-01-29 22:29:04,356 - INFO - Load test image: udacity/test_images/straight_lines2.jpg
+2017-01-29 22:29:05,854 - INFO - Load test image: udacity/test_images/test1.jpg
+2017-01-29 22:29:07,556 - INFO - Load test image: udacity/test_images/test2.jpg
+2017-01-29 22:29:09,197 - INFO - Load test image: udacity/test_images/test3.jpg
+2017-01-29 22:29:10,711 - INFO - Load test image: udacity/test_images/test4.jpg
+2017-01-29 22:29:12,265 - INFO - Load test image: udacity/test_images/test5.jpg
+2017-01-29 22:29:13,757 - INFO - Load test image: udacity/test_images/test6.jpg
+2017-01-29 22:29:15,131 - INFO - Load test image: udacity/test_images/test7_side_lane.jpg
+2017-01-29 22:29:16,500 - INFO - Load test image: udacity/test_images/test8_noise_from_another_car.jpg
+2017-01-29 22:29:17,764 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 22:29:17,764 - DEBUG - image saved to: debug_output/20170129_222917_gray_bird_view.jpg
+2017-01-29 22:29:17,765 - DEBUG - findLanePixels() - left line position x(x_left):  0
+2017-01-29 22:29:17,765 - DEBUG - findLanePixels() - left line position x(x_right):  0
+2017-01-29 22:29:17,765 - DEBUG - np_left_x size: 0
+2017-01-29 22:29:17,765 - DEBUG - np_left_y size: 0
+2017-01-29 22:29:17,765 - DEBUG - np_right_x size: 0
+2017-01-29 22:29:17,765 - DEBUG - np_right_y size: 0
+2017-01-29 22:29:17,822 - INFO - Load test image: udacity/test_images/test9_shadow.jpg
+2017-01-29 22:31:37,697 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 22:31:37,698 - DEBUG - image saved to: debug_output/20170129_223137_gray_bird_view.jpg
+2017-01-29 22:31:37,698 - DEBUG - findLanePixels() - left line position x(x_left):  0
+2017-01-29 22:31:37,698 - DEBUG - findLanePixels() - left line position x(x_right):  0
+2017-01-29 22:31:37,698 - DEBUG - np_left_x size: 0
+2017-01-29 22:31:37,698 - DEBUG - np_left_y size: 0
+2017-01-29 22:31:37,698 - DEBUG - np_right_x size: 0
+2017-01-29 22:31:37,699 - DEBUG - np_right_y size: 0
+2017-01-29 22:31:37,699 - DEBUG - main(): left_line empty? : True
+2017-01-29 22:31:37,699 - DEBUG - main(): right_line empty? : True
+2017-01-29 22:32:49,358 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 22:32:49,358 - DEBUG - image saved to: debug_output/20170129_223249_gray_bird_view.jpg
+2017-01-29 22:32:49,359 - DEBUG - findLanePixels() - left line position x(x_left):  0
+2017-01-29 22:32:49,359 - DEBUG - findLanePixels() - left line position x(x_right):  0
+2017-01-29 22:32:49,359 - DEBUG - np_left_x size: 0
+2017-01-29 22:32:49,359 - DEBUG - np_left_y size: 0
+2017-01-29 22:32:49,359 - DEBUG - np_right_x size: 0
+2017-01-29 22:32:49,359 - DEBUG - np_right_y size: 0
+2017-01-29 22:32:58,089 - DEBUG - main(): left_line empty? : True
+2017-01-29 22:32:58,089 - DEBUG - main(): right_line empty? : True
+2017-01-29 22:42:03,574 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 22:42:03,574 - DEBUG - image saved to: debug_output/20170129_224203_gray_bird_view.jpg
+2017-01-29 22:42:03,574 - DEBUG - findLanePixels() - left line position x(x_left):  0
+2017-01-29 22:42:03,575 - DEBUG - findLanePixels() - left line position x(x_right):  0
+2017-01-29 22:42:03,575 - DEBUG - np_left_x size: 0
+2017-01-29 22:42:03,575 - DEBUG - np_left_y size: 0
+2017-01-29 22:42:03,575 - DEBUG - np_right_x size: 0
+2017-01-29 22:42:03,575 - DEBUG - np_right_y size: 0
+2017-01-29 22:42:12,464 - DEBUG - main(): left_line empty? : True
+2017-01-29 22:42:12,465 - DEBUG - main(): right_line empty? : True
+2017-01-29 22:45:57,223 - INFO - findLinePositions() enables debugging.
+2017-01-29 22:47:48,550 - INFO - findLinePositions() enables debugging.
+2017-01-29 22:47:48,550 - DEBUG - findLinePositions() - Num of peaks found: 1
+2017-01-29 22:53:14,184 - INFO - findLinePositions() enables debugging.
+2017-01-29 22:53:14,185 - DEBUG - findLinePositions() - Num of peaks found: 1
+2017-01-29 22:54:33,042 - INFO - findLinePositions() enables debugging.
+2017-01-29 22:54:33,042 - DEBUG - findLinePositions() - Num of peaks found: 1
+2017-01-29 22:54:33,043 - DEBUG - findLinePositions() - Peak positions: [374]
+2017-01-29 22:58:53,707 - INFO - findLinePositions() enables debugging.
+2017-01-29 22:58:53,708 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-29 22:58:53,708 - DEBUG - findLinePositions() - Peak positions: [345 374]
+2017-01-29 23:00:41,813 - INFO - findLinePositions() enables debugging.
+2017-01-29 23:00:41,814 - DEBUG - findLinePositions() - Num of peaks found: 1
+2017-01-29 23:00:41,814 - DEBUG - findLinePositions() - Peak positions: [374]
+2017-01-29 23:08:18,402 - INFO - findLinePositions() enables debugging.
+2017-01-29 23:08:18,402 - DEBUG - findLinePositions() - Num of peaks found: 1
+2017-01-29 23:08:18,403 - DEBUG - findLinePositions() - Peak positions: [374]
+2017-01-29 23:13:18,341 - INFO - findLinePositions() enables debugging.
+2017-01-29 23:13:18,341 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-29 23:13:18,341 - DEBUG - findLinePositions() - Peak positions: [374, 1005]
+2017-01-29 23:13:58,974 - DEBUG - main(): left_line empty? : False
+2017-01-29 23:13:58,975 - DEBUG - main(): right_line empty? : False
+2017-01-29 23:15:28,050 - DEBUG - main(): left_line empty? : False
+2017-01-29 23:15:28,050 - DEBUG - main(): right_line empty? : False
+2017-01-29 23:15:34,642 - INFO - Load test image: udacity/test_images/signs_vehicles_xygrad.jpg
+2017-01-29 23:15:36,186 - INFO - Load test image: udacity/test_images/straight_lines1.jpg
+2017-01-29 23:15:37,914 - INFO - Load test image: udacity/test_images/straight_lines2.jpg
+2017-01-29 23:15:39,462 - INFO - Load test image: udacity/test_images/test1.jpg
+2017-01-29 23:15:41,090 - INFO - Load test image: udacity/test_images/test2.jpg
+2017-01-29 23:15:42,587 - INFO - Load test image: udacity/test_images/test3.jpg
+2017-01-29 23:15:44,086 - INFO - Load test image: udacity/test_images/test4.jpg
+2017-01-29 23:15:45,609 - INFO - Load test image: udacity/test_images/test5.jpg
+2017-01-29 23:15:47,128 - INFO - Load test image: udacity/test_images/test6.jpg
+2017-01-29 23:15:48,622 - INFO - Load test image: udacity/test_images/test7_side_lane.jpg
+2017-01-29 23:15:49,986 - INFO - Load test image: udacity/test_images/test8_noise_from_another_car.jpg
+2017-01-29 23:15:51,465 - INFO - Load test image: udacity/test_images/test9_shadow.jpg

@@ -5,11 +5,11 @@ import peakutils
 from peakutils.plot import plot as pplot
 from util_line import qLine
 
-from util_debug import DBG_saveTimeStampedImg
+from util_debug import DBG_saveTimeStampedImg, DBG_visualizeDetectedLane
 import logging
 logger = logging.getLogger(__name__)
 
-def findLinePositions(img_bgr):
+def findLinePositions(img_bgr, debug=False):
     """find left and right lane edges 
     
     Args:
@@ -19,32 +19,64 @@ def findLinePositions(img_bgr):
         tuple: x-axis positions of left and right lane edge lines 
     """
 
-    histogram = np.sum(img_bgr[img_bgr.shape[0]//2:,:], axis=0)
+    histogram = np.sum(img_bgr[img_bgr.shape[0]//2:,:], axis=0) # take a histogram along all the columns in the lower half of the image 
+    # peakutils.indexes has issue with finding peaks in the test8 image
+    # TODO: Find out why test8 image fails peakutils.indexes
+    # indexes = peakutils.indexes(histogram.astype(int), thres=.1, min_dist=100)  #100 is the estimated lane mark width, straight or curved lane
+    midpoint = np.int(histogram.shape[0]/2)
+    leftx_base = np.argmax(histogram[:midpoint])
+    rightx_base = np.argmax(histogram[midpoint:]) + midpoint
 
-    indexes = peakutils.indexes(histogram.astype(int), thres=.01, min_dist=100)  #100 is the estimated lane mark width, straight or curved lane
-
+    #TODO: redesign handeling no-lane-found exception
+    tolerance =  0.1*midpoint
+    if leftx_base > tolerance and rightx_base > (midpoint+tolerance) :
+        indexes = [leftx_base, rightx_base]
+    else:
+        indexes =[]
 
     # sort the peaks
     idx_sort = np.argsort( histogram[indexes] ) [::-1]
 
-    
+    if debug:
+        logger.info('findLinePositions() enables debugging.')
+        logger.debug('findLinePositions() - Num of peaks found: ' + str(len(indexes)))
+
+        logger.debug('findLinePositions() - Peak positions: ' + str((indexes)))
+        plt.plot(histogram )
+
+        plt.title('histogram')
+        plt.show()
+        plt.clf()
+     
     if len(indexes) < 2:
-        # lane is not found
-        return (0,0)
+        #try scan over the whole image instead of the lower half
+        histogram = np.sum(img_bgr[:,:], axis=0) # take a histogram along all the columns in the lower half of the image 
+
+        indexes = peakutils.indexes(histogram.astype(int), thres=.01, min_dist=100)  #100 is the estimated lane mark width, straight or curved lane
+
+
+        # sort the peaks
+        idx_sort = np.argsort( histogram[indexes] ) [::-1]
+        if len(indexes) < 2:
+            return (0,0)
+        else:
+            return (indexes[idx_sort[0]], indexes[idx_sort[1]])
     else:
         return (indexes[idx_sort[0]], indexes[idx_sort[1]])
 
 
-def findLinePixels(img, initial_x_center, window_width=50, window_height=20, search_step = 10, num_of_windows=2, debug=False):
+def findLinePixels(img, initial_x_center, pixel_threshol=5, window_width=70, window_height=20, search_step = 10, num_of_windows=2, debug=False):
     """find the line pixels
     
     Args:
         img (TYPE): gray images
         starting_x_pos (TYPE): Description
+        pixel_threshol : num of identified line pixels in a sliding window
         window_width (int, optional): Description
         window_height (int, optional): Description
         search_step: moving steps of the search window
         num_of_windows: search space consists a number of side-by-side windows
+
 
     Returns:
         tuple of list: list of (x, y) coorinates of line pixels.
@@ -58,7 +90,7 @@ def findLinePixels(img, initial_x_center, window_width=50, window_height=20, sea
     y_val = np.array([])
     
 
-    y_start_range = range(img_height, 0, -window_height) #scan bottom half; y_top ==0
+    y_start_range = range(img_height, 0, -window_height)
 
     for y_start in y_start_range:
 
@@ -103,7 +135,7 @@ def findLinePixels(img, initial_x_center, window_width=50, window_height=20, sea
         btm_left_row_idx, btm_left_col_idx  = ls_btm_left_pos[idx_search[0]]
 
 
-        if ls_window_sum[idx_search[0]] > 10: # only update the initial search position if we actually found pixels
+        if ls_window_sum[idx_search[0]] > pixel_threshol: # only update the initial search position if we actually found pixels
             initial_x_center = btm_left_col_idx + int(window_width/2) # for the next search along y-axis
 
         binary_map_line  = np.zeros_like(img)
@@ -165,11 +197,10 @@ def findLanePixels(img_gray, debug=False):
     Returns:
         TYPE: position of pixcels respectively in left and right lane marks
     """
-    x_left, x_right = findLinePositions(img_gray)
+    x_left, x_right = findLinePositions(img_gray, debug=debug)
 
 
-
-    np_left_x, np_left_y = findLinePixels(img_gray, x_left, debug=False)
+    np_left_x, np_left_y = findLinePixels(img_gray, x_left, debug=debug)
 
 
 
@@ -182,6 +213,12 @@ def findLanePixels(img_gray, debug=False):
         file_loc = DBG_saveTimeStampedImg(img_gray, 'gray_bird_view', 'debug_output' )
         logger.debug('findLanePixels(): one lane line is not found')
         logger.debug('image saved to: '+ file_loc)
+
+
+        logger.debug('findLanePixels() - left line position x(x_left):  ' + str(x_left))
+        logger.debug('findLanePixels() - left line position x(x_right):  ' + str(x_right))
+
+
         logger.debug('np_left_x size: ' + str(np_left_x.size))
         logger.debug('np_left_y size: '+ str(np_left_y.size))
         logger.debug('np_right_x size: ' + str(np_right_x.size))
@@ -250,36 +287,13 @@ def computeLaneLines(np_x_val_left, np_y_val_left, np_x_val_right, np_y_val_righ
 
     return left_fit, left_fitx, right_fit, right_fitx
 
-def DBG_visualizeDetectedLane(np_x_val_left, np_y_val_left, np_x_val_right, np_y_val_right, left_fitx, right_fitx, file_to_save = ''):
-    leftx = np_x_val_left
-    rightx = np_x_val_right
 
-
-
-    # Plot up the fake data
-    plt.plot(leftx, np_y_val_left, 'o', color='red')
-    plt.plot(rightx, np_y_val_right, 'o', color='blue')
-    plt.xlim(0, 1280)
-    plt.ylim(0, 720)
-    plt.plot(left_fitx, np_y_val_left, color='green', linewidth=3)
-    plt.plot(right_fitx, np_y_val_right, color='green', linewidth=3)
-    plt.gca().invert_yaxis() # to visualize as we do the images
-    plt.title('DBG_visualizeDetectedLane() - polyfit result')
-
-    if '' == file_to_save:
-        plt.show()   
-    else:
-        import os 
-        path, filename = os.path.split(file_to_save)    
-        plt.title(filename)
-        plt.savefig(file_to_save)
-
-    plt.clf()
 
 
 
 def findLaneLines(img_gray, debug=False):
     np_left_x, np_left_y, np_right_x, np_right_y  = findLanePixels(img_gray, debug=debug)
+
 
     #TODO: remove fitx from intermediate calculation
     left_fit, left_fitx, right_fit, right_fitx = computeLaneLines(np_left_x, np_left_y, np_right_x, np_right_y)
@@ -298,8 +312,17 @@ def main():
     import glob
     import os 
 
-    img_gray = cv2.imread('udacity/output_images/birds_eye_view/transformed_processed_test6.jpg', cv2.IMREAD_GRAYSCALE)
+    # from util_vision import qVision
+    # vision = qVision()
+    # img_bgr = cv2.imread('udacity/test_images/test8_noise_from_another_car.jpg')
+    # img_bgr_procd = vision.processImg(img_bgr)
 
+    # img_bgr_procd_birdview = vision.transformToBirdsEyeView(img_bgr_procd)
+
+    # img_gray =img_bgr_procd_birdview
+
+    
+    img_gray = cv2.imread('udacity/output_images/birds_eye_view/20170129_214432_gray_bird_view.jpg', cv2.IMREAD_GRAYSCALE)
     plt.imshow(img_gray,'gray')
     plt.show()
     print('img_gray shape', img_gray.shape)
