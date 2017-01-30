@@ -1058,3 +1058,1499 @@
 2017-01-29 16:18:00,990 - DEBUG - np_left_y size: 0
 2017-01-29 16:18:00,990 - DEBUG - np_right_x size: 0
 2017-01-29 16:18:00,990 - DEBUG - np_right_y size: 0
+2017-01-29 18:39:41,632 - INFO - util_debug.py loaded
+2017-01-29 18:39:41,632 - INFO - vision submodule loaded
+2017-01-29 18:39:53,722 - INFO - Camera calibrated
+2017-01-29 18:39:53,722 - INFO - Number of calibrated img: 17
+2017-01-29 18:39:53,879 - WARNING - /home/qh/anaconda3/envs/keras/lib/python3.5/site-packages/moviepy/audio/io/readers.py:123: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  self.nchannels))
+
+2017-01-29 18:39:55,304 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 18:39:55,304 - DEBUG - image saved to: debug_output/20170129_183955_gray_bird_view.jpg
+2017-01-29 18:39:55,304 - DEBUG - np_left_x size: 0
+2017-01-29 18:39:55,304 - DEBUG - np_left_y size: 0
+2017-01-29 18:39:55,305 - DEBUG - np_right_x size: 0
+2017-01-29 18:39:55,305 - DEBUG - np_right_y size: 0
+2017-01-29 19:29:42,827 - INFO - util_debug.py loaded
+2017-01-29 19:29:42,828 - INFO - vision submodule loaded
+2017-01-29 19:29:54,838 - INFO - Camera calibrated
+2017-01-29 19:29:54,839 - INFO - Number of calibrated img: 17
+2017-01-29 19:29:54,995 - WARNING - /home/qh/anaconda3/envs/keras/lib/python3.5/site-packages/moviepy/audio/io/readers.py:123: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  self.nchannels))
+
+2017-01-29 19:29:56,584 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:29:56,584 - DEBUG - image saved to: debug_output/20170129_192956_gray_bird_view.jpg
+2017-01-29 19:29:56,584 - DEBUG - np_left_x size: 0
+2017-01-29 19:29:56,584 - DEBUG - np_left_y size: 0
+2017-01-29 19:29:56,584 - DEBUG - np_right_x size: 0
+2017-01-29 19:29:56,585 - DEBUG - np_right_y size: 0
+2017-01-29 19:30:59,824 - INFO - util_debug.py loaded
+2017-01-29 19:30:59,824 - INFO - vision submodule loaded
+2017-01-29 19:31:11,316 - INFO - Camera calibrated
+2017-01-29 19:31:11,316 - INFO - Number of calibrated img: 17
+2017-01-29 19:31:11,466 - WARNING - /home/qh/anaconda3/envs/keras/lib/python3.5/site-packages/moviepy/audio/io/readers.py:123: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  self.nchannels))
+
+2017-01-29 19:31:12,928 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:31:12,928 - DEBUG - image saved to: debug_output/20170129_193112_gray_bird_view.jpg
+2017-01-29 19:31:12,928 - DEBUG - np_left_x size: 0
+2017-01-29 19:31:12,928 - DEBUG - np_left_y size: 0
+2017-01-29 19:31:12,929 - DEBUG - np_right_x size: 0
+2017-01-29 19:31:12,929 - DEBUG - np_right_y size: 0
+2017-01-29 19:31:12,929 - DEBUG - No past or current lane found. 
+2017-01-29 19:31:13,488 - WARNING - /mnt/data/hqs_d/MyDocuments/Study/CarND/term1/p4_adv_lane_finding/src/util_vision.py:213: FutureWarning: comparison to `None` will result in an elementwise object comparison in the future.
+  if None == self.M:
+
+2017-01-29 19:31:14,415 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:31:14,416 - DEBUG - image saved to: debug_output/20170129_193114_gray_bird_view.jpg
+2017-01-29 19:31:14,416 - DEBUG - np_left_x size: 0
+2017-01-29 19:31:14,416 - DEBUG - np_left_y size: 0
+2017-01-29 19:31:14,416 - DEBUG - np_right_x size: 0
+2017-01-29 19:31:14,416 - DEBUG - np_right_y size: 0
+2017-01-29 19:31:14,416 - DEBUG - No past or current lane found. 
+2017-01-29 19:31:17,333 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:31:17,333 - DEBUG - image saved to: debug_output/20170129_193117_gray_bird_view.jpg
+2017-01-29 19:31:17,333 - DEBUG - np_left_x size: 0
+2017-01-29 19:31:17,333 - DEBUG - np_left_y size: 0
+2017-01-29 19:31:17,333 - DEBUG - np_right_x size: 0
+2017-01-29 19:31:17,333 - DEBUG - np_right_y size: 0
+2017-01-29 19:31:21,593 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:31:21,594 - DEBUG - image saved to: debug_output/20170129_193121_gray_bird_view.jpg
+2017-01-29 19:31:21,594 - DEBUG - np_left_x size: 0
+2017-01-29 19:31:21,594 - DEBUG - np_left_y size: 0
+2017-01-29 19:31:21,594 - DEBUG - np_right_x size: 0
+2017-01-29 19:31:21,594 - DEBUG - np_right_y size: 0
+2017-01-29 19:31:24,367 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:31:24,367 - DEBUG - image saved to: debug_output/20170129_193124_gray_bird_view.jpg
+2017-01-29 19:31:24,367 - DEBUG - np_left_x size: 0
+2017-01-29 19:31:24,367 - DEBUG - np_left_y size: 0
+2017-01-29 19:31:24,368 - DEBUG - np_right_x size: 0
+2017-01-29 19:31:24,368 - DEBUG - np_right_y size: 0
+2017-01-29 19:31:47,321 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:31:47,321 - DEBUG - image saved to: debug_output/20170129_193147_gray_bird_view.jpg
+2017-01-29 19:31:47,322 - DEBUG - np_left_x size: 0
+2017-01-29 19:31:47,322 - DEBUG - np_left_y size: 0
+2017-01-29 19:31:47,322 - DEBUG - np_right_x size: 0
+2017-01-29 19:31:47,322 - DEBUG - np_right_y size: 0
+2017-01-29 19:32:01,783 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:32:01,783 - DEBUG - image saved to: debug_output/20170129_193201_gray_bird_view.jpg
+2017-01-29 19:32:01,783 - DEBUG - np_left_x size: 0
+2017-01-29 19:32:01,783 - DEBUG - np_left_y size: 0
+2017-01-29 19:32:01,783 - DEBUG - np_right_x size: 0
+2017-01-29 19:32:01,783 - DEBUG - np_right_y size: 0
+2017-01-29 19:32:03,229 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:32:03,229 - DEBUG - image saved to: debug_output/20170129_193203_gray_bird_view.jpg
+2017-01-29 19:32:03,230 - DEBUG - np_left_x size: 0
+2017-01-29 19:32:03,230 - DEBUG - np_left_y size: 0
+2017-01-29 19:32:03,230 - DEBUG - np_right_x size: 0
+2017-01-29 19:32:03,230 - DEBUG - np_right_y size: 0
+2017-01-29 19:32:04,603 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:32:04,603 - DEBUG - image saved to: debug_output/20170129_193204_gray_bird_view.jpg
+2017-01-29 19:32:04,604 - DEBUG - np_left_x size: 0
+2017-01-29 19:32:04,604 - DEBUG - np_left_y size: 0
+2017-01-29 19:32:04,604 - DEBUG - np_right_x size: 0
+2017-01-29 19:32:04,604 - DEBUG - np_right_y size: 0
+2017-01-29 19:32:19,213 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:32:19,213 - DEBUG - image saved to: debug_output/20170129_193219_gray_bird_view.jpg
+2017-01-29 19:32:19,213 - DEBUG - np_left_x size: 0
+2017-01-29 19:32:19,214 - DEBUG - np_left_y size: 0
+2017-01-29 19:32:19,214 - DEBUG - np_right_x size: 0
+2017-01-29 19:32:19,214 - DEBUG - np_right_y size: 0
+2017-01-29 19:32:20,633 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:32:20,633 - DEBUG - image saved to: debug_output/20170129_193220_gray_bird_view.jpg
+2017-01-29 19:32:20,634 - DEBUG - np_left_x size: 0
+2017-01-29 19:32:20,634 - DEBUG - np_left_y size: 0
+2017-01-29 19:32:20,634 - DEBUG - np_right_x size: 0
+2017-01-29 19:32:20,634 - DEBUG - np_right_y size: 0
+2017-01-29 19:32:26,424 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:32:26,424 - DEBUG - image saved to: debug_output/20170129_193226_gray_bird_view.jpg
+2017-01-29 19:32:26,424 - DEBUG - np_left_x size: 0
+2017-01-29 19:32:26,425 - DEBUG - np_left_y size: 0
+2017-01-29 19:32:26,425 - DEBUG - np_right_x size: 0
+2017-01-29 19:32:26,425 - DEBUG - np_right_y size: 0
+2017-01-29 19:32:38,429 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:32:38,429 - DEBUG - image saved to: debug_output/20170129_193238_gray_bird_view.jpg
+2017-01-29 19:32:38,430 - DEBUG - np_left_x size: 0
+2017-01-29 19:32:38,430 - DEBUG - np_left_y size: 0
+2017-01-29 19:32:38,430 - DEBUG - np_right_x size: 0
+2017-01-29 19:32:38,430 - DEBUG - np_right_y size: 0
+2017-01-29 19:32:53,682 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:32:53,683 - DEBUG - image saved to: debug_output/20170129_193253_gray_bird_view.jpg
+2017-01-29 19:32:53,683 - DEBUG - np_left_x size: 0
+2017-01-29 19:32:53,683 - DEBUG - np_left_y size: 0
+2017-01-29 19:32:53,683 - DEBUG - np_right_x size: 0
+2017-01-29 19:32:53,683 - DEBUG - np_right_y size: 0
+2017-01-29 19:32:55,081 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:32:55,081 - DEBUG - image saved to: debug_output/20170129_193255_gray_bird_view.jpg
+2017-01-29 19:32:55,081 - DEBUG - np_left_x size: 0
+2017-01-29 19:32:55,081 - DEBUG - np_left_y size: 0
+2017-01-29 19:32:55,081 - DEBUG - np_right_x size: 0
+2017-01-29 19:32:55,082 - DEBUG - np_right_y size: 0
+2017-01-29 19:32:56,432 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:32:56,432 - DEBUG - image saved to: debug_output/20170129_193256_gray_bird_view.jpg
+2017-01-29 19:32:56,432 - DEBUG - np_left_x size: 0
+2017-01-29 19:32:56,433 - DEBUG - np_left_y size: 0
+2017-01-29 19:32:56,433 - DEBUG - np_right_x size: 0
+2017-01-29 19:32:56,433 - DEBUG - np_right_y size: 0
+2017-01-29 19:33:00,707 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:33:00,707 - DEBUG - image saved to: debug_output/20170129_193300_gray_bird_view.jpg
+2017-01-29 19:33:00,707 - DEBUG - np_left_x size: 0
+2017-01-29 19:33:00,708 - DEBUG - np_left_y size: 0
+2017-01-29 19:33:00,708 - DEBUG - np_right_x size: 0
+2017-01-29 19:33:00,708 - DEBUG - np_right_y size: 0
+2017-01-29 19:33:02,110 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:33:02,111 - DEBUG - image saved to: debug_output/20170129_193302_gray_bird_view.jpg
+2017-01-29 19:33:02,111 - DEBUG - np_left_x size: 0
+2017-01-29 19:33:02,111 - DEBUG - np_left_y size: 0
+2017-01-29 19:33:02,111 - DEBUG - np_right_x size: 0
+2017-01-29 19:33:02,111 - DEBUG - np_right_y size: 0
+2017-01-29 19:33:14,148 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:33:14,148 - DEBUG - image saved to: debug_output/20170129_193314_gray_bird_view.jpg
+2017-01-29 19:33:14,148 - DEBUG - np_left_x size: 0
+2017-01-29 19:33:14,148 - DEBUG - np_left_y size: 0
+2017-01-29 19:33:14,148 - DEBUG - np_right_x size: 0
+2017-01-29 19:33:14,148 - DEBUG - np_right_y size: 0
+2017-01-29 19:33:47,129 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:33:47,129 - DEBUG - image saved to: debug_output/20170129_193347_gray_bird_view.jpg
+2017-01-29 19:33:47,129 - DEBUG - np_left_x size: 0
+2017-01-29 19:33:47,130 - DEBUG - np_left_y size: 0
+2017-01-29 19:33:47,130 - DEBUG - np_right_x size: 0
+2017-01-29 19:33:47,130 - DEBUG - np_right_y size: 0
+2017-01-29 19:34:13,142 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:34:13,142 - DEBUG - image saved to: debug_output/20170129_193413_gray_bird_view.jpg
+2017-01-29 19:34:13,143 - DEBUG - np_left_x size: 0
+2017-01-29 19:34:13,143 - DEBUG - np_left_y size: 0
+2017-01-29 19:34:13,143 - DEBUG - np_right_x size: 0
+2017-01-29 19:34:13,143 - DEBUG - np_right_y size: 0
+2017-01-29 19:34:31,565 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:34:31,565 - DEBUG - image saved to: debug_output/20170129_193431_gray_bird_view.jpg
+2017-01-29 19:34:31,565 - DEBUG - np_left_x size: 0
+2017-01-29 19:34:31,565 - DEBUG - np_left_y size: 0
+2017-01-29 19:34:31,565 - DEBUG - np_right_x size: 0
+2017-01-29 19:34:31,565 - DEBUG - np_right_y size: 0
+2017-01-29 19:34:34,421 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:34:34,421 - DEBUG - image saved to: debug_output/20170129_193434_gray_bird_view.jpg
+2017-01-29 19:34:34,421 - DEBUG - np_left_x size: 0
+2017-01-29 19:34:34,422 - DEBUG - np_left_y size: 0
+2017-01-29 19:34:34,422 - DEBUG - np_right_x size: 0
+2017-01-29 19:34:34,422 - DEBUG - np_right_y size: 0
+2017-01-29 19:34:35,850 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:34:35,850 - DEBUG - image saved to: debug_output/20170129_193435_gray_bird_view.jpg
+2017-01-29 19:34:35,851 - DEBUG - np_left_x size: 0
+2017-01-29 19:34:35,851 - DEBUG - np_left_y size: 0
+2017-01-29 19:34:35,851 - DEBUG - np_right_x size: 0
+2017-01-29 19:34:35,851 - DEBUG - np_right_y size: 0
+2017-01-29 19:35:29,515 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:35:29,515 - DEBUG - image saved to: debug_output/20170129_193529_gray_bird_view.jpg
+2017-01-29 19:35:29,515 - DEBUG - np_left_x size: 0
+2017-01-29 19:35:29,515 - DEBUG - np_left_y size: 0
+2017-01-29 19:35:29,515 - DEBUG - np_right_x size: 0
+2017-01-29 19:35:29,515 - DEBUG - np_right_y size: 0
+2017-01-29 19:35:47,690 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:35:47,690 - DEBUG - image saved to: debug_output/20170129_193547_gray_bird_view.jpg
+2017-01-29 19:35:47,690 - DEBUG - np_left_x size: 0
+2017-01-29 19:35:47,691 - DEBUG - np_left_y size: 0
+2017-01-29 19:35:47,691 - DEBUG - np_right_x size: 0
+2017-01-29 19:35:47,691 - DEBUG - np_right_y size: 0
+2017-01-29 19:35:50,738 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:35:50,738 - DEBUG - image saved to: debug_output/20170129_193550_gray_bird_view.jpg
+2017-01-29 19:35:50,738 - DEBUG - np_left_x size: 0
+2017-01-29 19:35:50,738 - DEBUG - np_left_y size: 0
+2017-01-29 19:35:50,738 - DEBUG - np_right_x size: 0
+2017-01-29 19:35:50,738 - DEBUG - np_right_y size: 0
+2017-01-29 19:35:53,749 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:35:53,750 - DEBUG - image saved to: debug_output/20170129_193553_gray_bird_view.jpg
+2017-01-29 19:35:53,750 - DEBUG - np_left_x size: 0
+2017-01-29 19:35:53,750 - DEBUG - np_left_y size: 0
+2017-01-29 19:35:53,750 - DEBUG - np_right_x size: 0
+2017-01-29 19:35:53,750 - DEBUG - np_right_y size: 0
+2017-01-29 19:36:07,509 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:36:07,509 - DEBUG - image saved to: debug_output/20170129_193607_gray_bird_view.jpg
+2017-01-29 19:36:07,509 - DEBUG - np_left_x size: 0
+2017-01-29 19:36:07,509 - DEBUG - np_left_y size: 0
+2017-01-29 19:36:07,510 - DEBUG - np_right_x size: 0
+2017-01-29 19:36:07,510 - DEBUG - np_right_y size: 0
+2017-01-29 19:36:09,108 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:36:09,109 - DEBUG - image saved to: debug_output/20170129_193609_gray_bird_view.jpg
+2017-01-29 19:36:09,109 - DEBUG - np_left_x size: 0
+2017-01-29 19:36:09,109 - DEBUG - np_left_y size: 0
+2017-01-29 19:36:09,109 - DEBUG - np_right_x size: 0
+2017-01-29 19:36:09,109 - DEBUG - np_right_y size: 0
+2017-01-29 19:36:25,982 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:36:25,983 - DEBUG - image saved to: debug_output/20170129_193625_gray_bird_view.jpg
+2017-01-29 19:36:25,983 - DEBUG - np_left_x size: 0
+2017-01-29 19:36:25,983 - DEBUG - np_left_y size: 0
+2017-01-29 19:36:25,983 - DEBUG - np_right_x size: 0
+2017-01-29 19:36:25,983 - DEBUG - np_right_y size: 0
+2017-01-29 19:36:28,979 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:36:28,979 - DEBUG - image saved to: debug_output/20170129_193628_gray_bird_view.jpg
+2017-01-29 19:36:28,979 - DEBUG - np_left_x size: 0
+2017-01-29 19:36:28,979 - DEBUG - np_left_y size: 0
+2017-01-29 19:36:28,979 - DEBUG - np_right_x size: 0
+2017-01-29 19:36:28,980 - DEBUG - np_right_y size: 0
+2017-01-29 19:36:30,435 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:36:30,435 - DEBUG - image saved to: debug_output/20170129_193630_gray_bird_view.jpg
+2017-01-29 19:36:30,435 - DEBUG - np_left_x size: 0
+2017-01-29 19:36:30,435 - DEBUG - np_left_y size: 0
+2017-01-29 19:36:30,435 - DEBUG - np_right_x size: 0
+2017-01-29 19:36:30,435 - DEBUG - np_right_y size: 0
+2017-01-29 19:36:33,346 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:36:33,346 - DEBUG - image saved to: debug_output/20170129_193633_gray_bird_view.jpg
+2017-01-29 19:36:33,346 - DEBUG - np_left_x size: 0
+2017-01-29 19:36:33,346 - DEBUG - np_left_y size: 0
+2017-01-29 19:36:33,346 - DEBUG - np_right_x size: 0
+2017-01-29 19:36:33,347 - DEBUG - np_right_y size: 0
+2017-01-29 19:36:36,208 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:36:36,208 - DEBUG - image saved to: debug_output/20170129_193636_gray_bird_view.jpg
+2017-01-29 19:36:36,208 - DEBUG - np_left_x size: 0
+2017-01-29 19:36:36,208 - DEBUG - np_left_y size: 0
+2017-01-29 19:36:36,208 - DEBUG - np_right_x size: 0
+2017-01-29 19:36:36,209 - DEBUG - np_right_y size: 0
+2017-01-29 19:36:45,368 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:36:45,369 - DEBUG - image saved to: debug_output/20170129_193645_gray_bird_view.jpg
+2017-01-29 19:36:45,369 - DEBUG - np_left_x size: 0
+2017-01-29 19:36:45,369 - DEBUG - np_left_y size: 0
+2017-01-29 19:36:45,369 - DEBUG - np_right_x size: 0
+2017-01-29 19:36:45,369 - DEBUG - np_right_y size: 0
+2017-01-29 19:37:29,790 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:37:29,790 - DEBUG - image saved to: debug_output/20170129_193729_gray_bird_view.jpg
+2017-01-29 19:37:29,790 - DEBUG - np_left_x size: 0
+2017-01-29 19:37:29,790 - DEBUG - np_left_y size: 0
+2017-01-29 19:37:29,790 - DEBUG - np_right_x size: 0
+2017-01-29 19:37:29,790 - DEBUG - np_right_y size: 0
+2017-01-29 19:37:43,440 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:37:43,440 - DEBUG - image saved to: debug_output/20170129_193743_gray_bird_view.jpg
+2017-01-29 19:37:43,440 - DEBUG - np_left_x size: 0
+2017-01-29 19:37:43,441 - DEBUG - np_left_y size: 0
+2017-01-29 19:37:43,441 - DEBUG - np_right_x size: 0
+2017-01-29 19:37:43,441 - DEBUG - np_right_y size: 0
+2017-01-29 19:37:44,879 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:37:44,879 - DEBUG - image saved to: debug_output/20170129_193744_gray_bird_view.jpg
+2017-01-29 19:37:44,879 - DEBUG - np_left_x size: 0
+2017-01-29 19:37:44,879 - DEBUG - np_left_y size: 0
+2017-01-29 19:37:44,879 - DEBUG - np_right_x size: 0
+2017-01-29 19:37:44,879 - DEBUG - np_right_y size: 0
+2017-01-29 19:38:03,434 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:38:03,434 - DEBUG - image saved to: debug_output/20170129_193803_gray_bird_view.jpg
+2017-01-29 19:38:03,434 - DEBUG - np_left_x size: 0
+2017-01-29 19:38:03,435 - DEBUG - np_left_y size: 0
+2017-01-29 19:38:03,435 - DEBUG - np_right_x size: 0
+2017-01-29 19:38:03,435 - DEBUG - np_right_y size: 0
+2017-01-29 19:38:20,455 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:38:20,455 - DEBUG - image saved to: debug_output/20170129_193820_gray_bird_view.jpg
+2017-01-29 19:38:20,455 - DEBUG - np_left_x size: 0
+2017-01-29 19:38:20,455 - DEBUG - np_left_y size: 0
+2017-01-29 19:38:20,455 - DEBUG - np_right_x size: 0
+2017-01-29 19:38:20,456 - DEBUG - np_right_y size: 0
+2017-01-29 19:38:57,301 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:38:57,301 - DEBUG - image saved to: debug_output/20170129_193857_gray_bird_view.jpg
+2017-01-29 19:38:57,301 - DEBUG - np_left_x size: 0
+2017-01-29 19:38:57,301 - DEBUG - np_left_y size: 0
+2017-01-29 19:38:57,302 - DEBUG - np_right_x size: 0
+2017-01-29 19:38:57,302 - DEBUG - np_right_y size: 0
+2017-01-29 19:39:38,227 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:39:38,227 - DEBUG - image saved to: debug_output/20170129_193938_gray_bird_view.jpg
+2017-01-29 19:39:38,227 - DEBUG - np_left_x size: 0
+2017-01-29 19:39:38,227 - DEBUG - np_left_y size: 0
+2017-01-29 19:39:38,227 - DEBUG - np_right_x size: 0
+2017-01-29 19:39:38,227 - DEBUG - np_right_y size: 0
+2017-01-29 19:39:41,212 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:39:41,212 - DEBUG - image saved to: debug_output/20170129_193941_gray_bird_view.jpg
+2017-01-29 19:39:41,212 - DEBUG - np_left_x size: 0
+2017-01-29 19:39:41,213 - DEBUG - np_left_y size: 0
+2017-01-29 19:39:41,213 - DEBUG - np_right_x size: 0
+2017-01-29 19:39:41,213 - DEBUG - np_right_y size: 0
+2017-01-29 19:39:45,585 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:39:45,585 - DEBUG - image saved to: debug_output/20170129_193945_gray_bird_view.jpg
+2017-01-29 19:39:45,585 - DEBUG - np_left_x size: 0
+2017-01-29 19:39:45,585 - DEBUG - np_left_y size: 0
+2017-01-29 19:39:45,585 - DEBUG - np_right_x size: 0
+2017-01-29 19:39:45,585 - DEBUG - np_right_y size: 0
+2017-01-29 19:39:46,942 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:39:46,943 - DEBUG - image saved to: debug_output/20170129_193946_gray_bird_view.jpg
+2017-01-29 19:39:46,943 - DEBUG - np_left_x size: 0
+2017-01-29 19:39:46,943 - DEBUG - np_left_y size: 0
+2017-01-29 19:39:46,943 - DEBUG - np_right_x size: 0
+2017-01-29 19:39:46,943 - DEBUG - np_right_y size: 0
+2017-01-29 19:39:48,300 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:39:48,300 - DEBUG - image saved to: debug_output/20170129_193948_gray_bird_view.jpg
+2017-01-29 19:39:48,300 - DEBUG - np_left_x size: 0
+2017-01-29 19:39:48,301 - DEBUG - np_left_y size: 0
+2017-01-29 19:39:48,301 - DEBUG - np_right_x size: 0
+2017-01-29 19:39:48,301 - DEBUG - np_right_y size: 0
+2017-01-29 19:39:49,594 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:39:49,594 - DEBUG - image saved to: debug_output/20170129_193949_gray_bird_view.jpg
+2017-01-29 19:39:49,594 - DEBUG - np_left_x size: 0
+2017-01-29 19:39:49,594 - DEBUG - np_left_y size: 0
+2017-01-29 19:39:49,594 - DEBUG - np_right_x size: 0
+2017-01-29 19:39:49,594 - DEBUG - np_right_y size: 0
+2017-01-29 19:39:55,395 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:39:55,395 - DEBUG - image saved to: debug_output/20170129_193955_gray_bird_view.jpg
+2017-01-29 19:39:55,395 - DEBUG - np_left_x size: 0
+2017-01-29 19:39:55,396 - DEBUG - np_left_y size: 0
+2017-01-29 19:39:55,396 - DEBUG - np_right_x size: 0
+2017-01-29 19:39:55,396 - DEBUG - np_right_y size: 0
+2017-01-29 19:39:56,778 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:39:56,779 - DEBUG - image saved to: debug_output/20170129_193956_gray_bird_view.jpg
+2017-01-29 19:39:56,779 - DEBUG - np_left_x size: 0
+2017-01-29 19:39:56,779 - DEBUG - np_left_y size: 0
+2017-01-29 19:39:56,779 - DEBUG - np_right_x size: 0
+2017-01-29 19:39:56,779 - DEBUG - np_right_y size: 0
+2017-01-29 19:40:07,344 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:40:07,344 - DEBUG - image saved to: debug_output/20170129_194007_gray_bird_view.jpg
+2017-01-29 19:40:07,344 - DEBUG - np_left_x size: 0
+2017-01-29 19:40:07,344 - DEBUG - np_left_y size: 0
+2017-01-29 19:40:07,344 - DEBUG - np_right_x size: 0
+2017-01-29 19:40:07,345 - DEBUG - np_right_y size: 0
+2017-01-29 19:40:11,796 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:40:11,796 - DEBUG - image saved to: debug_output/20170129_194011_gray_bird_view.jpg
+2017-01-29 19:40:11,796 - DEBUG - np_left_x size: 0
+2017-01-29 19:40:11,797 - DEBUG - np_left_y size: 0
+2017-01-29 19:40:11,797 - DEBUG - np_right_x size: 0
+2017-01-29 19:40:11,797 - DEBUG - np_right_y size: 0
+2017-01-29 19:40:13,194 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:40:13,194 - DEBUG - image saved to: debug_output/20170129_194013_gray_bird_view.jpg
+2017-01-29 19:40:13,194 - DEBUG - np_left_x size: 0
+2017-01-29 19:40:13,194 - DEBUG - np_left_y size: 0
+2017-01-29 19:40:13,194 - DEBUG - np_right_x size: 0
+2017-01-29 19:40:13,195 - DEBUG - np_right_y size: 0
+2017-01-29 19:40:14,531 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:40:14,531 - DEBUG - image saved to: debug_output/20170129_194014_gray_bird_view.jpg
+2017-01-29 19:40:14,532 - DEBUG - np_left_x size: 0
+2017-01-29 19:40:14,532 - DEBUG - np_left_y size: 0
+2017-01-29 19:40:14,532 - DEBUG - np_right_x size: 0
+2017-01-29 19:40:14,532 - DEBUG - np_right_y size: 0
+2017-01-29 19:40:15,895 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:40:15,895 - DEBUG - image saved to: debug_output/20170129_194015_gray_bird_view.jpg
+2017-01-29 19:40:15,895 - DEBUG - np_left_x size: 0
+2017-01-29 19:40:15,896 - DEBUG - np_left_y size: 0
+2017-01-29 19:40:15,896 - DEBUG - np_right_x size: 0
+2017-01-29 19:40:15,896 - DEBUG - np_right_y size: 0
+2017-01-29 19:40:18,740 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:40:18,740 - DEBUG - image saved to: debug_output/20170129_194018_gray_bird_view.jpg
+2017-01-29 19:40:18,740 - DEBUG - np_left_x size: 0
+2017-01-29 19:40:18,740 - DEBUG - np_left_y size: 0
+2017-01-29 19:40:18,740 - DEBUG - np_right_x size: 0
+2017-01-29 19:40:18,740 - DEBUG - np_right_y size: 0
+2017-01-29 19:40:24,476 - WARNING - /home/qh/anaconda3/envs/keras/lib/python3.5/site-packages/numpy/lib/polynomial.py:595: RankWarning: Polyfit may be poorly conditioned
+  warnings.warn(msg, RankWarning)
+
+2017-01-29 19:40:24,477 - WARNING - /home/qh/anaconda3/envs/keras/lib/python3.5/site-packages/numpy/lib/polynomial.py:595: RankWarning: Polyfit may be poorly conditioned
+  warnings.warn(msg, RankWarning)
+
+2017-01-29 19:41:18,622 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:41:18,622 - DEBUG - image saved to: debug_output/20170129_194118_gray_bird_view.jpg
+2017-01-29 19:41:18,623 - DEBUG - np_left_x size: 0
+2017-01-29 19:41:18,623 - DEBUG - np_left_y size: 0
+2017-01-29 19:41:18,623 - DEBUG - np_right_x size: 0
+2017-01-29 19:41:18,623 - DEBUG - np_right_y size: 0
+2017-01-29 19:41:29,306 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:41:29,306 - DEBUG - image saved to: debug_output/20170129_194129_gray_bird_view.jpg
+2017-01-29 19:41:29,306 - DEBUG - np_left_x size: 0
+2017-01-29 19:41:29,306 - DEBUG - np_left_y size: 0
+2017-01-29 19:41:29,307 - DEBUG - np_right_x size: 0
+2017-01-29 19:41:29,307 - DEBUG - np_right_y size: 0
+2017-01-29 19:41:53,522 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:41:53,522 - DEBUG - image saved to: debug_output/20170129_194153_gray_bird_view.jpg
+2017-01-29 19:41:53,523 - DEBUG - np_left_x size: 0
+2017-01-29 19:41:53,523 - DEBUG - np_left_y size: 0
+2017-01-29 19:41:53,523 - DEBUG - np_right_x size: 0
+2017-01-29 19:41:53,523 - DEBUG - np_right_y size: 0
+2017-01-29 19:41:55,114 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:41:55,114 - DEBUG - image saved to: debug_output/20170129_194155_gray_bird_view.jpg
+2017-01-29 19:41:55,114 - DEBUG - np_left_x size: 0
+2017-01-29 19:41:55,114 - DEBUG - np_left_y size: 0
+2017-01-29 19:41:55,114 - DEBUG - np_right_x size: 0
+2017-01-29 19:41:55,114 - DEBUG - np_right_y size: 0
+2017-01-29 19:42:25,651 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:42:25,651 - DEBUG - image saved to: debug_output/20170129_194225_gray_bird_view.jpg
+2017-01-29 19:42:25,651 - DEBUG - np_left_x size: 0
+2017-01-29 19:42:25,651 - DEBUG - np_left_y size: 0
+2017-01-29 19:42:25,651 - DEBUG - np_right_x size: 0
+2017-01-29 19:42:25,651 - DEBUG - np_right_y size: 0
+2017-01-29 19:42:28,375 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:42:28,375 - DEBUG - image saved to: debug_output/20170129_194228_gray_bird_view.jpg
+2017-01-29 19:42:28,375 - DEBUG - np_left_x size: 0
+2017-01-29 19:42:28,375 - DEBUG - np_left_y size: 0
+2017-01-29 19:42:28,375 - DEBUG - np_right_x size: 0
+2017-01-29 19:42:28,376 - DEBUG - np_right_y size: 0
+2017-01-29 19:42:46,470 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:42:46,470 - DEBUG - image saved to: debug_output/20170129_194246_gray_bird_view.jpg
+2017-01-29 19:42:46,470 - DEBUG - np_left_x size: 0
+2017-01-29 19:42:46,471 - DEBUG - np_left_y size: 0
+2017-01-29 19:42:46,471 - DEBUG - np_right_x size: 0
+2017-01-29 19:42:46,471 - DEBUG - np_right_y size: 0
+2017-01-29 19:43:33,895 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:43:33,895 - DEBUG - image saved to: debug_output/20170129_194333_gray_bird_view.jpg
+2017-01-29 19:43:33,895 - DEBUG - np_left_x size: 0
+2017-01-29 19:43:33,895 - DEBUG - np_left_y size: 0
+2017-01-29 19:43:33,896 - DEBUG - np_right_x size: 0
+2017-01-29 19:43:33,896 - DEBUG - np_right_y size: 0
+2017-01-29 19:43:35,214 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:43:35,214 - DEBUG - image saved to: debug_output/20170129_194335_gray_bird_view.jpg
+2017-01-29 19:43:35,214 - DEBUG - np_left_x size: 0
+2017-01-29 19:43:35,214 - DEBUG - np_left_y size: 0
+2017-01-29 19:43:35,214 - DEBUG - np_right_x size: 0
+2017-01-29 19:43:35,215 - DEBUG - np_right_y size: 0
+2017-01-29 19:43:38,091 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:43:38,091 - DEBUG - image saved to: debug_output/20170129_194338_gray_bird_view.jpg
+2017-01-29 19:43:38,091 - DEBUG - np_left_x size: 0
+2017-01-29 19:43:38,091 - DEBUG - np_left_y size: 0
+2017-01-29 19:43:38,091 - DEBUG - np_right_x size: 0
+2017-01-29 19:43:38,091 - DEBUG - np_right_y size: 0
+2017-01-29 19:43:39,431 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:43:39,431 - DEBUG - image saved to: debug_output/20170129_194339_gray_bird_view.jpg
+2017-01-29 19:43:39,431 - DEBUG - np_left_x size: 0
+2017-01-29 19:43:39,432 - DEBUG - np_left_y size: 0
+2017-01-29 19:43:39,432 - DEBUG - np_right_x size: 0
+2017-01-29 19:43:39,432 - DEBUG - np_right_y size: 0
+2017-01-29 19:43:40,840 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:43:40,841 - DEBUG - image saved to: debug_output/20170129_194340_gray_bird_view.jpg
+2017-01-29 19:43:40,841 - DEBUG - np_left_x size: 0
+2017-01-29 19:43:40,841 - DEBUG - np_left_y size: 0
+2017-01-29 19:43:40,841 - DEBUG - np_right_x size: 0
+2017-01-29 19:43:40,841 - DEBUG - np_right_y size: 0
+2017-01-29 19:43:42,267 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:43:42,267 - DEBUG - image saved to: debug_output/20170129_194342_gray_bird_view.jpg
+2017-01-29 19:43:42,267 - DEBUG - np_left_x size: 0
+2017-01-29 19:43:42,267 - DEBUG - np_left_y size: 0
+2017-01-29 19:43:42,267 - DEBUG - np_right_x size: 0
+2017-01-29 19:43:42,267 - DEBUG - np_right_y size: 0
+2017-01-29 19:43:57,359 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:43:57,359 - DEBUG - image saved to: debug_output/20170129_194357_gray_bird_view.jpg
+2017-01-29 19:43:57,359 - DEBUG - np_left_x size: 0
+2017-01-29 19:43:57,359 - DEBUG - np_left_y size: 0
+2017-01-29 19:43:57,359 - DEBUG - np_right_x size: 0
+2017-01-29 19:43:57,360 - DEBUG - np_right_y size: 0
+2017-01-29 19:44:03,620 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:44:03,620 - DEBUG - image saved to: debug_output/20170129_194403_gray_bird_view.jpg
+2017-01-29 19:44:03,620 - DEBUG - np_left_x size: 0
+2017-01-29 19:44:03,620 - DEBUG - np_left_y size: 0
+2017-01-29 19:44:03,621 - DEBUG - np_right_x size: 0
+2017-01-29 19:44:03,621 - DEBUG - np_right_y size: 0
+2017-01-29 19:44:06,607 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:44:06,608 - DEBUG - image saved to: debug_output/20170129_194406_gray_bird_view.jpg
+2017-01-29 19:44:06,608 - DEBUG - np_left_x size: 0
+2017-01-29 19:44:06,608 - DEBUG - np_left_y size: 0
+2017-01-29 19:44:06,608 - DEBUG - np_right_x size: 0
+2017-01-29 19:44:06,608 - DEBUG - np_right_y size: 0
+2017-01-29 19:44:16,892 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:44:16,892 - DEBUG - image saved to: debug_output/20170129_194416_gray_bird_view.jpg
+2017-01-29 19:44:16,892 - DEBUG - np_left_x size: 0
+2017-01-29 19:44:16,893 - DEBUG - np_left_y size: 0
+2017-01-29 19:44:16,893 - DEBUG - np_right_x size: 0
+2017-01-29 19:44:16,893 - DEBUG - np_right_y size: 0
+2017-01-29 19:44:27,222 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:44:27,222 - DEBUG - image saved to: debug_output/20170129_194427_gray_bird_view.jpg
+2017-01-29 19:44:27,222 - DEBUG - np_left_x size: 0
+2017-01-29 19:44:27,222 - DEBUG - np_left_y size: 0
+2017-01-29 19:44:27,222 - DEBUG - np_right_x size: 0
+2017-01-29 19:44:27,223 - DEBUG - np_right_y size: 0
+2017-01-29 19:44:28,633 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:44:28,633 - DEBUG - image saved to: debug_output/20170129_194428_gray_bird_view.jpg
+2017-01-29 19:44:28,634 - DEBUG - np_left_x size: 0
+2017-01-29 19:44:28,634 - DEBUG - np_left_y size: 0
+2017-01-29 19:44:28,634 - DEBUG - np_right_x size: 0
+2017-01-29 19:44:28,634 - DEBUG - np_right_y size: 0
+2017-01-29 19:46:21,811 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:46:21,811 - DEBUG - image saved to: debug_output/20170129_194621_gray_bird_view.jpg
+2017-01-29 19:46:21,811 - DEBUG - np_left_x size: 0
+2017-01-29 19:46:21,812 - DEBUG - np_left_y size: 0
+2017-01-29 19:46:21,812 - DEBUG - np_right_x size: 0
+2017-01-29 19:46:21,812 - DEBUG - np_right_y size: 0
+2017-01-29 19:46:23,114 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:46:23,114 - DEBUG - image saved to: debug_output/20170129_194623_gray_bird_view.jpg
+2017-01-29 19:46:23,114 - DEBUG - np_left_x size: 0
+2017-01-29 19:46:23,114 - DEBUG - np_left_y size: 0
+2017-01-29 19:46:23,114 - DEBUG - np_right_x size: 0
+2017-01-29 19:46:23,115 - DEBUG - np_right_y size: 0
+2017-01-29 19:46:24,463 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:46:24,463 - DEBUG - image saved to: debug_output/20170129_194624_gray_bird_view.jpg
+2017-01-29 19:46:24,463 - DEBUG - np_left_x size: 0
+2017-01-29 19:46:24,464 - DEBUG - np_left_y size: 0
+2017-01-29 19:46:24,464 - DEBUG - np_right_x size: 0
+2017-01-29 19:46:24,464 - DEBUG - np_right_y size: 0
+2017-01-29 19:46:25,886 - WARNING - /home/qh/anaconda3/envs/keras/lib/python3.5/site-packages/numpy/lib/polynomial.py:595: RankWarning: Polyfit may be poorly conditioned
+  warnings.warn(msg, RankWarning)
+
+2017-01-29 19:46:25,887 - WARNING - /home/qh/anaconda3/envs/keras/lib/python3.5/site-packages/numpy/lib/polynomial.py:595: RankWarning: Polyfit may be poorly conditioned
+  warnings.warn(msg, RankWarning)
+
+2017-01-29 19:46:27,271 - WARNING - /home/qh/anaconda3/envs/keras/lib/python3.5/site-packages/numpy/lib/polynomial.py:595: RankWarning: Polyfit may be poorly conditioned
+  warnings.warn(msg, RankWarning)
+
+2017-01-29 19:46:27,272 - WARNING - /home/qh/anaconda3/envs/keras/lib/python3.5/site-packages/numpy/lib/polynomial.py:595: RankWarning: Polyfit may be poorly conditioned
+  warnings.warn(msg, RankWarning)
+
+2017-01-29 19:46:28,647 - WARNING - /home/qh/anaconda3/envs/keras/lib/python3.5/site-packages/numpy/lib/polynomial.py:595: RankWarning: Polyfit may be poorly conditioned
+  warnings.warn(msg, RankWarning)
+
+2017-01-29 19:46:28,648 - WARNING - /home/qh/anaconda3/envs/keras/lib/python3.5/site-packages/numpy/lib/polynomial.py:595: RankWarning: Polyfit may be poorly conditioned
+  warnings.warn(msg, RankWarning)
+
+2017-01-29 19:46:32,857 - WARNING - /home/qh/anaconda3/envs/keras/lib/python3.5/site-packages/numpy/lib/polynomial.py:595: RankWarning: Polyfit may be poorly conditioned
+  warnings.warn(msg, RankWarning)
+
+2017-01-29 19:46:32,858 - WARNING - /home/qh/anaconda3/envs/keras/lib/python3.5/site-packages/numpy/lib/polynomial.py:595: RankWarning: Polyfit may be poorly conditioned
+  warnings.warn(msg, RankWarning)
+
+2017-01-29 19:47:04,712 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:47:04,712 - DEBUG - image saved to: debug_output/20170129_194704_gray_bird_view.jpg
+2017-01-29 19:47:04,712 - DEBUG - np_left_x size: 0
+2017-01-29 19:47:04,712 - DEBUG - np_left_y size: 0
+2017-01-29 19:47:04,712 - DEBUG - np_right_x size: 0
+2017-01-29 19:47:04,712 - DEBUG - np_right_y size: 0
+2017-01-29 19:47:09,038 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:47:09,039 - DEBUG - image saved to: debug_output/20170129_194709_gray_bird_view.jpg
+2017-01-29 19:47:09,039 - DEBUG - np_left_x size: 0
+2017-01-29 19:47:09,039 - DEBUG - np_left_y size: 0
+2017-01-29 19:47:09,039 - DEBUG - np_right_x size: 0
+2017-01-29 19:47:09,040 - DEBUG - np_right_y size: 0
+2017-01-29 19:47:40,791 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:47:40,791 - DEBUG - image saved to: debug_output/20170129_194740_gray_bird_view.jpg
+2017-01-29 19:47:40,791 - DEBUG - np_left_x size: 0
+2017-01-29 19:47:40,791 - DEBUG - np_left_y size: 0
+2017-01-29 19:47:40,792 - DEBUG - np_right_x size: 0
+2017-01-29 19:47:40,792 - DEBUG - np_right_y size: 0
+2017-01-29 19:47:42,157 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:47:42,157 - DEBUG - image saved to: debug_output/20170129_194742_gray_bird_view.jpg
+2017-01-29 19:47:42,157 - DEBUG - np_left_x size: 0
+2017-01-29 19:47:42,157 - DEBUG - np_left_y size: 0
+2017-01-29 19:47:42,157 - DEBUG - np_right_x size: 0
+2017-01-29 19:47:42,157 - DEBUG - np_right_y size: 0
+2017-01-29 19:47:43,636 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:47:43,637 - DEBUG - image saved to: debug_output/20170129_194743_gray_bird_view.jpg
+2017-01-29 19:47:43,637 - DEBUG - np_left_x size: 0
+2017-01-29 19:47:43,637 - DEBUG - np_left_y size: 0
+2017-01-29 19:47:43,637 - DEBUG - np_right_x size: 0
+2017-01-29 19:47:43,637 - DEBUG - np_right_y size: 0
+2017-01-29 19:47:44,975 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:47:44,975 - DEBUG - image saved to: debug_output/20170129_194744_gray_bird_view.jpg
+2017-01-29 19:47:44,975 - DEBUG - np_left_x size: 0
+2017-01-29 19:47:44,975 - DEBUG - np_left_y size: 0
+2017-01-29 19:47:44,976 - DEBUG - np_right_x size: 0
+2017-01-29 19:47:44,976 - DEBUG - np_right_y size: 0
+2017-01-29 19:47:52,424 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:47:52,424 - DEBUG - image saved to: debug_output/20170129_194752_gray_bird_view.jpg
+2017-01-29 19:47:52,424 - DEBUG - np_left_x size: 0
+2017-01-29 19:47:52,425 - DEBUG - np_left_y size: 0
+2017-01-29 19:47:52,425 - DEBUG - np_right_x size: 0
+2017-01-29 19:47:52,425 - DEBUG - np_right_y size: 0
+2017-01-29 19:48:00,015 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:48:00,016 - DEBUG - image saved to: debug_output/20170129_194800_gray_bird_view.jpg
+2017-01-29 19:48:00,016 - DEBUG - np_left_x size: 0
+2017-01-29 19:48:00,016 - DEBUG - np_left_y size: 0
+2017-01-29 19:48:00,016 - DEBUG - np_right_x size: 0
+2017-01-29 19:48:00,016 - DEBUG - np_right_y size: 0
+2017-01-29 19:48:01,424 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:48:01,424 - DEBUG - image saved to: debug_output/20170129_194801_gray_bird_view.jpg
+2017-01-29 19:48:01,424 - DEBUG - np_left_x size: 0
+2017-01-29 19:48:01,424 - DEBUG - np_left_y size: 0
+2017-01-29 19:48:01,424 - DEBUG - np_right_x size: 0
+2017-01-29 19:48:01,424 - DEBUG - np_right_y size: 0
+2017-01-29 19:48:07,581 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:48:07,581 - DEBUG - image saved to: debug_output/20170129_194807_gray_bird_view.jpg
+2017-01-29 19:48:07,581 - DEBUG - np_left_x size: 0
+2017-01-29 19:48:07,581 - DEBUG - np_left_y size: 0
+2017-01-29 19:48:07,581 - DEBUG - np_right_x size: 0
+2017-01-29 19:48:07,581 - DEBUG - np_right_y size: 0
+2017-01-29 19:48:09,054 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:48:09,054 - DEBUG - image saved to: debug_output/20170129_194809_gray_bird_view.jpg
+2017-01-29 19:48:09,054 - DEBUG - np_left_x size: 0
+2017-01-29 19:48:09,054 - DEBUG - np_left_y size: 0
+2017-01-29 19:48:09,055 - DEBUG - np_right_x size: 0
+2017-01-29 19:48:09,055 - DEBUG - np_right_y size: 0
+2017-01-29 19:48:13,423 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:48:13,423 - DEBUG - image saved to: debug_output/20170129_194813_gray_bird_view.jpg
+2017-01-29 19:48:13,423 - DEBUG - np_left_x size: 0
+2017-01-29 19:48:13,423 - DEBUG - np_left_y size: 0
+2017-01-29 19:48:13,423 - DEBUG - np_right_x size: 0
+2017-01-29 19:48:13,423 - DEBUG - np_right_y size: 0
+2017-01-29 19:48:16,232 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:48:16,232 - DEBUG - image saved to: debug_output/20170129_194816_gray_bird_view.jpg
+2017-01-29 19:48:16,232 - DEBUG - np_left_x size: 0
+2017-01-29 19:48:16,232 - DEBUG - np_left_y size: 0
+2017-01-29 19:48:16,232 - DEBUG - np_right_x size: 0
+2017-01-29 19:48:16,233 - DEBUG - np_right_y size: 0
+2017-01-29 19:48:17,630 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:48:17,631 - DEBUG - image saved to: debug_output/20170129_194817_gray_bird_view.jpg
+2017-01-29 19:48:17,631 - DEBUG - np_left_x size: 0
+2017-01-29 19:48:17,631 - DEBUG - np_left_y size: 0
+2017-01-29 19:48:17,631 - DEBUG - np_right_x size: 0
+2017-01-29 19:48:17,631 - DEBUG - np_right_y size: 0
+2017-01-29 19:48:20,688 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:48:20,689 - DEBUG - image saved to: debug_output/20170129_194820_gray_bird_view.jpg
+2017-01-29 19:48:20,689 - DEBUG - np_left_x size: 0
+2017-01-29 19:48:20,689 - DEBUG - np_left_y size: 0
+2017-01-29 19:48:20,689 - DEBUG - np_right_x size: 0
+2017-01-29 19:48:20,689 - DEBUG - np_right_y size: 0
+2017-01-29 19:48:22,125 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:48:22,125 - DEBUG - image saved to: debug_output/20170129_194822_gray_bird_view.jpg
+2017-01-29 19:48:22,125 - DEBUG - np_left_x size: 0
+2017-01-29 19:48:22,126 - DEBUG - np_left_y size: 0
+2017-01-29 19:48:22,126 - DEBUG - np_right_x size: 0
+2017-01-29 19:48:22,126 - DEBUG - np_right_y size: 0
+2017-01-29 19:48:26,618 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:48:26,618 - DEBUG - image saved to: debug_output/20170129_194826_gray_bird_view.jpg
+2017-01-29 19:48:26,618 - DEBUG - np_left_x size: 0
+2017-01-29 19:48:26,618 - DEBUG - np_left_y size: 0
+2017-01-29 19:48:26,618 - DEBUG - np_right_x size: 0
+2017-01-29 19:48:26,619 - DEBUG - np_right_y size: 0
+2017-01-29 19:50:28,168 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:50:28,168 - DEBUG - image saved to: debug_output/20170129_195028_gray_bird_view.jpg
+2017-01-29 19:50:28,168 - DEBUG - np_left_x size: 0
+2017-01-29 19:50:28,168 - DEBUG - np_left_y size: 0
+2017-01-29 19:50:28,169 - DEBUG - np_right_x size: 0
+2017-01-29 19:50:28,169 - DEBUG - np_right_y size: 0
+2017-01-29 19:51:05,393 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:51:05,393 - DEBUG - image saved to: debug_output/20170129_195105_gray_bird_view.jpg
+2017-01-29 19:51:05,393 - DEBUG - np_left_x size: 0
+2017-01-29 19:51:05,393 - DEBUG - np_left_y size: 0
+2017-01-29 19:51:05,393 - DEBUG - np_right_x size: 0
+2017-01-29 19:51:05,393 - DEBUG - np_right_y size: 0
+2017-01-29 19:51:08,316 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:51:08,316 - DEBUG - image saved to: debug_output/20170129_195108_gray_bird_view.jpg
+2017-01-29 19:51:08,316 - DEBUG - np_left_x size: 0
+2017-01-29 19:51:08,317 - DEBUG - np_left_y size: 0
+2017-01-29 19:51:08,317 - DEBUG - np_right_x size: 0
+2017-01-29 19:51:08,317 - DEBUG - np_right_y size: 0
+2017-01-29 19:51:09,784 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:51:09,784 - DEBUG - image saved to: debug_output/20170129_195109_gray_bird_view.jpg
+2017-01-29 19:51:09,784 - DEBUG - np_left_x size: 0
+2017-01-29 19:51:09,784 - DEBUG - np_left_y size: 0
+2017-01-29 19:51:09,784 - DEBUG - np_right_x size: 0
+2017-01-29 19:51:09,784 - DEBUG - np_right_y size: 0
+2017-01-29 19:51:23,512 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:51:23,513 - DEBUG - image saved to: debug_output/20170129_195123_gray_bird_view.jpg
+2017-01-29 19:51:23,513 - DEBUG - np_left_x size: 0
+2017-01-29 19:51:23,513 - DEBUG - np_left_y size: 0
+2017-01-29 19:51:23,513 - DEBUG - np_right_x size: 0
+2017-01-29 19:51:23,513 - DEBUG - np_right_y size: 0
+2017-01-29 19:51:26,605 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:51:26,605 - DEBUG - image saved to: debug_output/20170129_195126_gray_bird_view.jpg
+2017-01-29 19:51:26,605 - DEBUG - np_left_x size: 0
+2017-01-29 19:51:26,605 - DEBUG - np_left_y size: 0
+2017-01-29 19:51:26,606 - DEBUG - np_right_x size: 0
+2017-01-29 19:51:26,606 - DEBUG - np_right_y size: 0
+2017-01-29 19:51:32,627 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:51:32,627 - DEBUG - image saved to: debug_output/20170129_195132_gray_bird_view.jpg
+2017-01-29 19:51:32,628 - DEBUG - np_left_x size: 0
+2017-01-29 19:51:32,628 - DEBUG - np_left_y size: 0
+2017-01-29 19:51:32,628 - DEBUG - np_right_x size: 0
+2017-01-29 19:51:32,628 - DEBUG - np_right_y size: 0
+2017-01-29 19:51:42,826 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:51:42,826 - DEBUG - image saved to: debug_output/20170129_195142_gray_bird_view.jpg
+2017-01-29 19:51:42,826 - DEBUG - np_left_x size: 0
+2017-01-29 19:51:42,826 - DEBUG - np_left_y size: 0
+2017-01-29 19:51:42,826 - DEBUG - np_right_x size: 0
+2017-01-29 19:51:42,826 - DEBUG - np_right_y size: 0
+2017-01-29 19:51:45,767 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:51:45,767 - DEBUG - image saved to: debug_output/20170129_195145_gray_bird_view.jpg
+2017-01-29 19:51:45,767 - DEBUG - np_left_x size: 0
+2017-01-29 19:51:45,767 - DEBUG - np_left_y size: 0
+2017-01-29 19:51:45,768 - DEBUG - np_right_x size: 0
+2017-01-29 19:51:45,768 - DEBUG - np_right_y size: 0
+2017-01-29 19:51:57,624 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:51:57,624 - DEBUG - image saved to: debug_output/20170129_195157_gray_bird_view.jpg
+2017-01-29 19:51:57,624 - DEBUG - np_left_x size: 0
+2017-01-29 19:51:57,625 - DEBUG - np_left_y size: 0
+2017-01-29 19:51:57,625 - DEBUG - np_right_x size: 0
+2017-01-29 19:51:57,625 - DEBUG - np_right_y size: 0
+2017-01-29 19:51:58,980 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:51:58,980 - DEBUG - image saved to: debug_output/20170129_195158_gray_bird_view.jpg
+2017-01-29 19:51:58,980 - DEBUG - np_left_x size: 0
+2017-01-29 19:51:58,980 - DEBUG - np_left_y size: 0
+2017-01-29 19:51:58,980 - DEBUG - np_right_x size: 0
+2017-01-29 19:51:58,980 - DEBUG - np_right_y size: 0
+2017-01-29 19:52:16,221 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:52:16,221 - DEBUG - image saved to: debug_output/20170129_195216_gray_bird_view.jpg
+2017-01-29 19:52:16,221 - DEBUG - np_left_x size: 0
+2017-01-29 19:52:16,221 - DEBUG - np_left_y size: 0
+2017-01-29 19:52:16,221 - DEBUG - np_right_x size: 0
+2017-01-29 19:52:16,222 - DEBUG - np_right_y size: 0
+2017-01-29 19:52:19,246 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:52:19,246 - DEBUG - image saved to: debug_output/20170129_195219_gray_bird_view.jpg
+2017-01-29 19:52:19,246 - DEBUG - np_left_x size: 0
+2017-01-29 19:52:19,246 - DEBUG - np_left_y size: 0
+2017-01-29 19:52:19,247 - DEBUG - np_right_x size: 0
+2017-01-29 19:52:19,247 - DEBUG - np_right_y size: 0
+2017-01-29 19:52:22,242 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:52:22,242 - DEBUG - image saved to: debug_output/20170129_195222_gray_bird_view.jpg
+2017-01-29 19:52:22,242 - DEBUG - np_left_x size: 0
+2017-01-29 19:52:22,242 - DEBUG - np_left_y size: 0
+2017-01-29 19:52:22,242 - DEBUG - np_right_x size: 0
+2017-01-29 19:52:22,242 - DEBUG - np_right_y size: 0
+2017-01-29 19:52:26,557 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:52:26,557 - DEBUG - image saved to: debug_output/20170129_195226_gray_bird_view.jpg
+2017-01-29 19:52:26,557 - DEBUG - np_left_x size: 0
+2017-01-29 19:52:26,557 - DEBUG - np_left_y size: 0
+2017-01-29 19:52:26,557 - DEBUG - np_right_x size: 0
+2017-01-29 19:52:26,557 - DEBUG - np_right_y size: 0
+2017-01-29 19:52:27,907 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:52:27,908 - DEBUG - image saved to: debug_output/20170129_195227_gray_bird_view.jpg
+2017-01-29 19:52:27,908 - DEBUG - np_left_x size: 0
+2017-01-29 19:52:27,908 - DEBUG - np_left_y size: 0
+2017-01-29 19:52:27,908 - DEBUG - np_right_x size: 0
+2017-01-29 19:52:27,908 - DEBUG - np_right_y size: 0
+2017-01-29 19:52:38,635 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:52:38,635 - DEBUG - image saved to: debug_output/20170129_195238_gray_bird_view.jpg
+2017-01-29 19:52:38,635 - DEBUG - np_left_x size: 0
+2017-01-29 19:52:38,636 - DEBUG - np_left_y size: 0
+2017-01-29 19:52:38,636 - DEBUG - np_right_x size: 0
+2017-01-29 19:52:38,636 - DEBUG - np_right_y size: 0
+2017-01-29 19:52:44,813 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:52:44,813 - DEBUG - image saved to: debug_output/20170129_195244_gray_bird_view.jpg
+2017-01-29 19:52:44,813 - DEBUG - np_left_x size: 0
+2017-01-29 19:52:44,813 - DEBUG - np_left_y size: 0
+2017-01-29 19:52:44,813 - DEBUG - np_right_x size: 0
+2017-01-29 19:52:44,813 - DEBUG - np_right_y size: 0
+2017-01-29 19:52:52,456 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:52:52,456 - DEBUG - image saved to: debug_output/20170129_195252_gray_bird_view.jpg
+2017-01-29 19:52:52,456 - DEBUG - np_left_x size: 0
+2017-01-29 19:52:52,456 - DEBUG - np_left_y size: 0
+2017-01-29 19:52:52,456 - DEBUG - np_right_x size: 0
+2017-01-29 19:52:52,456 - DEBUG - np_right_y size: 0
+2017-01-29 19:52:53,859 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:52:53,860 - DEBUG - image saved to: debug_output/20170129_195253_gray_bird_view.jpg
+2017-01-29 19:52:53,860 - DEBUG - np_left_x size: 0
+2017-01-29 19:52:53,860 - DEBUG - np_left_y size: 0
+2017-01-29 19:52:53,860 - DEBUG - np_right_x size: 0
+2017-01-29 19:52:53,860 - DEBUG - np_right_y size: 0
+2017-01-29 19:53:02,731 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:53:02,731 - DEBUG - image saved to: debug_output/20170129_195302_gray_bird_view.jpg
+2017-01-29 19:53:02,731 - DEBUG - np_left_x size: 0
+2017-01-29 19:53:02,731 - DEBUG - np_left_y size: 0
+2017-01-29 19:53:02,732 - DEBUG - np_right_x size: 0
+2017-01-29 19:53:02,732 - DEBUG - np_right_y size: 0
+2017-01-29 19:53:10,120 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:53:10,120 - DEBUG - image saved to: debug_output/20170129_195310_gray_bird_view.jpg
+2017-01-29 19:53:10,120 - DEBUG - np_left_x size: 0
+2017-01-29 19:53:10,121 - DEBUG - np_left_y size: 0
+2017-01-29 19:53:10,121 - DEBUG - np_right_x size: 0
+2017-01-29 19:53:10,121 - DEBUG - np_right_y size: 0
+2017-01-29 19:53:11,483 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:53:11,483 - DEBUG - image saved to: debug_output/20170129_195311_gray_bird_view.jpg
+2017-01-29 19:53:11,483 - DEBUG - np_left_x size: 0
+2017-01-29 19:53:11,484 - DEBUG - np_left_y size: 0
+2017-01-29 19:53:11,484 - DEBUG - np_right_x size: 0
+2017-01-29 19:53:11,484 - DEBUG - np_right_y size: 0
+2017-01-29 19:53:12,860 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:53:12,860 - DEBUG - image saved to: debug_output/20170129_195312_gray_bird_view.jpg
+2017-01-29 19:53:12,860 - DEBUG - np_left_x size: 0
+2017-01-29 19:53:12,860 - DEBUG - np_left_y size: 0
+2017-01-29 19:53:12,860 - DEBUG - np_right_x size: 0
+2017-01-29 19:53:12,861 - DEBUG - np_right_y size: 0
+2017-01-29 19:53:14,291 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:53:14,292 - DEBUG - image saved to: debug_output/20170129_195314_gray_bird_view.jpg
+2017-01-29 19:53:14,292 - DEBUG - np_left_x size: 0
+2017-01-29 19:53:14,292 - DEBUG - np_left_y size: 0
+2017-01-29 19:53:14,292 - DEBUG - np_right_x size: 0
+2017-01-29 19:53:14,292 - DEBUG - np_right_y size: 0
+2017-01-29 19:53:17,291 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:53:17,291 - DEBUG - image saved to: debug_output/20170129_195317_gray_bird_view.jpg
+2017-01-29 19:53:17,292 - DEBUG - np_left_x size: 0
+2017-01-29 19:53:17,292 - DEBUG - np_left_y size: 0
+2017-01-29 19:53:17,292 - DEBUG - np_right_x size: 0
+2017-01-29 19:53:17,292 - DEBUG - np_right_y size: 0
+2017-01-29 19:53:18,715 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:53:18,715 - DEBUG - image saved to: debug_output/20170129_195318_gray_bird_view.jpg
+2017-01-29 19:53:18,715 - DEBUG - np_left_x size: 0
+2017-01-29 19:53:18,715 - DEBUG - np_left_y size: 0
+2017-01-29 19:53:18,715 - DEBUG - np_right_x size: 0
+2017-01-29 19:53:18,716 - DEBUG - np_right_y size: 0
+2017-01-29 19:53:20,141 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:53:20,141 - DEBUG - image saved to: debug_output/20170129_195320_gray_bird_view.jpg
+2017-01-29 19:53:20,141 - DEBUG - np_left_x size: 0
+2017-01-29 19:53:20,142 - DEBUG - np_left_y size: 0
+2017-01-29 19:53:20,142 - DEBUG - np_right_x size: 0
+2017-01-29 19:53:20,142 - DEBUG - np_right_y size: 0
+2017-01-29 19:53:23,089 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:53:23,089 - DEBUG - image saved to: debug_output/20170129_195323_gray_bird_view.jpg
+2017-01-29 19:53:23,089 - DEBUG - np_left_x size: 0
+2017-01-29 19:53:23,089 - DEBUG - np_left_y size: 0
+2017-01-29 19:53:23,089 - DEBUG - np_right_x size: 0
+2017-01-29 19:53:23,089 - DEBUG - np_right_y size: 0
+2017-01-29 19:53:25,946 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:53:25,946 - DEBUG - image saved to: debug_output/20170129_195325_gray_bird_view.jpg
+2017-01-29 19:53:25,946 - DEBUG - np_left_x size: 0
+2017-01-29 19:53:25,947 - DEBUG - np_left_y size: 0
+2017-01-29 19:53:25,947 - DEBUG - np_right_x size: 0
+2017-01-29 19:53:25,947 - DEBUG - np_right_y size: 0
+2017-01-29 19:53:27,398 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:53:27,398 - DEBUG - image saved to: debug_output/20170129_195327_gray_bird_view.jpg
+2017-01-29 19:53:27,398 - DEBUG - np_left_x size: 0
+2017-01-29 19:53:27,398 - DEBUG - np_left_y size: 0
+2017-01-29 19:53:27,398 - DEBUG - np_right_x size: 0
+2017-01-29 19:53:27,398 - DEBUG - np_right_y size: 0
+2017-01-29 19:53:28,724 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:53:28,725 - DEBUG - image saved to: debug_output/20170129_195328_gray_bird_view.jpg
+2017-01-29 19:53:28,725 - DEBUG - np_left_x size: 0
+2017-01-29 19:53:28,725 - DEBUG - np_left_y size: 0
+2017-01-29 19:53:28,725 - DEBUG - np_right_x size: 0
+2017-01-29 19:53:28,725 - DEBUG - np_right_y size: 0
+2017-01-29 19:53:30,203 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:53:30,203 - DEBUG - image saved to: debug_output/20170129_195330_gray_bird_view.jpg
+2017-01-29 19:53:30,203 - DEBUG - np_left_x size: 0
+2017-01-29 19:53:30,203 - DEBUG - np_left_y size: 0
+2017-01-29 19:53:30,203 - DEBUG - np_right_x size: 0
+2017-01-29 19:53:30,203 - DEBUG - np_right_y size: 0
+2017-01-29 19:53:33,095 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:53:33,095 - DEBUG - image saved to: debug_output/20170129_195333_gray_bird_view.jpg
+2017-01-29 19:53:33,095 - DEBUG - np_left_x size: 0
+2017-01-29 19:53:33,095 - DEBUG - np_left_y size: 0
+2017-01-29 19:53:33,095 - DEBUG - np_right_x size: 0
+2017-01-29 19:53:33,096 - DEBUG - np_right_y size: 0
+2017-01-29 19:53:34,439 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:53:34,439 - DEBUG - image saved to: debug_output/20170129_195334_gray_bird_view.jpg
+2017-01-29 19:53:34,440 - DEBUG - np_left_x size: 0
+2017-01-29 19:53:34,440 - DEBUG - np_left_y size: 0
+2017-01-29 19:53:34,440 - DEBUG - np_right_x size: 0
+2017-01-29 19:53:34,440 - DEBUG - np_right_y size: 0
+2017-01-29 19:53:37,365 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:53:37,365 - DEBUG - image saved to: debug_output/20170129_195337_gray_bird_view.jpg
+2017-01-29 19:53:37,365 - DEBUG - np_left_x size: 0
+2017-01-29 19:53:37,365 - DEBUG - np_left_y size: 0
+2017-01-29 19:53:37,365 - DEBUG - np_right_x size: 0
+2017-01-29 19:53:37,366 - DEBUG - np_right_y size: 0
+2017-01-29 19:53:38,894 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:53:38,894 - DEBUG - image saved to: debug_output/20170129_195338_gray_bird_view.jpg
+2017-01-29 19:53:38,894 - DEBUG - np_left_x size: 0
+2017-01-29 19:53:38,894 - DEBUG - np_left_y size: 0
+2017-01-29 19:53:38,895 - DEBUG - np_right_x size: 0
+2017-01-29 19:53:38,895 - DEBUG - np_right_y size: 0
+2017-01-29 19:53:46,547 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:53:46,547 - DEBUG - image saved to: debug_output/20170129_195346_gray_bird_view.jpg
+2017-01-29 19:53:46,547 - DEBUG - np_left_x size: 0
+2017-01-29 19:53:46,548 - DEBUG - np_left_y size: 0
+2017-01-29 19:53:46,548 - DEBUG - np_right_x size: 0
+2017-01-29 19:53:46,548 - DEBUG - np_right_y size: 0
+2017-01-29 19:53:47,956 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:53:47,956 - DEBUG - image saved to: debug_output/20170129_195347_gray_bird_view.jpg
+2017-01-29 19:53:47,956 - DEBUG - np_left_x size: 0
+2017-01-29 19:53:47,956 - DEBUG - np_left_y size: 0
+2017-01-29 19:53:47,956 - DEBUG - np_right_x size: 0
+2017-01-29 19:53:47,956 - DEBUG - np_right_y size: 0
+2017-01-29 19:54:01,514 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:54:01,514 - DEBUG - image saved to: debug_output/20170129_195401_gray_bird_view.jpg
+2017-01-29 19:54:01,514 - DEBUG - np_left_x size: 0
+2017-01-29 19:54:01,514 - DEBUG - np_left_y size: 0
+2017-01-29 19:54:01,514 - DEBUG - np_right_x size: 0
+2017-01-29 19:54:01,514 - DEBUG - np_right_y size: 0
+2017-01-29 19:54:04,406 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:54:04,406 - DEBUG - image saved to: debug_output/20170129_195404_gray_bird_view.jpg
+2017-01-29 19:54:04,406 - DEBUG - np_left_x size: 0
+2017-01-29 19:54:04,406 - DEBUG - np_left_y size: 0
+2017-01-29 19:54:04,406 - DEBUG - np_right_x size: 0
+2017-01-29 19:54:04,406 - DEBUG - np_right_y size: 0
+2017-01-29 19:54:05,842 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:54:05,842 - DEBUG - image saved to: debug_output/20170129_195405_gray_bird_view.jpg
+2017-01-29 19:54:05,842 - DEBUG - np_left_x size: 0
+2017-01-29 19:54:05,842 - DEBUG - np_left_y size: 0
+2017-01-29 19:54:05,842 - DEBUG - np_right_x size: 0
+2017-01-29 19:54:05,843 - DEBUG - np_right_y size: 0
+2017-01-29 19:54:07,194 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:54:07,194 - DEBUG - image saved to: debug_output/20170129_195407_gray_bird_view.jpg
+2017-01-29 19:54:07,195 - DEBUG - np_left_x size: 0
+2017-01-29 19:54:07,195 - DEBUG - np_left_y size: 0
+2017-01-29 19:54:07,195 - DEBUG - np_right_x size: 0
+2017-01-29 19:54:07,195 - DEBUG - np_right_y size: 0
+2017-01-29 19:54:13,177 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:54:13,177 - DEBUG - image saved to: debug_output/20170129_195413_gray_bird_view.jpg
+2017-01-29 19:54:13,177 - DEBUG - np_left_x size: 0
+2017-01-29 19:54:13,177 - DEBUG - np_left_y size: 0
+2017-01-29 19:54:13,178 - DEBUG - np_right_x size: 0
+2017-01-29 19:54:13,178 - DEBUG - np_right_y size: 0
+2017-01-29 19:54:22,154 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:54:22,154 - DEBUG - image saved to: debug_output/20170129_195422_gray_bird_view.jpg
+2017-01-29 19:54:22,154 - DEBUG - np_left_x size: 0
+2017-01-29 19:54:22,154 - DEBUG - np_left_y size: 0
+2017-01-29 19:54:22,155 - DEBUG - np_right_x size: 0
+2017-01-29 19:54:22,155 - DEBUG - np_right_y size: 0
+2017-01-29 19:54:37,506 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:54:37,506 - DEBUG - image saved to: debug_output/20170129_195437_gray_bird_view.jpg
+2017-01-29 19:54:37,506 - DEBUG - np_left_x size: 0
+2017-01-29 19:54:37,506 - DEBUG - np_left_y size: 0
+2017-01-29 19:54:37,506 - DEBUG - np_right_x size: 0
+2017-01-29 19:54:37,506 - DEBUG - np_right_y size: 0
+2017-01-29 19:54:38,820 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:54:38,820 - DEBUG - image saved to: debug_output/20170129_195438_gray_bird_view.jpg
+2017-01-29 19:54:38,820 - DEBUG - np_left_x size: 0
+2017-01-29 19:54:38,820 - DEBUG - np_left_y size: 0
+2017-01-29 19:54:38,821 - DEBUG - np_right_x size: 0
+2017-01-29 19:54:38,821 - DEBUG - np_right_y size: 0
+2017-01-29 19:54:40,171 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:54:40,171 - DEBUG - image saved to: debug_output/20170129_195440_gray_bird_view.jpg
+2017-01-29 19:54:40,171 - DEBUG - np_left_x size: 0
+2017-01-29 19:54:40,171 - DEBUG - np_left_y size: 0
+2017-01-29 19:54:40,171 - DEBUG - np_right_x size: 0
+2017-01-29 19:54:40,172 - DEBUG - np_right_y size: 0
+2017-01-29 19:54:41,595 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:54:41,596 - DEBUG - image saved to: debug_output/20170129_195441_gray_bird_view.jpg
+2017-01-29 19:54:41,596 - DEBUG - np_left_x size: 0
+2017-01-29 19:54:41,596 - DEBUG - np_left_y size: 0
+2017-01-29 19:54:41,596 - DEBUG - np_right_x size: 0
+2017-01-29 19:54:41,596 - DEBUG - np_right_y size: 0
+2017-01-29 19:54:44,472 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:54:44,472 - DEBUG - image saved to: debug_output/20170129_195444_gray_bird_view.jpg
+2017-01-29 19:54:44,472 - DEBUG - np_left_x size: 0
+2017-01-29 19:54:44,472 - DEBUG - np_left_y size: 0
+2017-01-29 19:54:44,472 - DEBUG - np_right_x size: 0
+2017-01-29 19:54:44,473 - DEBUG - np_right_y size: 0
+2017-01-29 19:54:45,810 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:54:45,810 - DEBUG - image saved to: debug_output/20170129_195445_gray_bird_view.jpg
+2017-01-29 19:54:45,810 - DEBUG - np_left_x size: 0
+2017-01-29 19:54:45,810 - DEBUG - np_left_y size: 0
+2017-01-29 19:54:45,810 - DEBUG - np_right_x size: 0
+2017-01-29 19:54:45,811 - DEBUG - np_right_y size: 0
+2017-01-29 19:54:54,869 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:54:54,869 - DEBUG - image saved to: debug_output/20170129_195454_gray_bird_view.jpg
+2017-01-29 19:54:54,869 - DEBUG - np_left_x size: 0
+2017-01-29 19:54:54,869 - DEBUG - np_left_y size: 0
+2017-01-29 19:54:54,869 - DEBUG - np_right_x size: 0
+2017-01-29 19:54:54,869 - DEBUG - np_right_y size: 0
+2017-01-29 19:54:56,280 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:54:56,280 - DEBUG - image saved to: debug_output/20170129_195456_gray_bird_view.jpg
+2017-01-29 19:54:56,280 - DEBUG - np_left_x size: 0
+2017-01-29 19:54:56,281 - DEBUG - np_left_y size: 0
+2017-01-29 19:54:56,281 - DEBUG - np_right_x size: 0
+2017-01-29 19:54:56,281 - DEBUG - np_right_y size: 0
+2017-01-29 19:54:59,422 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:54:59,422 - DEBUG - image saved to: debug_output/20170129_195459_gray_bird_view.jpg
+2017-01-29 19:54:59,422 - DEBUG - np_left_x size: 0
+2017-01-29 19:54:59,423 - DEBUG - np_left_y size: 0
+2017-01-29 19:54:59,423 - DEBUG - np_right_x size: 0
+2017-01-29 19:54:59,423 - DEBUG - np_right_y size: 0
+2017-01-29 19:55:00,856 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:55:00,856 - DEBUG - image saved to: debug_output/20170129_195500_gray_bird_view.jpg
+2017-01-29 19:55:00,856 - DEBUG - np_left_x size: 0
+2017-01-29 19:55:00,856 - DEBUG - np_left_y size: 0
+2017-01-29 19:55:00,857 - DEBUG - np_right_x size: 0
+2017-01-29 19:55:00,857 - DEBUG - np_right_y size: 0
+2017-01-29 19:55:11,421 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:55:11,421 - DEBUG - image saved to: debug_output/20170129_195511_gray_bird_view.jpg
+2017-01-29 19:55:11,421 - DEBUG - np_left_x size: 0
+2017-01-29 19:55:11,421 - DEBUG - np_left_y size: 0
+2017-01-29 19:55:11,422 - DEBUG - np_right_x size: 0
+2017-01-29 19:55:11,422 - DEBUG - np_right_y size: 0
+2017-01-29 19:55:14,261 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:55:14,261 - DEBUG - image saved to: debug_output/20170129_195514_gray_bird_view.jpg
+2017-01-29 19:55:14,261 - DEBUG - np_left_x size: 0
+2017-01-29 19:55:14,261 - DEBUG - np_left_y size: 0
+2017-01-29 19:55:14,261 - DEBUG - np_right_x size: 0
+2017-01-29 19:55:14,261 - DEBUG - np_right_y size: 0
+2017-01-29 19:55:15,687 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:55:15,687 - DEBUG - image saved to: debug_output/20170129_195515_gray_bird_view.jpg
+2017-01-29 19:55:15,687 - DEBUG - np_left_x size: 0
+2017-01-29 19:55:15,687 - DEBUG - np_left_y size: 0
+2017-01-29 19:55:15,688 - DEBUG - np_right_x size: 0
+2017-01-29 19:55:15,688 - DEBUG - np_right_y size: 0
+2017-01-29 19:55:17,150 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:55:17,150 - DEBUG - image saved to: debug_output/20170129_195517_gray_bird_view.jpg
+2017-01-29 19:55:17,150 - DEBUG - np_left_x size: 0
+2017-01-29 19:55:17,151 - DEBUG - np_left_y size: 0
+2017-01-29 19:55:17,151 - DEBUG - np_right_x size: 0
+2017-01-29 19:55:17,151 - DEBUG - np_right_y size: 0
+2017-01-29 19:55:18,535 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:55:18,535 - DEBUG - image saved to: debug_output/20170129_195518_gray_bird_view.jpg
+2017-01-29 19:55:18,535 - DEBUG - np_left_x size: 0
+2017-01-29 19:55:18,535 - DEBUG - np_left_y size: 0
+2017-01-29 19:55:18,535 - DEBUG - np_right_x size: 0
+2017-01-29 19:55:18,535 - DEBUG - np_right_y size: 0
+2017-01-29 19:55:22,998 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:55:22,998 - DEBUG - image saved to: debug_output/20170129_195522_gray_bird_view.jpg
+2017-01-29 19:55:22,998 - DEBUG - np_left_x size: 0
+2017-01-29 19:55:22,998 - DEBUG - np_left_y size: 0
+2017-01-29 19:55:22,998 - DEBUG - np_right_x size: 0
+2017-01-29 19:55:22,998 - DEBUG - np_right_y size: 0
+2017-01-29 19:55:27,412 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:55:27,412 - DEBUG - image saved to: debug_output/20170129_195527_gray_bird_view.jpg
+2017-01-29 19:55:27,413 - DEBUG - np_left_x size: 0
+2017-01-29 19:55:27,413 - DEBUG - np_left_y size: 0
+2017-01-29 19:55:27,413 - DEBUG - np_right_x size: 0
+2017-01-29 19:55:27,413 - DEBUG - np_right_y size: 0
+2017-01-29 19:55:36,115 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:55:36,115 - DEBUG - image saved to: debug_output/20170129_195536_gray_bird_view.jpg
+2017-01-29 19:55:36,115 - DEBUG - np_left_x size: 0
+2017-01-29 19:55:36,115 - DEBUG - np_left_y size: 0
+2017-01-29 19:55:36,115 - DEBUG - np_right_x size: 0
+2017-01-29 19:55:36,115 - DEBUG - np_right_y size: 0
+2017-01-29 19:56:24,237 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:56:24,237 - DEBUG - image saved to: debug_output/20170129_195624_gray_bird_view.jpg
+2017-01-29 19:56:24,237 - DEBUG - np_left_x size: 0
+2017-01-29 19:56:24,237 - DEBUG - np_left_y size: 0
+2017-01-29 19:56:24,237 - DEBUG - np_right_x size: 0
+2017-01-29 19:56:24,238 - DEBUG - np_right_y size: 0
+2017-01-29 19:56:27,257 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:56:27,257 - DEBUG - image saved to: debug_output/20170129_195627_gray_bird_view.jpg
+2017-01-29 19:56:27,258 - DEBUG - np_left_x size: 0
+2017-01-29 19:56:27,258 - DEBUG - np_left_y size: 0
+2017-01-29 19:56:27,258 - DEBUG - np_right_x size: 0
+2017-01-29 19:56:27,258 - DEBUG - np_right_y size: 0
+2017-01-29 19:56:45,653 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:56:45,654 - DEBUG - image saved to: debug_output/20170129_195645_gray_bird_view.jpg
+2017-01-29 19:56:45,654 - DEBUG - np_left_x size: 0
+2017-01-29 19:56:45,654 - DEBUG - np_left_y size: 0
+2017-01-29 19:56:45,654 - DEBUG - np_right_x size: 0
+2017-01-29 19:56:45,654 - DEBUG - np_right_y size: 0
+2017-01-29 19:56:48,736 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:56:48,736 - DEBUG - image saved to: debug_output/20170129_195648_gray_bird_view.jpg
+2017-01-29 19:56:48,737 - DEBUG - np_left_x size: 0
+2017-01-29 19:56:48,737 - DEBUG - np_left_y size: 0
+2017-01-29 19:56:48,737 - DEBUG - np_right_x size: 0
+2017-01-29 19:56:48,737 - DEBUG - np_right_y size: 0
+2017-01-29 19:56:51,758 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:56:51,758 - DEBUG - image saved to: debug_output/20170129_195651_gray_bird_view.jpg
+2017-01-29 19:56:51,758 - DEBUG - np_left_x size: 0
+2017-01-29 19:56:51,758 - DEBUG - np_left_y size: 0
+2017-01-29 19:56:51,758 - DEBUG - np_right_x size: 0
+2017-01-29 19:56:51,758 - DEBUG - np_right_y size: 0
+2017-01-29 19:57:47,304 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:57:47,304 - DEBUG - image saved to: debug_output/20170129_195747_gray_bird_view.jpg
+2017-01-29 19:57:47,304 - DEBUG - np_left_x size: 0
+2017-01-29 19:57:47,304 - DEBUG - np_left_y size: 0
+2017-01-29 19:57:47,305 - DEBUG - np_right_x size: 0
+2017-01-29 19:57:47,305 - DEBUG - np_right_y size: 0
+2017-01-29 19:57:53,138 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:57:53,138 - DEBUG - image saved to: debug_output/20170129_195753_gray_bird_view.jpg
+2017-01-29 19:57:53,138 - DEBUG - np_left_x size: 0
+2017-01-29 19:57:53,139 - DEBUG - np_left_y size: 0
+2017-01-29 19:57:53,139 - DEBUG - np_right_x size: 0
+2017-01-29 19:57:53,139 - DEBUG - np_right_y size: 0
+2017-01-29 19:58:00,505 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:58:00,506 - DEBUG - image saved to: debug_output/20170129_195800_gray_bird_view.jpg
+2017-01-29 19:58:00,506 - DEBUG - np_left_x size: 0
+2017-01-29 19:58:00,506 - DEBUG - np_left_y size: 0
+2017-01-29 19:58:00,506 - DEBUG - np_right_x size: 0
+2017-01-29 19:58:00,506 - DEBUG - np_right_y size: 0
+2017-01-29 19:58:06,680 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:58:06,680 - DEBUG - image saved to: debug_output/20170129_195806_gray_bird_view.jpg
+2017-01-29 19:58:06,680 - DEBUG - np_left_x size: 0
+2017-01-29 19:58:06,680 - DEBUG - np_left_y size: 0
+2017-01-29 19:58:06,680 - DEBUG - np_right_x size: 0
+2017-01-29 19:58:06,680 - DEBUG - np_right_y size: 0
+2017-01-29 19:58:08,226 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:58:08,226 - DEBUG - image saved to: debug_output/20170129_195808_gray_bird_view.jpg
+2017-01-29 19:58:08,226 - DEBUG - np_left_x size: 0
+2017-01-29 19:58:08,226 - DEBUG - np_left_y size: 0
+2017-01-29 19:58:08,226 - DEBUG - np_right_x size: 0
+2017-01-29 19:58:08,226 - DEBUG - np_right_y size: 0
+2017-01-29 19:58:09,564 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:58:09,565 - DEBUG - image saved to: debug_output/20170129_195809_gray_bird_view.jpg
+2017-01-29 19:58:09,565 - DEBUG - np_left_x size: 0
+2017-01-29 19:58:09,565 - DEBUG - np_left_y size: 0
+2017-01-29 19:58:09,565 - DEBUG - np_right_x size: 0
+2017-01-29 19:58:09,565 - DEBUG - np_right_y size: 0
+2017-01-29 19:58:10,942 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:58:10,942 - DEBUG - image saved to: debug_output/20170129_195810_gray_bird_view.jpg
+2017-01-29 19:58:10,943 - DEBUG - np_left_x size: 0
+2017-01-29 19:58:10,943 - DEBUG - np_left_y size: 0
+2017-01-29 19:58:10,943 - DEBUG - np_right_x size: 0
+2017-01-29 19:58:10,943 - DEBUG - np_right_y size: 0
+2017-01-29 19:58:12,378 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:58:12,378 - DEBUG - image saved to: debug_output/20170129_195812_gray_bird_view.jpg
+2017-01-29 19:58:12,378 - DEBUG - np_left_x size: 0
+2017-01-29 19:58:12,378 - DEBUG - np_left_y size: 0
+2017-01-29 19:58:12,378 - DEBUG - np_right_x size: 0
+2017-01-29 19:58:12,378 - DEBUG - np_right_y size: 0
+2017-01-29 19:58:15,381 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:58:15,381 - DEBUG - image saved to: debug_output/20170129_195815_gray_bird_view.jpg
+2017-01-29 19:58:15,381 - DEBUG - np_left_x size: 0
+2017-01-29 19:58:15,381 - DEBUG - np_left_y size: 0
+2017-01-29 19:58:15,381 - DEBUG - np_right_x size: 0
+2017-01-29 19:58:15,382 - DEBUG - np_right_y size: 0
+2017-01-29 19:58:27,810 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:58:27,811 - DEBUG - image saved to: debug_output/20170129_195827_gray_bird_view.jpg
+2017-01-29 19:58:27,811 - DEBUG - np_left_x size: 0
+2017-01-29 19:58:27,811 - DEBUG - np_left_y size: 0
+2017-01-29 19:58:27,811 - DEBUG - np_right_x size: 0
+2017-01-29 19:58:27,811 - DEBUG - np_right_y size: 0
+2017-01-29 19:58:29,218 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:58:29,218 - DEBUG - image saved to: debug_output/20170129_195829_gray_bird_view.jpg
+2017-01-29 19:58:29,218 - DEBUG - np_left_x size: 0
+2017-01-29 19:58:29,218 - DEBUG - np_left_y size: 0
+2017-01-29 19:58:29,218 - DEBUG - np_right_x size: 0
+2017-01-29 19:58:29,219 - DEBUG - np_right_y size: 0
+2017-01-29 19:58:30,610 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:58:30,610 - DEBUG - image saved to: debug_output/20170129_195830_gray_bird_view.jpg
+2017-01-29 19:58:30,610 - DEBUG - np_left_x size: 0
+2017-01-29 19:58:30,610 - DEBUG - np_left_y size: 0
+2017-01-29 19:58:30,610 - DEBUG - np_right_x size: 0
+2017-01-29 19:58:30,610 - DEBUG - np_right_y size: 0
+2017-01-29 19:58:31,938 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:58:31,938 - DEBUG - image saved to: debug_output/20170129_195831_gray_bird_view.jpg
+2017-01-29 19:58:31,938 - DEBUG - np_left_x size: 0
+2017-01-29 19:58:31,939 - DEBUG - np_left_y size: 0
+2017-01-29 19:58:31,939 - DEBUG - np_right_x size: 0
+2017-01-29 19:58:31,939 - DEBUG - np_right_y size: 0
+2017-01-29 19:58:39,686 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:58:39,686 - DEBUG - image saved to: debug_output/20170129_195839_gray_bird_view.jpg
+2017-01-29 19:58:39,686 - DEBUG - np_left_x size: 0
+2017-01-29 19:58:39,686 - DEBUG - np_left_y size: 0
+2017-01-29 19:58:39,686 - DEBUG - np_right_x size: 0
+2017-01-29 19:58:39,686 - DEBUG - np_right_y size: 0
+2017-01-29 19:58:50,202 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:58:50,202 - DEBUG - image saved to: debug_output/20170129_195850_gray_bird_view.jpg
+2017-01-29 19:58:50,202 - DEBUG - np_left_x size: 0
+2017-01-29 19:58:50,202 - DEBUG - np_left_y size: 0
+2017-01-29 19:58:50,203 - DEBUG - np_right_x size: 0
+2017-01-29 19:58:50,203 - DEBUG - np_right_y size: 0
+2017-01-29 19:59:02,613 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:59:02,614 - DEBUG - image saved to: debug_output/20170129_195902_gray_bird_view.jpg
+2017-01-29 19:59:02,614 - DEBUG - np_left_x size: 0
+2017-01-29 19:59:02,614 - DEBUG - np_left_y size: 0
+2017-01-29 19:59:02,614 - DEBUG - np_right_x size: 0
+2017-01-29 19:59:02,614 - DEBUG - np_right_y size: 0
+2017-01-29 19:59:05,637 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:59:05,637 - DEBUG - image saved to: debug_output/20170129_195905_gray_bird_view.jpg
+2017-01-29 19:59:05,638 - DEBUG - np_left_x size: 0
+2017-01-29 19:59:05,638 - DEBUG - np_left_y size: 0
+2017-01-29 19:59:05,638 - DEBUG - np_right_x size: 0
+2017-01-29 19:59:05,638 - DEBUG - np_right_y size: 0
+2017-01-29 19:59:11,805 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:59:11,806 - DEBUG - image saved to: debug_output/20170129_195911_gray_bird_view.jpg
+2017-01-29 19:59:11,806 - DEBUG - np_left_x size: 0
+2017-01-29 19:59:11,806 - DEBUG - np_left_y size: 0
+2017-01-29 19:59:11,806 - DEBUG - np_right_x size: 0
+2017-01-29 19:59:11,806 - DEBUG - np_right_y size: 0
+2017-01-29 19:59:19,379 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:59:19,379 - DEBUG - image saved to: debug_output/20170129_195919_gray_bird_view.jpg
+2017-01-29 19:59:19,379 - DEBUG - np_left_x size: 0
+2017-01-29 19:59:19,379 - DEBUG - np_left_y size: 0
+2017-01-29 19:59:19,380 - DEBUG - np_right_x size: 0
+2017-01-29 19:59:19,380 - DEBUG - np_right_y size: 0
+2017-01-29 19:59:20,807 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:59:20,807 - DEBUG - image saved to: debug_output/20170129_195920_gray_bird_view.jpg
+2017-01-29 19:59:20,807 - DEBUG - np_left_x size: 0
+2017-01-29 19:59:20,807 - DEBUG - np_left_y size: 0
+2017-01-29 19:59:20,807 - DEBUG - np_right_x size: 0
+2017-01-29 19:59:20,807 - DEBUG - np_right_y size: 0
+2017-01-29 19:59:22,164 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:59:22,164 - DEBUG - image saved to: debug_output/20170129_195922_gray_bird_view.jpg
+2017-01-29 19:59:22,165 - DEBUG - np_left_x size: 0
+2017-01-29 19:59:22,165 - DEBUG - np_left_y size: 0
+2017-01-29 19:59:22,165 - DEBUG - np_right_x size: 0
+2017-01-29 19:59:22,165 - DEBUG - np_right_y size: 0
+2017-01-29 19:59:28,229 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:59:28,230 - DEBUG - image saved to: debug_output/20170129_195928_gray_bird_view.jpg
+2017-01-29 19:59:28,230 - DEBUG - np_left_x size: 0
+2017-01-29 19:59:28,230 - DEBUG - np_left_y size: 0
+2017-01-29 19:59:28,230 - DEBUG - np_right_x size: 0
+2017-01-29 19:59:28,230 - DEBUG - np_right_y size: 0
+2017-01-29 19:59:39,011 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:59:39,011 - DEBUG - image saved to: debug_output/20170129_195939_gray_bird_view.jpg
+2017-01-29 19:59:39,011 - DEBUG - np_left_x size: 0
+2017-01-29 19:59:39,011 - DEBUG - np_left_y size: 0
+2017-01-29 19:59:39,011 - DEBUG - np_right_x size: 0
+2017-01-29 19:59:39,011 - DEBUG - np_right_y size: 0
+2017-01-29 19:59:40,408 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:59:40,408 - DEBUG - image saved to: debug_output/20170129_195940_gray_bird_view.jpg
+2017-01-29 19:59:40,408 - DEBUG - np_left_x size: 0
+2017-01-29 19:59:40,408 - DEBUG - np_left_y size: 0
+2017-01-29 19:59:40,408 - DEBUG - np_right_x size: 0
+2017-01-29 19:59:40,409 - DEBUG - np_right_y size: 0
+2017-01-29 19:59:41,770 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:59:41,771 - DEBUG - image saved to: debug_output/20170129_195941_gray_bird_view.jpg
+2017-01-29 19:59:41,771 - DEBUG - np_left_x size: 0
+2017-01-29 19:59:41,771 - DEBUG - np_left_y size: 0
+2017-01-29 19:59:41,771 - DEBUG - np_right_x size: 0
+2017-01-29 19:59:41,771 - DEBUG - np_right_y size: 0
+2017-01-29 19:59:53,801 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:59:53,801 - DEBUG - image saved to: debug_output/20170129_195953_gray_bird_view.jpg
+2017-01-29 19:59:53,801 - DEBUG - np_left_x size: 0
+2017-01-29 19:59:53,802 - DEBUG - np_left_y size: 0
+2017-01-29 19:59:53,802 - DEBUG - np_right_x size: 0
+2017-01-29 19:59:53,802 - DEBUG - np_right_y size: 0
+2017-01-29 19:59:55,255 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:59:55,255 - DEBUG - image saved to: debug_output/20170129_195955_gray_bird_view.jpg
+2017-01-29 19:59:55,255 - DEBUG - np_left_x size: 0
+2017-01-29 19:59:55,256 - DEBUG - np_left_y size: 0
+2017-01-29 19:59:55,256 - DEBUG - np_right_x size: 0
+2017-01-29 19:59:55,256 - DEBUG - np_right_y size: 0
+2017-01-29 19:59:59,658 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 19:59:59,658 - DEBUG - image saved to: debug_output/20170129_195959_gray_bird_view.jpg
+2017-01-29 19:59:59,659 - DEBUG - np_left_x size: 0
+2017-01-29 19:59:59,659 - DEBUG - np_left_y size: 0
+2017-01-29 19:59:59,659 - DEBUG - np_right_x size: 0
+2017-01-29 19:59:59,659 - DEBUG - np_right_y size: 0
+2017-01-29 20:00:10,274 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:00:10,275 - DEBUG - image saved to: debug_output/20170129_200010_gray_bird_view.jpg
+2017-01-29 20:00:10,275 - DEBUG - np_left_x size: 0
+2017-01-29 20:00:10,275 - DEBUG - np_left_y size: 0
+2017-01-29 20:00:10,275 - DEBUG - np_right_x size: 0
+2017-01-29 20:00:10,275 - DEBUG - np_right_y size: 0
+2017-01-29 20:00:13,219 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:00:13,219 - DEBUG - image saved to: debug_output/20170129_200013_gray_bird_view.jpg
+2017-01-29 20:00:13,219 - DEBUG - np_left_x size: 0
+2017-01-29 20:00:13,219 - DEBUG - np_left_y size: 0
+2017-01-29 20:00:13,219 - DEBUG - np_right_x size: 0
+2017-01-29 20:00:13,220 - DEBUG - np_right_y size: 0
+2017-01-29 20:00:14,605 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:00:14,606 - DEBUG - image saved to: debug_output/20170129_200014_gray_bird_view.jpg
+2017-01-29 20:00:14,606 - DEBUG - np_left_x size: 0
+2017-01-29 20:00:14,606 - DEBUG - np_left_y size: 0
+2017-01-29 20:00:14,606 - DEBUG - np_right_x size: 0
+2017-01-29 20:00:14,606 - DEBUG - np_right_y size: 0
+2017-01-29 20:00:15,911 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:00:15,911 - DEBUG - image saved to: debug_output/20170129_200015_gray_bird_view.jpg
+2017-01-29 20:00:15,911 - DEBUG - np_left_x size: 0
+2017-01-29 20:00:15,911 - DEBUG - np_left_y size: 0
+2017-01-29 20:00:15,911 - DEBUG - np_right_x size: 0
+2017-01-29 20:00:15,911 - DEBUG - np_right_y size: 0
+2017-01-29 20:00:18,702 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:00:18,702 - DEBUG - image saved to: debug_output/20170129_200018_gray_bird_view.jpg
+2017-01-29 20:00:18,702 - DEBUG - np_left_x size: 0
+2017-01-29 20:00:18,702 - DEBUG - np_left_y size: 0
+2017-01-29 20:00:18,703 - DEBUG - np_right_x size: 0
+2017-01-29 20:00:18,703 - DEBUG - np_right_y size: 0
+2017-01-29 20:00:20,075 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:00:20,075 - DEBUG - image saved to: debug_output/20170129_200020_gray_bird_view.jpg
+2017-01-29 20:00:20,076 - DEBUG - np_left_x size: 0
+2017-01-29 20:00:20,076 - DEBUG - np_left_y size: 0
+2017-01-29 20:00:20,076 - DEBUG - np_right_x size: 0
+2017-01-29 20:00:20,076 - DEBUG - np_right_y size: 0
+2017-01-29 20:00:21,360 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:00:21,360 - DEBUG - image saved to: debug_output/20170129_200021_gray_bird_view.jpg
+2017-01-29 20:00:21,360 - DEBUG - np_left_x size: 0
+2017-01-29 20:00:21,361 - DEBUG - np_left_y size: 0
+2017-01-29 20:00:21,361 - DEBUG - np_right_x size: 0
+2017-01-29 20:00:21,361 - DEBUG - np_right_y size: 0
+2017-01-29 20:00:27,280 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:00:27,280 - DEBUG - image saved to: debug_output/20170129_200027_gray_bird_view.jpg
+2017-01-29 20:00:27,281 - DEBUG - np_left_x size: 0
+2017-01-29 20:00:27,281 - DEBUG - np_left_y size: 0
+2017-01-29 20:00:27,281 - DEBUG - np_right_x size: 0
+2017-01-29 20:00:27,281 - DEBUG - np_right_y size: 0
+2017-01-29 20:00:30,160 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:00:30,160 - DEBUG - image saved to: debug_output/20170129_200030_gray_bird_view.jpg
+2017-01-29 20:00:30,161 - DEBUG - np_left_x size: 0
+2017-01-29 20:00:30,161 - DEBUG - np_left_y size: 0
+2017-01-29 20:00:30,161 - DEBUG - np_right_x size: 0
+2017-01-29 20:00:30,161 - DEBUG - np_right_y size: 0
+2017-01-29 20:00:32,935 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:00:32,935 - DEBUG - image saved to: debug_output/20170129_200032_gray_bird_view.jpg
+2017-01-29 20:00:32,935 - DEBUG - np_left_x size: 0
+2017-01-29 20:00:32,935 - DEBUG - np_left_y size: 0
+2017-01-29 20:00:32,935 - DEBUG - np_right_x size: 0
+2017-01-29 20:00:32,936 - DEBUG - np_right_y size: 0
+2017-01-29 20:00:37,478 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:00:37,478 - DEBUG - image saved to: debug_output/20170129_200037_gray_bird_view.jpg
+2017-01-29 20:00:37,479 - DEBUG - np_left_x size: 0
+2017-01-29 20:00:37,479 - DEBUG - np_left_y size: 0
+2017-01-29 20:00:37,479 - DEBUG - np_right_x size: 0
+2017-01-29 20:00:37,479 - DEBUG - np_right_y size: 0
+2017-01-29 20:00:43,335 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:00:43,335 - DEBUG - image saved to: debug_output/20170129_200043_gray_bird_view.jpg
+2017-01-29 20:00:43,335 - DEBUG - np_left_x size: 0
+2017-01-29 20:00:43,335 - DEBUG - np_left_y size: 0
+2017-01-29 20:00:43,336 - DEBUG - np_right_x size: 0
+2017-01-29 20:00:43,336 - DEBUG - np_right_y size: 0
+2017-01-29 20:00:44,697 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:00:44,697 - DEBUG - image saved to: debug_output/20170129_200044_gray_bird_view.jpg
+2017-01-29 20:00:44,698 - DEBUG - np_left_x size: 0
+2017-01-29 20:00:44,698 - DEBUG - np_left_y size: 0
+2017-01-29 20:00:44,698 - DEBUG - np_right_x size: 0
+2017-01-29 20:00:44,698 - DEBUG - np_right_y size: 0
+2017-01-29 20:00:46,065 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:00:46,065 - DEBUG - image saved to: debug_output/20170129_200046_gray_bird_view.jpg
+2017-01-29 20:00:46,065 - DEBUG - np_left_x size: 0
+2017-01-29 20:00:46,066 - DEBUG - np_left_y size: 0
+2017-01-29 20:00:46,066 - DEBUG - np_right_x size: 0
+2017-01-29 20:00:46,066 - DEBUG - np_right_y size: 0
+2017-01-29 20:00:48,884 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:00:48,884 - DEBUG - image saved to: debug_output/20170129_200048_gray_bird_view.jpg
+2017-01-29 20:00:48,884 - DEBUG - np_left_x size: 0
+2017-01-29 20:00:48,884 - DEBUG - np_left_y size: 0
+2017-01-29 20:00:48,885 - DEBUG - np_right_x size: 0
+2017-01-29 20:00:48,885 - DEBUG - np_right_y size: 0
+2017-01-29 20:00:50,166 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:00:50,167 - DEBUG - image saved to: debug_output/20170129_200050_gray_bird_view.jpg
+2017-01-29 20:00:50,167 - DEBUG - np_left_x size: 0
+2017-01-29 20:00:50,167 - DEBUG - np_left_y size: 0
+2017-01-29 20:00:50,167 - DEBUG - np_right_x size: 0
+2017-01-29 20:00:50,167 - DEBUG - np_right_y size: 0
+2017-01-29 20:00:54,769 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:00:54,769 - DEBUG - image saved to: debug_output/20170129_200054_gray_bird_view.jpg
+2017-01-29 20:00:54,769 - DEBUG - np_left_x size: 0
+2017-01-29 20:00:54,769 - DEBUG - np_left_y size: 0
+2017-01-29 20:00:54,769 - DEBUG - np_right_x size: 0
+2017-01-29 20:00:54,769 - DEBUG - np_right_y size: 0
+2017-01-29 20:01:02,258 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:01:02,258 - DEBUG - image saved to: debug_output/20170129_200102_gray_bird_view.jpg
+2017-01-29 20:01:02,258 - DEBUG - np_left_x size: 0
+2017-01-29 20:01:02,258 - DEBUG - np_left_y size: 0
+2017-01-29 20:01:02,258 - DEBUG - np_right_x size: 0
+2017-01-29 20:01:02,258 - DEBUG - np_right_y size: 0
+2017-01-29 20:01:03,702 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:01:03,702 - DEBUG - image saved to: debug_output/20170129_200103_gray_bird_view.jpg
+2017-01-29 20:01:03,702 - DEBUG - np_left_x size: 0
+2017-01-29 20:01:03,702 - DEBUG - np_left_y size: 0
+2017-01-29 20:01:03,702 - DEBUG - np_right_x size: 0
+2017-01-29 20:01:03,702 - DEBUG - np_right_y size: 0
+2017-01-29 20:01:05,078 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:01:05,078 - DEBUG - image saved to: debug_output/20170129_200105_gray_bird_view.jpg
+2017-01-29 20:01:05,078 - DEBUG - np_left_x size: 0
+2017-01-29 20:01:05,078 - DEBUG - np_left_y size: 0
+2017-01-29 20:01:05,079 - DEBUG - np_right_x size: 0
+2017-01-29 20:01:05,079 - DEBUG - np_right_y size: 0
+2017-01-29 20:01:19,153 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:01:19,154 - DEBUG - image saved to: debug_output/20170129_200119_gray_bird_view.jpg
+2017-01-29 20:01:19,154 - DEBUG - np_left_x size: 0
+2017-01-29 20:01:19,154 - DEBUG - np_left_y size: 0
+2017-01-29 20:01:19,154 - DEBUG - np_right_x size: 0
+2017-01-29 20:01:19,154 - DEBUG - np_right_y size: 0
+2017-01-29 20:01:20,570 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:01:20,571 - DEBUG - image saved to: debug_output/20170129_200120_gray_bird_view.jpg
+2017-01-29 20:01:20,571 - DEBUG - np_left_x size: 0
+2017-01-29 20:01:20,571 - DEBUG - np_left_y size: 0
+2017-01-29 20:01:20,571 - DEBUG - np_right_x size: 0
+2017-01-29 20:01:20,571 - DEBUG - np_right_y size: 0
+2017-01-29 20:01:23,397 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:01:23,397 - DEBUG - image saved to: debug_output/20170129_200123_gray_bird_view.jpg
+2017-01-29 20:01:23,398 - DEBUG - np_left_x size: 0
+2017-01-29 20:01:23,398 - DEBUG - np_left_y size: 0
+2017-01-29 20:01:23,398 - DEBUG - np_right_x size: 0
+2017-01-29 20:01:23,398 - DEBUG - np_right_y size: 0
+2017-01-29 20:01:24,896 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:01:24,896 - DEBUG - image saved to: debug_output/20170129_200124_gray_bird_view.jpg
+2017-01-29 20:01:24,896 - DEBUG - np_left_x size: 0
+2017-01-29 20:01:24,896 - DEBUG - np_left_y size: 0
+2017-01-29 20:01:24,896 - DEBUG - np_right_x size: 0
+2017-01-29 20:01:24,896 - DEBUG - np_right_y size: 0
+2017-01-29 20:01:33,984 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:01:33,985 - DEBUG - image saved to: debug_output/20170129_200133_gray_bird_view.jpg
+2017-01-29 20:01:33,985 - DEBUG - np_left_x size: 0
+2017-01-29 20:01:33,985 - DEBUG - np_left_y size: 0
+2017-01-29 20:01:33,985 - DEBUG - np_right_x size: 0
+2017-01-29 20:01:33,985 - DEBUG - np_right_y size: 0
+2017-01-29 20:01:36,944 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:01:36,944 - DEBUG - image saved to: debug_output/20170129_200136_gray_bird_view.jpg
+2017-01-29 20:01:36,945 - DEBUG - np_left_x size: 0
+2017-01-29 20:01:36,945 - DEBUG - np_left_y size: 0
+2017-01-29 20:01:36,945 - DEBUG - np_right_x size: 0
+2017-01-29 20:01:36,945 - DEBUG - np_right_y size: 0
+2017-01-29 20:01:38,386 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:01:38,387 - DEBUG - image saved to: debug_output/20170129_200138_gray_bird_view.jpg
+2017-01-29 20:01:38,387 - DEBUG - np_left_x size: 0
+2017-01-29 20:01:38,387 - DEBUG - np_left_y size: 0
+2017-01-29 20:01:38,387 - DEBUG - np_right_x size: 0
+2017-01-29 20:01:38,387 - DEBUG - np_right_y size: 0
+2017-01-29 20:01:41,331 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:01:41,331 - DEBUG - image saved to: debug_output/20170129_200141_gray_bird_view.jpg
+2017-01-29 20:01:41,331 - DEBUG - np_left_x size: 0
+2017-01-29 20:01:41,331 - DEBUG - np_left_y size: 0
+2017-01-29 20:01:41,331 - DEBUG - np_right_x size: 0
+2017-01-29 20:01:41,332 - DEBUG - np_right_y size: 0
+2017-01-29 20:01:52,145 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:01:52,145 - DEBUG - image saved to: debug_output/20170129_200152_gray_bird_view.jpg
+2017-01-29 20:01:52,145 - DEBUG - np_left_x size: 0
+2017-01-29 20:01:52,145 - DEBUG - np_left_y size: 0
+2017-01-29 20:01:52,145 - DEBUG - np_right_x size: 0
+2017-01-29 20:01:52,145 - DEBUG - np_right_y size: 0
+2017-01-29 20:01:53,605 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:01:53,605 - DEBUG - image saved to: debug_output/20170129_200153_gray_bird_view.jpg
+2017-01-29 20:01:53,605 - DEBUG - np_left_x size: 0
+2017-01-29 20:01:53,605 - DEBUG - np_left_y size: 0
+2017-01-29 20:01:53,605 - DEBUG - np_right_x size: 0
+2017-01-29 20:01:53,606 - DEBUG - np_right_y size: 0
+2017-01-29 20:01:55,020 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:01:55,020 - DEBUG - image saved to: debug_output/20170129_200155_gray_bird_view.jpg
+2017-01-29 20:01:55,020 - DEBUG - np_left_x size: 0
+2017-01-29 20:01:55,020 - DEBUG - np_left_y size: 0
+2017-01-29 20:01:55,020 - DEBUG - np_right_x size: 0
+2017-01-29 20:01:55,020 - DEBUG - np_right_y size: 0
+2017-01-29 20:01:56,376 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:01:56,376 - DEBUG - image saved to: debug_output/20170129_200156_gray_bird_view.jpg
+2017-01-29 20:01:56,376 - DEBUG - np_left_x size: 0
+2017-01-29 20:01:56,377 - DEBUG - np_left_y size: 0
+2017-01-29 20:01:56,377 - DEBUG - np_right_x size: 0
+2017-01-29 20:01:56,377 - DEBUG - np_right_y size: 0
+2017-01-29 20:01:59,182 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:01:59,183 - DEBUG - image saved to: debug_output/20170129_200159_gray_bird_view.jpg
+2017-01-29 20:01:59,183 - DEBUG - np_left_x size: 0
+2017-01-29 20:01:59,183 - DEBUG - np_left_y size: 0
+2017-01-29 20:01:59,183 - DEBUG - np_right_x size: 0
+2017-01-29 20:01:59,183 - DEBUG - np_right_y size: 0
+2017-01-29 20:02:00,550 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:02:00,550 - DEBUG - image saved to: debug_output/20170129_200200_gray_bird_view.jpg
+2017-01-29 20:02:00,551 - DEBUG - np_left_x size: 0
+2017-01-29 20:02:00,551 - DEBUG - np_left_y size: 0
+2017-01-29 20:02:00,551 - DEBUG - np_right_x size: 0
+2017-01-29 20:02:00,551 - DEBUG - np_right_y size: 0
+2017-01-29 20:02:06,557 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:02:06,557 - DEBUG - image saved to: debug_output/20170129_200206_gray_bird_view.jpg
+2017-01-29 20:02:06,557 - DEBUG - np_left_x size: 0
+2017-01-29 20:02:06,557 - DEBUG - np_left_y size: 0
+2017-01-29 20:02:06,557 - DEBUG - np_right_x size: 0
+2017-01-29 20:02:06,558 - DEBUG - np_right_y size: 0
+2017-01-29 20:02:08,028 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:02:08,028 - DEBUG - image saved to: debug_output/20170129_200208_gray_bird_view.jpg
+2017-01-29 20:02:08,028 - DEBUG - np_left_x size: 0
+2017-01-29 20:02:08,028 - DEBUG - np_left_y size: 0
+2017-01-29 20:02:08,028 - DEBUG - np_right_x size: 0
+2017-01-29 20:02:08,029 - DEBUG - np_right_y size: 0
+2017-01-29 20:02:10,934 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:02:10,934 - DEBUG - image saved to: debug_output/20170129_200210_gray_bird_view.jpg
+2017-01-29 20:02:10,935 - DEBUG - np_left_x size: 0
+2017-01-29 20:02:10,935 - DEBUG - np_left_y size: 0
+2017-01-29 20:02:10,935 - DEBUG - np_right_x size: 0
+2017-01-29 20:02:10,935 - DEBUG - np_right_y size: 0
+2017-01-29 20:02:12,254 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:02:12,254 - DEBUG - image saved to: debug_output/20170129_200212_gray_bird_view.jpg
+2017-01-29 20:02:12,254 - DEBUG - np_left_x size: 0
+2017-01-29 20:02:12,254 - DEBUG - np_left_y size: 0
+2017-01-29 20:02:12,254 - DEBUG - np_right_x size: 0
+2017-01-29 20:02:12,255 - DEBUG - np_right_y size: 0
+2017-01-29 20:02:19,804 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:02:19,804 - DEBUG - image saved to: debug_output/20170129_200219_gray_bird_view.jpg
+2017-01-29 20:02:19,804 - DEBUG - np_left_x size: 0
+2017-01-29 20:02:19,805 - DEBUG - np_left_y size: 0
+2017-01-29 20:02:19,805 - DEBUG - np_right_x size: 0
+2017-01-29 20:02:19,805 - DEBUG - np_right_y size: 0
+2017-01-29 20:02:22,762 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:02:22,762 - DEBUG - image saved to: debug_output/20170129_200222_gray_bird_view.jpg
+2017-01-29 20:02:22,762 - DEBUG - np_left_x size: 0
+2017-01-29 20:02:22,762 - DEBUG - np_left_y size: 0
+2017-01-29 20:02:22,762 - DEBUG - np_right_x size: 0
+2017-01-29 20:02:22,762 - DEBUG - np_right_y size: 0
+2017-01-29 20:02:25,697 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:02:25,697 - DEBUG - image saved to: debug_output/20170129_200225_gray_bird_view.jpg
+2017-01-29 20:02:25,697 - DEBUG - np_left_x size: 0
+2017-01-29 20:02:25,697 - DEBUG - np_left_y size: 0
+2017-01-29 20:02:25,697 - DEBUG - np_right_x size: 0
+2017-01-29 20:02:25,698 - DEBUG - np_right_y size: 0
+2017-01-29 20:02:27,097 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:02:27,097 - DEBUG - image saved to: debug_output/20170129_200227_gray_bird_view.jpg
+2017-01-29 20:02:27,097 - DEBUG - np_left_x size: 0
+2017-01-29 20:02:27,097 - DEBUG - np_left_y size: 0
+2017-01-29 20:02:27,097 - DEBUG - np_right_x size: 0
+2017-01-29 20:02:27,097 - DEBUG - np_right_y size: 0
+2017-01-29 20:02:30,016 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:02:30,017 - DEBUG - image saved to: debug_output/20170129_200230_gray_bird_view.jpg
+2017-01-29 20:02:30,017 - DEBUG - np_left_x size: 0
+2017-01-29 20:02:30,017 - DEBUG - np_left_y size: 0
+2017-01-29 20:02:30,017 - DEBUG - np_right_x size: 0
+2017-01-29 20:02:30,017 - DEBUG - np_right_y size: 0
+2017-01-29 20:02:32,836 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:02:32,836 - DEBUG - image saved to: debug_output/20170129_200232_gray_bird_view.jpg
+2017-01-29 20:02:32,836 - DEBUG - np_left_x size: 0
+2017-01-29 20:02:32,836 - DEBUG - np_left_y size: 0
+2017-01-29 20:02:32,837 - DEBUG - np_right_x size: 0
+2017-01-29 20:02:32,837 - DEBUG - np_right_y size: 0
+2017-01-29 20:02:37,202 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:02:37,202 - DEBUG - image saved to: debug_output/20170129_200237_gray_bird_view.jpg
+2017-01-29 20:02:37,202 - DEBUG - np_left_x size: 0
+2017-01-29 20:02:37,203 - DEBUG - np_left_y size: 0
+2017-01-29 20:02:37,203 - DEBUG - np_right_x size: 0
+2017-01-29 20:02:37,203 - DEBUG - np_right_y size: 0
+2017-01-29 20:02:41,693 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:02:41,693 - DEBUG - image saved to: debug_output/20170129_200241_gray_bird_view.jpg
+2017-01-29 20:02:41,694 - DEBUG - np_left_x size: 0
+2017-01-29 20:02:41,694 - DEBUG - np_left_y size: 0
+2017-01-29 20:02:41,694 - DEBUG - np_right_x size: 0
+2017-01-29 20:02:41,694 - DEBUG - np_right_y size: 0
+2017-01-29 20:02:46,166 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-29 20:02:46,166 - DEBUG - image saved to: debug_output/20170129_200246_gray_bird_view.jpg
+2017-01-29 20:02:46,166 - DEBUG - np_left_x size: 0
+2017-01-29 20:02:46,166 - DEBUG - np_left_y size: 0
+2017-01-29 20:02:46,166 - DEBUG - np_right_x size: 0
+2017-01-29 20:02:46,166 - DEBUG - np_right_y size: 0

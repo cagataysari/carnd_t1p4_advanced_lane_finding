@@ -12,7 +12,7 @@ def calc2ndOrderPoly(fit_coef, yvals):
 
 #to keep track of recent detections and to perform sanity checks.
 class qLine:
-    def __init__(self, np_x=None, np_y=None,  np_fit_coef_x=None, np_fitx = None):
+    def __init__(self, np_x=np.array([]), np_y=np.array([]),  np_fit_coef_x=np.array([]), np_fitx = np.array([])):
         self.np_x = np_x
         self.np_y = np_y
         self.np_fitx = np_fitx

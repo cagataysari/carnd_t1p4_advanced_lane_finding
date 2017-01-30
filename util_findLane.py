@@ -35,7 +35,7 @@ def findLinePositions(img_bgr):
         return (indexes[idx_sort[0]], indexes[idx_sort[1]])
 
 
-def findLinePixels(img, initial_x_center, window_width=100, window_height=20, search_step = 10, num_of_windows=2, debug=False):
+def findLinePixels(img, initial_x_center, window_width=50, window_height=20, search_step = 10, num_of_windows=2, debug=False):
     """find the line pixels
     
     Args:
@@ -298,7 +298,7 @@ def main():
     import glob
     import os 
 
-    img_gray = cv2.imread('udacity/output_images/birds_eye_view/transformed_processed_test1.jpg', cv2.IMREAD_GRAYSCALE)
+    img_gray = cv2.imread('udacity/output_images/birds_eye_view/transformed_processed_test6.jpg', cv2.IMREAD_GRAYSCALE)
 
     plt.imshow(img_gray,'gray')
     plt.show()

@@ -291,7 +291,11 @@ class qVision:
         projected_left_line = self.lane.getLeftLine()
         projected_right_line = self.lane.getRightLine()
 
-        img_imagined_lines = self.imaginLines(img_bgr, projected_left_line, projected_right_line)
+        if projected_left_line.isEmpty() or projected_right_line.isEmpty():
+            img_imagined_lines = img_bgr # use the original image if no lane is found
+            logger.debug('No past or current lane found. ')
+        else:
+            img_imagined_lines = self.imaginLines(img_bgr, projected_left_line, projected_right_line)
 
         return img_imagined_lines
 
@@ -412,15 +416,16 @@ def main():
     sample_dir = 'udacity/output_images/test_images/'
     images_loc = glob.glob(sample_dir+'/*.jpg')
     for loc in images_loc:
-        bgr = cv2.imread(loc, cv2.IMREAD_GRAYSCALE)
+        undist = cv2.imread(loc, cv2.IMREAD_GRAYSCALE)
 
-        distorted = bgr
-        undist = camera.undistortImg(distorted)
+        # distorted = bgr
+        # undist = camera.undistortImg(distorted)
+
         undist_birdview = vision.transformToBirdsEyeView(undist)
 
         path, filename = os.path.split(loc)    
         file_loc = 'udacity/output_images/' + 'birds_eye_view/' + 'transformed_'+ filename
-        cv2.imwrite(file_loc, img_undist_birdview ) #Only 8-bit images can be saved using this function, so convert from (0.0, 1.0) to (0,255)
+        cv2.imwrite(file_loc, undist_birdview ) #Only 8-bit images can be saved using this function, so convert from (0.0, 1.0) to (0,255)
         # cv2.imshow('Processed Image', img_procd)
         # DBG_CompareImages(img_rgb, img_procd, 'Original Image', 'Processed Image', cmap2='gray')
 
