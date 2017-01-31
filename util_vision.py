@@ -279,15 +279,15 @@ class qVision:
 
         binary_hls_mag[  (mag_binary == 1) | (hls_binary == 1) ] = 1
         # dir_binary = dir_threshold(image_cropped, sobel_kernel=15, thresh=(np.pi*30.0/180.0, np.pi*80.0/180.0)) 
-        dir_binary = dir_threshold_binary(binary_hls_mag, sobel_kernel=11, thresh=(np.pi*40.0/180.0, np.pi*80.0/180.0)) 
         # dir_binary = dir_threshold(image_orig2, sobel_kernel=15, thresh=(0.7, 1.2) ) # 40~80 degree
         # dir_binary = dir_threshold(mag_binary, sobel_kernel=11, thresh=(0.7, 1.3), enable_binary_map=True) 
 
 
-        combined = np.zeros_like(dir_binary)
+        combined = np.zeros_like(mag_binary)
 
-        combined[ (dir_binary == 1)  ] = 1
-        combined[ (combined == 1)  & (hls_binary_l == 1) ] = 10 # more emphsis on l
+        combined[ (binary_hls_mag == 1)  ] = 1
+        combined[ (combined == 1)  & (hls_binary_l == 1) ] = 3 # more emphsis on luminosity
+        dir_binary = dir_threshold_binary(combined, sobel_kernel=11, thresh=(np.pi*40.0/180.0, np.pi*80.0/180.0)) 
         # Plot the result
 
         if debug == True:
@@ -480,10 +480,10 @@ def main():
 
 
 
-    img_distorted = cv2.imread('udacity/test_images/629.jpg' )
+    img_distorted = cv2.imread('udacity/test_images/14.jpg' )
     img_undist = camera.undistortImg(img_distorted)
 
-    img_procd = vision.processImg(img_undist, debug=True)
+    img_procd = vision.processImg(img_undist, debug=False)
 
     DBG_CompareImages(img_undist, img_procd, 'Undistorted Image', 'Thresholded Binary Image', cmap2='gray')
 
@@ -568,7 +568,7 @@ def main():
 
     for loc in images_loc:
 
-        logger.info('Load test image: ' + str(loc))
+        logger.info('Process test image: ' + str(loc))
         distorted = cv2.imread(loc)
         undist = camera.undistortImg(distorted)
 
