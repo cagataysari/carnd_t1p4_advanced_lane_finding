@@ -159,13 +159,43 @@ def dir_threshold(image, sobel_kernel=3, thresh=(0, np.pi/2)):
     return binary_output
 
 
+def dir_threshold_binary(binary_map, sobel_kernel=3, thresh=(0, np.pi/2)):
+    
+    # Apply the following steps to image
+    # 1) Convert to grayscale
+    # img = cv2.cvtColor(binary_map, cv2.COLOR_BGR2GRAY)
+    # img = extractSatuCh(image)
+    img = binary_map
+    # 2) Take the gradient in x and y separately
+    sobel_x = cv2.Sobel(img, cv2.CV_64F, 1, 0, ksize=sobel_kernel)
+
+    sobel_y = cv2.Sobel(img, cv2.CV_64F, 0, 1, ksize=sobel_kernel)    
+    # 3) Take the absolute value of the x and y gradients
+    sobel_x_abs = np.absolute(sobel_x)
+    sobel_y_abs = np.absolute(sobel_y)
+    # 4) Use np.arctan2(abs_sobely, abs_sobelx) to calculate the direction of the gradient 
+    sobel_angle = np.arctan2(sobel_y_abs , sobel_x_abs)
+    # 5) Create a binary mask where direction thresholds are met
+    sobel_masked = np.zeros_like(sobel_angle)
+    
+    thresh_min = thresh[0]
+    thresh_max = thresh[1]
+    sobel_masked[(sobel_angle>=thresh_min) & (sobel_angle<=thresh_max)] = 1
+        
+    # 6) Return this mask as your binary_output image
+    binary_output = sobel_masked
+    return binary_output
+
+
 # a function that thresholds the S-channel of HLS
+# the function also cancels the false line from the edge of cropping
 # Use exclusive lower bound (>) and inclusive upper (<=)
 def hls_select(img, thresh=(0, 255)):
     # 1) Convert to HLS color space
     img_hls = cv2.cvtColor(img, cv2.COLOR_BGR2HLS)
     # 2) Apply a threshold to the S channel
     ch_satu = img_hls[:,:,2]
+    ch_satu = img_hls[:,:,1]
     img_1ch = ch_satu
     binary_ch = np.zeros_like(img_1ch)
     thre_min = thresh[0]
@@ -177,15 +207,33 @@ def hls_select(img, thresh=(0, 255)):
 
     return binary_output
 
+
 # a function that thresholds the S-channel of HLS
+# the function also cancels the false line from the edge of cropping
 # Use exclusive lower bound (>) and inclusive upper (<=)
 def hls_select_s(img, thresh=(0, 255)):
     # 1) Convert to HLS color space
     img_hls = cv2.cvtColor(img, cv2.COLOR_BGR2HLS)
     # 2) Apply a threshold to the S channel
-    ch_hue = img_hls[:,:,0]
-    # ch_satu = img_hls[:,:,2]
-    img_1ch = ch_hue
+    ch_satu = img_hls[:,:,2]
+    img_1ch = ch_satu
+    binary_ch = np.zeros_like(img_1ch)
+    thre_min = thresh[0]
+    thre_max = thresh[1]
+    binary_ch[ (img_1ch>thre_min) & (img_1ch<=thre_max)] =1
+    # 3) Return a binary image of threshold result
+    binary_output = binary_ch
+    return binary_output
+
+# a function that thresholds the S-channel of HLS
+# the function also cancels the false line from the edge of cropping
+# Use exclusive lower bound (>) and inclusive upper (<=)
+def hls_select_l(img, thresh=(0, 255)):
+    # 1) Convert to HLS color space
+    img_hls = cv2.cvtColor(img, cv2.COLOR_BGR2HLS)
+    # 2) Apply a threshold to the l channel
+    ch_lumi = img_hls[:,:,1]
+    img_1ch = ch_lumi
     binary_ch = np.zeros_like(img_1ch)
     thre_min = thresh[0]
     thre_max = thresh[1]
@@ -193,8 +241,8 @@ def hls_select_s(img, thresh=(0, 255)):
     # 3) Return a binary image of threshold result
     binary_output = binary_ch
     
-
     return binary_output
+
 
 class qVision:
     def __init__(self):
@@ -215,26 +263,39 @@ class qVision:
         image_orig = np.copy(img_rgb)
         image_cropped = self.cropImage(image_orig)
 
-        hls_binary = hls_select(image_cropped, thresh=(66, 255))
+        hls_binary_s = hls_select_s(image_cropped, thresh=(100, 150))
+
+        # hls_binary = hls_binary_s
+        hls_binary_l = hls_select_l(image_cropped, thresh=(190, 255))
+
+        hls_binary = np.zeros_like(hls_binary_s)
+        hls_binary[ (hls_binary_s == 1) | (hls_binary_l == 1) ] = 1
+
         # image[(hls_binary != 1)]  = 0
         # Run the function
-        mag_binary = mag_thresh(image_cropped, sobel_kernel=27, thresh=(50, 220 ))
+        mag_binary = mag_thresh(image_cropped, sobel_kernel=9, thresh=(50, 255 ))
 
-        dir_binary = dir_threshold(image_cropped, sobel_kernel=15, thresh=(np.pi*20.0/180.0, np.pi*80.0/180.0)) 
+        binary_hls_mag = np.zeros_like(mag_binary)
+
+        binary_hls_mag[  (mag_binary == 1) | (hls_binary == 1) ] = 1
+        # dir_binary = dir_threshold(image_cropped, sobel_kernel=15, thresh=(np.pi*30.0/180.0, np.pi*80.0/180.0)) 
+        dir_binary = dir_threshold_binary(binary_hls_mag, sobel_kernel=11, thresh=(np.pi*40.0/180.0, np.pi*80.0/180.0)) 
         # dir_binary = dir_threshold(image_orig2, sobel_kernel=15, thresh=(0.7, 1.2) ) # 40~80 degree
         # dir_binary = dir_threshold(mag_binary, sobel_kernel=11, thresh=(0.7, 1.3), enable_binary_map=True) 
 
 
         combined = np.zeros_like(dir_binary)
-        # combined[(hls_binary == 1) ] = 1
-        # combined[  (dir_binary == 1) & (mag_binary == 1)   ] = 1
-        combined[ (dir_binary == 1) & (mag_binary == 1) & (hls_binary == 1) ] = 1
+
+        combined[ (dir_binary == 1)  ] = 1
+        combined[ (combined == 1)  & (hls_binary_l == 1) ] = 10 # more emphsis on l
         # Plot the result
 
         if debug == True:
             DBG_CompareThreeGrayImages(hls_binary , mag_binary,  dir_binary ,'HLS satu', 'mag', 'directional' )
-        
 
+            hls_binary = hls_select_l(image_cropped, thresh=(200, 255))
+
+            DBG_CompareImages(image_cropped, hls_binary, 'Cropped Image', 'Luminosity channel only', cmap2='gray' )
         img_final = combined
         return img_final
 
@@ -256,7 +317,7 @@ class qVision:
         img_size = (img.shape[1], img.shape[0])
 
         # init M when the first image is fed in
-        if None == self.M:
+        if self.M is None:
             src = np.float32(
                 [[(img_size[0] / 2) - 55, img_size[1] / 2 + 100],
                 [((img_size[0] / 6) - 10), img_size[1]],
@@ -393,7 +454,8 @@ def DBG_CompareThreeGrayImages(img1, img2, img3, title1, title2, title3 ):
 
 def main():
     logging.basicConfig(filename='log_lanefinding.txt', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
-
+    import glob
+    import os
 
     #load camera
     from util_camera import qCamera
@@ -415,27 +477,13 @@ def main():
     ##############################3
     vision = qVision()
 
-    import glob
-    import os
-
-    sample_dir = 'udacity/test_images/'
-    images_loc = glob.glob(sample_dir+'/*.jpg')
-
-    for img_loc in images_loc:
-        img_bgr = cv2.imread(img_loc)
-        img_bgr = camera.undistortImg(img_bgr)
-        img_procd = vision.processImg(img_bgr)
-
-        path, filename = os.path.split(img_loc)    
-        file_loc = 'udacity/output_images/' + 'test_images/' + 'processed_'+ filename
-        cv2.imwrite(file_loc, (img_procd*225).astype(np.uint8) ) #Only 8-bit images can be saved using this function, so convert from (0.0, 1.0) to (0,255)
 
 
 
-    img_distorted = cv2.imread('udacity/test_images/test8_noise_from_another_car.jpg' )
+    img_distorted = cv2.imread('udacity/test_images/629.jpg' )
     img_undist = camera.undistortImg(img_distorted)
 
-    img_procd = vision.processImg(img_undist)
+    img_procd = vision.processImg(img_undist, debug=True)
 
     DBG_CompareImages(img_undist, img_procd, 'Undistorted Image', 'Thresholded Binary Image', cmap2='gray')
 
@@ -455,10 +503,24 @@ def main():
     logger.debug('main(): left_line empty? : '+ str(left_line.isEmpty()))
     logger.debug('main(): right_line empty? : '+ str(right_line.isEmpty()))
 
+    ##########################################
+    # Test for imaging lines on road
+    ##########################################
+    lane = qLane()
+    lane.update( left_line, right_line, bottom_pixel_pos=img_undist.shape[0])
+
+    projected_left_line = lane.getLeftLine()
+    projected_right_line = lane.getRightLine()
+
+
+    img_imagined_lines = vision.imaginLines(img_undist, projected_left_line, projected_right_line)
+    DBG_CompareImages(img_undist, img_imagined_lines, 'Undistorted Image', 'Imagined lines')
+
 
     ##########################################
-    # Test for Birds Eye View Transformation on black and white thresholded images
+    # Batch Test for Birds Eye View Transformation on black and white thresholded images
     ##########################################
+    logger.info('Batch Test for Birds Eye View Transformation on black and white thresholded images')
     # test on thresholded images
     sample_dir = 'udacity/output_images/test_images/'
     images_loc = glob.glob(sample_dir+'/*.jpg')
@@ -479,12 +541,27 @@ def main():
 
 
     ##########################################
+    # Batch Test on thresholding all the test images
+    ##########################################
+    logger.info('Batch Test on thresholding all the test images')
+
+
+    sample_dir = 'udacity/test_images/'
+    images_loc = glob.glob(sample_dir+'/*.jpg')
+
+    for img_loc in images_loc:
+        img_bgr = cv2.imread(img_loc)
+        img_bgr = camera.undistortImg(img_bgr)
+        img_procd = vision.processImg(img_bgr)
+
+        path, filename = os.path.split(img_loc)    
+        file_loc = 'udacity/output_images/' + 'test_images/' + 'processed_'+ filename
+        cv2.imwrite(file_loc, (img_procd*225).astype(np.uint8) ) #Only 8-bit images can be saved using this function, so convert from (0.0, 1.0) to (0,255)
+
+    ##########################################
     # Test on Lane Finding
     ##########################################
-
-    img_lane_hightlighted = vision.highlightLane(img_undist)
-
-    DBG_CompareImages(img_undist, img_lane_hightlighted, 'Undistorted Image', "Reimagined Lane")
+    logger.info('Batch Test on highlighting lanes on all the test images')
 
     sample_dir = 'udacity/test_images/'
     images_loc = glob.glob(sample_dir+'*.jpg')
@@ -500,6 +577,8 @@ def main():
         path, filename = os.path.split(loc)    
         file_loc = 'udacity/output_images/' + 'hightlighted_lane/' + 'hightlighted_'+ filename
         cv2.imwrite(file_loc, lane_hightlighted ) 
+
+    logger.info('vision-debug done')
 
 if __name__ == "__main__": 
     import time

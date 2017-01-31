@@ -19,7 +19,9 @@ def findLinePositions(img_bgr, debug=False):
         tuple: x-axis positions of left and right lane edge lines 
     """
 
-    histogram = np.sum(img_bgr[img_bgr.shape[0]//2:,:], axis=0) # take a histogram along all the columns in the lower half of the image 
+    # histogram = np.sum(img_bgr[img_bgr.shape[0]//2:,:], axis=0) # take a histogram along all the columns in the lower half of the image 
+    #TODO: find out why have histogram only on lower half
+    histogram = np.sum(img_bgr[:,:], axis=0) # take a histogram along all the columns in full image 
     # peakutils.indexes has issue with finding peaks in the test8 image
     # TODO: Find out why test8 image fails peakutils.indexes
     # indexes = peakutils.indexes(histogram.astype(int), thres=.1, min_dist=100)  #100 is the estimated lane mark width, straight or curved lane
@@ -250,6 +252,8 @@ def findLanePixels(img_gray, debug=False):
         # plt.plot([1,2,3,4], [1,4,9,16], 'ro')
         plt.title('findLanePixels() - right line pixels')
         plt.show()
+        logger.debug('Initial guess of left line position: ' + str(x_left))
+        logger.debug('Initial guess of right line position: ' + str(x_left))
 
 
     return np_left_x, np_left_y, np_right_x, np_right_y
@@ -312,18 +316,39 @@ def main():
     import glob
     import os 
 
-    # from util_vision import qVision
-    # vision = qVision()
-    # img_bgr = cv2.imread('udacity/test_images/test8_noise_from_another_car.jpg')
-    # img_bgr_procd = vision.processImg(img_bgr)
+    #load camera
+    from util_camera import qCamera
 
-    # img_bgr_procd_birdview = vision.transformToBirdsEyeView(img_bgr_procd)
+    #save camera data
+    import pickle
+    import os.path
+    if os.path.isfile('calibrated_camera.pickle') :
+        with open('calibrated_camera.pickle', 'rb') as handle:
+            camera = pickle.load(handle)
+    else: 
+        camera = qCamera()
+        camera.calibrateSamples('udacity/camera_cal/')
 
-    # img_gray =img_bgr_procd_birdview
+        with open('calibrated_camera.pickle', 'wb') as handle:
+            pickle.dump(camera, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
+
+    ##############################3 
+    from util_vision import qVision
+    vision = qVision()
+
+
+
+
+    img_distorted = cv2.imread('udacity/test_images/1040.jpg' )
+    img_undist = camera.undistortImg(img_distorted)
+
+    img_procd = vision.processImg(img_undist, debug=False)
+
 
     
-    img_gray = cv2.imread('udacity/output_images/birds_eye_view/20170129_214432_gray_bird_view.jpg', cv2.IMREAD_GRAYSCALE)
-    plt.imshow(img_gray,'gray')
+    img_gray = img_procd
+    plt.imshow(img_gray*255,'gray')
     plt.show()
     print('img_gray shape', img_gray.shape)
     

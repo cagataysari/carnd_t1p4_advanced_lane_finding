@@ -2928,3 +2928,601 @@
 2017-01-29 23:15:48,622 - INFO - Load test image: udacity/test_images/test7_side_lane.jpg
 2017-01-29 23:15:49,986 - INFO - Load test image: udacity/test_images/test8_noise_from_another_car.jpg
 2017-01-29 23:15:51,465 - INFO - Load test image: udacity/test_images/test9_shadow.jpg
+2017-01-29 23:24:00,707 - INFO - util_debug.py loaded
+2017-01-29 23:24:00,707 - INFO - vision submodule loaded
+2017-01-29 23:24:12,342 - INFO - Camera calibrated
+2017-01-29 23:24:12,343 - INFO - Number of calibrated img: 17
+2017-01-29 23:24:12,493 - WARNING - /home/qh/anaconda3/envs/keras/lib/python3.5/site-packages/moviepy/audio/io/readers.py:123: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  self.nchannels))
+
+2017-01-29 23:24:31,403 - INFO - util_debug.py loaded
+2017-01-29 23:24:31,403 - INFO - vision submodule loaded
+2017-01-29 23:24:43,482 - INFO - Camera calibrated
+2017-01-29 23:24:43,482 - INFO - Number of calibrated img: 17
+2017-01-29 23:24:43,635 - WARNING - /home/qh/anaconda3/envs/keras/lib/python3.5/site-packages/moviepy/audio/io/readers.py:123: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  self.nchannels))
+
+2017-01-29 23:28:07,147 - INFO - util_debug.py loaded
+2017-01-29 23:28:07,148 - INFO - vision submodule loaded
+2017-01-29 23:28:18,461 - INFO - Camera calibrated
+2017-01-29 23:28:18,462 - INFO - Number of calibrated img: 17
+2017-01-29 23:28:18,619 - WARNING - /home/qh/anaconda3/envs/keras/lib/python3.5/site-packages/moviepy/audio/io/readers.py:123: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  self.nchannels))
+
+2017-01-29 23:28:20,958 - WARNING - /mnt/data/hqs_d/MyDocuments/Study/CarND/term1/p4_adv_lane_finding/src/util_vision.py:259: FutureWarning: comparison to `None` will result in an elementwise object comparison in the future.
+  if None == self.M:
+
+2017-01-29 23:31:19,253 - INFO - util_debug.py loaded
+2017-01-29 23:31:19,254 - INFO - vision submodule loaded
+2017-01-29 23:31:30,907 - INFO - Camera calibrated
+2017-01-29 23:31:30,907 - INFO - Number of calibrated img: 17
+2017-01-29 23:31:31,070 - WARNING - /home/qh/anaconda3/envs/keras/lib/python3.5/site-packages/moviepy/audio/io/readers.py:123: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  self.nchannels))
+
+2017-01-29 23:31:33,428 - WARNING - /mnt/data/hqs_d/MyDocuments/Study/CarND/term1/p4_adv_lane_finding/src/util_vision.py:259: FutureWarning: comparison to `None` will result in an elementwise object comparison in the future.
+  if None == self.M:
+
+2017-01-29 23:49:37,013 - WARNING - /home/qh/anaconda3/envs/keras/lib/python3.5/site-packages/numpy/lib/polynomial.py:595: RankWarning: Polyfit may be poorly conditioned
+  warnings.warn(msg, RankWarning)
+
+2017-01-30 19:34:35,816 - DEBUG - main(): left_line empty? : False
+2017-01-30 19:34:35,817 - DEBUG - main(): right_line empty? : False
+2017-01-30 19:34:40,428 - INFO - Load test image: udacity/test_images/602.jpg
+2017-01-30 19:34:42,031 - INFO - Load test image: udacity/test_images/612.jpg
+2017-01-30 19:34:43,559 - INFO - Load test image: udacity/test_images/619.jpg
+2017-01-30 19:34:44,963 - INFO - Load test image: udacity/test_images/629.jpg
+2017-01-30 19:34:46,497 - INFO - Load test image: udacity/test_images/654.jpg
+2017-01-30 19:34:48,014 - INFO - Load test image: udacity/test_images/679.jpg
+2017-01-30 19:34:49,547 - INFO - Load test image: udacity/test_images/signs_vehicles_xygrad.jpg
+2017-01-30 19:34:50,935 - INFO - Load test image: udacity/test_images/straight_lines1.jpg
+2017-01-30 19:34:52,529 - INFO - Load test image: udacity/test_images/straight_lines2.jpg
+2017-01-30 19:34:53,972 - INFO - Load test image: udacity/test_images/test1.jpg
+2017-01-30 19:34:55,467 - INFO - Load test image: udacity/test_images/test2.jpg
+2017-01-30 19:34:56,977 - INFO - Load test image: udacity/test_images/test3.jpg
+2017-01-30 19:34:58,433 - INFO - Load test image: udacity/test_images/test4.jpg
+2017-01-30 19:34:59,919 - INFO - Load test image: udacity/test_images/test5.jpg
+2017-01-30 19:35:01,645 - INFO - Load test image: udacity/test_images/test6.jpg
+2017-01-30 19:35:03,356 - INFO - Load test image: udacity/test_images/test7_side_lane.jpg
+2017-01-30 19:35:04,700 - INFO - Load test image: udacity/test_images/test8_noise_from_another_car.jpg
+2017-01-30 19:35:06,193 - INFO - Load test image: udacity/test_images/test9_shadow.jpg
+2017-01-30 19:39:28,998 - DEBUG - main(): left_line empty? : False
+2017-01-30 19:39:28,998 - DEBUG - main(): right_line empty? : False
+2017-01-30 19:39:34,079 - INFO - Load test image: udacity/test_images/602.jpg
+2017-01-30 19:39:35,933 - INFO - Load test image: udacity/test_images/612.jpg
+2017-01-30 19:39:37,457 - INFO - Load test image: udacity/test_images/619.jpg
+2017-01-30 19:39:38,838 - INFO - Load test image: udacity/test_images/629.jpg
+2017-01-30 19:39:40,429 - INFO - Load test image: udacity/test_images/654.jpg
+2017-01-30 19:39:41,977 - INFO - Load test image: udacity/test_images/679.jpg
+2017-01-30 19:39:43,490 - INFO - Load test image: udacity/test_images/signs_vehicles_xygrad.jpg
+2017-01-30 19:39:44,899 - INFO - Load test image: udacity/test_images/straight_lines1.jpg
+2017-01-30 19:39:46,402 - INFO - Load test image: udacity/test_images/straight_lines2.jpg
+2017-01-30 19:39:47,798 - INFO - Load test image: udacity/test_images/test1.jpg
+2017-01-30 19:39:49,289 - INFO - Load test image: udacity/test_images/test2.jpg
+2017-01-30 19:39:50,776 - INFO - Load test image: udacity/test_images/test3.jpg
+2017-01-30 19:39:52,282 - INFO - Load test image: udacity/test_images/test4.jpg
+2017-01-30 19:39:53,868 - INFO - Load test image: udacity/test_images/test5.jpg
+2017-01-30 19:39:55,509 - INFO - Load test image: udacity/test_images/test6.jpg
+2017-01-30 19:39:57,070 - INFO - Load test image: udacity/test_images/test7_side_lane.jpg
+2017-01-30 19:39:58,489 - INFO - Load test image: udacity/test_images/test8_noise_from_another_car.jpg
+2017-01-30 19:39:59,982 - INFO - Load test image: udacity/test_images/test9_shadow.jpg
+2017-01-30 19:40:01,391 - INFO - vision-debug done
+2017-01-30 19:42:18,246 - DEBUG - main(): left_line empty? : False
+2017-01-30 19:42:18,246 - DEBUG - main(): right_line empty? : False
+2017-01-30 19:43:48,422 - DEBUG - main(): left_line empty? : False
+2017-01-30 19:43:48,422 - DEBUG - main(): right_line empty? : False
+2017-01-30 19:45:13,727 - DEBUG - main(): left_line empty? : False
+2017-01-30 19:45:13,728 - DEBUG - main(): right_line empty? : False
+2017-01-30 19:46:10,582 - DEBUG - main(): left_line empty? : False
+2017-01-30 19:46:10,582 - DEBUG - main(): right_line empty? : False
+2017-01-30 19:46:53,935 - DEBUG - main(): left_line empty? : False
+2017-01-30 19:46:53,935 - DEBUG - main(): right_line empty? : False
+2017-01-30 19:47:09,612 - DEBUG - main(): left_line empty? : False
+2017-01-30 19:47:09,612 - DEBUG - main(): right_line empty? : False
+2017-01-30 19:47:42,197 - DEBUG - main(): left_line empty? : False
+2017-01-30 19:47:42,198 - DEBUG - main(): right_line empty? : False
+2017-01-30 19:49:03,341 - DEBUG - main(): left_line empty? : False
+2017-01-30 19:49:03,341 - DEBUG - main(): right_line empty? : False
+2017-01-30 19:49:12,422 - DEBUG - main(): left_line empty? : False
+2017-01-30 19:49:12,423 - DEBUG - main(): right_line empty? : False
+2017-01-30 19:49:21,411 - DEBUG - main(): left_line empty? : False
+2017-01-30 19:49:21,412 - DEBUG - main(): right_line empty? : False
+2017-01-30 19:49:29,805 - DEBUG - main(): left_line empty? : False
+2017-01-30 19:49:29,806 - DEBUG - main(): right_line empty? : False
+2017-01-30 19:49:38,248 - DEBUG - main(): left_line empty? : False
+2017-01-30 19:49:38,248 - DEBUG - main(): right_line empty? : False
+2017-01-30 19:49:56,840 - DEBUG - main(): left_line empty? : False
+2017-01-30 19:49:56,840 - DEBUG - main(): right_line empty? : False
+2017-01-30 19:50:07,414 - DEBUG - main(): left_line empty? : False
+2017-01-30 19:50:07,415 - DEBUG - main(): right_line empty? : False
+2017-01-30 19:50:36,799 - DEBUG - main(): left_line empty? : False
+2017-01-30 19:50:36,799 - DEBUG - main(): right_line empty? : False
+2017-01-30 19:51:15,076 - DEBUG - main(): left_line empty? : False
+2017-01-30 19:51:15,077 - DEBUG - main(): right_line empty? : False
+2017-01-30 19:56:50,250 - DEBUG - main(): left_line empty? : False
+2017-01-30 19:56:50,250 - DEBUG - main(): right_line empty? : False
+2017-01-30 19:57:06,276 - DEBUG - main(): left_line empty? : False
+2017-01-30 19:57:06,276 - DEBUG - main(): right_line empty? : False
+2017-01-30 19:58:27,134 - DEBUG - main(): left_line empty? : False
+2017-01-30 19:58:27,134 - DEBUG - main(): right_line empty? : False
+2017-01-30 19:58:52,733 - DEBUG - main(): left_line empty? : False
+2017-01-30 19:58:52,734 - DEBUG - main(): right_line empty? : False
+2017-01-30 19:59:29,838 - DEBUG - main(): left_line empty? : False
+2017-01-30 19:59:29,839 - DEBUG - main(): right_line empty? : False
+2017-01-30 19:59:47,659 - DEBUG - main(): left_line empty? : False
+2017-01-30 19:59:47,659 - DEBUG - main(): right_line empty? : False
+2017-01-30 20:00:29,037 - DEBUG - main(): left_line empty? : False
+2017-01-30 20:00:29,037 - DEBUG - main(): right_line empty? : False
+2017-01-30 20:01:48,257 - DEBUG - main(): left_line empty? : False
+2017-01-30 20:01:48,257 - DEBUG - main(): right_line empty? : False
+2017-01-30 20:02:02,018 - DEBUG - main(): left_line empty? : False
+2017-01-30 20:02:02,019 - DEBUG - main(): right_line empty? : False
+2017-01-30 20:02:17,939 - DEBUG - main(): left_line empty? : False
+2017-01-30 20:02:17,939 - DEBUG - main(): right_line empty? : False
+2017-01-30 20:02:53,159 - DEBUG - main(): left_line empty? : False
+2017-01-30 20:02:53,159 - DEBUG - main(): right_line empty? : False
+2017-01-30 20:03:08,768 - DEBUG - main(): left_line empty? : False
+2017-01-30 20:03:08,768 - DEBUG - main(): right_line empty? : False
+2017-01-30 20:03:39,214 - DEBUG - main(): left_line empty? : False
+2017-01-30 20:03:39,214 - DEBUG - main(): right_line empty? : False
+2017-01-30 20:03:52,244 - DEBUG - main(): left_line empty? : False
+2017-01-30 20:03:52,245 - DEBUG - main(): right_line empty? : False
+2017-01-30 20:04:03,689 - DEBUG - main(): left_line empty? : False
+2017-01-30 20:04:03,690 - DEBUG - main(): right_line empty? : False
+2017-01-30 20:04:24,517 - DEBUG - main(): left_line empty? : False
+2017-01-30 20:04:24,517 - DEBUG - main(): right_line empty? : False
+2017-01-30 20:04:56,353 - DEBUG - main(): left_line empty? : False
+2017-01-30 20:04:56,353 - DEBUG - main(): right_line empty? : False
+2017-01-30 20:05:20,749 - INFO - util_debug.py loaded
+2017-01-30 20:05:20,749 - INFO - vision submodule loaded
+2017-01-30 20:05:34,349 - INFO - Camera calibrated
+2017-01-30 20:05:34,349 - INFO - Number of calibrated img: 17
+2017-01-30 20:05:34,574 - WARNING - /home/qh/anaconda3/envs/keras/lib/python3.5/site-packages/moviepy/audio/io/readers.py:123: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  self.nchannels))
+
+2017-01-30 20:05:36,874 - WARNING - /mnt/data/hqs_d/MyDocuments/Study/CarND/term1/p4_adv_lane_finding/src/util_vision.py:260: FutureWarning: comparison to `None` will result in an elementwise object comparison in the future.
+  if None == self.M:
+
+2017-01-30 20:13:57,160 - DEBUG - main(): left_line empty? : False
+2017-01-30 20:13:57,161 - DEBUG - main(): right_line empty? : False
+2017-01-30 20:21:32,310 - DEBUG - main(): left_line empty? : False
+2017-01-30 20:21:32,311 - DEBUG - main(): right_line empty? : False
+2017-01-30 20:21:51,190 - INFO - Load test image: udacity/test_images/1036.jpg
+2017-01-30 20:21:53,163 - INFO - Load test image: udacity/test_images/1037.jpg
+2017-01-30 20:21:55,193 - INFO - Load test image: udacity/test_images/1038.jpg
+2017-01-30 20:21:57,126 - INFO - Load test image: udacity/test_images/1040.jpg
+2017-01-30 20:21:59,242 - INFO - Load test image: udacity/test_images/1041.jpg
+2017-01-30 20:22:01,127 - INFO - Load test image: udacity/test_images/1046.jpg
+2017-01-30 20:22:03,178 - INFO - Load test image: udacity/test_images/1052.jpg
+2017-01-30 20:22:05,197 - INFO - Load test image: udacity/test_images/602.jpg
+2017-01-30 20:22:07,142 - INFO - Load test image: udacity/test_images/612.jpg
+2017-01-30 20:22:09,159 - INFO - Load test image: udacity/test_images/619.jpg
+2017-01-30 20:22:11,164 - INFO - Load test image: udacity/test_images/629.jpg
+2017-01-30 20:22:13,081 - INFO - Load test image: udacity/test_images/654.jpg
+2017-01-30 20:22:15,161 - INFO - Load test image: udacity/test_images/679.jpg
+2017-01-30 20:22:17,096 - INFO - Load test image: udacity/test_images/signs_vehicles_xygrad.jpg
+2017-01-30 20:22:19,150 - INFO - Load test image: udacity/test_images/straight_lines1.jpg
+2017-01-30 20:22:21,246 - INFO - Load test image: udacity/test_images/straight_lines2.jpg
+2017-01-30 20:22:23,447 - INFO - Load test image: udacity/test_images/test1.jpg
+2017-01-30 20:22:25,380 - INFO - Load test image: udacity/test_images/test2.jpg
+2017-01-30 20:22:27,466 - INFO - Load test image: udacity/test_images/test3.jpg
+2017-01-30 20:22:29,758 - INFO - Load test image: udacity/test_images/test4.jpg
+2017-01-30 20:22:32,013 - INFO - Load test image: udacity/test_images/test5.jpg
+2017-01-30 20:22:34,218 - INFO - Load test image: udacity/test_images/test6.jpg
+2017-01-30 20:22:36,341 - INFO - Load test image: udacity/test_images/test7_side_lane.jpg
+2017-01-30 20:22:38,428 - INFO - Load test image: udacity/test_images/test8_noise_from_another_car.jpg
+2017-01-30 20:22:40,610 - INFO - Load test image: udacity/test_images/test9_shadow.jpg
+2017-01-30 20:22:43,179 - INFO - vision-debug done
+2017-01-30 20:23:33,896 - DEBUG - main(): left_line empty? : False
+2017-01-30 20:23:33,896 - DEBUG - main(): right_line empty? : False
+2017-01-30 20:24:33,420 - INFO - findLinePositions() enables debugging.
+2017-01-30 20:24:33,422 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 20:24:33,422 - DEBUG - findLinePositions() - Peak positions: [303, 712]
+2017-01-30 20:25:11,581 - DEBUG - main(): left_line empty? : False
+2017-01-30 20:25:11,582 - DEBUG - main(): right_line empty? : False
+2017-01-30 20:28:52,725 - INFO - findLinePositions() enables debugging.
+2017-01-30 20:28:52,726 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 20:28:52,726 - DEBUG - findLinePositions() - Peak positions: [303, 712]
+2017-01-30 21:15:04,084 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:15:04,084 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 21:15:04,084 - DEBUG - findLinePositions() - Peak positions: [303, 712]
+2017-01-30 21:15:36,262 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:15:36,263 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 21:15:36,263 - DEBUG - findLinePositions() - Peak positions: [323, 978]
+2017-01-30 21:16:02,145 - DEBUG - Initial guess of left line position: 323
+2017-01-30 21:16:02,145 - DEBUG - Initial guess of right line position: 323
+2017-01-30 21:16:02,161 - DEBUG - main(): left_line empty? : False
+2017-01-30 21:16:02,161 - DEBUG - main(): right_line empty? : False
+2017-01-30 21:26:55,095 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:26:55,095 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 21:26:55,095 - DEBUG - findLinePositions() - Peak positions: [298, 712]
+2017-01-30 21:28:36,500 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:28:36,500 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 21:28:36,500 - DEBUG - findLinePositions() - Peak positions: [303, 712]
+2017-01-30 21:29:53,750 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:29:53,751 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 21:29:53,751 - DEBUG - findLinePositions() - Peak positions: [303, 712]
+2017-01-30 21:31:03,760 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:31:03,761 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 21:31:03,761 - DEBUG - findLinePositions() - Peak positions: [303, 712]
+2017-01-30 21:32:21,378 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:32:21,378 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 21:32:21,378 - DEBUG - findLinePositions() - Peak positions: [303, 712]
+2017-01-30 21:33:27,357 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:33:27,358 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 21:33:27,358 - DEBUG - findLinePositions() - Peak positions: [303, 712]
+2017-01-30 21:33:53,306 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:33:53,306 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 21:33:53,307 - DEBUG - findLinePositions() - Peak positions: [303, 713]
+2017-01-30 21:34:15,219 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:34:15,219 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 21:34:15,219 - DEBUG - findLinePositions() - Peak positions: [298, 766]
+2017-01-30 21:34:55,616 - DEBUG - Initial guess of left line position: 298
+2017-01-30 21:34:55,616 - DEBUG - Initial guess of right line position: 298
+2017-01-30 21:34:55,622 - DEBUG - main(): left_line empty? : False
+2017-01-30 21:34:55,622 - DEBUG - main(): right_line empty? : False
+2017-01-30 21:35:16,107 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:35:16,107 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 21:35:16,107 - DEBUG - findLinePositions() - Peak positions: [303, 765]
+2017-01-30 21:35:34,126 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:35:34,127 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 21:35:34,127 - DEBUG - findLinePositions() - Peak positions: [304, 764]
+2017-01-30 21:36:08,492 - DEBUG - Initial guess of left line position: 304
+2017-01-30 21:36:08,493 - DEBUG - Initial guess of right line position: 304
+2017-01-30 21:36:08,496 - DEBUG - main(): left_line empty? : False
+2017-01-30 21:36:08,496 - DEBUG - main(): right_line empty? : False
+2017-01-30 21:37:10,857 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:37:10,858 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 21:37:10,858 - DEBUG - findLinePositions() - Peak positions: [304, 764]
+2017-01-30 21:39:29,732 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:39:29,733 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 21:39:29,733 - DEBUG - findLinePositions() - Peak positions: [304, 714]
+2017-01-30 21:39:57,613 - DEBUG - Initial guess of left line position: 304
+2017-01-30 21:39:57,613 - DEBUG - Initial guess of right line position: 304
+2017-01-30 21:39:57,616 - DEBUG - main(): left_line empty? : False
+2017-01-30 21:39:57,616 - DEBUG - main(): right_line empty? : False
+2017-01-30 21:40:59,486 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:40:59,486 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 21:40:59,486 - DEBUG - findLinePositions() - Peak positions: [304, 714]
+2017-01-30 21:42:54,097 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:42:54,097 - DEBUG - findLinePositions() - Num of peaks found: 0
+2017-01-30 21:42:54,097 - DEBUG - findLinePositions() - Peak positions: []
+2017-01-30 21:43:28,732 - DEBUG - Initial guess of left line position: 304
+2017-01-30 21:43:28,732 - DEBUG - Initial guess of right line position: 304
+2017-01-30 21:43:28,735 - DEBUG - main(): left_line empty? : False
+2017-01-30 21:43:28,736 - DEBUG - main(): right_line empty? : False
+2017-01-30 21:44:00,746 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:44:00,746 - DEBUG - findLinePositions() - Num of peaks found: 0
+2017-01-30 21:44:00,746 - DEBUG - findLinePositions() - Peak positions: []
+2017-01-30 21:45:07,441 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:45:07,442 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 21:45:07,442 - DEBUG - findLinePositions() - Peak positions: [371, 714]
+2017-01-30 21:48:27,761 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:48:27,761 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 21:48:27,761 - DEBUG - findLinePositions() - Peak positions: [372, 715]
+2017-01-30 21:49:47,813 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:49:47,813 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 21:49:47,813 - DEBUG - findLinePositions() - Peak positions: [370, 715]
+2017-01-30 21:50:22,438 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:50:22,438 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 21:50:22,438 - DEBUG - findLinePositions() - Peak positions: [301, 1037]
+2017-01-30 21:50:48,746 - DEBUG - Initial guess of left line position: 301
+2017-01-30 21:50:48,746 - DEBUG - Initial guess of right line position: 301
+2017-01-30 21:50:48,749 - DEBUG - main(): left_line empty? : False
+2017-01-30 21:50:48,749 - DEBUG - main(): right_line empty? : False
+2017-01-30 21:52:07,949 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:52:07,950 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 21:52:07,950 - DEBUG - findLinePositions() - Peak positions: [366, 1114]
+2017-01-30 21:52:36,248 - DEBUG - Initial guess of left line position: 366
+2017-01-30 21:52:36,248 - DEBUG - Initial guess of right line position: 366
+2017-01-30 21:52:36,251 - DEBUG - main(): left_line empty? : False
+2017-01-30 21:52:36,251 - DEBUG - main(): right_line empty? : False
+2017-01-30 21:53:47,552 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:53:47,552 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 21:53:47,552 - DEBUG - findLinePositions() - Peak positions: [390, 805]
+2017-01-30 21:54:15,471 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:54:15,471 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 21:54:15,471 - DEBUG - findLinePositions() - Peak positions: [357, 719]
+2017-01-30 21:54:40,085 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:54:40,086 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 21:54:40,086 - DEBUG - findLinePositions() - Peak positions: [359, 1087]
+2017-01-30 21:54:59,414 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:54:59,414 - DEBUG - findLinePositions() - Num of peaks found: 0
+2017-01-30 21:54:59,415 - DEBUG - findLinePositions() - Peak positions: []
+2017-01-30 21:55:28,591 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:55:28,592 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 21:55:28,592 - DEBUG - findLinePositions() - Peak positions: [358, 719]
+2017-01-30 21:55:51,999 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:55:51,999 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 21:55:52,000 - DEBUG - findLinePositions() - Peak positions: [358, 720]
+2017-01-30 21:56:56,283 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:56:56,283 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 21:56:56,283 - DEBUG - findLinePositions() - Peak positions: [386, 1238]
+2017-01-30 21:57:05,054 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:57:05,054 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 21:57:05,054 - DEBUG - findLinePositions() - Peak positions: [303, 712]
+2017-01-30 21:57:09,959 - DEBUG - Initial guess of left line position: 298
+2017-01-30 21:57:09,960 - DEBUG - Initial guess of right line position: 298
+2017-01-30 21:57:09,964 - DEBUG - main(): left_line empty? : False
+2017-01-30 21:57:09,964 - DEBUG - main(): right_line empty? : False
+2017-01-30 21:57:11,168 - INFO - Load test image: udacity/test_images/1036.jpg
+2017-01-30 21:57:12,958 - INFO - Load test image: udacity/test_images/1037.jpg
+2017-01-30 21:57:12,994 - DEBUG - main(): left_line empty? : False
+2017-01-30 21:57:12,995 - DEBUG - main(): right_line empty? : False
+2017-01-30 21:57:14,979 - INFO - Load test image: udacity/test_images/1038.jpg
+2017-01-30 21:57:17,173 - INFO - Load test image: udacity/test_images/1040.jpg
+2017-01-30 21:57:19,030 - INFO - Load test image: udacity/test_images/1041.jpg
+2017-01-30 21:57:20,528 - INFO - Load test image: udacity/test_images/1046.jpg
+2017-01-30 21:57:22,470 - INFO - Load test image: udacity/test_images/1052.jpg
+2017-01-30 21:57:24,177 - INFO - Load test image: udacity/test_images/602.jpg
+2017-01-30 21:57:25,765 - INFO - Load test image: udacity/test_images/612.jpg
+2017-01-30 21:57:27,309 - INFO - Load test image: udacity/test_images/619.jpg
+2017-01-30 21:57:28,852 - INFO - Load test image: udacity/test_images/629.jpg
+2017-01-30 21:57:30,370 - INFO - Load test image: udacity/test_images/654.jpg
+2017-01-30 21:57:31,868 - INFO - Load test image: udacity/test_images/679.jpg
+2017-01-30 21:57:33,329 - INFO - Load test image: udacity/test_images/signs_vehicles_xygrad.jpg
+2017-01-30 21:57:34,857 - INFO - Load test image: udacity/test_images/straight_lines1.jpg
+2017-01-30 21:57:36,256 - INFO - Load test image: udacity/test_images/straight_lines2.jpg
+2017-01-30 21:57:37,671 - INFO - Load test image: udacity/test_images/test1.jpg
+2017-01-30 21:57:39,256 - INFO - Load test image: udacity/test_images/test2.jpg
+2017-01-30 21:57:40,943 - INFO - Load test image: udacity/test_images/test3.jpg
+2017-01-30 21:57:43,247 - INFO - Load test image: udacity/test_images/test4.jpg
+2017-01-30 21:57:44,916 - INFO - Load test image: udacity/test_images/test5.jpg
+2017-01-30 21:57:46,362 - INFO - Load test image: udacity/test_images/test6.jpg
+2017-01-30 21:57:47,762 - INFO - Load test image: udacity/test_images/test7_side_lane.jpg
+2017-01-30 21:57:49,451 - INFO - Load test image: udacity/test_images/test8_noise_from_another_car.jpg
+2017-01-30 21:57:50,859 - INFO - Load test image: udacity/test_images/test9_shadow.jpg
+2017-01-30 21:57:52,779 - INFO - vision-debug done
+2017-01-30 21:57:54,795 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:57:54,796 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 21:57:54,796 - DEBUG - findLinePositions() - Peak positions: [358, 719]
+2017-01-30 21:58:27,454 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:58:27,454 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 21:58:27,455 - DEBUG - findLinePositions() - Peak positions: [357, 711]
+2017-01-30 21:59:04,311 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:59:04,312 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 21:59:04,312 - DEBUG - findLinePositions() - Peak positions: [389, 716]
+2017-01-30 21:59:22,826 - INFO - findLinePositions() enables debugging.
+2017-01-30 21:59:22,826 - DEBUG - findLinePositions() - Num of peaks found: 0
+2017-01-30 21:59:22,827 - DEBUG - findLinePositions() - Peak positions: []
+2017-01-30 22:00:20,323 - INFO - findLinePositions() enables debugging.
+2017-01-30 22:00:20,324 - DEBUG - findLinePositions() - Num of peaks found: 0
+2017-01-30 22:00:20,324 - DEBUG - findLinePositions() - Peak positions: []
+2017-01-30 22:00:54,776 - INFO - findLinePositions() enables debugging.
+2017-01-30 22:00:54,777 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 22:00:54,777 - DEBUG - findLinePositions() - Peak positions: [359, 709]
+2017-01-30 22:01:40,705 - INFO - findLinePositions() enables debugging.
+2017-01-30 22:01:40,705 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 22:01:40,705 - DEBUG - findLinePositions() - Peak positions: [358, 718]
+2017-01-30 22:03:36,597 - INFO - findLinePositions() enables debugging.
+2017-01-30 22:03:36,597 - DEBUG - findLinePositions() - Num of peaks found: 0
+2017-01-30 22:03:36,598 - DEBUG - findLinePositions() - Peak positions: []
+2017-01-30 22:04:09,307 - DEBUG - Initial guess of left line position: 357
+2017-01-30 22:04:09,308 - DEBUG - Initial guess of right line position: 357
+2017-01-30 22:04:09,310 - DEBUG - main(): left_line empty? : False
+2017-01-30 22:04:09,310 - DEBUG - main(): right_line empty? : False
+2017-01-30 22:04:52,942 - INFO - findLinePositions() enables debugging.
+2017-01-30 22:04:52,942 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 22:04:52,943 - DEBUG - findLinePositions() - Peak positions: [358, 738]
+2017-01-30 22:05:27,480 - INFO - findLinePositions() enables debugging.
+2017-01-30 22:05:27,480 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 22:05:27,480 - DEBUG - findLinePositions() - Peak positions: [358, 710]
+2017-01-30 22:06:12,549 - INFO - findLinePositions() enables debugging.
+2017-01-30 22:06:12,549 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 22:06:12,549 - DEBUG - findLinePositions() - Peak positions: [358, 720]
+2017-01-30 22:08:19,937 - INFO - findLinePositions() enables debugging.
+2017-01-30 22:08:19,937 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 22:08:19,938 - DEBUG - findLinePositions() - Peak positions: [358, 720]
+2017-01-30 22:08:43,163 - INFO - findLinePositions() enables debugging.
+2017-01-30 22:08:43,164 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 22:08:43,164 - DEBUG - findLinePositions() - Peak positions: [358, 969]
+2017-01-30 22:09:11,385 - DEBUG - Initial guess of left line position: 358
+2017-01-30 22:09:11,386 - DEBUG - Initial guess of right line position: 358
+2017-01-30 22:09:11,388 - DEBUG - main(): left_line empty? : False
+2017-01-30 22:09:11,388 - DEBUG - main(): right_line empty? : False
+2017-01-30 22:09:48,022 - INFO - findLinePositions() enables debugging.
+2017-01-30 22:09:48,023 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 22:09:48,023 - DEBUG - findLinePositions() - Peak positions: [358, 969]
+2017-01-30 22:11:15,484 - INFO - findLinePositions() enables debugging.
+2017-01-30 22:11:15,485 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 22:11:15,485 - DEBUG - findLinePositions() - Peak positions: [358, 969]
+2017-01-30 22:11:38,716 - DEBUG - Initial guess of left line position: 358
+2017-01-30 22:11:38,716 - DEBUG - Initial guess of right line position: 358
+2017-01-30 22:11:38,718 - DEBUG - main(): left_line empty? : False
+2017-01-30 22:11:38,719 - DEBUG - main(): right_line empty? : False
+2017-01-30 22:16:31,898 - INFO - findLinePositions() enables debugging.
+2017-01-30 22:16:31,899 - DEBUG - findLinePositions() - Num of peaks found: 0
+2017-01-30 22:16:31,899 - DEBUG - findLinePositions() - Peak positions: []
+2017-01-30 22:17:11,907 - INFO - findLinePositions() enables debugging.
+2017-01-30 22:17:11,907 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 22:17:11,907 - DEBUG - findLinePositions() - Peak positions: [357, 966]
+2017-01-30 22:17:34,101 - INFO - findLinePositions() enables debugging.
+2017-01-30 22:17:34,102 - DEBUG - findLinePositions() - Num of peaks found: 0
+2017-01-30 22:17:34,102 - DEBUG - findLinePositions() - Peak positions: []
+2017-01-30 22:17:49,798 - INFO - findLinePositions() enables debugging.
+2017-01-30 22:17:49,798 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 22:17:49,799 - DEBUG - findLinePositions() - Peak positions: [357, 966]
+2017-01-30 22:18:49,290 - INFO - findLinePositions() enables debugging.
+2017-01-30 22:18:49,290 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 22:18:49,291 - DEBUG - findLinePositions() - Peak positions: [357, 966]
+2017-01-30 22:19:24,142 - DEBUG - Initial guess of left line position: 357
+2017-01-30 22:19:24,143 - DEBUG - Initial guess of right line position: 357
+2017-01-30 22:19:24,144 - DEBUG - main(): left_line empty? : False
+2017-01-30 22:19:24,145 - DEBUG - main(): right_line empty? : False
+2017-01-30 22:19:50,547 - DEBUG - main(): left_line empty? : False
+2017-01-30 22:19:50,547 - DEBUG - main(): right_line empty? : False
+2017-01-30 22:20:13,112 - DEBUG - main(): left_line empty? : False
+2017-01-30 22:20:13,112 - DEBUG - main(): right_line empty? : False
+2017-01-30 22:22:33,846 - DEBUG - main(): left_line empty? : False
+2017-01-30 22:22:33,847 - DEBUG - main(): right_line empty? : False
+2017-01-30 22:22:34,957 - INFO - Batch Test for Birds Eye View Transformation on black and white thresholded images
+2017-01-30 22:22:35,913 - INFO - Batch Test on thresholding all the test images
+2017-01-30 22:22:43,353 - INFO - Batch Test on highlighting lanes on all the test images
+2017-01-30 22:23:24,089 - INFO - Load test image: udacity/test_images/1036.jpg
+2017-01-30 22:23:25,628 - INFO - Load test image: udacity/test_images/1037.jpg
+2017-01-30 22:23:27,148 - INFO - Load test image: udacity/test_images/1038.jpg
+2017-01-30 22:23:28,507 - INFO - Load test image: udacity/test_images/1040.jpg
+2017-01-30 22:23:29,894 - INFO - Load test image: udacity/test_images/1041.jpg
+2017-01-30 22:23:31,302 - INFO - Load test image: udacity/test_images/1046.jpg
+2017-01-30 22:23:32,784 - INFO - Load test image: udacity/test_images/1052.jpg
+2017-01-30 22:23:34,242 - INFO - Load test image: udacity/test_images/602.jpg
+2017-01-30 22:23:35,713 - INFO - Load test image: udacity/test_images/612.jpg
+2017-01-30 22:23:37,223 - INFO - Load test image: udacity/test_images/619.jpg
+2017-01-30 22:23:38,688 - INFO - Load test image: udacity/test_images/629.jpg
+2017-01-30 22:23:39,898 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-30 22:23:39,898 - DEBUG - image saved to: debug_output/20170130_222339_gray_bird_view.jpg
+2017-01-30 22:23:39,898 - DEBUG - findLanePixels() - left line position x(x_left):  0
+2017-01-30 22:23:39,898 - DEBUG - findLanePixels() - left line position x(x_right):  0
+2017-01-30 22:23:39,898 - DEBUG - np_left_x size: 0
+2017-01-30 22:23:39,899 - DEBUG - np_left_y size: 0
+2017-01-30 22:23:39,899 - DEBUG - np_right_x size: 0
+2017-01-30 22:23:39,899 - DEBUG - np_right_y size: 0
+2017-01-30 22:23:39,960 - INFO - Load test image: udacity/test_images/654.jpg
+2017-01-30 22:23:41,367 - INFO - Load test image: udacity/test_images/679.jpg
+2017-01-30 22:23:42,766 - INFO - Load test image: udacity/test_images/signs_vehicles_xygrad.jpg
+2017-01-30 22:23:44,008 - INFO - Load test image: udacity/test_images/straight_lines1.jpg
+2017-01-30 22:23:45,402 - INFO - Load test image: udacity/test_images/straight_lines2.jpg
+2017-01-30 22:23:46,656 - INFO - Load test image: udacity/test_images/test1.jpg
+2017-01-30 22:23:47,891 - INFO - Load test image: udacity/test_images/test2.jpg
+2017-01-30 22:23:49,292 - INFO - Load test image: udacity/test_images/test3.jpg
+2017-01-30 22:23:50,737 - INFO - Load test image: udacity/test_images/test4.jpg
+2017-01-30 22:23:52,117 - INFO - Load test image: udacity/test_images/test5.jpg
+2017-01-30 22:23:53,398 - INFO - Load test image: udacity/test_images/test6.jpg
+2017-01-30 22:23:54,715 - INFO - Load test image: udacity/test_images/test7_side_lane.jpg
+2017-01-30 22:23:56,031 - INFO - Load test image: udacity/test_images/test8_noise_from_another_car.jpg
+2017-01-30 22:23:57,390 - INFO - Load test image: udacity/test_images/test9_shadow.jpg
+2017-01-30 22:23:58,769 - INFO - vision-debug done
+2017-01-30 22:24:39,249 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-30 22:24:39,249 - DEBUG - image saved to: debug_output/20170130_222439_gray_bird_view.jpg
+2017-01-30 22:24:39,249 - DEBUG - findLanePixels() - left line position x(x_left):  0
+2017-01-30 22:24:39,249 - DEBUG - findLanePixels() - left line position x(x_right):  0
+2017-01-30 22:24:39,249 - DEBUG - np_left_x size: 0
+2017-01-30 22:24:39,249 - DEBUG - np_left_y size: 0
+2017-01-30 22:24:39,249 - DEBUG - np_right_x size: 0
+2017-01-30 22:24:39,249 - DEBUG - np_right_y size: 0
+2017-01-30 22:24:39,250 - DEBUG - main(): left_line empty? : True
+2017-01-30 22:24:39,250 - DEBUG - main(): right_line empty? : True
+2017-01-30 22:24:41,704 - INFO - Batch Test for Birds Eye View Transformation on black and white thresholded images
+2017-01-30 22:24:42,832 - INFO - Batch Test on thresholding all the test images
+2017-01-30 22:24:50,627 - INFO - Batch Test on highlighting lanes on all the test images
+2017-01-30 22:24:51,884 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-30 22:24:51,885 - DEBUG - image saved to: debug_output/20170130_222451_gray_bird_view.jpg
+2017-01-30 22:24:51,886 - DEBUG - findLanePixels() - left line position x(x_left):  0
+2017-01-30 22:24:51,886 - DEBUG - findLanePixels() - left line position x(x_right):  0
+2017-01-30 22:24:51,887 - DEBUG - np_left_x size: 0
+2017-01-30 22:24:51,888 - DEBUG - np_left_y size: 0
+2017-01-30 22:24:51,888 - DEBUG - np_right_x size: 0
+2017-01-30 22:24:51,890 - DEBUG - np_right_y size: 0
+2017-01-30 22:24:51,890 - DEBUG - No past or current lane found. 
+2017-01-30 22:24:55,674 - INFO - findLinePositions() enables debugging.
+2017-01-30 22:24:55,674 - DEBUG - findLinePositions() - Num of peaks found: 0
+2017-01-30 22:24:55,674 - DEBUG - findLinePositions() - Peak positions: []
+2017-01-30 22:25:52,902 - INFO - findLinePositions() enables debugging.
+2017-01-30 22:25:52,902 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 22:25:52,903 - DEBUG - findLinePositions() - Peak positions: [334, 1009]
+2017-01-30 22:26:21,892 - INFO - Load test image: udacity/test_images/1036.jpg
+2017-01-30 22:26:23,279 - DEBUG - Initial guess of left line position: 334
+2017-01-30 22:26:23,280 - DEBUG - Initial guess of right line position: 334
+2017-01-30 22:26:23,318 - DEBUG - main(): left_line empty? : False
+2017-01-30 22:26:23,321 - DEBUG - main(): right_line empty? : False
+2017-01-30 22:26:24,103 - INFO - Load test image: udacity/test_images/1037.jpg
+2017-01-30 22:26:25,632 - INFO - Load test image: udacity/test_images/1038.jpg
+2017-01-30 22:26:26,959 - INFO - Load test image: udacity/test_images/1040.jpg
+2017-01-30 22:26:28,283 - INFO - Load test image: udacity/test_images/1041.jpg
+2017-01-30 22:26:29,052 - INFO - Batch Test for Birds Eye View Transformation on black and white thresholded images
+2017-01-30 22:26:30,368 - INFO - Load test image: udacity/test_images/1046.jpg
+2017-01-30 22:26:30,746 - INFO - Batch Test on thresholding all the test images
+2017-01-30 22:26:32,637 - INFO - Load test image: udacity/test_images/1052.jpg
+2017-01-30 22:26:34,965 - INFO - Load test image: udacity/test_images/602.jpg
+2017-01-30 22:26:37,218 - INFO - Load test image: udacity/test_images/612.jpg
+2017-01-30 22:26:39,482 - INFO - Load test image: udacity/test_images/619.jpg
+2017-01-30 22:26:41,793 - INFO - Load test image: udacity/test_images/629.jpg
+2017-01-30 22:26:42,743 - INFO - Batch Test on highlighting lanes on all the test images
+2017-01-30 22:26:43,600 - DEBUG - findLanePixels(): one lane line is not found
+2017-01-30 22:26:43,600 - DEBUG - image saved to: debug_output/20170130_222643_gray_bird_view.jpg
+2017-01-30 22:26:43,600 - DEBUG - findLanePixels() - left line position x(x_left):  0
+2017-01-30 22:26:43,600 - DEBUG - findLanePixels() - left line position x(x_right):  0
+2017-01-30 22:26:43,600 - DEBUG - np_left_x size: 0
+2017-01-30 22:26:43,601 - DEBUG - np_left_y size: 0
+2017-01-30 22:26:43,601 - DEBUG - np_right_x size: 0
+2017-01-30 22:26:43,601 - DEBUG - np_right_y size: 0
+2017-01-30 22:26:43,663 - INFO - Load test image: udacity/test_images/654.jpg
+2017-01-30 22:26:45,632 - INFO - Load test image: udacity/test_images/679.jpg
+2017-01-30 22:26:47,052 - INFO - Load test image: udacity/test_images/signs_vehicles_xygrad.jpg
+2017-01-30 22:26:48,023 - INFO - Load test image: udacity/test_images/1036.jpg
+2017-01-30 22:26:48,510 - INFO - Load test image: udacity/test_images/straight_lines1.jpg
+2017-01-30 22:26:50,150 - INFO - Load test image: udacity/test_images/1037.jpg
+2017-01-30 22:26:50,352 - INFO - Load test image: udacity/test_images/straight_lines2.jpg
+2017-01-30 22:26:52,033 - INFO - Load test image: udacity/test_images/1038.jpg
+2017-01-30 22:26:52,387 - INFO - Load test image: udacity/test_images/test1.jpg
+2017-01-30 22:26:54,362 - INFO - Load test image: udacity/test_images/1040.jpg
+2017-01-30 22:26:54,496 - INFO - Load test image: udacity/test_images/test2.jpg
+2017-01-30 22:26:56,484 - INFO - Load test image: udacity/test_images/test3.jpg
+2017-01-30 22:26:56,577 - INFO - Load test image: udacity/test_images/1041.jpg
+2017-01-30 22:26:58,209 - INFO - Load test image: udacity/test_images/test4.jpg
+2017-01-30 22:26:58,367 - INFO - Load test image: udacity/test_images/1046.jpg
+2017-01-30 22:27:00,034 - INFO - Load test image: udacity/test_images/test5.jpg
+2017-01-30 22:27:00,335 - INFO - Load test image: udacity/test_images/1052.jpg
+2017-01-30 22:27:02,373 - INFO - Load test image: udacity/test_images/test6.jpg
+2017-01-30 22:27:02,551 - INFO - Load test image: udacity/test_images/602.jpg
+2017-01-30 22:27:04,329 - INFO - Load test image: udacity/test_images/test7_side_lane.jpg
+2017-01-30 22:27:04,480 - INFO - Load test image: udacity/test_images/612.jpg
+2017-01-30 22:27:06,445 - INFO - Load test image: udacity/test_images/test8_noise_from_another_car.jpg
+2017-01-30 22:27:06,842 - INFO - Load test image: udacity/test_images/619.jpg
+2017-01-30 22:27:08,580 - INFO - Load test image: udacity/test_images/test9_shadow.jpg
+2017-01-30 22:27:08,581 - INFO - Load test image: udacity/test_images/629.jpg
+2017-01-30 22:27:10,661 - INFO - Load test image: udacity/test_images/654.jpg
+2017-01-30 22:27:10,836 - INFO - vision-debug done
+2017-01-30 22:27:12,292 - INFO - Load test image: udacity/test_images/679.jpg
+2017-01-30 22:27:13,835 - INFO - Load test image: udacity/test_images/signs_vehicles_xygrad.jpg
+2017-01-30 22:27:15,219 - INFO - Load test image: udacity/test_images/straight_lines1.jpg
+2017-01-30 22:27:15,697 - INFO - findLinePositions() enables debugging.
+2017-01-30 22:27:15,698 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 22:27:15,704 - DEBUG - findLinePositions() - Peak positions: [334, 1009]
+2017-01-30 22:27:16,886 - INFO - Load test image: udacity/test_images/straight_lines2.jpg
+2017-01-30 22:27:18,153 - INFO - Load test image: udacity/test_images/test1.jpg
+2017-01-30 22:27:19,522 - INFO - Load test image: udacity/test_images/test2.jpg
+2017-01-30 22:27:20,998 - INFO - Load test image: udacity/test_images/test3.jpg
+2017-01-30 22:27:22,437 - INFO - Load test image: udacity/test_images/test4.jpg
+2017-01-30 22:27:23,850 - INFO - Load test image: udacity/test_images/test5.jpg
+2017-01-30 22:27:25,255 - INFO - Load test image: udacity/test_images/test6.jpg
+2017-01-30 22:27:26,765 - INFO - Load test image: udacity/test_images/test7_side_lane.jpg
+2017-01-30 22:27:28,197 - INFO - Load test image: udacity/test_images/test8_noise_from_another_car.jpg
+2017-01-30 22:27:29,901 - INFO - Load test image: udacity/test_images/test9_shadow.jpg
+2017-01-30 22:27:31,271 - INFO - vision-debug done
+2017-01-30 22:28:02,928 - INFO - findLinePositions() enables debugging.
+2017-01-30 22:28:02,928 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 22:28:02,928 - DEBUG - findLinePositions() - Peak positions: [334, 993]
+2017-01-30 22:28:50,451 - INFO - findLinePositions() enables debugging.
+2017-01-30 22:28:50,452 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-01-30 22:28:50,452 - DEBUG - findLinePositions() - Peak positions: [344, 1001]
+2017-01-30 22:29:19,568 - DEBUG - main(): left_line empty? : False
+2017-01-30 22:29:19,569 - DEBUG - main(): right_line empty? : False
+2017-01-30 22:29:23,729 - INFO - Batch Test for Birds Eye View Transformation on black and white thresholded images
+2017-01-30 22:29:24,886 - INFO - Batch Test on thresholding all the test images
+2017-01-30 22:29:32,121 - INFO - Batch Test on highlighting lanes on all the test images
+2017-01-30 22:29:36,797 - INFO - Load test image: udacity/test_images/1036.jpg
+2017-01-30 22:29:38,317 - INFO - Load test image: udacity/test_images/1037.jpg
+2017-01-30 22:29:40,004 - INFO - Load test image: udacity/test_images/1038.jpg
+2017-01-30 22:29:41,535 - INFO - Load test image: udacity/test_images/1040.jpg
+2017-01-30 22:29:43,151 - INFO - Load test image: udacity/test_images/1041.jpg
+2017-01-30 22:29:44,905 - INFO - Load test image: udacity/test_images/1046.jpg
+2017-01-30 22:29:46,431 - INFO - Load test image: udacity/test_images/1052.jpg
+2017-01-30 22:29:47,959 - INFO - Load test image: udacity/test_images/602.jpg
+2017-01-30 22:29:49,537 - INFO - Load test image: udacity/test_images/612.jpg
+2017-01-30 22:29:50,944 - INFO - Load test image: udacity/test_images/619.jpg
+2017-01-30 22:29:52,481 - INFO - Load test image: udacity/test_images/629.jpg
+2017-01-30 22:29:53,992 - INFO - Load test image: udacity/test_images/654.jpg
+2017-01-30 22:29:55,555 - INFO - Load test image: udacity/test_images/679.jpg
+2017-01-30 22:29:57,044 - INFO - Load test image: udacity/test_images/signs_vehicles_xygrad.jpg
+2017-01-30 22:29:58,469 - INFO - Load test image: udacity/test_images/straight_lines1.jpg
+2017-01-30 22:29:59,936 - INFO - Load test image: udacity/test_images/straight_lines2.jpg
+2017-01-30 22:30:01,258 - INFO - Load test image: udacity/test_images/test1.jpg
+2017-01-30 22:30:02,616 - INFO - Load test image: udacity/test_images/test2.jpg
+2017-01-30 22:30:04,051 - INFO - Load test image: udacity/test_images/test3.jpg
+2017-01-30 22:30:05,569 - INFO - Load test image: udacity/test_images/test4.jpg
+2017-01-30 22:30:07,049 - INFO - Load test image: udacity/test_images/test5.jpg
+2017-01-30 22:30:08,650 - INFO - Load test image: udacity/test_images/test6.jpg
+2017-01-30 22:30:10,157 - INFO - Load test image: udacity/test_images/test7_side_lane.jpg
+2017-01-30 22:30:11,703 - INFO - Load test image: udacity/test_images/test8_noise_from_another_car.jpg
+2017-01-30 22:30:13,543 - INFO - Load test image: udacity/test_images/test9_shadow.jpg
+2017-01-30 22:30:15,115 - INFO - vision-debug done

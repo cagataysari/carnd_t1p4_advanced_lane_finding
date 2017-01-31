@@ -1,5 +1,5 @@
 import logging
-logging.basicConfig(filename='log_lanefinding.txt', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(filename='log_lanefinding.txt', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 
 from util_camera import qCamera
@@ -19,17 +19,24 @@ num_of_calbd_img = camera.calibrateSamples('udacity/camera_cal/')
 logger.info('Camera calibrated')
 logger.info('Number of calibrated img: '+ str(num_of_calbd_img) )
 
+
+DBG_counter = 0
+
 def DBG_process_image(img):
+    global DBG_counter
+    
+    img_bgr = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
+    cv2.imwrite('debug_output/input/'+ str(DBG_counter)+'.jpg', img_bgr)
 
+    img_bgr = camera.undistortImg(img_bgr)
+    img_bgr = vision.highlightLane(img_bgr)
 
-        img_bgr = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
+    cv2.imwrite('debug_output/output/'+ str(DBG_counter)+'.jpg', img_bgr)
+    img = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2RGB)
 
-        img_bgr = camera.undistortImg(img_bgr)
-        img_bgr = vision.highlightLane(img_bgr)
+    DBG_counter += 1
 
-        img = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2RGB)
-
-        return img
+    return img
 
 
 class qLaneFinder:
