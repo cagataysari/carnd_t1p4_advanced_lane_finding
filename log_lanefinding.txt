@@ -4815,3 +4815,14 @@
 2017-01-31 22:37:04,806 - DEBUG - main(): right_line empty? : False
 2017-01-31 22:39:14,456 - DEBUG - main(): left_line empty? : False
 2017-01-31 22:39:14,456 - DEBUG - main(): right_line empty? : False
+2017-01-31 22:39:59,742 - INFO - util_debug.py loaded
+2017-01-31 22:39:59,743 - INFO - vision submodule loaded
+2017-01-31 22:40:13,004 - INFO - Camera calibrated
+2017-01-31 22:40:13,005 - INFO - Number of calibrated img: 17
+2017-01-31 22:40:13,534 - WARNING - /home/qh/anaconda3/envs/keras/lib/python3.5/site-packages/moviepy/audio/io/readers.py:123: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  self.nchannels))
+
+2017-01-31 22:43:14,982 - DEBUG - main(): left_line empty? : False
+2017-01-31 22:43:14,982 - DEBUG - main(): right_line empty? : False
+2017-01-31 22:43:34,192 - INFO - util_debug.py loaded
+2017-01-31 22:43:34,192 - INFO - vision submodule loaded

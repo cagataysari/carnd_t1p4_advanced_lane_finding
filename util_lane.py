@@ -106,6 +106,12 @@ class qLane:
 
             dist_meters = dist_pixel* self.left_line.getMetersPerPixelInX()
 
+            # print('left_x: ', left_x)
+            # print('right_x: ', right_x)
+            # print('lane_center_pos_pixel: ', lane_center_pos_pixel)
+            # print('car_center_pos_pixel: ', car_center_pos_pixel)
+            # print('dist_pixel: ', dist_pixel)
+
         return dist_meters    
 
 def main():

@@ -466,7 +466,8 @@ class qVision:
         left_line_curv  = self.lane.getLeftLine().getCurvatureRadiusInMeters()
         right_line_curv = self.lane.getRightLine().getCurvatureRadiusInMeters()
 
-        departure = self.lane.getCarDepartureFromLaneCeterInMeters(width)
+        car_center_pos = width//2
+        departure = self.lane.getCarDepartureFromLaneCeterInMeters(car_center_pos)
 
         str_anno_left_curv  =  'Left Line Curvature: {:.2f}m '.format(left_line_curv)
         str_anno_right_curv =  'Right Line Curvature: {:.2f}m'.format(right_line_curv) 
@@ -589,7 +590,7 @@ def main():
     img_imagined_lines = vision.imaginLines(img_undist, projected_left_line, projected_right_line)
     DBG_CompareImages(img_undist, img_imagined_lines, 'Undistorted Image', 'Imagined lines')
 
-    return False
+    # return False
     ##########################################
     # Batch Test for Birds Eye View Transformation on black and white thresholded images
     ##########################################
