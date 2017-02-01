@@ -421,10 +421,11 @@ class qVision:
         Minv = inv(self.M)
         newwarp = cv2.warpPerspective(color_warp, Minv, (img_undist.shape[1], img_undist.shape[0])) 
         # Combine the result with the original image
-        result = cv2.addWeighted(img_undist, 1, newwarp, 0.3, 0)
+        img_highlighted_lane = cv2.addWeighted(img_undist, 1, newwarp, 0.3, 0)
         # plt.imshow(result)
 
-        return result
+        self.annotateLane(img_highlighted_lane)
+        return img_highlighted_lane
 
     def highlightLane(self, img_bgr):
         """hightlight the current lane
@@ -455,6 +456,28 @@ class qVision:
 
         return img_imagined_lines
 
+    def annotateLane(self, img_bgr):
+
+        height, width = img_bgr.shape[:2]
+
+        x = int(0.1*width)
+        y = int(0.1*height)
+
+        left_line_curv  = self.lane.getLeftLine().getCurvatureRadiusInMeters()
+        right_line_curv = self.lane.getRightLine().getCurvatureRadiusInMeters()
+
+        departure = self.lane.getCarDepartureFromLaneCeterInMeters(width)
+
+        str_anno_left_curv  =  'Left Line Curvature: {:.2f}m '.format(left_line_curv)
+        str_anno_right_curv =  'Right Line Curvature: {:.2f}m'.format(right_line_curv) 
+        str_anno_departure  =  'Lane Center Departure: {:.2f}m'.format(departure) 
+
+        font_delta = 33
+        cv2.putText(img_bgr,str_anno_left_curv, (x,y), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,204,102),3)
+        y+=font_delta
+        cv2.putText(img_bgr,str_anno_right_curv, (x,y), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,204,102),3)
+        y+=font_delta
+        cv2.putText(img_bgr,str_anno_departure, (x,y), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,204,102),3)
 
 
 def DBG_CompareImages(img1, img2, title1, title2, cmap2=None, save_to_file=''):
@@ -532,7 +555,7 @@ def main():
     img_distorted = cv2.imread('udacity/test_images/test9_shadow.jpg' )
     img_undist = camera.undistortImg(img_distorted)
 
-    img_procd = vision.processImg(img_undist, debug=True)
+    img_procd = vision.processImg(img_undist, debug=False)
 
     DBG_CompareImages(img_undist, img_procd, 'Undistorted Image', 'Thresholded Binary Image', cmap2='gray')
 
@@ -555,7 +578,8 @@ def main():
     ##########################################
     # Test for imaging lines on road
     ##########################################
-    lane = qLane()
+    lane =   vision.lane
+
     lane.update( left_line, right_line, bottom_pixel_pos=img_undist.shape[0])
 
     projected_left_line = lane.getLeftLine()
@@ -565,7 +589,7 @@ def main():
     img_imagined_lines = vision.imaginLines(img_undist, projected_left_line, projected_right_line)
     DBG_CompareImages(img_undist, img_imagined_lines, 'Undistorted Image', 'Imagined lines')
 
-    # return False
+    return False
     ##########################################
     # Batch Test for Birds Eye View Transformation on black and white thresholded images
     ##########################################

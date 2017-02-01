@@ -79,7 +79,14 @@ class qLane:
         return is_valid 
 
     def getCarDepartureFromLaneCeterInMeters(self, car_center_pos_pixel):
-
+        """Calculate the car departure distance from lane center 
+        
+        Args:
+            car_center_pos_pixel (TYPE): the pixel position of car center. It would be the image center, if the camera is mounted at center.
+        
+        Returns:
+            float: distance in meteres
+        """
         dist_meters = 0
 
         #check if there are lines captured
@@ -93,9 +100,6 @@ class qLane:
 
             right_x = calc2ndOrderPoly(right_x_fit_coef, self.bottom_pixel_pos)
 
-            print('left_x: ', left_x)
-            print('right_x: ', right_x)
-            print('self.bottom_pixel_pos: ', self.bottom_pixel_pos)
             lane_center_pos_pixel = (left_x+right_x)/2.0
 
             dist_pixel = car_center_pos_pixel - lane_center_pos_pixel
