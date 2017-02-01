@@ -111,3 +111,39 @@ class qLine:
 
     def getMetersPerPixelInY(self):
         return qLine.YM_PER_PIX
+
+
+
+def main():
+
+
+    pixel_num = 200
+    bottom_pixel_pos = 1000
+
+    x_right_start = 500
+
+    top_y = 100
+
+    left_line = qLine()
+    # x = np.arange(0,0+pixel_num)
+    y = np.linspace( bottom_pixel_pos, top_y,pixel_num)
+    coef = np.array([0.0003,0.003,0.8])
+    x = calc2ndOrderPoly(coef, y)
+
+    coef = np.polyfit(y, x, 2)
+    left_line.update(x,y,coef)
+    
+
+    print('Left Lane Curvature: ', left_line.getCurvatureRadiusInMeters())
+
+if __name__ == "__main__": 
+    import time
+    from datetime import timedelta
+
+    time_start = time.time()
+
+    main()
+
+    time_end = time.time()
+    print("Time usage: " + str(timedelta(seconds=int( time_end - time_start))))
+    

@@ -474,11 +474,13 @@ class qVision:
         str_anno_departure  =  'Lane Center Departure: {:.2f}m'.format(departure) 
 
         font_delta = 33
-        cv2.putText(img_bgr,str_anno_left_curv, (x,y), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,204,102),3)
+        # font_color = (51,51,153)
+        font_color = (0,204,204)
+        cv2.putText(img_bgr,str_anno_left_curv, (x,y), cv2.FONT_HERSHEY_SIMPLEX, 1, font_color,3)
         y+=font_delta
-        cv2.putText(img_bgr,str_anno_right_curv, (x,y), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,204,102),3)
+        cv2.putText(img_bgr,str_anno_right_curv, (x,y), cv2.FONT_HERSHEY_SIMPLEX, 1, font_color,3)
         y+=font_delta
-        cv2.putText(img_bgr,str_anno_departure, (x,y), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,204,102),3)
+        cv2.putText(img_bgr,str_anno_departure, (x,y), cv2.FONT_HERSHEY_SIMPLEX, 1, font_color,3)
 
 
 def DBG_CompareImages(img1, img2, title1, title2, cmap2=None, save_to_file=''):
