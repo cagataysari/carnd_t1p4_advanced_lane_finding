@@ -4746,3 +4746,12 @@
 2017-01-31 19:12:52,431 - INFO - Process test image: udacity/test_images/test8_noise_from_another_car.jpg
 2017-01-31 19:12:53,969 - INFO - Process test image: udacity/test_images/test9_shadow.jpg
 2017-01-31 19:12:55,358 - INFO - vision-debug done
+2017-01-31 19:15:28,826 - INFO - util_debug.py loaded
+2017-01-31 19:15:28,826 - INFO - vision submodule loaded
+2017-01-31 19:15:40,222 - INFO - Camera calibrated
+2017-01-31 19:15:40,222 - INFO - Number of calibrated img: 17
+2017-01-31 19:15:40,374 - WARNING - /home/qh/anaconda3/envs/keras/lib/python3.5/site-packages/moviepy/audio/io/readers.py:123: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  self.nchannels))
+
+2017-01-31 20:20:57,506 - DEBUG - main(): left_line empty? : False
+2017-01-31 20:20:57,506 - DEBUG - main(): right_line empty? : False

@@ -12,6 +12,11 @@ def calc2ndOrderPoly(fit_coef, yvals):
 
 #to keep track of recent detections and to perform sanity checks.
 class qLine:
+
+    # Define conversions in x and y from pixels space to meters
+    YM_PER_PIX = 30/720 # meters per pixel in y dimension
+    XM_PER_PIX = 3.7/700 # meteres per pixel in x dimension
+
     def __init__(self, np_x=np.array([]), np_y=np.array([]),  np_fit_coef_x=np.array([]), np_fitx = np.array([])):
         self.np_x = np_x
         self.np_y = np_y
@@ -38,6 +43,8 @@ class qLine:
         self.allx = None  
         #y values for detected line pixels
         self.ally = None
+
+
 
     def getFittedX(self):
         return self.np_fitx
@@ -87,11 +94,9 @@ class qLine:
         Returns:
             TYPE: Description
         """
-        # Define conversions in x and y from pixels space to meters
-        ym_per_pix = 30/720 # meters per pixel in y dimension
-        xm_per_pix = 3.7/700 # meteres per pixel in x dimension
 
-        fit_cr = np.polyfit(self.np_y*ym_per_pix, self.np_x*xm_per_pix, 2)
+
+        fit_cr = np.polyfit(self.np_y*qLine.YM_PER_PIX, self.np_x*qLine.XM_PER_PIX, 2)
 
         y_eval = np.max(self.np_y) #the maximum y-value, corresponding to the bottom of the image
 
@@ -99,3 +104,10 @@ class qLine:
                                      /np.absolute(2*fit_cr[0])
 
         return curverad
+
+    def getMetersPerPixelInX(self):
+        return qLine.XM_PER_PIX
+
+
+    def getMetersPerPixelInY(self):
+        return qLine.YM_PER_PIX

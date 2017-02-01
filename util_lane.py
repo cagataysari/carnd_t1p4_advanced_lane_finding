@@ -16,7 +16,16 @@ class qLane:
 
 
     def update(self, left_line, right_line, bottom_pixel_pos):
-
+        """project line to image bottom. 
+        
+        Args:
+            left_line (TYPE): Description
+            right_line (TYPE): Description
+            bottom_pixel_pos (TYPE): Description
+        
+        Returns:
+            TYPE: Description
+        """
         if self.isLaneValid(left_line, right_line):
 
             self.bottom_pixel_pos = bottom_pixel_pos
@@ -69,6 +78,31 @@ class qLane:
 
         return is_valid 
 
+    def getCarDepartureFromLaneCeterInMeters(self, car_center_pos_pixel):
+
+        dist_meters = 0
+
+        #check if there are lines captured
+        if (self.left_line.isEmpty() is not True) and (self.right_line.isEmpty() is not True):
+
+            left_x_fit_coef = self.left_line.getFitXCoef()
+
+            left_x = calc2ndOrderPoly(left_x_fit_coef, self.bottom_pixel_pos)
+
+            right_x_fit_coef = self.right_line.getFitXCoef()
+
+            right_x = calc2ndOrderPoly(right_x_fit_coef, self.bottom_pixel_pos)
+
+            print('left_x: ', left_x)
+            print('right_x: ', right_x)
+            print('self.bottom_pixel_pos: ', self.bottom_pixel_pos)
+            lane_center_pos_pixel = (left_x+right_x)/2.0
+
+            dist_pixel = car_center_pos_pixel - lane_center_pos_pixel
+
+            dist_meters = dist_pixel* self.left_line.getMetersPerPixelInX()
+
+        return dist_meters    
 
 def main():
 
@@ -76,26 +110,29 @@ def main():
     top_y_right = 300
 
     pixel_num = 200
+    bottom_pixel_pos = 1000
+
+    x_right_start = 500
 
     top_y = min(top_y_left, top_y_right)
-    bottom_pixel_pos = 1000
 
     left_line = qLine()
     x = np.arange(0,0+pixel_num)
-    y = np.arange( top_y_left,top_y_left+pixel_num,1)
-    coef = np.array([1,2,3])
+    y = np.linspace( bottom_pixel_pos, top_y_left,pixel_num)
+    # coef = np.array([0,-1,0.3])
+    coef = np.polyfit(y, x, 2)
     left_line.update(x,y,coef)
 
 
     right_line = qLine()
-    x = np.arange(500,500+pixel_num)
-    y = np.arange(top_y_right,top_y_right+pixel_num, 1)
-    coef = np.array([1,2,3])
+    x = np.arange(x_right_start,x_right_start+pixel_num)
+    y = np.linspace(top_y_right,bottom_pixel_pos, pixel_num)
+    coef = np.polyfit(y, x, 2)
     right_line.update(x,y,coef)
 
 
 
-    lane = qLane(700)
+    lane = qLane(bottom_pixel_pos)
     lane1 = qLane()
 
     lane.update( left_line, right_line, bottom_pixel_pos)
@@ -118,6 +155,12 @@ def main():
 
     assert(projected_right_line.getPixelsY().size == (bottom_pixel_pos - top_y) ) , \
             "\n projected_right_line.getPixelsY().size: %d \n (bottom_pixel_pos - top_y) :  %d" % (projected_right_line.getPixelsY().size , (bottom_pixel_pos - top_y) )
+
+    print('Left Line Curvature: ', lane.getLeftLine().getCurvatureRadiusInMeters())
+    print('Right Line Curvature: ', lane.getRightLine().getCurvatureRadiusInMeters())
+
+    print('Car Departure from center: ' + str(lane.getCarDepartureFromLaneCeterInMeters( 1280) ) ) # image width of 1280
+
 
 if __name__ == "__main__": 
     import time
