@@ -76,6 +76,9 @@ class qLane:
         if left_line.isEmpty() or right_line.isEmpty():
             is_valid = False
 
+        if abs(left_line.getCurvatureRadiusInMeters() - right_line.getCurvatureRadiusInMeters()) > 2000:
+            is_vaild = False
+
         return is_valid 
 
     def getCarDepartureFromLaneCeterInMeters(self, car_center_pos_pixel):
