@@ -344,7 +344,7 @@ def main():
 
 
 
-    img_distorted = cv2.imread('udacity/test_images/15.jpg' )
+    img_distorted = cv2.imread('udacity/test_images/test1.jpg' )
     img_undist = camera.undistortImg(img_distorted)
 
     img_procd = vision.processImg(img_undist, debug=False)
@@ -356,7 +356,7 @@ def main():
     plt.show()
     print('img_gray shape', img_gray.shape)
     
-    left_line, right_line = findLaneLines(img_gray, debug=False)
+    left_line, right_line = findLaneLines(img_gray, debug=True)
 
 
     

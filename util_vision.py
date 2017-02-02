@@ -337,11 +337,11 @@ class qVision:
         # Plot the result
 
         if debug == True:
-            DBG_CompareThreeGrayImages(binary_color , mag_binary,  dir_binary ,'HLS', 'mag', 'directional' )
+            DBG_CompareThreeGrayImages(binary_color , mag_binary,  hls_binary_l ,'YUV u-channel Amplitude Filter', 'Magnitude Sobel Filter', 'HLS l-channel Amplitude Filter' )
 
             hls_binary_l = hls_select_l(image_cropped, thresh=(200, 255))
 
-            DBG_CompareImages(image_cropped, hls_binary_l, 'Cropped Image', 'Luminosity channel only', cmap2='gray' )
+            DBG_CompareImages(image_orig, dir_binary, 'Original Image', 'Final Directional Sobel Filtering', cmap2='gray' )
 
 
 
@@ -468,8 +468,8 @@ class qVision:
         departure = self.lane.getCarDepartureFromLaneCeterInMeters(car_center_pos)
         lane_curv = self.lane.getCurvatureRadiusInMeters()
 
-        str_anno_curv =  'Lane Curvature: {:.2f}m'.format(lane_curv) 
-        str_anno_departure  =  'Car Departure from Center: {:.2f}m'.format(departure) 
+        str_anno_curv =        'Lane Curvature:       {:>10.2f}m'.format(lane_curv) 
+        str_anno_departure  =  'Car Departure from Center: {:>5.2f}m'.format(departure) 
 
         font_delta = 33
         # font_color = (51,51,153)
@@ -511,13 +511,13 @@ def DBG_CompareThreeGrayImages(img1, img2, img3, title1, title2, title3 ):
     f.tight_layout()
 
     ax1.imshow(img1, cmap='gray', vmin = 0, vmax = 1)
-    ax1.set_title(title1, fontsize=30)
+    ax1.set_title(title1, fontsize=15)
 
     ax2.imshow(img2, cmap='gray', vmin = 0, vmax = 1)
-    ax2.set_title(title2, fontsize=30)
+    ax2.set_title(title2, fontsize=15)
 
     ax3.imshow(img3, cmap='gray', vmin = 0, vmax = 1)
-    ax3.set_title(title3, fontsize=30)
+    ax3.set_title(title3, fontsize=15)
 
     plt.subplots_adjust(left=0., right=1, top=0.9, bottom=0.)
 
@@ -552,7 +552,7 @@ def main():
 
 
 
-    img_distorted = cv2.imread('udacity/test_images/test9_shadow.jpg' )
+    img_distorted = cv2.imread('udacity/test_images/straight_lines1.jpg' )
     img_undist = camera.undistortImg(img_distorted)
 
     img_procd = vision.processImg(img_undist, debug=False)
@@ -589,7 +589,7 @@ def main():
     img_imagined_lines = vision.imaginLines(img_undist, projected_left_line, projected_right_line)
     DBG_CompareImages(img_undist, img_imagined_lines, 'Undistorted Image', 'Imagined lines')
 
-    # return False
+    return False
     ##########################################
     # Batch Test for Birds Eye View Transformation on black and white thresholded images
     ##########################################

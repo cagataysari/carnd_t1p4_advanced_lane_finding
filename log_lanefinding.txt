@@ -5186,3 +5186,75 @@
 2017-02-01 20:51:34,107 - WARNING - /home/qh/anaconda3/envs/keras/lib/python3.5/site-packages/moviepy/audio/io/readers.py:123: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
   self.nchannels))
 
+2017-02-01 21:32:21,632 - DEBUG - main(): left_line empty? : False
+2017-02-01 21:32:21,633 - DEBUG - main(): right_line empty? : False
+2017-02-01 21:33:03,057 - DEBUG - main(): left_line empty? : False
+2017-02-01 21:33:03,057 - DEBUG - main(): right_line empty? : False
+2017-02-01 21:33:43,471 - DEBUG - main(): left_line empty? : False
+2017-02-01 21:33:43,471 - DEBUG - main(): right_line empty? : False
+2017-02-01 21:33:55,862 - DEBUG - main(): left_line empty? : False
+2017-02-01 21:33:55,863 - DEBUG - main(): right_line empty? : False
+2017-02-01 21:34:24,495 - INFO - util_debug.py loaded
+2017-02-01 21:34:24,496 - INFO - vision submodule loaded
+2017-02-01 21:34:37,973 - INFO - Camera calibrated
+2017-02-01 21:34:37,973 - INFO - Number of calibrated img: 17
+2017-02-01 21:34:38,144 - WARNING - /home/qh/anaconda3/envs/keras/lib/python3.5/site-packages/moviepy/audio/io/readers.py:123: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  self.nchannels))
+
+2017-02-01 22:02:07,335 - DEBUG - main(): left_line empty? : False
+2017-02-01 22:02:07,335 - DEBUG - main(): right_line empty? : False
+2017-02-01 22:03:58,166 - DEBUG - main(): left_line empty? : False
+2017-02-01 22:03:58,179 - DEBUG - main(): right_line empty? : False
+2017-02-01 22:04:59,780 - DEBUG - main(): left_line empty? : False
+2017-02-01 22:04:59,781 - DEBUG - main(): right_line empty? : False
+2017-02-01 22:07:41,018 - INFO - vision submodule loaded
+2017-02-01 22:08:38,445 - INFO - vision submodule loaded
+2017-02-01 22:08:55,988 - INFO - vision submodule loaded
+2017-02-01 22:09:05,330 - INFO - vision submodule loaded
+2017-02-01 22:09:27,390 - INFO - findLinePositions() enables debugging.
+2017-02-01 22:09:27,391 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-02-01 22:09:27,391 - DEBUG - findLinePositions() - Peak positions: [365, 1016]
+2017-02-01 22:09:37,858 - INFO - vision submodule loaded
+2017-02-01 22:10:14,528 - INFO - findLinePositions() enables debugging.
+2017-02-01 22:10:14,529 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-02-01 22:10:14,529 - DEBUG - findLinePositions() - Peak positions: [365, 1016]
+2017-02-01 22:11:26,462 - DEBUG - Initial guess of left line position: 365
+2017-02-01 22:11:26,462 - DEBUG - Initial guess of right line position: 365
+2017-02-01 22:11:48,847 - DEBUG - findLanePixels(): one lane line is not found
+2017-02-01 22:11:48,847 - DEBUG - image saved to: debug_output/20170201_221148_gray_bird_view.jpg
+2017-02-01 22:11:48,848 - DEBUG - findLanePixels() - left line position x(x_left):  0
+2017-02-01 22:11:48,848 - DEBUG - findLanePixels() - left line position x(x_right):  0
+2017-02-01 22:11:48,848 - DEBUG - np_left_x size: 0
+2017-02-01 22:11:48,848 - DEBUG - np_left_y size: 0
+2017-02-01 22:11:48,848 - DEBUG - np_right_x size: 0
+2017-02-01 22:11:48,848 - DEBUG - np_right_y size: 0
+2017-02-01 22:11:49,939 - DEBUG - findLanePixels(): one lane line is not found
+2017-02-01 22:11:49,940 - DEBUG - image saved to: debug_output/20170201_221149_gray_bird_view.jpg
+2017-02-01 22:11:49,940 - DEBUG - findLanePixels() - left line position x(x_left):  0
+2017-02-01 22:11:49,940 - DEBUG - findLanePixels() - left line position x(x_right):  0
+2017-02-01 22:11:49,940 - DEBUG - np_left_x size: 0
+2017-02-01 22:11:49,940 - DEBUG - np_left_y size: 0
+2017-02-01 22:11:49,940 - DEBUG - np_right_x size: 0
+2017-02-01 22:11:49,941 - DEBUG - np_right_y size: 0
+2017-02-01 22:12:00,797 - DEBUG - main(): left_line empty? : False
+2017-02-01 22:12:00,807 - DEBUG - main(): right_line empty? : False
+2017-02-01 22:12:14,161 - INFO - vision submodule loaded
+2017-02-01 22:12:24,224 - INFO - vision submodule loaded
+2017-02-01 22:12:39,364 - INFO - vision submodule loaded
+2017-02-01 22:13:26,002 - INFO - findLinePositions() enables debugging.
+2017-02-01 22:13:26,003 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-02-01 22:13:26,003 - DEBUG - findLinePositions() - Peak positions: [374, 1057]
+2017-02-01 22:13:33,118 - INFO - vision submodule loaded
+2017-02-01 22:13:44,409 - INFO - findLinePositions() enables debugging.
+2017-02-01 22:13:44,409 - DEBUG - findLinePositions() - Num of peaks found: 2
+2017-02-01 22:13:44,409 - DEBUG - findLinePositions() - Peak positions: [344, 995]
+2017-02-01 22:14:14,975 - DEBUG - Initial guess of left line position: 344
+2017-02-01 22:14:14,975 - DEBUG - Initial guess of right line position: 344
+2017-02-01 22:14:25,825 - DEBUG - findLanePixels(): one lane line is not found
+2017-02-01 22:14:25,826 - DEBUG - image saved to: debug_output/20170201_221425_gray_bird_view.jpg
+2017-02-01 22:14:25,826 - DEBUG - findLanePixels() - left line position x(x_left):  0
+2017-02-01 22:14:25,826 - DEBUG - findLanePixels() - left line position x(x_right):  0
+2017-02-01 22:14:25,826 - DEBUG - np_left_x size: 0
+2017-02-01 22:14:25,826 - DEBUG - np_left_y size: 0
+2017-02-01 22:14:25,826 - DEBUG - np_right_x size: 0
+2017-02-01 22:14:25,826 - DEBUG - np_right_y size: 0
