@@ -68,7 +68,7 @@ class qLine:
     # Checking that they are separated by approximately the right distance horizontally
     # Checking that they are roughly parallel
     def update(self, np_x, np_y,  np_fit_coef_x):
-
+        #TODO: add low-low pass filtering to each pixel
         if self.isLineValie(np_x, np_y,  np_fit_coef_x):
             self.np_x = np_x
             self.np_y = np_y
