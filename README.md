@@ -1,5 +1,5 @@
-##Self-driving Car Nanodegree - Project 4 Advanced Lane Finding
-###You can use this file as a template for your writeup if you want to submit it as a markdown file, but feel free to use some other method and submit a pdf if you prefer.
+##CarND - Project 4 Advanced Lane Finding
+###The project objective is to recognize a lane and compute the curvature on a road. The road video is recorded from a car, so the departure from lane center can also be obtained. 
 
 ---
 
@@ -23,7 +23,8 @@ The goals / steps of this project are the following:
 [image3]: ./doc/binary_combo_example.png "Binary Example"
 [image3_filters]: ./doc/binary_filters.png "Binary Filters"
 [image4]: ./doc/persp_birds_eye_view.jpg "Warp Example"
-[image5]: ./doc/findlane_3_fit.png "Fit Visual"
+[image5_orig]: ./doc/transformed_processed_test4.jpg "Original Image for fit"
+[image5]: ./doc/computed_transformed_processed_test4.jpg "Fit Visual"
 [image6]: ./doc/example_output_1036.jpg "Output"
 [video1]: ./Processsed_project_video.mp4 "Video"
 
@@ -92,13 +93,17 @@ I verified that my perspective transform was working as expected by drawing the 
 
 Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
 
-![alt text][image5]
+
+Image for fitting:         |  Fit result
+:-------------------------:|:-------------------------:
+![alt text][image5_orig]   |![alt text][image5] 
+
 
 ####5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
-I did this in lines # through # in my code in `my_other_file.py`
+I did this in function findLinePixels() in `util_findLane.py`
 
-####6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
+####6. An example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
 I implemented this step in lines # through # in my code in `yet_another_file.py` in the function `map_lane()`.  Here is an example of my result on a test image:
 
@@ -110,7 +115,7 @@ I implemented this step in lines # through # in my code in `yet_another_file.py`
 
 ####1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
-Here's a [link to my video result](./Processsed_project_video.mp4)
+Here's a [link to my video result](./Processsed_project_video.mp4). Or it can be viewed on youtube by clicking the following image:
 
 [![Lane-finding Video](http://img.youtube.com/vi/R_oIGwcXz1Y/0.jpg)](https://www.youtube.com/embed/R_oIGwcXz1Y "Lane-finding Video")
 

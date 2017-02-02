@@ -344,7 +344,7 @@ def main():
 
 
 
-    img_distorted = cv2.imread('udacity/test_images/test1.jpg' )
+    img_distorted = cv2.imread('udacity/test_images/test2.jpg' )
     img_undist = camera.undistortImg(img_distorted)
 
     img_procd = vision.processImg(img_undist, debug=False)
