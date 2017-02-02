@@ -5258,3 +5258,10 @@
 2017-02-01 22:14:25,826 - DEBUG - np_left_y size: 0
 2017-02-01 22:14:25,826 - DEBUG - np_right_x size: 0
 2017-02-01 22:14:25,826 - DEBUG - np_right_y size: 0
+2017-02-01 23:10:19,614 - INFO - util_debug.py loaded
+2017-02-01 23:10:19,614 - INFO - vision submodule loaded
+2017-02-01 23:10:31,099 - INFO - Camera calibrated
+2017-02-01 23:10:31,099 - INFO - Number of calibrated img: 17
+2017-02-01 23:10:31,259 - WARNING - /home/qh/anaconda3/envs/keras/lib/python3.5/site-packages/moviepy/audio/io/readers.py:123: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  self.nchannels))
+
