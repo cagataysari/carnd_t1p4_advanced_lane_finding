@@ -112,6 +112,8 @@ I implemented this step in lines # through # in my code in `yet_another_file.py`
 
 Here's a [link to my video result](./Processsed_project_video.mp4)
 
+[![Lane-finding Video](http://img.youtube.com/vi/R_oIGwcXz1Y/0.jpg)](https://www.youtube.com/embed/R_oIGwcXz1Y "Lane-finding Video")
+
 ---
 
 ###Discussion
