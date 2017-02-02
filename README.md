@@ -1,5 +1,5 @@
 ##CarND - Project 4 Advanced Lane Finding
-###The project objective is to recognize a lane and compute the curvature on a road. The road video is recorded from a car, so the departure from lane center can also be obtained. 
+###The objective is to recognize a lane and compute the curvature on a road. The road video is recorded from a car, so the departure from lane center can also be obtained. 
 
 ---
 
@@ -58,6 +58,10 @@ To demonstrate this step, I will describe how I apply the distortion correction 
 I used a combination of color and gradient thresholds to generate a binary image (thresholding steps at lines # through # in `another_file.py`).  Here's an example of my output for this step.  (note: this is not actually from one of the test images)
 
 ![alt text][image3]
+
+The image are passed through the intermediate filters. The most difficult issue is the noise from shadow. To tackle the problem, it is found that YUV color space is perfect in identifying the yellow lane mark, while HLS has supreme property in isolating the white lane mark. The filtering result is as following.
+![alt text][image3_filters]
+
 
 ####3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 
