@@ -4909,3 +4909,280 @@
 2017-01-31 23:47:35,801 - INFO - Process test image: udacity/test_images/test8_noise_from_another_car.jpg
 2017-01-31 23:47:37,414 - INFO - Process test image: udacity/test_images/test9_shadow.jpg
 2017-01-31 23:47:38,965 - INFO - vision-debug done
+2017-02-01 18:32:56,974 - INFO - util_debug.py loaded
+2017-02-01 18:32:56,995 - INFO - vision submodule loaded
+2017-02-01 18:33:10,015 - INFO - Camera calibrated
+2017-02-01 18:33:10,016 - INFO - Number of calibrated img: 17
+2017-02-01 18:33:10,298 - WARNING - /home/qh/anaconda3/envs/keras/lib/python3.5/site-packages/moviepy/audio/io/readers.py:123: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  self.nchannels))
+
+2017-02-01 19:47:34,132 - DEBUG - main(): left_line empty? : False
+2017-02-01 19:47:34,132 - DEBUG - main(): right_line empty? : False
+2017-02-01 19:47:36,001 - INFO - Batch Test for Birds Eye View Transformation on black and white thresholded images
+2017-02-01 19:47:39,394 - INFO - Batch Test on thresholding all the test images
+2017-02-01 19:47:41,545 - DEBUG - main(): left_line empty? : False
+2017-02-01 19:47:41,545 - DEBUG - main(): right_line empty? : False
+2017-02-01 19:47:44,399 - INFO - Batch Test for Birds Eye View Transformation on black and white thresholded images
+2017-02-01 19:47:47,494 - DEBUG - findLanePixels(): one lane line is not found
+2017-02-01 19:47:47,494 - DEBUG - image saved to: debug_output/20170201_194747_gray_bird_view.jpg
+2017-02-01 19:47:47,495 - DEBUG - findLanePixels() - left line position x(x_left):  0
+2017-02-01 19:47:47,495 - DEBUG - findLanePixels() - left line position x(x_right):  0
+2017-02-01 19:47:47,495 - DEBUG - np_left_x size: 0
+2017-02-01 19:47:47,495 - DEBUG - np_left_y size: 0
+2017-02-01 19:47:47,496 - DEBUG - np_right_x size: 0
+2017-02-01 19:47:47,496 - DEBUG - np_right_y size: 0
+2017-02-01 19:47:47,496 - DEBUG - main(): left_line empty? : True
+2017-02-01 19:47:47,496 - DEBUG - main(): right_line empty? : True
+2017-02-01 19:47:47,603 - DEBUG - findLanePixels(): one lane line is not found
+2017-02-01 19:47:47,604 - DEBUG - image saved to: debug_output/20170201_194747_gray_bird_view.jpg
+2017-02-01 19:47:47,605 - DEBUG - findLanePixels() - left line position x(x_left):  0
+2017-02-01 19:47:47,605 - DEBUG - findLanePixels() - left line position x(x_right):  0
+2017-02-01 19:47:47,606 - DEBUG - np_left_x size: 0
+2017-02-01 19:47:47,606 - DEBUG - np_left_y size: 0
+2017-02-01 19:47:47,606 - DEBUG - np_right_x size: 0
+2017-02-01 19:47:47,607 - DEBUG - np_right_y size: 0
+2017-02-01 19:47:47,613 - DEBUG - main(): left_line empty? : True
+2017-02-01 19:47:47,630 - DEBUG - main(): right_line empty? : True
+2017-02-01 19:47:48,011 - DEBUG - main(): left_line empty? : False
+2017-02-01 19:47:48,012 - DEBUG - main(): right_line empty? : False
+2017-02-01 19:47:48,101 - INFO - Batch Test on thresholding all the test images
+2017-02-01 19:47:52,715 - INFO - Batch Test for Birds Eye View Transformation on black and white thresholded images
+2017-02-01 19:47:52,718 - INFO - Batch Test for Birds Eye View Transformation on black and white thresholded images
+2017-02-01 19:47:52,754 - INFO - Batch Test for Birds Eye View Transformation on black and white thresholded images
+2017-02-01 19:47:57,168 - INFO - Batch Test on thresholding all the test images
+2017-02-01 19:47:57,211 - INFO - Batch Test on thresholding all the test images
+2017-02-01 19:48:14,020 - INFO - Batch Test on highlighting lanes on all the test images
+2017-02-01 19:48:14,021 - INFO - Process test image: udacity/test_images/1036.jpg
+2017-02-01 19:48:17,181 - INFO - Process test image: udacity/test_images/1037.jpg
+2017-02-01 19:48:20,018 - INFO - Batch Test on highlighting lanes on all the test images
+2017-02-01 19:48:20,019 - INFO - Process test image: udacity/test_images/1036.jpg
+2017-02-01 19:48:20,979 - INFO - Process test image: udacity/test_images/1038.jpg
+2017-02-01 19:48:21,321 - INFO - Batch Test on highlighting lanes on all the test images
+2017-02-01 19:48:21,322 - INFO - Process test image: udacity/test_images/1036.jpg
+2017-02-01 19:48:23,236 - INFO - Process test image: udacity/test_images/1037.jpg
+2017-02-01 19:48:23,685 - INFO - Process test image: udacity/test_images/1037.jpg
+2017-02-01 19:48:24,491 - INFO - Process test image: udacity/test_images/1040.jpg
+2017-02-01 19:48:26,020 - INFO - Process test image: udacity/test_images/1038.jpg
+2017-02-01 19:48:26,144 - DEBUG - findLanePixels(): one lane line is not found
+2017-02-01 19:48:26,145 - DEBUG - image saved to: debug_output/20170201_194826_gray_bird_view.jpg
+2017-02-01 19:48:26,145 - DEBUG - findLanePixels() - left line position x(x_left):  0
+2017-02-01 19:48:26,145 - DEBUG - findLanePixels() - left line position x(x_right):  0
+2017-02-01 19:48:26,145 - DEBUG - np_left_x size: 0
+2017-02-01 19:48:26,146 - DEBUG - np_left_y size: 0
+2017-02-01 19:48:26,146 - DEBUG - np_right_x size: 0
+2017-02-01 19:48:26,146 - DEBUG - np_right_y size: 0
+2017-02-01 19:48:26,358 - INFO - Process test image: udacity/test_images/1038.jpg
+2017-02-01 19:48:27,676 - INFO - Process test image: udacity/test_images/1041.jpg
+2017-02-01 19:48:29,069 - INFO - Process test image: udacity/test_images/1040.jpg
+2017-02-01 19:48:29,231 - DEBUG - findLanePixels(): one lane line is not found
+2017-02-01 19:48:29,238 - DEBUG - image saved to: debug_output/20170201_194829_gray_bird_view.jpg
+2017-02-01 19:48:29,239 - DEBUG - findLanePixels() - left line position x(x_left):  0
+2017-02-01 19:48:29,243 - DEBUG - findLanePixels() - left line position x(x_right):  0
+2017-02-01 19:48:29,244 - DEBUG - np_left_x size: 0
+2017-02-01 19:48:29,244 - DEBUG - np_left_y size: 0
+2017-02-01 19:48:29,244 - DEBUG - np_right_x size: 0
+2017-02-01 19:48:29,244 - DEBUG - np_right_y size: 0
+2017-02-01 19:48:29,603 - INFO - Process test image: udacity/test_images/1040.jpg
+2017-02-01 19:48:30,552 - INFO - Process test image: udacity/test_images/1046.jpg
+2017-02-01 19:48:32,184 - INFO - Process test image: udacity/test_images/1041.jpg
+2017-02-01 19:48:32,294 - INFO - Process test image: udacity/test_images/1041.jpg
+2017-02-01 19:48:33,530 - INFO - Process test image: udacity/test_images/1052.jpg
+2017-02-01 19:48:34,882 - INFO - Process test image: udacity/test_images/1046.jpg
+2017-02-01 19:48:35,322 - INFO - Process test image: udacity/test_images/1046.jpg
+2017-02-01 19:48:36,725 - INFO - Process test image: udacity/test_images/14.jpg
+2017-02-01 19:48:37,915 - INFO - Process test image: udacity/test_images/1052.jpg
+2017-02-01 19:48:37,927 - INFO - Process test image: udacity/test_images/1052.jpg
+2017-02-01 19:48:39,912 - INFO - Process test image: udacity/test_images/14.jpg
+2017-02-01 19:48:39,993 - INFO - Process test image: udacity/test_images/145.jpg
+2017-02-01 19:48:41,283 - INFO - Process test image: udacity/test_images/14.jpg
+2017-02-01 19:48:42,716 - INFO - Process test image: udacity/test_images/145.jpg
+2017-02-01 19:48:43,817 - INFO - Process test image: udacity/test_images/159.jpg
+2017-02-01 19:48:44,223 - INFO - Process test image: udacity/test_images/145.jpg
+2017-02-01 19:48:45,874 - INFO - Process test image: udacity/test_images/159.jpg
+2017-02-01 19:48:46,793 - INFO - Process test image: udacity/test_images/44.jpg
+2017-02-01 19:48:47,356 - INFO - Process test image: udacity/test_images/159.jpg
+2017-02-01 19:48:48,861 - DEBUG - findLanePixels(): one lane line is not found
+2017-02-01 19:48:48,862 - DEBUG - image saved to: debug_output/20170201_194848_gray_bird_view.jpg
+2017-02-01 19:48:48,862 - DEBUG - findLanePixels() - left line position x(x_left):  0
+2017-02-01 19:48:48,862 - DEBUG - findLanePixels() - left line position x(x_right):  0
+2017-02-01 19:48:48,862 - DEBUG - np_left_x size: 0
+2017-02-01 19:48:48,863 - DEBUG - np_left_y size: 0
+2017-02-01 19:48:48,863 - DEBUG - np_right_x size: 0
+2017-02-01 19:48:48,863 - DEBUG - np_right_y size: 0
+2017-02-01 19:48:49,040 - INFO - Process test image: udacity/test_images/44.jpg
+2017-02-01 19:48:49,954 - INFO - Process test image: udacity/test_images/6.jpg
+2017-02-01 19:48:50,328 - INFO - Process test image: udacity/test_images/44.jpg
+2017-02-01 19:48:51,901 - DEBUG - findLanePixels(): one lane line is not found
+2017-02-01 19:48:51,901 - DEBUG - image saved to: debug_output/20170201_194851_gray_bird_view.jpg
+2017-02-01 19:48:51,901 - DEBUG - findLanePixels() - left line position x(x_left):  0
+2017-02-01 19:48:51,902 - DEBUG - findLanePixels() - left line position x(x_right):  0
+2017-02-01 19:48:51,902 - DEBUG - np_left_x size: 0
+2017-02-01 19:48:51,902 - DEBUG - np_left_y size: 0
+2017-02-01 19:48:51,902 - DEBUG - np_right_x size: 0
+2017-02-01 19:48:51,902 - DEBUG - np_right_y size: 0
+2017-02-01 19:48:52,127 - INFO - Process test image: udacity/test_images/6.jpg
+2017-02-01 19:48:53,065 - INFO - Process test image: udacity/test_images/602.jpg
+2017-02-01 19:48:53,395 - INFO - Process test image: udacity/test_images/6.jpg
+2017-02-01 19:48:54,995 - INFO - Process test image: udacity/test_images/602.jpg
+2017-02-01 19:48:55,477 - INFO - Process test image: udacity/test_images/612.jpg
+2017-02-01 19:48:56,754 - INFO - Process test image: udacity/test_images/602.jpg
+2017-02-01 19:48:58,159 - INFO - Process test image: udacity/test_images/619.jpg
+2017-02-01 19:48:59,262 - INFO - Process test image: udacity/test_images/612.jpg
+2017-02-01 19:49:00,080 - INFO - Process test image: udacity/test_images/629.jpg
+2017-02-01 19:49:01,177 - INFO - Process test image: udacity/test_images/619.jpg
+2017-02-01 19:49:01,673 - INFO - Process test image: udacity/test_images/654.jpg
+2017-02-01 19:49:02,856 - INFO - Process test image: udacity/test_images/629.jpg
+2017-02-01 19:49:03,867 - INFO - Process test image: udacity/test_images/679.jpg
+2017-02-01 19:49:05,026 - INFO - Process test image: udacity/test_images/654.jpg
+2017-02-01 19:49:06,547 - INFO - Process test image: udacity/test_images/signs_vehicles_xygrad.jpg
+2017-02-01 19:49:07,294 - INFO - Process test image: udacity/test_images/679.jpg
+2017-02-01 19:49:08,719 - INFO - Process test image: udacity/test_images/straight_lines1.jpg
+2017-02-01 19:49:09,631 - INFO - Process test image: udacity/test_images/signs_vehicles_xygrad.jpg
+2017-02-01 19:49:11,013 - INFO - Process test image: udacity/test_images/straight_lines2.jpg
+2017-02-01 19:49:11,592 - INFO - Process test image: udacity/test_images/straight_lines1.jpg
+2017-02-01 19:49:12,930 - INFO - Process test image: udacity/test_images/test1.jpg
+2017-02-01 19:49:13,893 - INFO - Process test image: udacity/test_images/straight_lines2.jpg
+2017-02-01 19:49:14,924 - INFO - Process test image: udacity/test_images/test2.jpg
+2017-02-01 19:49:15,856 - INFO - Process test image: udacity/test_images/test1.jpg
+2017-02-01 19:49:16,755 - INFO - Process test image: udacity/test_images/test3.jpg
+2017-02-01 19:49:17,532 - INFO - Process test image: udacity/test_images/test2.jpg
+2017-02-01 19:49:18,678 - INFO - Process test image: udacity/test_images/test4.jpg
+2017-02-01 19:49:19,541 - INFO - Process test image: udacity/test_images/test3.jpg
+2017-02-01 19:49:20,484 - INFO - Process test image: udacity/test_images/test5.jpg
+2017-02-01 19:49:21,680 - INFO - Process test image: udacity/test_images/test4.jpg
+2017-02-01 19:49:22,613 - INFO - Process test image: udacity/test_images/test6.jpg
+2017-02-01 19:49:23,556 - INFO - Process test image: udacity/test_images/test5.jpg
+2017-02-01 19:49:24,626 - INFO - Process test image: udacity/test_images/test7_side_lane.jpg
+2017-02-01 19:49:25,380 - INFO - Process test image: udacity/test_images/test6.jpg
+2017-02-01 19:49:26,559 - INFO - Process test image: udacity/test_images/test8_noise_from_another_car.jpg
+2017-02-01 19:49:27,333 - INFO - Process test image: udacity/test_images/test7_side_lane.jpg
+2017-02-01 19:49:28,360 - INFO - Process test image: udacity/test_images/test9_shadow.jpg
+2017-02-01 19:49:29,179 - INFO - Process test image: udacity/test_images/test8_noise_from_another_car.jpg
+2017-02-01 19:49:30,645 - INFO - vision-debug done
+2017-02-01 19:49:30,775 - INFO - Process test image: udacity/test_images/test9_shadow.jpg
+2017-02-01 19:49:32,114 - INFO - vision-debug done
+2017-02-01 20:25:20,105 - DEBUG - main(): left_line empty? : False
+2017-02-01 20:25:20,105 - DEBUG - main(): right_line empty? : False
+2017-02-01 20:26:04,192 - DEBUG - main(): left_line empty? : False
+2017-02-01 20:26:04,192 - DEBUG - main(): right_line empty? : False
+2017-02-01 20:26:52,359 - DEBUG - main(): left_line empty? : False
+2017-02-01 20:26:52,360 - DEBUG - main(): right_line empty? : False
+2017-02-01 20:27:09,517 - INFO - Batch Test for Birds Eye View Transformation on black and white thresholded images
+2017-02-01 20:27:11,215 - INFO - Batch Test on thresholding all the test images
+2017-02-01 20:27:22,867 - INFO - Batch Test on highlighting lanes on all the test images
+2017-02-01 20:27:22,867 - INFO - Process test image: udacity/test_images/1036.jpg
+2017-02-01 20:27:24,287 - INFO - Process test image: udacity/test_images/1037.jpg
+2017-02-01 20:27:25,715 - INFO - Process test image: udacity/test_images/1038.jpg
+2017-02-01 20:27:27,223 - INFO - Process test image: udacity/test_images/1040.jpg
+2017-02-01 20:27:28,759 - INFO - Process test image: udacity/test_images/1041.jpg
+2017-02-01 20:27:30,238 - INFO - Process test image: udacity/test_images/1046.jpg
+2017-02-01 20:27:31,666 - INFO - Process test image: udacity/test_images/1052.jpg
+2017-02-01 20:27:33,239 - INFO - Process test image: udacity/test_images/14.jpg
+2017-02-01 20:27:34,852 - INFO - Process test image: udacity/test_images/145.jpg
+2017-02-01 20:27:36,414 - INFO - Process test image: udacity/test_images/159.jpg
+2017-02-01 20:27:38,035 - INFO - Process test image: udacity/test_images/44.jpg
+2017-02-01 20:27:39,602 - INFO - Process test image: udacity/test_images/6.jpg
+2017-02-01 20:27:41,137 - INFO - Process test image: udacity/test_images/602.jpg
+2017-02-01 20:27:42,758 - INFO - Process test image: udacity/test_images/612.jpg
+2017-02-01 20:27:44,288 - INFO - Process test image: udacity/test_images/619.jpg
+2017-02-01 20:27:45,756 - INFO - Process test image: udacity/test_images/629.jpg
+2017-02-01 20:27:47,287 - INFO - Process test image: udacity/test_images/654.jpg
+2017-02-01 20:27:48,927 - INFO - Process test image: udacity/test_images/679.jpg
+2017-02-01 20:27:50,492 - INFO - Process test image: udacity/test_images/signs_vehicles_xygrad.jpg
+2017-02-01 20:27:52,008 - INFO - Process test image: udacity/test_images/straight_lines1.jpg
+2017-02-01 20:27:53,686 - INFO - Process test image: udacity/test_images/straight_lines2.jpg
+2017-02-01 20:27:55,357 - INFO - Process test image: udacity/test_images/test1.jpg
+2017-02-01 20:27:57,043 - INFO - Process test image: udacity/test_images/test2.jpg
+2017-02-01 20:27:58,639 - INFO - Process test image: udacity/test_images/test3.jpg
+2017-02-01 20:28:00,162 - INFO - Process test image: udacity/test_images/test4.jpg
+2017-02-01 20:28:01,826 - INFO - Process test image: udacity/test_images/test5.jpg
+2017-02-01 20:28:03,260 - INFO - Process test image: udacity/test_images/test6.jpg
+2017-02-01 20:28:04,808 - INFO - Process test image: udacity/test_images/test7_side_lane.jpg
+2017-02-01 20:28:06,329 - INFO - Process test image: udacity/test_images/test8_noise_from_another_car.jpg
+2017-02-01 20:28:07,855 - INFO - Process test image: udacity/test_images/test9_shadow.jpg
+2017-02-01 20:28:09,316 - INFO - vision-debug done
+2017-02-01 20:43:58,635 - DEBUG - main(): left_line empty? : False
+2017-02-01 20:43:58,635 - DEBUG - main(): right_line empty? : False
+2017-02-01 20:44:37,051 - DEBUG - main(): left_line empty? : False
+2017-02-01 20:44:37,051 - DEBUG - main(): right_line empty? : False
+2017-02-01 20:45:32,786 - INFO - Batch Test for Birds Eye View Transformation on black and white thresholded images
+2017-02-01 20:45:34,544 - INFO - Batch Test on thresholding all the test images
+2017-02-01 20:45:46,779 - INFO - Batch Test on highlighting lanes on all the test images
+2017-02-01 20:45:46,780 - INFO - Process test image: udacity/test_images/1036.jpg
+2017-02-01 20:45:48,332 - INFO - Process test image: udacity/test_images/1037.jpg
+2017-02-01 20:45:49,849 - INFO - Process test image: udacity/test_images/1038.jpg
+2017-02-01 20:45:51,757 - INFO - Process test image: udacity/test_images/1040.jpg
+2017-02-01 20:45:53,465 - INFO - Process test image: udacity/test_images/1041.jpg
+2017-02-01 20:45:54,918 - INFO - Process test image: udacity/test_images/1046.jpg
+2017-02-01 20:45:56,491 - INFO - Process test image: udacity/test_images/1052.jpg
+2017-02-01 20:45:58,220 - INFO - Process test image: udacity/test_images/14.jpg
+2017-02-01 20:45:59,826 - INFO - Process test image: udacity/test_images/145.jpg
+2017-02-01 20:46:01,534 - INFO - Process test image: udacity/test_images/159.jpg
+2017-02-01 20:46:03,257 - INFO - Process test image: udacity/test_images/44.jpg
+2017-02-01 20:46:04,867 - INFO - Process test image: udacity/test_images/6.jpg
+2017-02-01 20:46:06,444 - INFO - Process test image: udacity/test_images/602.jpg
+2017-02-01 20:46:08,032 - INFO - Process test image: udacity/test_images/612.jpg
+2017-02-01 20:46:09,924 - INFO - Process test image: udacity/test_images/619.jpg
+2017-02-01 20:46:11,576 - INFO - Process test image: udacity/test_images/629.jpg
+2017-02-01 20:46:13,239 - INFO - Process test image: udacity/test_images/654.jpg
+2017-02-01 20:46:14,823 - INFO - Process test image: udacity/test_images/679.jpg
+2017-02-01 20:46:16,384 - INFO - Process test image: udacity/test_images/signs_vehicles_xygrad.jpg
+2017-02-01 20:46:17,961 - INFO - Process test image: udacity/test_images/straight_lines1.jpg
+2017-02-01 20:46:19,652 - INFO - Process test image: udacity/test_images/straight_lines2.jpg
+2017-02-01 20:46:21,186 - INFO - Process test image: udacity/test_images/test1.jpg
+2017-02-01 20:46:22,908 - INFO - Process test image: udacity/test_images/test2.jpg
+2017-02-01 20:46:24,619 - INFO - Process test image: udacity/test_images/test3.jpg
+2017-02-01 20:46:26,263 - INFO - Process test image: udacity/test_images/test4.jpg
+2017-02-01 20:46:27,921 - INFO - Process test image: udacity/test_images/test5.jpg
+2017-02-01 20:46:29,556 - INFO - Process test image: udacity/test_images/test6.jpg
+2017-02-01 20:46:31,135 - INFO - Process test image: udacity/test_images/test7_side_lane.jpg
+2017-02-01 20:46:32,666 - INFO - Process test image: udacity/test_images/test8_noise_from_another_car.jpg
+2017-02-01 20:46:34,229 - INFO - Process test image: udacity/test_images/test9_shadow.jpg
+2017-02-01 20:46:35,775 - INFO - vision-debug done
+2017-02-01 20:47:45,397 - DEBUG - main(): left_line empty? : False
+2017-02-01 20:47:45,398 - DEBUG - main(): right_line empty? : False
+2017-02-01 20:48:13,233 - DEBUG - main(): left_line empty? : False
+2017-02-01 20:48:13,233 - DEBUG - main(): right_line empty? : False
+2017-02-01 20:49:22,765 - DEBUG - main(): left_line empty? : False
+2017-02-01 20:49:22,765 - DEBUG - main(): right_line empty? : False
+2017-02-01 20:49:25,619 - INFO - Batch Test for Birds Eye View Transformation on black and white thresholded images
+2017-02-01 20:49:27,251 - INFO - Batch Test on thresholding all the test images
+2017-02-01 20:49:39,406 - INFO - Batch Test on highlighting lanes on all the test images
+2017-02-01 20:49:39,407 - INFO - Process test image: udacity/test_images/1036.jpg
+2017-02-01 20:49:40,917 - INFO - Process test image: udacity/test_images/1037.jpg
+2017-02-01 20:49:42,697 - INFO - Process test image: udacity/test_images/1038.jpg
+2017-02-01 20:49:44,170 - INFO - Process test image: udacity/test_images/1040.jpg
+2017-02-01 20:49:46,079 - INFO - Process test image: udacity/test_images/1041.jpg
+2017-02-01 20:49:47,995 - INFO - Process test image: udacity/test_images/1046.jpg
+2017-02-01 20:49:49,855 - INFO - Process test image: udacity/test_images/1052.jpg
+2017-02-01 20:49:51,851 - INFO - Process test image: udacity/test_images/14.jpg
+2017-02-01 20:49:53,628 - INFO - Process test image: udacity/test_images/145.jpg
+2017-02-01 20:49:55,505 - INFO - Process test image: udacity/test_images/159.jpg
+2017-02-01 20:49:57,545 - INFO - Process test image: udacity/test_images/44.jpg
+2017-02-01 20:49:59,533 - INFO - Process test image: udacity/test_images/6.jpg
+2017-02-01 20:50:01,326 - INFO - Process test image: udacity/test_images/602.jpg
+2017-02-01 20:50:03,083 - INFO - Process test image: udacity/test_images/612.jpg
+2017-02-01 20:50:04,713 - INFO - Process test image: udacity/test_images/619.jpg
+2017-02-01 20:50:06,719 - INFO - Process test image: udacity/test_images/629.jpg
+2017-02-01 20:50:08,493 - INFO - Process test image: udacity/test_images/654.jpg
+2017-02-01 20:50:10,564 - INFO - Process test image: udacity/test_images/679.jpg
+2017-02-01 20:50:12,423 - INFO - Process test image: udacity/test_images/signs_vehicles_xygrad.jpg
+2017-02-01 20:50:14,188 - INFO - Process test image: udacity/test_images/straight_lines1.jpg
+2017-02-01 20:50:16,052 - INFO - Process test image: udacity/test_images/straight_lines2.jpg
+2017-02-01 20:50:17,943 - INFO - Process test image: udacity/test_images/test1.jpg
+2017-02-01 20:50:19,949 - INFO - Process test image: udacity/test_images/test2.jpg
+2017-02-01 20:50:21,890 - INFO - Process test image: udacity/test_images/test3.jpg
+2017-02-01 20:50:24,039 - INFO - Process test image: udacity/test_images/test4.jpg
+2017-02-01 20:50:26,093 - INFO - Process test image: udacity/test_images/test5.jpg
+2017-02-01 20:50:27,977 - INFO - Process test image: udacity/test_images/test6.jpg
+2017-02-01 20:50:29,853 - INFO - Process test image: udacity/test_images/test7_side_lane.jpg
+2017-02-01 20:50:31,649 - INFO - Process test image: udacity/test_images/test8_noise_from_another_car.jpg
+2017-02-01 20:50:33,599 - INFO - Process test image: udacity/test_images/test9_shadow.jpg
+2017-02-01 20:50:35,251 - INFO - vision-debug done
+2017-02-01 20:51:20,468 - INFO - util_debug.py loaded
+2017-02-01 20:51:20,469 - INFO - vision submodule loaded
+2017-02-01 20:51:33,884 - INFO - Camera calibrated
+2017-02-01 20:51:33,885 - INFO - Number of calibrated img: 17
+2017-02-01 20:51:34,107 - WARNING - /home/qh/anaconda3/envs/keras/lib/python3.5/site-packages/moviepy/audio/io/readers.py:123: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  self.nchannels))
+

@@ -463,23 +463,20 @@ class qVision:
         x = int(0.1*width)
         y = int(0.1*height)
 
-        left_line_curv  = self.lane.getLeftLine().getCurvatureRadiusInMeters()
-        right_line_curv = self.lane.getRightLine().getCurvatureRadiusInMeters()
 
         car_center_pos = width//2
         departure = self.lane.getCarDepartureFromLaneCeterInMeters(car_center_pos)
+        lane_curv = self.lane.getCurvatureRadiusInMeters()
 
-        str_anno_left_curv  =  'Left Line Curvature: {:.2f}m '.format(left_line_curv)
-        str_anno_right_curv =  'Right Line Curvature: {:.2f}m'.format(right_line_curv) 
-        str_anno_departure  =  'Lane Center Departure: {:.2f}m'.format(departure) 
+        str_anno_curv =  'Lane Curvature: {:.2f}m'.format(lane_curv) 
+        str_anno_departure  =  'Car Departure from Center: {:.2f}m'.format(departure) 
 
         font_delta = 33
         # font_color = (51,51,153)
         font_color = (0,204,204)
-        cv2.putText(img_bgr,str_anno_left_curv, (x,y), cv2.FONT_HERSHEY_SIMPLEX, 1, font_color,3)
+        cv2.putText(img_bgr,str_anno_curv, (x,y), cv2.FONT_HERSHEY_SIMPLEX, 1, font_color,3)
         y+=font_delta
-        cv2.putText(img_bgr,str_anno_right_curv, (x,y), cv2.FONT_HERSHEY_SIMPLEX, 1, font_color,3)
-        y+=font_delta
+
         cv2.putText(img_bgr,str_anno_departure, (x,y), cv2.FONT_HERSHEY_SIMPLEX, 1, font_color,3)
 
 

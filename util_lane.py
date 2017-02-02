@@ -13,7 +13,11 @@ class qLane:
 
         self.y_pixels = np.array([])
 
+        self.current_left_fidelity = 0
+        self.current_right_fidelity = 0
 
+        self.curv_fifo = [0]
+        self.depart_fifo = [0]
 
     def update(self, left_line, right_line, bottom_pixel_pos):
         """project line to image bottom. 
@@ -42,6 +46,9 @@ class qLane:
 
             self.updateLeftLine(left_line)
             self.updateRightLine(right_line)
+
+            self.current_left_fidelity = left_line.getDataFidelity()
+            self.current_right_fidelity = right_line.getDataFidelity()
 
     def updateLeftLine(self, line):
 
@@ -115,7 +122,32 @@ class qLane:
             # print('car_center_pos_pixel: ', car_center_pos_pixel)
             # print('dist_pixel: ', dist_pixel)
 
-        return dist_meters    
+        dist_meters = self.lowpass(dist_meters, self.depart_fifo)
+        return dist_meters  
+
+    def getCurvatureRadiusInMeters(self):
+
+        curv = 0
+        if self.current_left_fidelity > self.current_right_fidelity:
+            curv = self.left_line.getCurvatureRadiusInMeters() 
+        else:
+            curv = self.right_line.getCurvatureRadiusInMeters() 
+
+        curv = self.lowpass(curv, self.curv_fifo)
+
+        return curv
+
+    def lowpass(self, data, fifo):
+
+        low_pass_length = 5
+
+        fifo.append(data)
+
+        while len(fifo) > low_pass_length:
+            fifo.pop(0)
+
+        return np.average(fifo)
+
 
 def main():
 

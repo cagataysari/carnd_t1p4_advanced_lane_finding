@@ -112,6 +112,13 @@ class qLine:
     def getMetersPerPixelInY(self):
         return qLine.YM_PER_PIX
 
+    def getDataFidelity(self):
+        """larger variance along y-axis means the line is more trustworthy
+        
+        Returns:
+            TYPE: Description
+        """
+        return np.var(self.np_y)
 
 
 def main():
@@ -136,6 +143,7 @@ def main():
 
     print('Left Lane Curvature: ', left_line.getCurvatureRadiusInMeters())
 
+    print('Left Line Fidelity: ' , left_line.getDataFidelity())
 if __name__ == "__main__": 
     import time
     from datetime import timedelta
