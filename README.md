@@ -140,7 +140,7 @@ I implemented this step in the function imaginLines() in my code in `util_vision
 
 ####1. Final video output. .
 
-Run `p4_adv_lane_finding.py` to generate the final video output from [the raw recording](.udacity/project_video.mp4).
+Run `p4_adv_lane_finding.py` to generate the final video output from [the raw recording](./udacity/project_video.mp4).
 
 Here's a [link to my video result](./Processsed_project_video.mp4). Or it can be viewed on youtube by clicking the following image:
 
