@@ -54,7 +54,7 @@ To demonstrate this step, I will describe how I apply the distortion correction 
 
 ####2. Filter for thresholded binary image.  
 
-I used a combination of color and gradient thresholds to generate a binary image (thresholding steps at the function processImg() in `util_vision.py`). 
+I used interest of region cropping and a combination of color and gradient thresholds to generate a binary image (thresholding steps at the function processImg() in `util_vision.py`). 
 
 The image are passed through the intermediate filters. The most difficult issue is the noise from shadow. To tackle the problem, it is found that u-channel of YUV color space is perfect in identifying the yellow lane mark, while l-channel of HLS has excellent property in isolating the white lane mark. The downside of the color thresholding is color noise from random objects or marks on the road.
 
@@ -148,7 +148,17 @@ Here's a [link to my video result](./Processsed_project_video.mp4). Or it can be
 
 ###Discussion
 
-####1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
+####1. Further work
 
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
+A key component of this project is filtering. The thresholding filter used in this project has excellent performance is rejecting noise from shadow and random objects or stain marks on the road. 
+
+There are many advanced filtering method available to handle more challenging images, such as glare. A more exhaustive testing on filters is needed to further improve lane-finding robustness. 
+
+Also various method can be used to filter the raw pixel data of line marks. Line and lane data can further be validated to reject any wrong recognition result.
+
+Another feature to add for lane finding is to calculate the steering angle based on the extracted lane data. End-to-end deep learning is one of the most promising approaches.
+
+
+
+
 
