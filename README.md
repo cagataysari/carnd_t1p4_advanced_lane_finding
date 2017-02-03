@@ -1,5 +1,5 @@
 ##CarND - Project 4 Advanced Lane Finding
-###The objective is to recognize a lane and compute the curvature on a road. The road video is recorded from a car, so the departure from lane center can also be obtained. 
+###The objective is to recognize a lane and compute the curvature on a road. The road video is recorded from car center, so the departure from lane center can also be obtained. 
 
 ---
 
@@ -35,7 +35,7 @@ The project can be broken down into the following steps:
 
 ####1. Compute the camera matrix and distortion coefficients. 
 
-The calibration is based on the raw photos of chessboard pattern. The photos are distorted due to inherent camera and lens properties. The first step is to generate the meshgrid of logical coordination of corners. Then using OpenCV function of drawChessboardCorners(), we are able to obtain the actual pixel position of corners in the picture. By correlating the logical coordinations and the physical pixel locations, OpenCV function calibrateCamera() is able to calculate the camera matrix and distortion coefficients.
+The calibration is based on the raw photos of chessboard pattern. The photos are distorted due to inherent camera and lens properties. The first step is to generate the meshgrid of logical coordinations of corners. Then using OpenCV function of drawChessboardCorners(), we are able to obtain the actual pixel positions of corners in the picture. By correlating the logical coordinations and the physical pixel locations, OpenCV function calibrateCamera() is able to calculate the camera matrix and distortion coefficients.
 
 All the incoming frame picture will have distortion from this camera. Therefore, we save the matrix and coefficients, and apply them to correct distortion in every future frame.  
 
@@ -123,7 +123,7 @@ Image for fitting:         |  Fit result
 ####5. Calculate the radius of curvature of the lane and the position of the vehicle with respect to center.
 
 
-The radius of curvature is implemented at getCurvatureRadiusInMeters() in `util_line.py`. The pixels are converted to values in units of meters. Then the radius is calculated based on the curvature formula of second-order polynomials. Since ultimately the steering angle is determined by the curvature, a low-pass filter is applied to smooth out the value over the time. In addition, if the difference of curvature is too big between the two lines, the lane data will be dropped and a past result will be reused. The filtering is at getCurvatureRadiusInMeters() and and isLaneValid() in `util_lane.py`.
+The radius of curvature is implemented at getCurvatureRadiusInMeters() in `util_line.py`. The pixels are converted to values in units of meters. Then the radius is calculated based on the curvature formula of second-order polynomials. Since ultimately we want the steering angle which is determined by the curvature, a low-pass filter is applied to smooth out the value over the time. In addition, if the difference of curvature is too big between the two lines, the lane data will be dropped and a past result will be reused. The filtering is at getCurvatureRadiusInMeters() and and isLaneValid() in `util_lane.py`.
 
 The position of the car with respect to lane center is calculated by subtracting the lane center from the image middle position. A negative value means the car is on the right side from the lane center. It is implemented at getCarDepartureFromLaneCeterInMeters() `util_lane.py`.
 
