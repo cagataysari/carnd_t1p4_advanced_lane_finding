@@ -140,6 +140,8 @@ I implemented this step in the function imaginLines() in my code in `util_vision
 
 ####1. Final video output. .
 
+Run `p4_adv_lane_finding.py` to generate the final video output from [the raw recording](.udacity/project_video.mp4).
+
 Here's a [link to my video result](./Processsed_project_video.mp4). Or it can be viewed on youtube by clicking the following image:
 
 [![Lane-finding Video](http://img.youtube.com/vi/R_oIGwcXz1Y/0.jpg)](https://www.youtube.com/embed/R_oIGwcXz1Y "Lane-finding Video")
@@ -148,15 +150,14 @@ Here's a [link to my video result](./Processsed_project_video.mp4). Or it can be
 
 ###Discussion
 
-####1. Further work
 
 A key component of this project is filtering. The thresholding filter used in this project has excellent performance is rejecting noise from shadow and random objects or stain marks on the road. 
 
-There are many advanced filtering method available to handle more challenging images, such as glare. A more exhaustive testing on filters is needed to further improve lane-finding robustness. 
+There are many advanced filtering method available to handle more challenging images, such as glare. A more exhaustive testing and tuning on filters is needed to further improve lane-finding performance and robustness. 
 
 Also various method can be used to filter the raw pixel data of line marks. Line and lane data can further be validated to reject any wrong recognition result.
 
-Another feature to add for lane finding is to calculate the steering angle based on the extracted lane data. End-to-end deep learning is one of the most promising approaches.
+Furthermore, feature can be added to calculate the steering angle based on the extracted lane data. End-to-end deep learning is one of the most promising approaches.
 
 
 

@@ -92,12 +92,12 @@ def main():
 
 
 
+    lane_finder.processVideo('udacity/project_video.mp4', 'udacity/Processsed_project_video.mp4')
 
 
-    lane_finder.processVideo('udacity/challenge_video.mp4', 'udacity/Processsed_challenge_video.mp4')
-    lane_finder.processVideo('udacity/harder_challenge_video.mp4', 'udacity/Processsed_harder_challenge_video.mp4')
+    # lane_finder.processVideo('udacity/challenge_video.mp4', 'udacity/Processsed_challenge_video.mp4')
+    # lane_finder.processVideo('udacity/harder_challenge_video.mp4', 'udacity/Processsed_harder_challenge_video.mp4')
 
-    # lane_finder.processVideo('udacity/project_video.mp4', 'udacity/Processsed_project_video.mp4')
     # output_name = 'white.mp4'
     # clip1 = VideoFileClip("solidWhiteRight.mp4")
     # white_clip = clip1.fl_image(driver_vision.processImg) #NOTE: this function expects color images!!
