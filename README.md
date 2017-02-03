@@ -5,7 +5,7 @@
 
 **Advanced Lane Finding Project**
 
-The project is broken down into the following steps:
+The project can be broken down into the following steps:
 
 * Compute the camera calibration matrix and distortion coefficients given a set of chessboard images.
 * Apply a distortion correction to raw images.
@@ -120,13 +120,17 @@ Image for fitting:         |  Fit result
 ![alt text][image5_orig]   |![alt text][image5] 
 
 
-####5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
+####5. Calculate the radius of curvature of the lane and the position of the vehicle with respect to center.
 
-I did this in function findLinePixels() in `util_findLane.py`
 
-####6. An example image of your result plotted back down onto the road such that the lane area is identified clearly.
+The radius of curvature is implemented at getCurvatureRadiusInMeters() in `util_line.py`. The pixels are converted to values in units of meters. Then the radius is calculated based on the curvature formula of second-order polynomials. Since ultimately the steering angle is determined by the curvature, a low-pass filter is applied to smooth out the value over the time. In addition, if the difference of curvature is too big between the two lines, the lane data will be dropped and a past result will be reused. The filtering is at getCurvatureRadiusInMeters() and and isLaneValid() in `util_lane.py`.
 
-I implemented this step in lines # through # in my code in `yet_another_file.py` in the function `map_lane()`.  Here is an example of my result on a test image:
+The position of the car with respect to lane center is calculated by subtracting the lane center from the image middle position. A negative value means the car is on the right side from the lane center. It is implemented at getCarDepartureFromLaneCeterInMeters() `util_lane.py`.
+
+
+####6. An example image of your result plotted back down onto the road such that the lane area is identified.
+
+I implemented this step in the function imaginLines() in my code in `util_vision.py`.  Here is an example of my result on a test image:
 
 ![alt text][image6]
 
@@ -134,7 +138,7 @@ I implemented this step in lines # through # in my code in `yet_another_file.py`
 
 ###Pipeline (video)
 
-####1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
+####1. Final video output. .
 
 Here's a [link to my video result](./Processsed_project_video.mp4). Or it can be viewed on youtube by clicking the following image:
 
