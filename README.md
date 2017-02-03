@@ -142,9 +142,9 @@ I implemented this step in the function imaginLines() in my code in `util_vision
 
 Run `p4_adv_lane_finding.py` to generate the final video output from [the raw recording](./udacity/project_video.mp4).
 
-Here's a [link to my video result](./Processsed_project_video.mp4). Or it can be viewed on youtube by clicking the following image:
+Here's a [link to my video result](./Processsed_project_video.mp4). Or it can be viewed on YouTube by clicking the following image:
 
-[![Lane-finding Video](http://img.youtube.com/vi/R_oIGwcXz1Y/0.jpg)](https://www.youtube.com/embed/R_oIGwcXz1Y "Lane-finding Video")
+[![Lane-finding Video](http://img.youtube.com/vi/R_oIGwcXz1Y/0.jpg)](https://www.youtube.com/embed/R_oIGwcXz1Y "Lane-finding Video on YouTube")
 
 ---
 
