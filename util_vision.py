@@ -314,20 +314,8 @@ class qVision:
         yuv_binary_u = yuv_select_u(image_cropped, thresh=(140, 250))
 
         binary_color = yuv_binary_u
-        # hls_binary = np.zeros_like(hls_binary_s)
-        # hls_binary[ (hls_binary_s == 1) | (hls_binary_l == 1) ] = 1
 
-        # image[(hls_binary != 1)]  = 0
-        # Run the function
         mag_binary = mag_thresh(image_cropped, sobel_kernel=31, thresh=(60, 255 ))
-
-        # binary_hls_mag = np.zeros_like(mag_binary)
-
-        # binary_hls_mag[  (mag_binary == 1) & (hls_binary == 1) ] = 1
-        # dir_binary = dir_threshold(image_cropped, sobel_kernel=15, thresh=(np.pi*30.0/180.0, np.pi*80.0/180.0)) 
-        # dir_binary = dir_threshold(image_orig2, sobel_kernel=15, thresh=(0.7, 1.2) ) # 40~80 degree
-        # dir_binary = dir_threshold(mag_binary, sobel_kernel=11, thresh=(0.7, 1.3), enable_binary_map=True) 
-
 
         combined = np.zeros_like(mag_binary)
 

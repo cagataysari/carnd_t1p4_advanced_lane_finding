@@ -5265,3 +5265,19 @@
 2017-02-01 23:10:31,259 - WARNING - /home/qh/anaconda3/envs/keras/lib/python3.5/site-packages/moviepy/audio/io/readers.py:123: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
   self.nchannels))
 
+2017-02-01 23:39:12,318 - INFO - util_debug.py loaded
+2017-02-01 23:39:12,320 - INFO - vision submodule loaded
+2017-02-01 23:39:24,149 - INFO - Camera calibrated
+2017-02-01 23:39:24,150 - INFO - Number of calibrated img: 17
+2017-02-01 23:39:24,291 - WARNING - /home/qh/anaconda3/envs/keras/lib/python3.5/site-packages/moviepy/audio/io/readers.py:123: VisibleDeprecationWarning: using a non-integer number instead of an integer will result in an error in the future
+  self.nchannels))
+
+2017-02-01 23:51:56,357 - WARNING - /home/qh/anaconda3/envs/keras/lib/python3.5/site-packages/moviepy/video/io/ffmpeg_reader.py:116: UserWarning: Warning: in file udacity/challenge_video.mp4, 2764800 bytes wanted but 0 bytes read,at frame 484/485, at time 16.15/16.15 sec. Using the last valid frame instead.
+  UserWarning)
+
+2017-02-02 00:14:26,120 - WARNING - /home/qh/anaconda3/envs/keras/lib/python3.5/site-packages/numpy/lib/polynomial.py:595: RankWarning: Polyfit may be poorly conditioned
+  warnings.warn(msg, RankWarning)
+
+2017-02-02 00:14:26,122 - WARNING - /home/qh/anaconda3/envs/keras/lib/python3.5/site-packages/numpy/lib/polynomial.py:595: RankWarning: Polyfit may be poorly conditioned
+  warnings.warn(msg, RankWarning)
+

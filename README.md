@@ -35,28 +35,38 @@ The project is broken down into the following steps:
 
 ####1. Compute the camera matrix and distortion coefficients. 
 
-The calibration is based on the raw photos of chessboard pattern. The photo has a distorted imaged caused by inherent camera and lens properties. The first step is to generate the meshgrid of logical coordination of corners. Then using OpenCV function of drawChessboardCorners(), we are able to obtain the actual pixel position of corners in the picture. By correlating the logical coordinations and the physical pixel locations, OpenCV function calibrateCamera() can calculate the camera matrix and distortion coefficients.
+The calibration is based on the raw photos of chessboard pattern. The photos are distorted due to inherent camera and lens properties. The first step is to generate the meshgrid of logical coordination of corners. Then using OpenCV function of drawChessboardCorners(), we are able to obtain the actual pixel position of corners in the picture. By correlating the logical coordinations and the physical pixel locations, OpenCV function calibrateCamera() is able to calculate the camera matrix and distortion coefficients.
 
-All the incoming frame picture will have distortion from this camera. Therefore, we save the matrix and coefficients, and use them to correct distortion in every future frame.  
+All the incoming frame picture will have distortion from this camera. Therefore, we save the matrix and coefficients, and apply them to correct distortion in every future frame.  
 
-The calibration logic is encapsulated at `util_camera.p`.
+The calibration logic is encapsulated at source code `util_camera.py`.
 
-An example image after distortion correction is as following.
+An example image after correction is as following.
 
 ![alt text][image1]
 
 ###Pipeline (single images)
 
 ####1. Provide an example of a distortion-corrected image.
-To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like this one:
-![alt text][image2]
-####2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
-I used a combination of color and gradient thresholds to generate a binary image (thresholding steps at lines # through # in `another_file.py`). 
+To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like the below one. It is less obvious to see the distortion if it is not chess-patterned. But look closely at the horizontal line on the windshield, it is warped before correction and straight afterwards.
 
-The image are passed through the intermediate filters. The most difficult issue is the noise from shadow. To tackle the problem, it is found that YUV color space is perfect in identifying the yellow lane mark, while HLS has supreme property in isolating the white lane mark. The filtering result is as following.
+![alt text][image2]
+
+####2. Filtering for thresholded binary image.  
+
+I used a combination of color and gradient thresholds to generate a binary image (thresholding steps at the function processImg() in `util_vision.py`). 
+
+The image are passed through the intermediate filters. The most difficult issue is the noise from shadow. To tackle the problem, it is found that u-channel of YUV color space is perfect in identifying the yellow lane mark, while l-channel of HLS has excellent property in isolating the white lane mark. The down-side of the color thresholding is color noise from random objects or marks on the road.
+
+On the other hand, magnitude Sobel gradient filter is not sensitive to the color noise, but is prone to shadow noise. Combining the good properties of the two, the yellow lane mark can be cleanly filtered by logically AND the u-channel thresholding and magnitude Sobel filter.
+
+The L-channel thresholding filter can robustly identify the white lane mark with noise from other objects. It is logically OR with the u-channel result. To compensate the color noise in white lane marks, the directional Sobel filter as the last layer filters out the noise that does not resemble the lane lines.
+
+The intermediate filter outputs on a challenging shadowy image is as following
+
 ![alt text][image3_filters]
 
-The last layer is a directional Sobel filter. Here's an example of the final filtering output for this step. 
+Here's an example of the final filtering output for this step. 
 
 ![alt text][image3]
 
