@@ -31,6 +31,18 @@ The project can be broken down into the following steps:
 
 ---
 
+**Code Structure**
+
+- `p4_adv_lane_finding.py`: top-level file to generate video output
+- `util_camera.py`: camera calibration, undistortion.
+- `util_vision.py`: image filtering, lane highligting, perspective transformation.
+- `util_findLane.py`: Sliding-window algorithm, line-fitting.
+- `util_lane.py`: filter out insufficient line marks that do not represent a lane
+- `util_line.py`: curvature calculation
+
+---
+
+
 ###Camera Calibration
 
 ####1. Compute the camera matrix and distortion coefficients. 
