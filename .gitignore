@@ -13,3 +13,5 @@ __pycache__
 README.html
 
 calibrated_camera.pickle
+
+log_lanefinding.txt
