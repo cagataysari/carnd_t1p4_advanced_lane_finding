@@ -47,16 +47,16 @@ An example image after correction is as following.
 
 ###Pipeline (single images)
 
-####1. Provide an example of a distortion-corrected image.
+####1. an example of a distortion-corrected image.
 To demonstrate this step, I will describe how I apply the distortion correction to one of the test images like the below one. It is less obvious to see the distortion if it is not chess-patterned. But look closely at the horizontal line on the windshield, it is warped before correction and straight afterwards.
 
 ![alt text][image2]
 
-####2. Filtering for thresholded binary image.  
+####2. Filter for thresholded binary image.  
 
 I used a combination of color and gradient thresholds to generate a binary image (thresholding steps at the function processImg() in `util_vision.py`). 
 
-The image are passed through the intermediate filters. The most difficult issue is the noise from shadow. To tackle the problem, it is found that u-channel of YUV color space is perfect in identifying the yellow lane mark, while l-channel of HLS has excellent property in isolating the white lane mark. The down-side of the color thresholding is color noise from random objects or marks on the road.
+The image are passed through the intermediate filters. The most difficult issue is the noise from shadow. To tackle the problem, it is found that u-channel of YUV color space is perfect in identifying the yellow lane mark, while l-channel of HLS has excellent property in isolating the white lane mark. The downside of the color thresholding is color noise from random objects or marks on the road.
 
 On the other hand, magnitude Sobel gradient filter is not sensitive to the color noise, but is prone to shadow noise. Combining the good properties of the two, the yellow lane mark can be cleanly filtered by logically AND the u-channel thresholding and magnitude Sobel filter.
 
@@ -71,9 +71,9 @@ Here's an example of the final filtering output for this step.
 ![alt text][image3]
 
 
-####3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
+####3. Perform a perspective transform.
 
-The code for my perspective transform includes a function called `warper()`, which appears in lines 1 through 8 in the file `example.py` (output_images/examples/example.py) (or, for example, in the 3rd code cell of the IPython notebook).  The `warper()` function takes as inputs an image (`img`), as well as source (`src`) and destination (`dst`) points.  I chose the hardcode the source and destination points in the following manner:
+The code for my perspective transform includes a function called `transformToBirdsEyeView()`, in the file `util_vision.py`. At the initialization of 'qVision' object, the transformation matrix is calculated. The matrix is calculated using Udacity's matching source and destination points as following:
 
 ```
 src = np.float32(
@@ -101,10 +101,19 @@ I verified that my perspective transform was working as expected by drawing the 
 
 ![alt text][image4]
 
-####4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
+####4. Identify lane-line pixels and fit their positions with a polynomial
 
-Then I did some other stuff and fit my lane lines with a 2nd order polynomial kinda like this:
+Sliding-window method is used to identify two lines. The algorithm is implemented in `util_findLane.py`.
 
+The first step is to have a histogram on the image lower-half. The peak on the left side would be the starting point to search for a line; same applies for the right line search. This process is in findLinePositions() function. 
+
+Then a small window of 70x20 size is sliding left and right near the starting point from bottom. An area with most pixels is marked as lane mark. Afterward, the window moves further up to search for the whole line. The previous filtering performance greatly influences this sliding process.  The sliding-window code can be found at findLinePositions() function.
+
+After finding all the line pixels, a second order polynomial is used to fit the line. The code is at computeLaneLines().
+
+The top-level function is findLaneLines() which returns two qLine objects of pixels and polynomial coefficients of right and right lines.
+
+An example of input and output to the sliding-window method is as following:
 
 Image for fitting:         |  Fit result
 :-------------------------:|:-------------------------:
