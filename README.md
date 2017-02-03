@@ -56,7 +56,7 @@ To demonstrate this step, I will describe how I apply the distortion correction 
 
 I used interest of region cropping and a combination of color and gradient thresholds to generate a binary image (thresholding steps at the function processImg() in `util_vision.py`). 
 
-The image are passed through the intermediate filters. The most difficult issue is the noise from shadow. To tackle the problem, it is found that u-channel of YUV color space is perfect in identifying the yellow lane mark, while l-channel of HLS has excellent property in isolating the white lane mark. The downside of the color thresholding is color noise from random objects or marks on the road.
+The image are passed through the intermediate filters. The most difficult issue is the noise from shadow. To tackle the problem, it is found that u-channel of YUV color space is very good in identifying the yellow lane mark, while l-channel of HLS has excellent property in isolating the white lane mark. The downside of the color thresholding is color noise from random objects or marks on the road.
 
 On the other hand, magnitude Sobel gradient filter is not sensitive to the color noise, but is prone to shadow noise. Combining the good properties of the two, the yellow lane mark can be cleanly filtered by logically AND the u-channel thresholding and magnitude Sobel filter.
 
