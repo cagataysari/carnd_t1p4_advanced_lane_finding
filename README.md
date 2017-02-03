@@ -60,7 +60,7 @@ The image are passed through the intermediate filters. The most difficult issue 
 
 On the other hand, magnitude Sobel gradient filter is not sensitive to the color noise, but is prone to shadow noise. Combining the good properties of the two, the yellow lane mark can be cleanly filtered by logically AND the u-channel thresholding and magnitude Sobel filter.
 
-The L-channel thresholding filter can robustly identify the white lane mark with noise from other objects. It is logically OR with the u-channel result. To compensate the color noise in white lane marks, the directional Sobel filter as the last layer filters out the noise that does not resemble the lane lines.
+The L-channel thresholding filter can robustly identify the white lane mark with noise from other objects. It is logically OR with the u-channel result. To compensate the color noise in white lane marks, the directional Sobel filter, as the last layer, filters out the noise that does not resemble the lane lines.
 
 The intermediate filter outputs on a challenging shadowy image is as following
 
@@ -73,7 +73,7 @@ Here's an example of the final filtering output for this step.
 
 ####3. Perform a perspective transform.
 
-The code for my perspective transform includes a function called `transformToBirdsEyeView()`, in the file `util_vision.py`. At the initialization of 'qVision' object, the transformation matrix is calculated. The matrix is calculated using Udacity's matching source and destination points as following:
+The code for my perspective transform includes a function called `transformToBirdsEyeView()`, in the file `util_vision.py`. At the initialization of qVision object, the transformation matrix is calculated. The matrix is calculated using Udacity's matching source and destination points as following:
 
 ```
 src = np.float32(
@@ -151,11 +151,11 @@ Here's a [link to my video result](./Processsed_project_video.mp4). Or it can be
 ###Discussion
 
 
-A key component of this project is filtering. The thresholding filter used in this project has excellent performance is rejecting noise from shadow and random objects or stain marks on the road. 
+A key component of this project is filtering. The thresholding filter used in this project has excellent performance in rejecting noise from shadow and random objects/marks on the road. 
 
 There are many advanced filtering method available to handle more challenging images, such as glare. A more exhaustive testing and tuning on filters is needed to further improve lane-finding performance and robustness. 
 
-Also various method can be used to filter the raw pixel data of line marks. Line and lane data can further be validated to reject any wrong recognition result.
+Also various method can be used to filter the raw pixel points of line marks. Line and lane data can further be validated to reject any wrong recognition result.
 
 Furthermore, feature can be added to calculate the steering angle based on the extracted lane data. End-to-end deep learning is one of the most promising approaches.
 
